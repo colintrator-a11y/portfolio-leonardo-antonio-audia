@@ -230,7 +230,7 @@ function Ecommerce({ id }) {
   )
 }
 
-function Delivery({ id }) {
+function Fitness({ id }) {
   const phone = (x, y, w, h) => (
     <>
       <rect x={x} y={y} width={w} height={h} rx="24" fill={C.bg} stroke={C.barMid} strokeWidth="1.5" />
@@ -241,7 +241,7 @@ function Delivery({ id }) {
 
   return (
     <>
-      <PlainFrame id={id} label="delivery.app · customer + driver" />
+      <PlainFrame id={id} label="coaching.app · athlete + coach" />
 
       {/* Customer phone */}
       {phone(56, 52, 210, 320)}
@@ -270,7 +270,7 @@ function Delivery({ id }) {
       <rect x="118" y="258" width="60" height="6" rx="3" fill={C.barLight} />
       <rect x="76" y="290" width="170" height="8" rx="4" fill={C.barLight} />
       <rect x="76" y="290" width="118" height="8" rx="4" fill={`url(#${id}-brand)`} />
-      {['Placed', 'On the way', 'Delivered'].map((t, i) => (
+      {['Warm-up', 'Main set', 'Cool-down'].map((t, i) => (
         <text
           key={t}
           x={78 + i * 62}
@@ -289,7 +289,7 @@ function Delivery({ id }) {
       <rect x="342" y="86" width="72" height="8" rx="4" fill={C.barMid} />
       <rect x="342" y="106" width="170" height="70" rx="10" fill={C.bg} stroke={C.border} />
       <text x="356" y="130" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        NEXT STOP
+        TODAY'S SESSION
       </text>
       <rect x="356" y="140" width="112" height="7" rx="3.5" fill={C.barMid} />
       <rect x="356" y="154" width="80" height="6" rx="3" fill={C.barLight} />
@@ -622,10 +622,131 @@ function Automation({ id }) {
   )
 }
 
+/* Product detail with a configurable option set — the modular furniture build. */
+function Storefront({ id }) {
+  return (
+    <>
+      <BrowserChrome id={id} label="store.example/product/modular-sofa" />
+
+      {/* Top bar */}
+      <rect x="16" y="60" width="608" height="40" rx="10" fill={C.panel} stroke={C.border} />
+      <rect x="34" y="74" width="70" height="10" rx="5" fill={C.ink} />
+      {[0, 1, 2].map((i) => (
+        <rect key={i} x={134 + i * 62} y="76" width="44" height="7" rx="3.5" fill={C.barMid} />
+      ))}
+      <circle cx="596" cy="80" r="12" fill={C.accentSoft} />
+
+      {/* Gallery */}
+      <rect x="16" y="114" width="300" height="200" rx="10" fill={C.panel} stroke={C.border} />
+      <rect x="60" y="176" width="212" height="76" rx="8" fill={C.accentSoft} />
+      <rect x="60" y="176" width="98" height="76" rx="8" fill="#c9dcf8" />
+      <rect x="96" y="252" width="140" height="12" rx="4" fill={C.barLight} />
+      {[0, 1, 2, 3].map((i) => (
+        <rect
+          key={i}
+          x={16 + i * 78}
+          y="326"
+          width="70"
+          height="58"
+          rx="8"
+          fill={C.bg}
+          stroke={i === 0 ? C.accent : C.border}
+        />
+      ))}
+
+      {/* Configurator */}
+      <rect x="332" y="114" width="292" height="270" rx="10" fill={C.bg} stroke={C.border} />
+      <rect x="352" y="136" width="170" height="11" rx="5.5" fill={C.barMid} />
+      <text x="352" y="176" fill={C.ink} fontSize="20" fontWeight="600" fontFamily="Georgia, serif">
+        € 1,840
+      </text>
+      <rect x="440" y="163" width="60" height="8" rx="4" fill={C.barLight} />
+
+      {['MODULES', 'FABRIC', 'FINISH'].map((label, row) => (
+        <g key={label}>
+          <text
+            x="352"
+            y={206 + row * 56}
+            fill={C.muted}
+            fontSize="8.5"
+            fontFamily="monospace"
+            letterSpacing="0.08em"
+          >
+            {label}
+          </text>
+          {[0, 1, 2, 3].map((i) => (
+            <rect
+              key={i}
+              x={352 + i * 62}
+              y={214 + row * 56}
+              width="54"
+              height="24"
+              rx="6"
+              fill={i === row % 3 ? C.accent : C.bg}
+              stroke={i === row % 3 ? C.accent : C.barMid}
+            />
+          ))}
+        </g>
+      ))}
+
+      <rect x="352" y="344" width="150" height="26" rx="13" fill={C.ink} />
+      <rect x="516" y="344" width="88" height="26" rx="13" fill={C.bg} stroke={C.barMid} />
+      <circle cx="596" cy="204" r="5" fill={C.green} />
+      <text x="524" y="208" fill={C.muted} fontSize="8.5" fontFamily="monospace">
+        IN STOCK
+      </text>
+    </>
+  )
+}
+
+/* Editorial studio site — the Next.js build. */
+function Studio({ id }) {
+  return (
+    <>
+      <BrowserChrome id={id} label="lumina.studio" />
+
+      {/* Nav */}
+      <rect x="40" y="72" width="58" height="11" rx="5.5" fill={C.ink} />
+      {[0, 1, 2].map((i) => (
+        <rect key={i} x={420 + i * 58} y="74" width="42" height="7" rx="3.5" fill={C.barMid} />
+      ))}
+
+      {/* Hero */}
+      <rect x="40" y="118" width="330" height="16" rx="6" fill={C.ink} opacity="0.88" />
+      <rect x="40" y="146" width="264" height="16" rx="6" fill={C.ink} opacity="0.88" />
+      <rect x="40" y="174" width="180" height="16" rx="6" fill={C.accent} opacity="0.75" />
+      <rect x="40" y="212" width="240" height="7" rx="3.5" fill={C.barMid} />
+      <rect x="40" y="226" width="200" height="7" rx="3.5" fill={C.barLight} />
+      <rect x="40" y="252" width="112" height="28" rx="14" fill={C.ink} />
+
+      {/* Hero image */}
+      <rect x="410" y="112" width="214" height="168" rx="10" fill={C.panel} stroke={C.border} />
+      <circle cx="517" cy="182" r="44" fill={C.accentSoft} />
+      <path d="M446 246 L490 206 L522 236 L560 198 L588 246 Z" fill="#c9dcf8" />
+
+      {/* Work grid */}
+      <line x1="40" y1="306" x2="600" y2="306" stroke={C.hair} />
+      <text x="40" y="328" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
+        SELECTED WORK
+      </text>
+      {[0, 1, 2, 3].map((i) => (
+        <g key={i}>
+          <rect x={40 + i * 142} y="340" width="126" height="44" rx="8" fill={C.bg} stroke={C.border} />
+          <rect x={52 + i * 142} y="352" width="26" height="20" rx="5" fill={C.accentSoft} />
+          <rect x={88 + i * 142} y="356" width={64 - i * 8} height="6" rx="3" fill={C.barMid} />
+          <rect x={88 + i * 142} y="367" width="40" height="5" rx="2.5" fill={C.barLight} />
+        </g>
+      ))}
+    </>
+  )
+}
+
 const scenes = {
   chatbot: Chatbot,
   ecommerce: Ecommerce,
-  delivery: Delivery,
+  storefront: Storefront,
+  studio: Studio,
+  fitness: Fitness,
   maps: Maps,
   api: Api,
   automation: Automation,

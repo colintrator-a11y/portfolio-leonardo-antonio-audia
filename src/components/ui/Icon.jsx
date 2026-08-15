@@ -66,6 +66,16 @@ const paths = {
       <path d="M14.5 6.5a3.5 3.5 0 0 0 4.6 4.6L21 13l-8 8-2-2 1.9-1.9a3.5 3.5 0 0 0-4.6-4.6L6.4 14.4 4 12l8-8 2.5 2.5Z" />
     </>
   ),
+  cart: (
+    <>
+      <path d="M3 4h2.2l2 11h10.2l2-8H7" />
+      <circle cx="9.5" cy="19" r="1.4" />
+      <circle cx="17" cy="19" r="1.4" />
+    </>
+  ),
+  star: (
+    <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8L12 3.6Z" />
+  ),
   arrowRight: (
     <>
       <path d="M5 12h13" />
@@ -111,7 +121,7 @@ export default function Icon({ name, size = 20, strokeWidth = 1.6, className = '
   const glyph = paths[name]
   if (!glyph) return null
 
-  const filled = name === 'quote'
+  const filled = name === 'quote' || name === 'star'
 
   return (
     <svg

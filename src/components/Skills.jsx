@@ -43,6 +43,32 @@ export default function Skills() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="verified">
+          <div className="verified__head">
+            <h3 className="verified__title">Recorded experience</h3>
+            <p className="verified__note">As published on my Workana profile</p>
+          </div>
+
+          <table className="verified__table">
+            <thead>
+              <tr>
+                <th scope="col">Skill</th>
+                <th scope="col">Projects</th>
+                <th scope="col">Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              {skills.verified.map((row) => (
+                <tr key={row.name}>
+                  <th scope="row">{row.name}</th>
+                  <td>{row.projects}</td>
+                  <td>{row.years}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Reveal>
       </div>
     </section>
   )

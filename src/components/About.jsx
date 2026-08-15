@@ -54,13 +54,42 @@ export default function About() {
                 ))}
               </dl>
 
-              <div className="about__note">
+              <div className="about__block">
+                <h4 className="about__blockTitle">Certifications</h4>
+                <ul className="about__certs">
+                  {about.certifications.map((cert) => (
+                    <li key={cert.name}>
+                      <span>{cert.name}</span>
+                      <strong>{cert.score}</strong>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="about__block">
+                <h4 className="about__blockTitle">Languages</h4>
+                <ul className="about__langs">
+                  {about.languages.map((lang) => (
+                    <li key={lang.name}>
+                      <strong>{lang.name}</strong>
+                      <span>{lang.level}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                className="about__note"
+                href={profile.workanaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Icon name="globe" size={17} />
                 <span>
-                  Freelance engagements delivered for international clients, including through
-                  Workana.com.
+                  Verified Workana profile — 5.0 rating, Silver level, ranked #1 in Italy for IT &amp;
+                  Programming.
                 </span>
-              </div>
+              </a>
             </div>
           </Reveal>
         </div>

@@ -34,11 +34,11 @@ src/
     HeroVisual.jsx       animated code-window mockup
     About.jsx            biography, highlights, profile card
     Services.jsx         six service cards
-    Skills.jsx           six skill categories
-    Projects.jsx         six alternating project rows
+    Skills.jsx           six skill categories + recorded-experience table
+    Projects.jsx         seven alternating project rows
     ProjectVisual.jsx    inline-SVG screenshot mockups (one scene per project)
     Process.jsx          six-step workflow
-    Testimonials.jsx     client feedback
+    Testimonials.jsx     verified review + completed engagements
     Footer.jsx           tagline, quick links, expertise
     BackToTop.jsx        floating scroll-to-top control
     ui/                  Icon, Reveal, SectionHead primitives
@@ -51,19 +51,33 @@ Each component keeps its styles in a sibling `.css` file, imported by the compon
 Everything readable on the page — headline, biography, services, skills, projects, process steps,
 testimonials, footer — comes from `src/data/content.js`. No component edits are needed to change copy.
 
-### Two things worth reviewing before publishing
+### Content provenance
 
-1. **Testimonials** (`testimonials.items`) are written as representative placeholder copy with
-   role/region attributions rather than invented client names. Replace them with real Workana
-   feedback before the site goes live.
-2. **Canonical URL** — `index.html`, `public/robots.txt` and `public/sitemap.xml` use
+All content is grounded in the verified Workana profile:
+<https://www.workana.com/freelancer/f9d69e5b850578f4e85687d42b23fbcf>
+
+Taken directly from that profile: skills and their recorded experience levels, project titles and
+technology stacks, certifications and scores, languages, the 5.0 client rating, the Italy #1 ranking,
+and the written client review. Project overviews and feature lists are written from each project's
+title and stack — they contain **no invented metrics or outcome figures**, because the profile
+publishes none.
+
+Two profile fields were truncated behind a "View more" control and could not be read: the full
+"About me" text and the complete skills table beyond the first seven rows. If you paste those in,
+they can be dropped straight into `content.js`.
+
+### Before publishing
+
+1. **Canonical URL** — `index.html`, `public/robots.txt` and `public/sitemap.xml` use
    `https://leonardoaudia.dev/`. Swap in the real domain.
+2. **Workana links** — the About card and testimonials panel link to the Workana profile. Remove
+   `profile.workanaUrl` references if you would rather the site carry no outbound link.
 
 ## Project screenshots
 
-The project "screenshots" are hand-drawn inline SVG interface mockups (`ProjectVisual.jsx`) — a
-chatbot console, an e-commerce catalogue, a delivery app, a live map, an API reference and an
-automation workflow. They stay crisp at any resolution, cost no network requests, and can be
+The project "screenshots" are hand-drawn inline SVG interface mockups (`ProjectVisual.jsx`) — an
+e-commerce catalogue, a configurable product page, an API reference, a coaching app, a logistics
+map, a studio site and an automation workflow, one scene per real project. They stay crisp at any resolution, cost no network requests, and can be
 swapped for real screenshots by replacing `<ProjectVisual />` in `Projects.jsx` with an `<img>`.
 
 ## Design system

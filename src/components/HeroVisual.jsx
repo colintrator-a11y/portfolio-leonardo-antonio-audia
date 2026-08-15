@@ -49,8 +49,8 @@ const codeLines = [
 ]
 
 const badges = [
-  { icon: 'api', title: 'REST API', detail: '99.9% uptime design' },
-  { icon: 'ai', title: 'AI Chatbots', detail: 'Automation ready' },
+  { icon: 'cart', title: 'E-Commerce', detail: 'Storefronts & platforms' },
+  { icon: 'api', title: 'REST APIs', detail: 'Node.js & Nest.js' },
 ]
 
 export default function HeroVisual() {

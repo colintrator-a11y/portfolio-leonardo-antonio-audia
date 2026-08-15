@@ -1,4 +1,4 @@
-import { testimonials } from '../data/content'
+import { profile, testimonials } from '../data/content'
 import Icon from './ui/Icon'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
@@ -16,17 +16,22 @@ export default function Testimonials() {
           intro={testimonials.intro}
         />
 
-        <div className="testimonials__grid">
+        <div className="testimonials__layout">
           {testimonials.items.map((item, index) => (
-            <Reveal
-              as="figure"
-              key={item.quote}
-              delay={(index % 2) * 110}
-              className="card testimonial"
-            >
+            <Reveal as="figure" key={item.author} delay={index * 90} className="card testimonial">
               <Icon name="quote" size={30} className="testimonial__mark" />
 
               <blockquote className="testimonial__quote">{item.quote}</blockquote>
+
+              {item.tech ? (
+                <ul className="testimonial__tech">
+                  {item.tech.map((tech) => (
+                    <li key={tech} className="chip">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
 
               <figcaption className="testimonial__author">
                 <span className="testimonial__avatar" aria-hidden="true">
@@ -37,20 +42,44 @@ export default function Testimonials() {
                   <small>{item.role}</small>
                 </span>
                 <span className="testimonial__location">
-                  <Icon name="globe" size={13} />
+                  <Icon name="star" size={12} />
                   {item.location}
                 </span>
               </figcaption>
             </Reveal>
           ))}
+
+          <Reveal delay={120} className="card engagements">
+            <h3 className="engagements__title">Completed engagements</h3>
+            <p className="engagements__intro">{testimonials.repeatNote}</p>
+
+            <ul className="engagements__list">
+              {testimonials.engagements.map((item) => (
+                <li key={item.title} className="engagements__item">
+                  <span className="engagements__rating">{item.rating}</span>
+                  <span className="engagements__body">
+                    <strong>{item.title}</strong>
+                    <small>Client {item.client}</small>
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              className="engagements__link"
+              href={profile.workanaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View the verified profile
+              <Icon name="arrowRight" size={14} />
+            </a>
+          </Reveal>
         </div>
 
         <Reveal className="testimonials__note">
           <Icon name="shield" size={16} />
-          <span>
-            Client identities are kept confidential in line with the privacy terms of each freelance
-            engagement.
-          </span>
+          <span>{testimonials.verifyNote}</span>
         </Reveal>
       </div>
     </section>
