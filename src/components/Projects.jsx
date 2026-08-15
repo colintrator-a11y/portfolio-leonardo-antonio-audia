@@ -25,14 +25,26 @@ export default function Projects() {
               <article className="card project__card">
                 <div className="project__media">
                   <div className="project__mediaFrame">
-                    <ProjectVisual variant={project.visual} title={project.title} />
+                    {project.image ? (
+                      <img
+                        className="project__shot"
+                        src={project.image}
+                        alt={`Screenshot of ${project.title}`}
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                        width={project.imageSize?.[0]}
+                        height={project.imageSize?.[1]}
+                      />
+                    ) : (
+                      <ProjectVisual variant={project.visual} title={project.title} />
+                    )}
                   </div>
-                  <span className="project__category">{project.category}</span>
                 </div>
 
                 <div className="project__body">
                   <span className="project__number">
                     Project {String(index + 1).padStart(2, '0')}
+                    <span className="project__category">{project.category}</span>
                   </span>
                   <h3 className="project__title">{project.title}</h3>
                   <p className="project__overview">{project.overview}</p>

@@ -4,11 +4,18 @@
  * Content is grounded in the verified Workana profile:
  * https://www.workana.com/freelancer/f9d69e5b850578f4e85687d42b23fbcf
  *
- * Skills, project titles, technologies, certifications, languages, ratings
- * and the client review are taken from that profile. Project overviews and
+ * Skills, project titles, technologies, certifications, languages, ratings,
+ * the client review and the project screenshots are taken from that profile. Project overviews and
  * feature lists are written from each project's title and technology stack —
  * they deliberately contain no invented metrics or outcome figures.
  */
+
+import premiumFashionImg from '../assets/projects/premium-fashion.webp'
+import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
+import multiBrandImg from '../assets/projects/multi-brand.webp'
+import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
+import apexLogisticsImg from '../assets/projects/apex-logistics.webp'
+import luminaStudioImg from '../assets/projects/lumina-studio.webp'
 
 export const profile = {
   name: 'Leonardo Antonio Audia',
@@ -46,7 +53,7 @@ export const hero = {
   ],
   pillars: [
     { title: 'Full-Stack', detail: 'React.js · Next.js · Node.js · Nest.js' },
-    { title: 'Mobile', detail: 'React Native · Flutter · Windows Mobile' },
+    { title: 'Mobile', detail: 'React Native · Android · iOS · Flutter' },
     { title: 'E-Commerce', detail: 'Storefronts · WooCommerce · WordPress' },
     { title: 'APIs', detail: 'REST API · Integrations · Chatbots' },
   ],
@@ -54,12 +61,12 @@ export const hero = {
 
 export const about = {
   eyebrow: 'About Me',
-  heading: 'A decade of building web and mobile products that hold up in production',
+  heading: 'The technical part is rarely the hard part',
   paragraphs: [
-    'Hello — I am Leonardo Antonio. I build websites and web and mobile applications that work well for real: fast, clear and easy to use on any screen. That standard is the whole job for me, and it is what every technical decision gets measured against.',
-    'I have worked as a self-employed senior web and mobile developer since March 2013, delivering applications for clients across different industries. My core stack is React.js and Node.js, extended with Next.js, Nest.js, AngularJS and TypeScript on larger platforms, and React Native and Flutter when a project needs to ship on mobile.',
-    'A large share of my work is e-commerce — fashion storefronts, a modular furniture platform and multi-brand retail systems — alongside responsive business sites, a fitness and coaching mobile platform, and internal process automation. I have also built chatbot and REST API integrations that connect these products to the systems a business already runs on.',
-    'I work with international clients through Workana, where I hold a 5.0 rating and rank first in Italy for IT & Programming. Clients consistently highlight the same things: clear communication, visible progress at every stage, and fast, accurate revisions. One client has hired me for more than one project — the outcome I care about most.',
+    "Hi, I'm Leonardo Antonio. I build web and mobile applications that actually work well — fast, clear, and easy to use on any screen.",
+    'I work mainly with React.js, Next.js and Node.js for custom platforms, and with WordPress and WooCommerce when a client needs to manage their own content without depending on a developer. I also build mobile apps for Android and iOS with React Native, plus API integrations and chatbots.',
+    'Over 10 years of building digital products taught me that the technical part is rarely the hard part. The hard part is understanding what the business needs before writing code, and speaking up early when something won\u2019t work the way it\u2019s expected to. That\u2019s why I work with constant communication, visible progress throughout, and fast revisions.',
+    'If you have a project in mind, tell me what you want to achieve and I\u2019ll give you an honest view of how I\u2019d approach it.',
   ],
   highlights: [
     {
@@ -128,8 +135,8 @@ export const services = {
       title: 'Mobile Application Development',
       summary: 'Cross-platform apps that feel native.',
       description:
-        'Mobile applications built with React Native and Flutter, including mobile app design and Windows Mobile work, delivered as one codebase across devices.',
-      points: ['React Native & Flutter', 'Mobile app design', 'Windows Mobile development'],
+        'Mobile applications for Android and iOS built with React Native, plus Flutter and Windows Mobile work and mobile app design — delivered as one codebase across devices.',
+      points: ['Android & iOS with React Native', 'Flutter & Windows Mobile', 'Mobile app design'],
     },
     {
       icon: 'api',
@@ -180,7 +187,7 @@ export const skills = {
       icon: 'mobile',
       name: 'Mobile',
       caption: 'Cross-platform delivery from a single codebase.',
-      items: ['React Native', 'Flutter', 'Windows Mobile', 'Mobile App Design'],
+      items: ['React Native', 'Android', 'iOS', 'Flutter', 'Windows Mobile', 'Mobile App Design'],
     },
     {
       icon: 'cart',
@@ -221,7 +228,8 @@ export const projects = {
   items: [
     {
       id: 'premium-fashion',
-      visual: 'ecommerce',
+      image: premiumFashionImg,
+      imageSize: [1440, 682],
       category: 'E-Commerce',
       title: 'Premium Fashion E-Commerce Website Development',
       overview:
@@ -238,7 +246,8 @@ export const projects = {
     },
     {
       id: 'modular-furniture',
-      visual: 'storefront',
+      image: modularFurnitureImg,
+      imageSize: [1440, 688],
       category: 'E-Commerce',
       title: 'Modern Modular Furniture E-Commerce Platform',
       overview:
@@ -255,7 +264,8 @@ export const projects = {
     },
     {
       id: 'multi-brand',
-      visual: 'api',
+      image: multiBrandImg,
+      imageSize: [1440, 702],
       category: 'Platform & API',
       title: 'Multi-Brand Fashion E-Commerce Platform',
       overview:
@@ -272,7 +282,8 @@ export const projects = {
     },
     {
       id: 'fitness-platform',
-      visual: 'fitness',
+      image: fitnessPlatformImg,
+      imageSize: [1440, 627],
       category: 'Mobile Application',
       title: 'Sports Coaching & Fitness Mobile Platform',
       overview:
@@ -289,24 +300,26 @@ export const projects = {
     },
     {
       id: 'apex-logistics',
-      visual: 'maps',
-      category: 'Logistics',
+      image: apexLogisticsImg,
+      imageSize: [1024, 1024],
+      category: 'Web Application',
       title: 'Apex Logistics',
       overview:
-        'A logistics web application built with React.js and TypeScript, giving an operations team a live picture of shipments, routes and status across the network in one interface.',
+        'An internal operations dashboard built with React.js and TypeScript, bringing active projects, tasks, deadlines, documents and invoicing into a single workspace so a team can see the state of everything it is running at a glance.',
       tech: ['React.js', 'TypeScript'],
       features: [
-        'Operations dashboard for active shipments',
-        'Route and stop visualisation',
-        'Status tracking across the delivery chain',
+        'Project overview with status, progress and deadlines',
+        'Task lists and an upcoming calendar in one view',
+        'Activity charts and document management',
         'TypeScript codebase for long-term safety',
       ],
       value:
-        'Replaces scattered status chasing with one operational view, so the team can answer where a shipment is without making a phone call.',
+        'Replaces scattered spreadsheets and separate tools with one workspace, so the state of every project is visible without chasing an update.',
     },
     {
       id: 'lumina-studio',
-      visual: 'studio',
+      image: luminaStudioImg,
+      imageSize: [1024, 1024],
       category: 'Web Platform',
       title: 'Lumina Studio',
       overview:

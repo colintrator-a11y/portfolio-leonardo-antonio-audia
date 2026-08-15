@@ -62,9 +62,8 @@ and the written client review. Project overviews and feature lists are written f
 title and stack — they contain **no invented metrics or outcome figures**, because the profile
 publishes none.
 
-Two profile fields were truncated behind a "View more" control and could not be read: the full
-"About me" text and the complete skills table beyond the first seven rows. If you paste those in,
-they can be dropped straight into `content.js`.
+The "About me" text is the client's own English version, supplied directly. The skills table beyond
+the first seven rows is still truncated behind a "View more" control on the profile.
 
 ### Before publishing
 
@@ -75,9 +74,13 @@ they can be dropped straight into `content.js`.
 
 ## Project screenshots
 
-The project "screenshots" are hand-drawn inline SVG interface mockups (`ProjectVisual.jsx`) — an
-e-commerce catalogue, a configurable product page, an API reference, a coaching app, a logistics
-map, a studio site and an automation workflow, one scene per real project. They stay crisp at any resolution, cost no network requests, and can be
+Six of the seven projects use the **real screenshots** published on the Workana portfolio, stored in
+`src/assets/projects/` as WebP (resized to 1440px wide, quality 82 — 401 KB for all six). Each is
+rendered at its own aspect ratio with `width`/`height` attributes set from `imageSize` in
+`content.js`, so no layout shift occurs and nothing is cropped.
+
+The seventh (the Pipefy protocols centre) has no published screenshot, so it falls back to an inline
+SVG process diagram in `ProjectVisual.jsx`. They stay crisp at any resolution, cost no network requests, and can be
 swapped for real screenshots by replacing `<ProjectVisual />` in `Projects.jsx` with an `<img>`.
 
 ## Design system
