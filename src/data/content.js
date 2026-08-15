@@ -107,7 +107,7 @@ const projectMedia = {
     tech: ['React.js', 'TypeScript'],
   },
   'lumina-studio': { image: luminaStudioImg, imageSize: [1024, 1024], tech: ['Next.js', 'CSS3'] },
-  'pipefy-protocols': { visual: 'automation', tech: ['Pipefy', 'Process Automation', 'Integrations'] },
+  'pipefy-protocols': { visual: 'pipefy', tech: ['Pipefy', 'Process Automation', 'Integrations'] },
 }
 
 const projectOrder = [

@@ -60,88 +60,148 @@ function BrowserChrome({ id, label }) {
   )
 }
 
-function Automation({ id }) {
-  const nodes = [
-    { x: 90, y: 130, label: 'Trigger' },
-    { x: 250, y: 100, label: 'Validate' },
-    { x: 250, y: 210, label: 'Enrich' },
-    { x: 410, y: 155, label: 'Approve' },
-    { x: 552, y: 155, label: 'Sync' },
+/* The delivered pipe as it appears inside Pipefy: phases, cards and the
+   automation that moves them. Brand blue sampled from pipefy.com. */
+function Pipefy() {
+  const BLUE = '#0054f0'
+  const INK = '#0a1020'
+  const BOARD = '#f4f6f9'
+  const CARD_BORDER = '#e3e7ef'
+
+  const t = (x, y, text, fill, size = 9, weight = '400', anchor = 'start') => (
+    <text
+      x={x}
+      y={y}
+      fill={fill}
+      fontSize={size}
+      fontWeight={weight}
+      textAnchor={anchor}
+      fontFamily="Helvetica, Arial, sans-serif"
+    >
+      {text}
+    </text>
+  )
+
+  const columns = [
+    {
+      name: 'Solicitação recebida',
+      count: '3',
+      cards: [
+        ['Protocolo 2451', 'Nota fiscal', '#0054f0', 'Fiscal'],
+        ['Protocolo 2452', 'Devolução', '#16a34a', 'Logística'],
+        ['Protocolo 2453', 'Cadastro', '#d97706', 'Jurídico'],
+      ],
+    },
+    {
+      name: 'Em análise',
+      count: '2',
+      cards: [
+        ['Protocolo 2448', 'Alvará sanitário', '#7c3aed', 'Regulatório'],
+        ['Protocolo 2449', 'Contrato', '#d97706', 'Jurídico'],
+      ],
+    },
+    {
+      name: 'Aprovação',
+      count: '1',
+      cards: [['Protocolo 2447', 'Licença ANVISA', '#7c3aed', 'Regulatório']],
+    },
+    {
+      name: 'Concluído',
+      count: '5',
+      cards: [
+        ['Protocolo 2440', 'Nota fiscal', '#0054f0', 'Fiscal'],
+        ['Protocolo 2441', 'Transporte', '#16a34a', 'Logística'],
+      ],
+    },
   ]
 
   return (
     <>
-      <BrowserChrome id={id} label="automation.platform/workflows" />
+      <rect x="0" y="0" width="640" height="400" rx="14" fill="#ffffff" />
+      <rect x="0.5" y="0.5" width="639" height="399" rx="13.5" fill="none" stroke={CARD_BORDER} />
 
-      {/* Connectors */}
-      {[
-        'M132 130 C180 130 190 100 208 100',
-        'M132 130 C180 130 190 210 208 210',
-        'M292 100 C340 100 350 155 368 155',
-        'M292 210 C340 210 350 155 368 155',
-        'M452 155 H510',
-      ].map((d, i) => (
-        <path key={i} d={d} fill="none" stroke={C.barMid} strokeWidth="1.8" strokeDasharray="6 6">
-          <animate attributeName="stroke-dashoffset" values="24;0" dur="1.8s" repeatCount="indefinite" />
-        </path>
-      ))}
-
-      {nodes.map((n, i) => (
-        <g key={n.label}>
-          <rect
-            x={n.x - 42}
-            y={n.y - 26}
-            width="84"
-            height="52"
-            rx="10"
-            fill={C.bg}
-            stroke={i === 3 ? C.accent : C.border}
-          />
-          <circle cx={n.x} cy={n.y - 6} r="9" fill={i === 3 ? C.accent : C.accentSoft} />
-          <text x={n.x} y={n.y + 19} fill={C.ink} fontSize="9" fontFamily="sans-serif" textAnchor="middle">
-            {n.label}
-          </text>
-        </g>
-      ))}
-
-      {/* Rule builder */}
-      <rect x="16" y="252" width="286" height="132" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="34" y="276" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        RULES
+      {/* Product top bar */}
+      <path d="M14 0 H626 A14 14 0 0 1 640 14 V40 H0 V14 A14 14 0 0 1 14 0 Z" fill="#ffffff" />
+      <line x1="0" y1="40" x2="640" y2="40" stroke={CARD_BORDER} />
+      <text
+        x="20"
+        y="26"
+        fill={INK}
+        fontSize="15"
+        fontWeight="700"
+        letterSpacing="-0.4"
+        fontFamily="Helvetica, Arial, sans-serif"
+      >
+        pipefy
       </text>
-      {[0, 1, 2].map((i) => (
-        <g key={i}>
-          <rect x="32" y={288 + i * 32} width="254" height="24" rx="7" fill={C.bg} stroke={C.hair} />
-          <rect x="42" y={297 + i * 32} width="38" height="7" rx="3.5" fill={C.barMid} />
-          <rect x="90" y={297 + i * 32} width="26" height="7" rx="3.5" fill={C.accent} fillOpacity="0.55" />
-          <rect x="126" y={297 + i * 32} width={110 - i * 22} height="7" rx="3.5" fill={C.barLight} />
-          <circle cx="272" cy={300 + i * 32} r="5.5" fill={i === 2 ? C.barLight : C.green} fillOpacity={i === 2 ? 1 : 0.85} />
-        </g>
+      <line x1="82" y1="12" x2="82" y2="28" stroke={CARD_BORDER} />
+      {t(94, 25, 'Kalk Distribuidora', '#6b7688', 9)}
+
+      <rect x="454" y="11" width="98" height="19" rx="9.5" fill={BLUE} />
+      {t(503, 24, '+  Novo card', '#ffffff', 8.5, '600', 'middle')}
+      {[572, 590, 608].map((cx, i) => (
+        <circle key={cx} cx={cx} cy="20" r="8" fill={['#dbe6fb', '#e6f3ea', '#f3e8fb'][i]} />
       ))}
 
-      {/* Audit log */}
-      <rect x="318" y="252" width="306" height="132" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="336" y="276" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        AUDIT LOG
-      </text>
-      {[
-        ['09:04', 'workflow.started', C.accent],
-        ['09:04', 'validation.passed', C.green],
-        ['09:05', 'approval.granted', C.green],
-        ['09:05', 'erp.sync.ok', C.green],
-      ].map(([time, event, color], i) => (
-        <g key={i}>
-          <text x="336" y={296 + i * 22} fill={C.muted} fontSize="9" fontFamily="monospace">
-            {time}
-          </text>
-          <circle cx="384" cy={292 + i * 22} r="3.5" fill={color} />
-          <text x="398" y={296 + i * 22} fill={C.ink} fontSize="9.5" fontFamily="monospace">
-            {event}
-          </text>
+      {/* Pipe title + tabs */}
+      {t(20, 62, 'Central de Protocolos Internos', INK, 12.5, '700')}
+      {['Pipe', 'Relatórios', 'Automações'].map((tab, i) => (
+        <g key={tab}>
+          {t(452 + i * 62, 62, tab, i === 0 ? BLUE : '#6b7688', 9, i === 0 ? '600' : '400')}
+          {i === 0 ? <rect x="450" y="68" width="26" height="2" rx="1" fill={BLUE} /> : null}
         </g>
       ))}
-      <rect x="336" y="360" width="272" height="7" rx="3.5" fill={C.barLight} />
-      <rect x="336" y="360" width="228" height="7" rx="3.5" fill={`url(#${id}-brand)`} />
+      <line x1="0" y1="78" x2="640" y2="78" stroke={CARD_BORDER} />
+
+      {/* Board */}
+      <rect x="0" y="78" width="640" height="322" fill={BOARD} />
+
+      {columns.map((col, ci) => {
+        const x = 16 + ci * 154
+        return (
+          <g key={col.name}>
+            {/* Phase header */}
+            {t(x, 100, col.name, INK, 9, '700')}
+            <rect x={x + 118} y={92} width="20" height="13" rx="6.5" fill="#e6eaf2" />
+            {t(x + 128, 101, col.count, '#5a6679', 8, '600', 'middle')}
+            <rect x={x} y={108} width="138" height="2" rx="1" fill={ci === 3 ? '#16a34a' : BLUE} opacity={ci === 3 ? 0.75 : 0.85} />
+
+            {col.cards.map(([code, kind, colour, label], i) => {
+              const y = 120 + i * 66
+              return (
+                <g key={code}>
+                  <rect x={x} y={y} width="138" height="58" rx="8" fill="#ffffff" stroke={CARD_BORDER} />
+                  <rect x={x} y={y} width="3" height="58" rx="1.5" fill={colour} />
+                  {t(x + 12, y + 17, code, INK, 8.6, '600')}
+                  {t(x + 12, y + 29, kind, '#6b7688', 8.2)}
+                  <rect x={x + 12} y={y + 36} width={label.length * 4.6 + 12} height="12" rx="6" fill={colour} fillOpacity="0.12" />
+                  {t(x + 18, y + 45, label, colour, 7, '600')}
+                  <circle cx={x + 118} cy={y + 42} r="6.5" fill="#eef1f6" />
+                  {t(x + 118, y + 45, 'LA', '#5a6679', 6, '700', 'middle')}
+                </g>
+              )
+            })}
+
+            {/* Automation marker on the approval phase */}
+            {ci === 2 ? (
+              <g>
+                <rect x={x} y={192} width="138" height="30" rx="8" fill="#ffffff" stroke={BLUE} strokeOpacity="0.35" strokeDasharray="4 3" />
+                <path d={`M${x + 16} ${203} l6 -8 l-1.5 6 l4 0 l-6.5 9 l1.5 -7 z`} fill={BLUE} />
+                {t(x + 30, 204, 'Automação ativa', BLUE, 7.5, '600')}
+                {t(x + 30, 214, 'move ao aprovar', '#6b7688', 7)}
+              </g>
+            ) : null}
+
+            {/* Remaining cards in the done column */}
+            {ci === 3 ? t(x + 4, 268, '+ 3 concluídos', '#6b7688', 8) : null}
+          </g>
+        )
+      })}
+
+      {/* SLA strip */}
+      <rect x="16" y="352" width="608" height="32" rx="8" fill="#ffffff" stroke={CARD_BORDER} />
+      <circle cx="34" cy="368" r="5" fill="#16a34a" />
+      {t(48, 371, 'Fase 2 implantada · quatro etapas definidas · rastreabilidade completa por fase', '#5a6679', 8.5)}
     </>
   )
 }
@@ -593,7 +653,7 @@ function ChatOps() {
 }
 
 const scenes = {
-  automation: Automation,
+  pipefy: Pipefy,
   chatbot: Chatbot,
   python: PythonAutomation,
   chatops: ChatOps,
