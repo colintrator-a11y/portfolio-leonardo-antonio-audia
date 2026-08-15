@@ -32,17 +32,17 @@
 }
 
 .nav__mark {
-  display: grid;
-  place-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 9px;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper-sunken);
+  box-shadow: 0 0 0 1px var(--line), 0 0 0 3px var(--paper), 0 0 0 4px var(--accent-soft);
+  transition: box-shadow 0.35s var(--ease);
+}
+
+.nav__brand:hover .nav__mark {
+  box-shadow: 0 0 0 1px var(--line), 0 0 0 3px var(--paper), 0 0 0 4px rgba(29, 78, 216, 0.45);
 }
 
 .nav__brandText {

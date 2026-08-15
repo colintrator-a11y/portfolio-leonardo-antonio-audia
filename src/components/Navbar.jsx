@@ -41,9 +41,14 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'is-scrolled' : ''}`.trim()}>
       <div className="container nav__inner">
         <a className="nav__brand" href="#home" onClick={go('home')}>
-          <span className="nav__mark" aria-hidden="true">
-            {profile.monogram}
-          </span>
+          <img
+            className="nav__mark"
+            src={profile.avatar}
+            alt=""
+            width="172"
+            height="172"
+            decoding="async"
+          />
           <span className="nav__brandText">
             <strong>{profile.shortName}</strong>
             <small>Senior Full-Stack Developer</small>

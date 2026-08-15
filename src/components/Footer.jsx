@@ -17,9 +17,15 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brandBlock">
             <a className="footer__brand" href="#home" onClick={go('home')}>
-              <span className="footer__mark" aria-hidden="true">
-                {profile.monogram}
-              </span>
+              <img
+                className="footer__mark"
+                src={profile.avatar}
+                alt=""
+                width="172"
+                height="172"
+                loading="lazy"
+                decoding="async"
+              />
               <span>
                 <strong>{profile.name}</strong>
                 <small>{profile.title}</small>

@@ -17,7 +17,7 @@ npm run preview  # serve the production build locally
 
 ```
 index.html               SEO meta, Open Graph, JSON-LD Person schema, fonts
-public/                  robots.txt, sitemap.xml
+public/                  robots.txt, sitemap.xml, favicons
 src/
   main.jsx               entry point
   App.jsx                page composition + ambient background
@@ -95,8 +95,11 @@ blue header, inline keyboard and status tracker; a support widget open over a li
 dark editor showing real Python source with its terminal output. They are illustrations of each
 build, **not** captured screenshots of a live deployment.
 
-The portrait in the About card is `src/assets/avatar.webp` — the Workana profile photo with its teal
-ring masked off, so the site applies its own ring in the page palette.
+The portrait in `src/assets/avatar.webp` — the Workana profile photo with its teal ring masked off —
+is the site's logo. It appears as the brand mark in the navigation, in the footer, in the About card,
+and as the browser tab icon (`public/favicon.png`, `favicon-32.png`, `apple-touch-icon.png`, all
+generated from the same file). Workana serves it at 192px maximum; drop a higher-resolution copy in
+and regenerate if the mark is ever used larger.
 
 These are **not** client deliveries and the site never presents them as such: they live under their
 own heading, are numbered "Example 01/02" rather than "Project", each carries a dashed *Capability
