@@ -346,10 +346,211 @@ function PythonAutomation({ id }) {
   )
 }
 
+/* WhatsApp and Telegram bot conversations, drawn in each platform's own
+   chrome so the result reads like a screenshot of the running bots. */
+function ChatOps() {
+  const PH_W = 288
+  const PH_H = 392
+  const LEFT = 20
+  const RIGHT = 332
+  const TOP = 22
+
+  const waIn = [
+    ['Hi! I am the Bella Boutique', 'assistant. How can I help?'],
+  ]
+  const waOut = [['Where is my order?']]
+  const waIn2 = [
+    ['Order #48213 was shipped today', 'with SDA Express.'],
+    ['Estimated delivery: tomorrow', 'before 18:00.'],
+  ]
+  const waOut2 = [['Perfect, thanks!']]
+
+  const bubble = (x, y, w, h, fill, stroke, tail) => (
+    <>
+      <rect x={x} y={y} width={w} height={h} rx="8" fill={fill} stroke={stroke || 'none'} />
+      {tail === 'left' ? <path d={`M${x} ${y + 6} l-5 -4 l5 -3 z`} fill={fill} /> : null}
+      {tail === 'right' ? <path d={`M${x + w} ${y + 6} l5 -4 l-5 -3 z`} fill={fill} /> : null}
+    </>
+  )
+
+  const line = (x, y, text, fill, size = 9, anchor = 'start', weight = '400') => (
+    <text x={x} y={y} fill={fill} fontSize={size} fontFamily="Helvetica, Arial, sans-serif" textAnchor={anchor} fontWeight={weight}>
+      {text}
+    </text>
+  )
+
+  const ticks = (x, y, color) => (
+    <path
+      d={`M${x} ${y} l2.2 2.4 l4.4 -5 M${x + 4} ${y} l2.2 2.4 l4.4 -5`}
+      fill="none"
+      stroke={color}
+      strokeWidth="1.1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  )
+
+  return (
+    <>
+      <rect x="0" y="0" width="640" height="452" rx="14" fill="#fbfcfe" />
+      <rect x="0.5" y="0.5" width="639" height="451" rx="13.5" fill="none" stroke={C.border} />
+
+      {/* ================= WhatsApp ================= */}
+      <g>
+        <rect x={LEFT} y={TOP} width={PH_W} height={PH_H} rx="20" fill="#ffffff" stroke={C.barMid} strokeWidth="1.2" />
+        <clipPath id="wa-clip">
+          <rect x={LEFT + 5} y={TOP + 5} width={PH_W - 10} height={PH_H - 10} rx="16" />
+        </clipPath>
+        <g clipPath="url(#wa-clip)">
+          <rect x={LEFT + 5} y={TOP + 5} width={PH_W - 10} height={PH_H - 10} fill="#ece5dd" />
+
+          {/* header */}
+          <rect x={LEFT + 5} y={TOP + 5} width={PH_W - 10} height="46" fill="#008069" />
+          <path d={`M${LEFT + 20} ${TOP + 28} l-6 -5 l6 -5`} stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+          <circle cx={LEFT + 42} cy={TOP + 28} r="13" fill="#ffffff" fillOpacity="0.25" />
+          <circle cx={LEFT + 42} cy={TOP + 24} r="4.4" fill="#ffffff" fillOpacity="0.85" />
+          <path d={`M${LEFT + 34} ${TOP + 38} a8 8 0 0 1 16 0 z`} fill="#ffffff" fillOpacity="0.85" />
+          {line(LEFT + 62, TOP + 25, 'Bella Boutique', '#ffffff', 10.5, 'start', '600')}
+          {line(LEFT + 62, TOP + 37, 'online', '#d6efe6', 8.5)}
+          <circle cx={LEFT + 246} cy={TOP + 28} r="1.6" fill="#fff" />
+          <circle cx={LEFT + 246} cy={TOP + 22} r="1.6" fill="#fff" />
+          <circle cx={LEFT + 246} cy={TOP + 34} r="1.6" fill="#fff" />
+
+          {/* date chip */}
+          <rect x={LEFT + 112} y={TOP + 62} width="64" height="17" rx="8.5" fill="#ffffff" fillOpacity="0.85" />
+          {line(LEFT + 144, TOP + 74, 'TODAY', '#5c6b73', 7.5, 'middle', '600')}
+
+          {/* bot message */}
+          {bubble(LEFT + 16, TOP + 90, 178, 44, '#ffffff', null, 'left')}
+          {waIn[0].map((t, i) => line(LEFT + 26, TOP + 107 + i * 13, t, '#111b21', 9))}
+          {line(LEFT + 182, TOP + 129, '09:41', '#8696a0', 7)}
+
+          {/* user message */}
+          {bubble(LEFT + 128, TOP + 144, 138, 26, '#d9fdd3', null, 'right')}
+          {waOut[0].map((t, i) => line(LEFT + 138, TOP + 161 + i * 13, t, '#111b21', 9))}
+          {line(LEFT + 236, TOP + 166, '09:41', '#667781', 7)}
+          {ticks(LEFT + 254, TOP + 164, '#53bdeb')}
+
+          {/* bot reply */}
+          {bubble(LEFT + 16, TOP + 180, 190, 58, '#ffffff', null, 'left')}
+          {waIn2[0].map((t, i) => line(LEFT + 26, TOP + 197 + i * 13, t, '#111b21', 9))}
+          {waIn2[1].map((t, i) => line(LEFT + 26, TOP + 223 + i * 13, t, '#111b21', 9))}
+
+          {/* order card */}
+          <rect x={LEFT + 16} y={TOP + 244} width={190} height="56" rx="8" fill="#ffffff" />
+          <rect x={LEFT + 22} y={TOP + 250} width={178} height="26" rx="5" fill="#f0f2f5" />
+          <circle cx={LEFT + 36} cy={TOP + 263} r="7.5" fill="#008069" fillOpacity="0.15" />
+          <path d={`M${LEFT + 32} ${TOP + 263} l3 3 l6 -6`} stroke="#008069" strokeWidth="1.4" fill="none" strokeLinecap="round" />
+          {line(LEFT + 50, TOP + 261, 'Out for delivery', '#111b21', 8.5, 'start', '600')}
+          {line(LEFT + 50, TOP + 270, 'SDA Express · #48213', '#667781', 7.5)}
+          <rect x={LEFT + 22} y={TOP + 282} width={178} height="12" rx="6" fill="#008069" fillOpacity="0.12" />
+          {line(LEFT + 111, TOP + 291, 'TRACK MY PARCEL', '#008069', 7.5, 'middle', '700')}
+
+          {/* user reply */}
+          {bubble(LEFT + 168, TOP + 308, 98, 26, '#d9fdd3', null, 'right')}
+          {line(LEFT + 178, TOP + 325, 'Perfect, thanks!', '#111b21', 9)}
+          {ticks(LEFT + 254, TOP + 328, '#53bdeb')}
+
+          {/* input bar */}
+          <rect x={LEFT + 5} y={TOP + PH_H - 52} width={PH_W - 10} height="47" fill="#f0f2f5" />
+          <rect x={LEFT + 14} y={TOP + PH_H - 44} width={214} height="30" rx="15" fill="#ffffff" />
+          {line(LEFT + 30, TOP + PH_H - 24, 'Message', '#8696a0', 9)}
+          <circle cx={LEFT + 252} cy={TOP + PH_H - 29} r="15" fill="#008069" />
+          <path d={`M${LEFT + 246} ${TOP + PH_H - 35} l12 6 l-12 6 l3 -6 z`} fill="#ffffff" />
+        </g>
+        {line(LEFT + 4, TOP + PH_H + 22, 'WhatsApp Business API', C.muted, 9, 'start', '600')}
+      </g>
+
+      {/* ================= Telegram ================= */}
+      <g>
+        <rect x={RIGHT} y={TOP} width={PH_W} height={PH_H} rx="20" fill="#ffffff" stroke={C.barMid} strokeWidth="1.2" />
+        <clipPath id="tg-clip">
+          <rect x={RIGHT + 5} y={TOP + 5} width={PH_W - 10} height={PH_H - 10} rx="16" />
+        </clipPath>
+        <g clipPath="url(#tg-clip)">
+          <rect x={RIGHT + 5} y={TOP + 5} width={PH_W - 10} height={PH_H - 10} fill="#eef3f7" />
+
+          {/* header */}
+          <rect x={RIGHT + 5} y={TOP + 5} width={PH_W - 10} height="46" fill="#527da3" />
+          <path d={`M${RIGHT + 20} ${TOP + 28} l-6 -5 l6 -5`} stroke="#fff" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+          <circle cx={RIGHT + 42} cy={TOP + 28} r="13" fill="#ffffff" fillOpacity="0.25" />
+          {line(RIGHT + 42, TOP + 32, 'BB', '#ffffff', 10, 'middle', '700')}
+          {line(RIGHT + 62, TOP + 25, 'BellaBoutiqueBot', '#ffffff', 10.5, 'start', '600')}
+          {line(RIGHT + 62, TOP + 37, 'bot', '#cfe1f0', 8.5)}
+
+          {/* bot greeting */}
+          {bubble(RIGHT + 16, TOP + 68, 196, 44, '#ffffff', null, 'left')}
+          {line(RIGHT + 26, TOP + 85, 'Welcome back, Marco.', '#0f1419', 9)}
+          {line(RIGHT + 26, TOP + 98, 'What would you like to do?', '#0f1419', 9)}
+          {line(RIGHT + 196, TOP + 107, '09:38', '#8b9aa7', 7)}
+
+          {/* inline keyboard */}
+          {['Track my order', 'Book a fitting', 'Talk to a human'].map((label, i) => (
+            <g key={label}>
+              <rect
+                x={RIGHT + 16}
+                y={TOP + 118 + i * 26}
+                width={196}
+                height="22"
+                rx="6"
+                fill="#ffffff"
+                stroke="#d7e3ec"
+              />
+              {line(RIGHT + 114, TOP + 133 + i * 26, label, '#2b7cd3', 8.5, 'middle', '600')}
+            </g>
+          ))}
+
+          {/* user tap */}
+          {bubble(RIGHT + 128, TOP + 200, 138, 26, '#effdde', null, 'right')}
+          {line(RIGHT + 138, TOP + 217, 'Track my order', '#0f1419', 9)}
+          {line(RIGHT + 236, TOP + 222, '09:38', '#5eaa5e', 7)}
+          {ticks(RIGHT + 254, TOP + 220, '#4fae4e')}
+
+          {/* bot answer + status card */}
+          {bubble(RIGHT + 16, TOP + 236, 200, 30, '#ffffff', null, 'left')}
+          {line(RIGHT + 26, TOP + 254, 'Order #48213 — out for delivery', '#0f1419', 9)}
+
+          <rect x={RIGHT + 16} y={TOP + 272} width={200} height="62" rx="8" fill="#ffffff" />
+          {line(RIGHT + 28, TOP + 289, 'DELIVERY STATUS', '#8b9aa7', 7, 'start', '700')}
+          {[
+            ['Packed', true],
+            ['Shipped', true],
+            ['Out for delivery', true],
+            ['Delivered', false],
+          ].map(([label, done], i) => (
+            <g key={label}>
+              <circle cx={RIGHT + 32 + i * 46} cy={TOP + 302} r="4.6" fill={done ? '#4fae4e' : '#d7e3ec'} />
+              {i < 3 ? (
+                <rect x={RIGHT + 37 + i * 46} y={TOP + 301} width="36" height="2" fill={done ? '#4fae4e' : '#d7e3ec'} />
+              ) : null}
+            </g>
+          ))}
+          {line(RIGHT + 28, TOP + 322, 'Arriving today before 18:00', '#0f1419', 8)}
+
+          {/* input bar */}
+          <rect x={RIGHT + 5} y={TOP + PH_H - 52} width={PH_W - 10} height="47" fill="#ffffff" />
+          <line x1={RIGHT + 5} y1={TOP + PH_H - 52} x2={RIGHT + PH_W - 5} y2={TOP + PH_H - 52} stroke="#e3ebf1" />
+          {line(RIGHT + 22, TOP + PH_H - 24, 'Message', '#8b9aa7', 9)}
+          <rect x={RIGHT + 196} y={TOP + PH_H - 38} width="30" height="16" rx="4" fill="#eef3f7" />
+          {line(RIGHT + 211, TOP + PH_H - 27, 'MENU', '#527da3', 7, 'middle', '700')}
+          <path d={`M${RIGHT + 246} ${TOP + PH_H - 36} l14 7 l-14 7 l3 -7 z`} fill="#527da3" />
+        </g>
+        {line(RIGHT + 4, TOP + PH_H + 22, 'Telegram Bot API', C.muted, 9, 'start', '600')}
+      </g>
+    </>
+  )
+}
+
 const scenes = {
   automation: Automation,
   chatbot: Chatbot,
   python: PythonAutomation,
+  chatops: ChatOps,
+}
+
+/* Scenes that need a canvas other than the default 640x400. */
+const sizes = {
+  chatops: [640, 452],
 }
 
 /**
@@ -361,11 +562,12 @@ export default function ProjectVisual({ variant, title }) {
   if (!Scene) return null
 
   const id = `pv-${variant}`
+  const [vw, vh] = sizes[variant] ?? [W, H]
 
   return (
     <svg
       className="projectVisual"
-      viewBox={`0 0 ${W} ${H}`}
+      viewBox={`0 0 ${vw} ${vh}`}
       role="img"
       aria-label={`Interface diagram for ${title}`}
       preserveAspectRatio="xMidYMid meet"

@@ -361,12 +361,29 @@ export const projects = {
  */
 export const examples = {
   eyebrow: 'Capability Examples',
-  heading: 'Chatbot and Python automation builds',
+  heading: 'Chatbot, messaging and Python automation builds',
   intro:
-    'Reference builds rather than client deliveries — shown to make concrete what the chatbot and Python work on my skills list actually looks like in practice.',
+    'Reference builds rather than client deliveries — shown to make concrete what the chatbot, messaging and Python work on my skills list actually looks like in practice.',
   badge: 'Capability example',
   note: 'These two are reference builds, not client projects. Every project above was delivered for a paying client.',
   items: [
+    {
+      id: 'whatsapp-telegram-bot',
+      visual: 'chatops',
+      category: 'Messaging Chatbot',
+      title: 'WhatsApp & Telegram Chatbot',
+      overview:
+        'A single bot serving both WhatsApp and Telegram from one Node.js backend. Customers ask about an order, book an appointment or reach a person, and get an answer in the app they already have open — with Telegram inline buttons and WhatsApp interactive replies driven by the same conversation logic.',
+      tech: ['Chatbot', 'WhatsApp Business API', 'Telegram Bot API', 'Node.js', 'Python', 'REST API'],
+      features: [
+        'One conversation engine behind both platforms',
+        'Telegram inline keyboards and WhatsApp quick replies',
+        'Live order and booking lookups through REST integrations',
+        'Handover to a human with the full thread attached',
+      ],
+      value:
+        'Answers the routine questions where customers already are, at any hour, and only involves a person when the conversation actually needs one.',
+    },
     {
       id: 'support-chatbot',
       visual: 'chatbot',

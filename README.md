@@ -85,8 +85,14 @@ SVG process diagram in `ProjectVisual.jsx`.
 ### Capability examples
 
 Below the client work sits a separate **Capability examples** block (`examples` in `content.js`) with
-two reference builds — a customer support chatbot and a scheduled Python data pipeline — added to
-demonstrate the Chatbot and Python skills on the profile, which have no client project behind them.
+three reference builds — a WhatsApp & Telegram chatbot, a customer support chatbot and a scheduled
+Python data pipeline — added to demonstrate the Chatbot and Python skills on the profile, which have
+no client project behind them.
+
+The WhatsApp and Telegram conversations are drawn as inline SVG in each platform's own chrome
+(`ChatOps` in `ProjectVisual.jsx`): WhatsApp's green header, beige canvas and delivery ticks;
+Telegram's blue header, inline keyboard and status tracker. They are illustrations of the bot flow,
+**not** captured screenshots of a live deployment.
 
 These are **not** client deliveries and the site never presents them as such: they live under their
 own heading, are numbered "Example 01/02" rather than "Project", each carries a dashed *Capability
