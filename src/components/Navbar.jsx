@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
-import { nav, profile } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import useScrollSpy from '../hooks/useScrollSpy'
 import scrollToSection from '../utils/scrollToSection'
 import Icon from './ui/Icon'
+import LanguageSwitcher from './LanguageSwitcher'
 import './Navbar.css'
 
 export default function Navbar() {
-  const ids = useMemo(() => nav.map((item) => item.id), [])
+  const { nav, profile, hero, ui } = useContent()
+  const ids = useMemo(() => nav.map((item) => item.id), [nav])
   const active = useScrollSpy(ids)
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -51,11 +53,11 @@ export default function Navbar() {
           />
           <span className="nav__brandText">
             <strong>{profile.shortName}</strong>
-            <small>Senior Full-Stack Developer</small>
+            <small>{profile.navRole}</small>
           </span>
         </a>
 
-        <nav className="nav__links" aria-label="Primary">
+        <nav className="nav__links" aria-label={ui.primaryNav}>
           {nav.map((item) => (
             <a
               key={item.id}
@@ -70,16 +72,19 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__actions">
+          <LanguageSwitcher />
+
           <a className="btn btn--primary nav__cta" href="#projects" onClick={go('projects')}>
-            View Projects
+            {hero.primaryCta.label}
             <Icon name="arrowRight" className="btn__icon" />
           </a>
+
           <button
             type="button"
             className="nav__toggle"
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? ui.closeMenu : ui.openMenu}
             onClick={() => setOpen((value) => !value)}
           >
             <Icon name={open ? 'close' : 'menu'} size={22} strokeWidth={1.8} />
@@ -92,7 +97,7 @@ export default function Navbar() {
         className={`nav__drawer ${open ? 'is-open' : ''}`.trim()}
         aria-hidden={!open}
       >
-        <nav className="nav__drawerLinks" aria-label="Mobile">
+        <nav className="nav__drawerLinks" aria-label={ui.mobileNav}>
           {nav.map((item, index) => (
             <a
               key={item.id}
@@ -106,6 +111,8 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+
+          <LanguageSwitcher variant="inline" />
         </nav>
       </div>
 

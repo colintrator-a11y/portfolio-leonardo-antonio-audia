@@ -1,10 +1,12 @@
-import { about, profile } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
 import './About.css'
 
 export default function About() {
+  const { about, profile, ui } = useContent()
+
   return (
     <section className="section section--alt" id="about" aria-labelledby="about-title">
       <div className="container">
@@ -61,7 +63,7 @@ export default function About() {
               </dl>
 
               <div className="about__block">
-                <h4 className="about__blockTitle">Certifications</h4>
+                <h4 className="about__blockTitle">{ui.certifications}</h4>
                 <ul className="about__certs">
                   {about.certifications.map((cert) => (
                     <li key={cert.name}>
@@ -73,7 +75,7 @@ export default function About() {
               </div>
 
               <div className="about__block">
-                <h4 className="about__blockTitle">Languages</h4>
+                <h4 className="about__blockTitle">{ui.languagesTitle}</h4>
                 <ul className="about__langs">
                   {about.languages.map((lang) => (
                     <li key={lang.name}>
@@ -91,10 +93,7 @@ export default function About() {
                 rel="noopener noreferrer"
               >
                 <Icon name="globe" size={17} />
-                <span>
-                  Verified Workana profile — 5.0 rating, Silver level, ranked #1 in Italy for IT &amp;
-                  Programming.
-                </span>
+                <span>{ui.workanaNote}</span>
               </a>
             </div>
           </Reveal>

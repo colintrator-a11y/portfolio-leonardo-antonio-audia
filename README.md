@@ -21,7 +21,10 @@ public/                  robots.txt, sitemap.xml, favicons
 src/
   main.jsx               entry point
   App.jsx                page composition + ambient background
-  data/content.js        ← ALL site copy lives here
+  i18n/
+    translations.js      ← ALL site copy, in English, Portuguese and Spanish
+    LanguageContext.jsx  provider, detection and persistence
+  data/content.js        shared assets + buildContent(lang)
   hooks/
     useReveal.js         IntersectionObserver scroll-reveal
     useScrollSpy.js      active-section tracking for the nav
@@ -30,6 +33,7 @@ src/
   styles/global.css      design tokens, layout primitives, buttons, chips
   components/
     Navbar.jsx           sticky nav, scroll spy, mobile drawer
+    LanguageSwitcher.jsx dropdown in the nav, button row in the drawer
     Hero.jsx             headline, CTAs, pillars, stat band
     HeroVisual.jsx       animated code-window mockup
     About.jsx            biography, highlights, profile card
@@ -46,10 +50,22 @@ src/
 
 Each component keeps its styles in a sibling `.css` file, imported by the component.
 
+## Languages
+
+The site ships in **English, Portuguese and Spanish**. The switcher sits in the navigation (a
+dropdown) and in the mobile drawer (a row of buttons). The chosen language is stored in
+`localStorage`; a first-time visitor gets their browser's language if it is one of the three, and
+English otherwise. Switching updates `<html lang>` so screen readers and search engines follow.
+
+To add a language: append it to `languages` in `src/i18n/translations.js`, add a locale object with
+the same shape as `en`, and the switcher picks it up automatically. Italian is the obvious next one.
+
 ## Editing content
 
 Everything readable on the page — headline, biography, services, skills, projects, process steps,
-testimonials, footer — comes from `src/data/content.js`. No component edits are needed to change copy.
+testimonials, footer, and every UI label — comes from `src/i18n/translations.js`, one block per
+language. Language-independent data (images, technology names, certifications, the Workana URL)
+lives in `src/data/content.js`, which merges the two with `buildContent(lang)`.
 
 ### Content provenance
 

@@ -1,10 +1,12 @@
-import { services } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
 import './Services.css'
 
 export default function Services() {
+  const { services } = useContent()
+
   return (
     <section className="section" id="services" aria-labelledby="services-title">
       <div className="container">

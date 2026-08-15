@@ -8,8 +8,11 @@ import Projects from './components/Projects'
 import Services from './components/Services'
 import Skills from './components/Skills'
 import Testimonials from './components/Testimonials'
+import { useContent } from './i18n/LanguageContext'
 
 export default function App() {
+  const { ui } = useContent()
+
   return (
     <div className="app">
       <div className="backdrop" aria-hidden="true">
@@ -20,7 +23,7 @@ export default function App() {
       </div>
 
       <a className="skip-link" href="#main">
-        Skip to content
+        {ui.skipToContent}
       </a>
 
       <Navbar />

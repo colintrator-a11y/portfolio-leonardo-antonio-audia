@@ -1,10 +1,12 @@
-import { skills } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
 import './Skills.css'
 
 export default function Skills() {
+  const { skills, ui } = useContent()
+
   return (
     <section className="section section--alt" id="skills" aria-labelledby="skills-title">
       <div className="container">
@@ -46,16 +48,16 @@ export default function Skills() {
 
         <Reveal className="verified">
           <div className="verified__head">
-            <h3 className="verified__title">Recorded experience</h3>
-            <p className="verified__note">As published on my Workana profile</p>
+            <h3 className="verified__title">{ui.recordedExperience}</h3>
+            <p className="verified__note">{ui.recordedNote}</p>
           </div>
 
           <table className="verified__table">
             <thead>
               <tr>
-                <th scope="col">Skill</th>
-                <th scope="col">Projects</th>
-                <th scope="col">Experience</th>
+                <th scope="col">{ui.tableSkill}</th>
+                <th scope="col">{ui.tableProjects}</th>
+                <th scope="col">{ui.tableExperience}</th>
               </tr>
             </thead>
             <tbody>

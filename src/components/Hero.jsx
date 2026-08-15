@@ -1,25 +1,25 @@
-import { hero, profile } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import scrollToSection from '../utils/scrollToSection'
 import Icon from './ui/Icon'
 import HeroVisual from './HeroVisual'
 import './Hero.css'
 
-function Headline() {
-  const { headline, headlineAccent } = hero
-  const index = headline.indexOf(headlineAccent)
-
+function Headline({ headline, accent }) {
+  const index = headline.indexOf(accent)
   if (index === -1) return <>{headline}</>
 
   return (
     <>
       {headline.slice(0, index)}
-      <span className="grad-text">{headlineAccent}</span>
-      {headline.slice(index + headlineAccent.length)}
+      <span className="grad-text">{accent}</span>
+      {headline.slice(index + accent.length)}
     </>
   )
 }
 
 export default function Hero() {
+  const { hero, profile } = useContent()
+
   const go = (id) => (event) => {
     event.preventDefault()
     scrollToSection(id)
@@ -35,7 +35,7 @@ export default function Hero() {
           </span>
 
           <h1 className="hero__title">
-            <Headline />
+            <Headline headline={hero.headline} accent={hero.headlineAccent} />
           </h1>
 
           <p className="hero__role">{profile.title}</p>

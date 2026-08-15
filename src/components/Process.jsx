@@ -1,9 +1,11 @@
-import { process } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
 import './Process.css'
 
 export default function Process() {
+  const { process } = useContent()
+
   return (
     <section className="section section--alt" id="process" aria-labelledby="process-title">
       <div className="container">

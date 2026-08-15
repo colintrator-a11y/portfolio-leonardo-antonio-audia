@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import Icon from './ui/Icon'
+import { useContent } from '../i18n/LanguageContext'
 
 export default function BackToTop() {
+  const { ui } = useContent()
   const [shown, setShown] = useState(false)
 
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function BackToTop() {
       type="button"
       className={`to-top ${shown ? 'is-shown' : ''}`.trim()}
       onClick={toTop}
-      aria-label="Back to top"
+      aria-label={ui.backToTop}
       tabIndex={shown ? 0 : -1}
     >
       <Icon name="arrowUp" strokeWidth={1.9} />

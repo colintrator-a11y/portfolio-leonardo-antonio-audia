@@ -1,10 +1,12 @@
-import { profile, testimonials } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
 import Reveal from './ui/Reveal'
 import SectionHead from './ui/SectionHead'
 import './Testimonials.css'
 
 export default function Testimonials() {
+  const { testimonials, profile, ui } = useContent()
+
   return (
     <section className="section" id="testimonials" aria-labelledby="testimonials-title">
       <div className="container">
@@ -50,7 +52,7 @@ export default function Testimonials() {
           ))}
 
           <Reveal delay={120} className="card engagements">
-            <h3 className="engagements__title">Completed engagements</h3>
+            <h3 className="engagements__title">{ui.completedEngagements}</h3>
             <p className="engagements__intro">{testimonials.repeatNote}</p>
 
             <ul className="engagements__list">
@@ -59,7 +61,7 @@ export default function Testimonials() {
                   <span className="engagements__rating">{item.rating}</span>
                   <span className="engagements__body">
                     <strong>{item.title}</strong>
-                    <small>Client {item.client}</small>
+                    <small>{`${ui.clientPrefix} ${item.client}`}</small>
                   </span>
                 </li>
               ))}
@@ -71,7 +73,7 @@ export default function Testimonials() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View the verified profile
+              {ui.viewProfile}
               <Icon name="arrowRight" size={14} />
             </a>
           </Reveal>

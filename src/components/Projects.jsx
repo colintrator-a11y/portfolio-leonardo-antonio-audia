@@ -1,4 +1,4 @@
-import { examples, projects } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
 import ProjectVisual from './ProjectVisual'
 import Reveal from './ui/Reveal'
@@ -9,7 +9,7 @@ import './Projects.css'
  * One project row. `badge` marks entries that are capability examples rather
  * than client deliveries, so the two can never be mistaken for each other.
  */
-function ProjectRow({ project, index, label, badge, eager = false }) {
+function ProjectRow({ project, index, label, badge, ui, eager = false }) {
   return (
     <Reveal className={`project ${index % 2 === 1 ? 'project--flip' : ''}`.trim()}>
       <article className="card project__card">
@@ -43,7 +43,7 @@ function ProjectRow({ project, index, label, badge, eager = false }) {
           <p className="project__overview">{project.overview}</p>
 
           <div className="project__block">
-            <h4 className="project__label">Technologies Used</h4>
+            <h4 className="project__label">{ui.technologiesUsed}</h4>
             <ul className="project__tech">
               {project.tech.map((tech) => (
                 <li key={tech} className="chip">
@@ -54,7 +54,7 @@ function ProjectRow({ project, index, label, badge, eager = false }) {
           </div>
 
           <div className="project__block">
-            <h4 className="project__label">Key Features</h4>
+            <h4 className="project__label">{ui.keyFeatures}</h4>
             <ul className="project__features">
               {project.features.map((feature) => (
                 <li key={feature}>
@@ -70,7 +70,7 @@ function ProjectRow({ project, index, label, badge, eager = false }) {
               <Icon name="spark" size={16} />
             </span>
             <div>
-              <h4 className="project__label project__label--inline">Business Value</h4>
+              <h4 className="project__label project__label--inline">{ui.businessValue}</h4>
               <p>{project.value}</p>
             </div>
           </div>
@@ -81,6 +81,8 @@ function ProjectRow({ project, index, label, badge, eager = false }) {
 }
 
 export default function Projects() {
+  const { projects, examples, ui } = useContent()
+
   return (
     <section className="section" id="projects" aria-labelledby="projects-title">
       <div className="container">
@@ -97,7 +99,8 @@ export default function Projects() {
               key={project.id}
               project={project}
               index={index}
-              label="Project"
+              label={ui.projectWord}
+              ui={ui}
               eager={index === 0}
             />
           ))}
@@ -115,8 +118,9 @@ export default function Projects() {
               key={project.id}
               project={project}
               index={index}
-              label="Example"
+              label={ui.exampleWord}
               badge={examples.badge}
+              ui={ui}
             />
           ))}
         </div>

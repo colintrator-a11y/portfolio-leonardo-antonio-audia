@@ -1,9 +1,10 @@
-import { footer, profile } from '../data/content'
+import { useContent } from '../i18n/LanguageContext'
 import scrollToSection from '../utils/scrollToSection'
 import Icon from './ui/Icon'
 import './Footer.css'
 
 export default function Footer() {
+  const { footer, profile, ui } = useContent()
   const year = new Date().getFullYear()
 
   const go = (id) => (event) => {
@@ -65,11 +66,9 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p>
-            © {year} {profile.name}. All rights reserved.
+            © {year} {profile.name}. {ui.rightsReserved}
           </p>
-          <p className="footer__built">
-            Designed &amp; developed with React — engineered for performance and accessibility.
-          </p>
+          <p className="footer__built">{ui.builtWith}</p>
         </div>
       </div>
     </footer>

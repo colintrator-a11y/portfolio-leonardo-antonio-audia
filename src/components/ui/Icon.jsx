@@ -76,6 +76,7 @@ const paths = {
   star: (
     <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8L12 3.6Z" />
   ),
+  chevronDown: <path d="m6 9.5 6 6 6-6" />,
   arrowRight: (
     <>
       <path d="M5 12h13" />
