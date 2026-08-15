@@ -10,6 +10,7 @@
  * they deliberately contain no invented metrics or outcome figures.
  */
 
+import avatarImg from '../assets/avatar.webp'
 import premiumFashionImg from '../assets/projects/premium-fashion.webp'
 import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
 import multiBrandImg from '../assets/projects/multi-brand.webp'
@@ -21,6 +22,7 @@ export const profile = {
   name: 'Leonardo Antonio Audia',
   shortName: 'Leonardo Audia',
   monogram: 'LA',
+  avatar: avatarImg,
   title: 'Senior Full-Stack Developer | Web, Mobile & E-Commerce',
   location: 'Italy',
   workanaUrl: 'https://www.workana.com/freelancer/f9d69e5b850578f4e85687d42b23fbcf',

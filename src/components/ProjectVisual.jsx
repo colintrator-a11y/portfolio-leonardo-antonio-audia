@@ -146,201 +146,252 @@ function Automation({ id }) {
   )
 }
 
-function Chatbot({ id }) {
+/* A support widget open on a live storefront. */
+function Chatbot() {
+  const WX = 356
+  const WY = 40
+  const WW = 262
+  const WH = 342
+
+  const t = (x, y, text, fill, size = 9, weight = '400', anchor = 'start') => (
+    <text
+      x={x}
+      y={y}
+      fill={fill}
+      fontSize={size}
+      fontWeight={weight}
+      textAnchor={anchor}
+      fontFamily="Helvetica, Arial, sans-serif"
+    >
+      {text}
+    </text>
+  )
+
   return (
     <>
-      <BrowserChrome id={id} label="support.assistant/console" />
+      {/* Storefront behind the widget */}
+      <rect x="0" y="0" width="640" height="400" rx="14" fill="#ffffff" />
+      <rect x="0.5" y="0.5" width="639" height="399" rx="13.5" fill="none" stroke={C.border} />
+      <path d="M14 0 H626 A14 14 0 0 1 640 14 V40 H0 V14 A14 14 0 0 1 14 0 Z" fill={C.chrome} />
+      <line x1="0" y1="40" x2="640" y2="40" stroke={C.border} />
+      <circle cx="20" cy="20" r="4" fill="#e5e8ee" />
+      <circle cx="34" cy="20" r="4" fill="#e5e8ee" />
+      <circle cx="48" cy="20" r="4" fill="#e5e8ee" />
+      <rect x="68" y="11" width="200" height="18" rx="9" fill="#ffffff" stroke={C.border} />
+      {t(82, 24, 'bellaboutique.it', C.muted, 8.5)}
 
-      {/* Sidebar */}
-      <rect x="16" y="60" width="150" height="324" rx="10" fill={C.panel} stroke={C.border} />
-      {[0, 1, 2, 3, 4].map((i) => (
-        <g key={i}>
-          <circle cx="38" cy={90 + i * 46} r="11" fill={i === 0 ? C.accentSoft : C.barLight} />
-          <rect
-            x="56"
-            y={83 + i * 46}
-            width={i === 0 ? 84 : 70}
-            height="7"
-            rx="3.5"
-            fill={i === 0 ? `url(#${id}-brand)` : C.barMid}
-          />
-          <rect x="56" y={95 + i * 46} width="56" height="5" rx="2.5" fill={C.barLight} />
-        </g>
-      ))}
+      {t(28, 72, 'BELLA BOUTIQUE', C.ink, 11, '700')}
+      {['New in', 'Dresses', 'Shoes', 'Sale'].map((label, i) => t(150 + i * 52, 72, label, C.muted, 8.5))}
 
-      {/* Conversation */}
-      <rect x="180" y="60" width="292" height="324" rx="10" fill={C.bg} stroke={C.border} />
-      <rect x="196" y="78" width="180" height="46" rx="10" fill={C.panel} />
-      <rect x="210" y="94" width="130" height="6" rx="3" fill={C.barMid} />
-      <rect x="210" y="106" width="92" height="6" rx="3" fill={C.barLight} />
+      {t(28, 126, 'New season,', C.ink, 26, '600')}
+      {t(28, 156, 'now in store', C.ink, 26, '600')}
+      {t(28, 182, 'Free returns within 30 days on every order.', C.muted, 9)}
+      <rect x="28" y="196" width="104" height="28" rx="14" fill={C.ink} />
+      {t(80, 214, 'Shop the edit', '#ffffff', 8.5, '600', 'middle')}
 
-      <rect x="276" y="138" width="180" height="60" rx="10" fill={C.accentSoft} />
-      <rect x="292" y="154" width="146" height="6" rx="3" fill="#a9c5f2" />
-      <rect x="292" y="167" width="120" height="6" rx="3" fill="#bcd2f5" />
-      <rect x="292" y="180" width="86" height="6" rx="3" fill="#cadcf8" />
-
-      <rect x="196" y="212" width="200" height="60" rx="10" fill={C.panel} />
-      <rect x="210" y="228" width="164" height="6" rx="3" fill={C.barMid} />
-      <rect x="210" y="241" width="132" height="6" rx="3" fill={C.barLight} />
-      <rect x="210" y="254" width="98" height="6" rx="3" fill={C.barLight} />
-
-      {/* Typing indicator */}
-      <rect x="196" y="286" width="74" height="26" rx="13" fill={C.panel} />
-      {[214, 228, 242].map((cx, i) => (
-        <circle key={cx} cx={cx} cy="299" r="3.5" fill={C.accent}>
-          <animate
-            attributeName="opacity"
-            values="0.25;1;0.25"
-            dur="1.2s"
-            begin={`${i * 0.2}s`}
-            repeatCount="indefinite"
-          />
-        </circle>
-      ))}
-
-      <rect x="196" y="330" width="260" height="34" rx="17" fill={C.bg} stroke={C.border} />
-      <rect x="212" y="344" width="120" height="6" rx="3" fill={C.barLight} />
-      <circle cx="436" cy="347" r="12" fill={`url(#${id}-brand)`} />
-
-      {/* Insight panel */}
-      <rect x="486" y="60" width="138" height="150" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="502" y="84" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        RESOLUTION RATE
-      </text>
-      <text x="502" y="118" fill={C.ink} fontSize="27" fontWeight="600" fontFamily="Georgia, serif">
-        86%
-      </text>
-      <rect x="502" y="132" width="106" height="6" rx="3" fill={C.barLight} />
-      <rect x="502" y="132" width="91" height="6" rx="3" fill={`url(#${id}-brand)`} />
       {[0, 1, 2].map((i) => (
         <g key={i}>
-          <rect x="502" y={154 + i * 18} width={70 - i * 14} height="5" rx="2.5" fill={C.barLight} />
-          <rect x="588" y={154 + i * 18} width="20" height="5" rx="2.5" fill={C.barMid} />
+          <rect x={28 + i * 100} y="252" width="88" height="112" rx="8" fill={C.panel} stroke={C.border} />
+          <rect x={36 + i * 100} y="260" width="72" height="62" rx="6" fill={C.accentSoft} opacity={0.5 + i * 0.2} />
+          {t(36 + i * 100, 338, ['Linen shirt', 'Wool coat', 'Silk scarf'][i], C.ink, 8.5, '600')}
+          {t(36 + i * 100, 352, ['€ 89', '€ 240', '€ 65'][i], C.muted, 8.5)}
         </g>
       ))}
 
-      <rect x="486" y="224" width="138" height="160" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="502" y="248" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        INTENTS
-      </text>
-      {[62, 48, 71, 35, 55].map((v, i) => (
-        <g key={i}>
-          <rect x="502" y={262 + i * 22} width="106" height="8" rx="4" fill={C.barLight} />
+      {/* Chat widget */}
+      <rect x={WX - 4} y={WY - 4} width={WW + 8} height={WH + 8} rx="16" fill="#0d1b30" opacity="0.06" />
+      <rect x={WX} y={WY} width={WW} height={WH} rx="14" fill="#ffffff" stroke={C.border} />
+
+      <path
+        d={`M${WX} ${WY + 14} a14 14 0 0 1 14 -14 H${WX + WW - 14} a14 14 0 0 1 14 14 V${WY + 58} H${WX} Z`}
+        fill={C.accent}
+      />
+      <circle cx={WX + 30} cy={WY + 30} r="14" fill="#ffffff" fillOpacity="0.22" />
+      {t(WX + 30, WY + 34, 'BB', '#ffffff', 10, '700', 'middle')}
+      {t(WX + 52, WY + 26, 'Bella Boutique Support', '#ffffff', 10, '600')}
+      <circle cx={WX + 56} cy={WY + 38} r="3" fill="#4ade80" />
+      {t(WX + 64, WY + 41, 'Typically replies instantly', '#cfe0fb', 8)}
+      {t(WX + WW - 18, WY + 34, '–', '#ffffff', 12, '700', 'middle')}
+
+      <rect x={WX} y={WY + 58} width={WW} height={WH - 58} fill="#f7f9fc" />
+
+      {/* Conversation */}
+      <rect x={WX + 14} y={WY + 74} width={186} height="42" rx="10" fill="#ffffff" stroke={C.hair} />
+      {t(WX + 24, WY + 92, 'Hi Marco, welcome back.', C.ink, 8.8)}
+      {t(WX + 24, WY + 105, 'What can I help you with?', C.ink, 8.8)}
+
+      {['Track an order', 'Returns policy', 'Size guide'].map((label, i) => (
+        <g key={label}>
           <rect
-            x="502"
-            y={262 + i * 22}
-            width={v * 1.06}
-            height="8"
-            rx="4"
-            fill={`url(#${id}-brand)`}
-            opacity={0.9 - i * 0.12}
+            x={WX + 14 + (i === 2 ? 0 : 0)}
+            y={WY + 118 + i * 23}
+            width={i === 0 ? 86 : i === 1 ? 92 : 74}
+            height="19"
+            rx="9.5"
+            fill="#ffffff"
+            stroke={C.accent}
+            strokeOpacity="0.45"
           />
+          {t(WX + 24, WY + 131 + i * 23, label, C.accent, 8.2, '600')}
         </g>
       ))}
+
+      <rect x={WX + 96} y={WY + 188} width={152} height="24" rx="10" fill={C.accent} />
+      {t(WX + 108, WY + 204, 'Where is order #48213?', '#ffffff', 8.8)}
+
+      <rect x={WX + 14} y={WY + 218} width={196} height="40" rx="10" fill="#ffffff" stroke={C.hair} />
+      {t(WX + 24, WY + 235, 'It left our warehouse today', C.ink, 8.8)}
+      {t(WX + 24, WY + 248, 'and arrives tomorrow by 18:00.', C.ink, 8.8)}
+
+      <rect x={WX + 14} y={WY + 262} width={196} height="30" rx="10" fill="#ffffff" stroke={C.accent} strokeOpacity="0.35" />
+      <circle cx={WX + 32} cy={WY + 277} r="8" fill={C.accent} fillOpacity="0.12" />
+      <path d={`M${WX + 28} ${WY + 277} l3 3 l6 -6`} stroke={C.accent} strokeWidth="1.4" fill="none" strokeLinecap="round" />
+      {t(WX + 48, WY + 275, 'Out for delivery', C.ink, 8.5, '600')}
+      {t(WX + 48, WY + 286, 'SDA Express · #48213', C.muted, 7.8)}
+
+      {/* Input */}
+      <rect x={WX} y={WY + WH - 44} width={WW} height="44" rx="0" fill="#ffffff" />
+      <line x1={WX} y1={WY + WH - 44} x2={WX + WW} y2={WY + WH - 44} stroke={C.hair} />
+      {t(WX + 18, WY + WH - 18, 'Write a message…', C.muted, 8.8)}
+      <circle cx={WX + WW - 26} cy={WY + WH - 22} r="13" fill={C.accent} />
+      <path d={`M${WX + WW - 32} ${WY + WH - 28} l12 6 l-12 6 l3 -6 z`} fill="#ffffff" />
     </>
   )
 }
 
-/* Scheduled Python job: sources in, transform, report out. */
-function PythonAutomation({ id }) {
+/* The job itself: source on top, run output below. */
+function PythonAutomation() {
+  const CW = 5.32
+  const X0 = 92
+  const code = [
+    [['import', 'kw'], [' requests, schedule', 'pl']],
+    [['import', 'kw'], [' pandas ', 'pl'], ['as', 'kw'], [' pd', 'pl']],
+    [['from', 'kw'], [' datetime ', 'pl'], ['import', 'kw'], [' date', 'pl']],
+    [],
+    [['API ', 'var'], ['= ', 'op'], ['"https://api.shop.local/v1/orders"', 'str']],
+    [],
+    [['def', 'kw'], [' ', 'pl'], ['fetch_orders', 'fn'], ['(day: date) -> pd.DataFrame:', 'pl']],
+    [['    r ', 'pl'], ['= ', 'op'], ['requests', 'var'], ['.get(API, params={', 'pl'], ['"date"', 'str'], [': day}, timeout=', 'pl'], ['30', 'num'], [')', 'pl']],
+    [['    r.raise_for_status()', 'pl']],
+    [['    ', 'pl'], ['return', 'kw'], [' pd.DataFrame(r.json()[', 'pl'], ['"data"', 'str'], ['])', 'pl']],
+    [],
+    [['def', 'kw'], [' ', 'pl'], ['run', 'fn'], ['() -> ', 'pl'], ['None', 'kw'], [':', 'pl']],
+    [['    orders ', 'pl'], ['= ', 'op'], ['fetch_orders', 'fn'], ['(date.today())', 'pl']],
+    [['    clean ', 'pl'], ['= ', 'op'], ['orders.dropna(subset=[', 'pl'], ['"sku"', 'str'], [', ', 'pl'], ['"total"', 'str'], ['])', 'pl']],
+    [['    warehouse.upsert(clean)', 'pl'], ['  ', 'pl'], ['# single source of truth', 'cm']],
+    [['    notify.email(', 'pl'], ['"daily-report"', 'str'], [', clean.describe())', 'pl']],
+  ]
+  const colors = {
+    kw: '#c792ea',
+    fn: '#82aaff',
+    str: '#c3e88d',
+    num: '#f78c6c',
+    op: '#89ddff',
+    var: '#eeffff',
+    pl: '#a6accd',
+    cm: '#5f7e97',
+  }
+
   const log = [
-    ['09:00:01', 'scheduler', 'job.start  sync_daily', C.accent],
-    ['09:00:04', 'extract  ', 'api.orders        1,284 rows', C.ink],
-    ['09:00:09', 'extract  ', 'sheets.pricing      312 rows', C.ink],
-    ['09:00:15', 'transform', 'validate + normalise', C.ink],
-    ['09:00:21', 'load     ', 'warehouse.upsert  1,596', C.green],
-    ['09:00:23', 'notify   ', 'report.emailed', C.green],
+    ['09:00:01', 'INFO', 'job.start sync_daily', '#82aaff'],
+    ['09:00:04', 'INFO', 'fetched 1,284 orders from api.shop.local', '#a6accd'],
+    ['09:00:15', 'INFO', 'validated + normalised → 1,596 rows', '#a6accd'],
+    ['09:00:21', 'INFO', 'warehouse.upsert ok', '#c3e88d'],
+    ['09:00:23', 'INFO', 'report emailed → ops@bellaboutique.it', '#c3e88d'],
   ]
 
   return (
     <>
-      <BrowserChrome id={id} label="automation/jobs/sync_daily.py" />
+      <rect x="0" y="0" width="640" height="400" rx="14" fill="#0f172a" />
+      <rect x="0.5" y="0.5" width="639" height="399" rx="13.5" fill="none" stroke="#1e293b" />
 
-      {/* Pipeline */}
-      {[
-        { x: 92, label: 'Sources' },
-        { x: 246, label: 'Extract' },
-        { x: 400, label: 'Transform' },
-        { x: 554, label: 'Load' },
-      ].map((n, i) => (
-        <g key={n.label}>
-          <rect x={n.x - 54} y="72" width="108" height="46" rx="10" fill={C.bg} stroke={C.border} />
-          <circle cx={n.x} cy="90" r="7" fill={i === 3 ? C.green : C.accentSoft} />
-          <text x={n.x} y="112" fill={C.ink} fontSize="9" fontFamily="sans-serif" textAnchor="middle">
-            {n.label}
+      {/* Title bar */}
+      <path d="M14 0 H626 A14 14 0 0 1 640 14 V34 H0 V14 A14 14 0 0 1 14 0 Z" fill="#111c33" />
+      <circle cx="20" cy="17" r="4" fill="#f87171" />
+      <circle cx="34" cy="17" r="4" fill="#fbbf24" />
+      <circle cx="48" cy="17" r="4" fill="#34d399" />
+      <rect x="68" y="4" width="108" height="30" fill="#0f172a" />
+      <text x="82" y="23" fill="#e2e8f0" fontSize="9" fontFamily="monospace">
+        sync_daily.py
+      </text>
+      <text x="192" y="23" fill="#475569" fontSize="9" fontFamily="monospace">
+        config.yml
+      </text>
+
+      {/* File tree */}
+      <rect x="0" y="34" width="80" height="366" fill="#0c1424" />
+      <text x="14" y="54" fill="#475569" fontSize="7.5" fontFamily="monospace" letterSpacing="0.08em">
+        AUTOMATION
+      </text>
+      {['jobs/', '  sync_daily.py', '  invoices.py', 'lib/', '  warehouse.py', '  notify.py', 'config.yml'].map((f, i) => (
+        <text
+          key={f}
+          x="14"
+          y={72 + i * 15}
+          fill={f.includes('sync_daily') ? '#82aaff' : '#64748b'}
+          fontSize="7.6"
+          fontFamily="monospace"
+        >
+          {f}
+        </text>
+      ))}
+
+      {/* Code */}
+      {code.map((line, i) => (
+        <g key={i}>
+          <text x="76" y={54 + i * 14.4} fill="#334155" fontSize="8.4" fontFamily="monospace" textAnchor="end">
+            {i + 1}
           </text>
-          {i < 3 ? (
-            <path
-              d={`M${n.x + 56} 95 H${n.x + 136}`}
-              stroke={C.barMid}
-              strokeWidth="1.8"
-              strokeDasharray="5 5"
-              fill="none"
-            >
-              <animate attributeName="stroke-dashoffset" values="20;0" dur="1.5s" repeatCount="indefinite" />
-            </path>
-          ) : null}
+          {line.reduce(
+            (acc, [text, kind]) => {
+              acc.nodes.push(
+                <text
+                  key={acc.chars}
+                  x={X0 + acc.chars * CW}
+                  y={54 + i * 14.4}
+                  fill={colors[kind]}
+                  fontSize="8.8"
+                  fontFamily="monospace"
+                  xmlSpace="preserve"
+                >
+                  {text}
+                </text>
+              )
+              acc.chars += text.length
+              return acc
+            },
+            { chars: 0, nodes: [] }
+          ).nodes}
         </g>
       ))}
 
-      {/* Schedule panel */}
-      <rect x="16" y="140" width="180" height="120" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="34" y="164" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        SCHEDULE
+      {/* Terminal */}
+      <rect x="80" y="276" width="560" height="124" fill="#0b1220" />
+      <line x1="80" y1="276" x2="640" y2="276" stroke="#1e293b" />
+      <text x="92" y="292" fill="#475569" fontSize="7.5" fontFamily="monospace" letterSpacing="0.08em">
+        TERMINAL
       </text>
-      <text x="34" y="190" fill={C.accent} fontSize="12" fontFamily="monospace">
-        0 9 * * *
+      <text x="176" y="292" fill="#334155" fontSize="7.5" fontFamily="monospace">
+        cron: 0 9 * * * · next run in 22h 14m
       </text>
-      <text x="34" y="212" fill={C.muted} fontSize="9" fontFamily="sans-serif">
-        Daily at 09:00
+      <text x="92" y="310" fill="#c3e88d" fontSize="8.4" fontFamily="monospace">
+        $ python -m jobs.sync_daily
       </text>
-      <rect x="34" y="228" width="144" height="6" rx="3" fill={C.barLight} />
-      <rect x="34" y="228" width="108" height="6" rx="3" fill={`url(#${id}-brand)`} />
-      <text x="34" y="250" fill={C.muted} fontSize="8.5" fontFamily="monospace">
-        NEXT RUN 22h 14m
-      </text>
-
-      {/* Run log */}
-      <rect x="212" y="140" width="412" height="120" rx="10" fill={C.panel} stroke={C.border} />
-      <text x="230" y="164" fill={C.muted} fontSize="8.5" fontFamily="monospace" letterSpacing="0.08em">
-        RUN LOG
-      </text>
-      {log.map(([t, stage, msg, color], i) => (
+      {log.map(([time, level, msg, color], i) => (
         <g key={i}>
-          <text x="230" y={182 + i * 13} fill={C.muted} fontSize="7.5" fontFamily="monospace">
-            {t}
+          <text x="92" y={326 + i * 12} fill="#475569" fontSize="8" fontFamily="monospace">
+            {time}
           </text>
-          <text x="288" y={182 + i * 13} fill={C.accent} fontSize="7.5" fontFamily="monospace">
-            {stage}
+          <text x="150" y={326 + i * 12} fill="#82aaff" fontSize="8" fontFamily="monospace">
+            {level}
           </text>
-          <text x="352" y={182 + i * 13} fill={color} fontSize="7.5" fontFamily="monospace">
+          <text x="184" y={326 + i * 12} fill={color} fontSize="8" fontFamily="monospace">
             {msg}
           </text>
         </g>
       ))}
-
-      {/* Result tiles */}
-      {[
-        ['ROWS SYNCED', '1,596'],
-        ['DURATION', '23s'],
-        ['FAILURES', '0'],
-        ['MANUAL STEPS', '0'],
-      ].map(([k, v], i) => (
-        <g key={k}>
-          <rect x={16 + i * 154} y="278" width="140" height="60" rx="10" fill={C.bg} stroke={C.border} />
-          <text x={32 + i * 154} y="300" fill={C.muted} fontSize="8" fontFamily="monospace" letterSpacing="0.06em">
-            {k}
-          </text>
-          <text x={32 + i * 154} y="324" fill={C.ink} fontSize="17" fontWeight="600" fontFamily="Georgia, serif">
-            {v}
-          </text>
-        </g>
-      ))}
-
-      <rect x="16" y="352" width="608" height="32" rx="10" fill={C.panel} stroke={C.border} />
-      <circle cx="38" cy="368" r="5" fill={C.green} />
-      <text x="54" y="372" fill={C.muted} fontSize="9" fontFamily="monospace">
-        Last 30 runs: 30 succeeded · 0 failed · average 24s
+      <text x="92" y="388" fill="#94a3b8" fontSize="8.4" fontFamily="monospace">
+        Done in 23.4s · 0 failures · 30/30 successful runs this month
       </text>
     </>
   )

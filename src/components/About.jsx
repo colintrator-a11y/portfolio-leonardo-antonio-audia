@@ -36,9 +36,15 @@ export default function About() {
           <Reveal className="about__aside" delay={120}>
             <div className="card about__card">
               <div className="about__identity">
-                <span className="about__avatar" aria-hidden="true">
-                  {profile.monogram}
-                </span>
+                <img
+                  className="about__avatar"
+                  src={profile.avatar}
+                  alt={`Portrait of ${profile.name}`}
+                  width="172"
+                  height="172"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h3 className="about__name">{profile.name}</h3>
                   <p className="about__title">{profile.title}</p>

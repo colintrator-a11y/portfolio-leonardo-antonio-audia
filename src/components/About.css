@@ -80,17 +80,13 @@
 }
 
 .about__avatar {
-  display: grid;
-  place-items: center;
   flex-shrink: 0;
-  width: 62px;
-  height: 62px;
-  border-radius: 12px;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--font-serif);
-  font-size: 23px;
-  font-weight: 600;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper-sunken);
+  box-shadow: 0 0 0 1px var(--line), 0 0 0 5px var(--paper-raised), 0 0 0 6px var(--accent-soft);
 }
 
 .about__name {

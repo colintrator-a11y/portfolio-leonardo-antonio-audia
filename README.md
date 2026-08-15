@@ -89,10 +89,14 @@ three reference builds — a WhatsApp & Telegram chatbot, a customer support cha
 Python data pipeline — added to demonstrate the Chatbot and Python skills on the profile, which have
 no client project behind them.
 
-The WhatsApp and Telegram conversations are drawn as inline SVG in each platform's own chrome
-(`ChatOps` in `ProjectVisual.jsx`): WhatsApp's green header, beige canvas and delivery ticks;
-Telegram's blue header, inline keyboard and status tracker. They are illustrations of the bot flow,
-**not** captured screenshots of a live deployment.
+All three are drawn as inline SVG in the interface each one would actually run in
+(`ProjectVisual.jsx`): WhatsApp's green header, beige canvas and delivery ticks beside Telegram's
+blue header, inline keyboard and status tracker; a support widget open over a live storefront; and a
+dark editor showing real Python source with its terminal output. They are illustrations of each
+build, **not** captured screenshots of a live deployment.
+
+The portrait in the About card is `src/assets/avatar.webp` — the Workana profile photo with its teal
+ring masked off, so the site applies its own ring in the page palette.
 
 These are **not** client deliveries and the site never presents them as such: they live under their
 own heading, are numbered "Example 01/02" rather than "Project", each carries a dashed *Capability
