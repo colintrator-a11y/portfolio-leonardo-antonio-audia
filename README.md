@@ -66,6 +66,15 @@ chatbot console, an e-commerce catalogue, a delivery app, a live map, an API ref
 automation workflow. They stay crisp at any resolution, cost no network requests, and can be
 swapped for real screenshots by replacing `<ProjectVisual />` in `Projects.jsx` with an `<img>`.
 
+## Design system
+
+Light editorial: warm off-white paper (`#faf9f6`), deep navy ink (`#0d1b30`), a single blue accent
+(`#1d4ed8`), Source Serif 4 for display headings and Inter for UI text. Structure is drawn with
+hairline rules rather than boxes — the services grid and process steps are flush matrices, and
+project rows are separated by a single rule. Two solid ink fields anchor the page: the hero code
+window and the footer. Every colour, radius, shadow and font is a custom property in
+`src/styles/global.css`, so the whole palette can be retuned from one place.
+
 ## Notes on the build
 
 - **Performance** — no UI/animation/icon libraries; React + ReactDOM are the only dependencies.

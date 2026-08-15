@@ -1,25 +1,17 @@
+/* The footer closes the page with a solid ink block — the one large
+   dark field in the layout, echoing the hero code window. */
+
 .footer {
   position: relative;
-  margin-top: clamp(40px, 6vw, 80px);
-  padding-block: clamp(48px, 6vw, 72px) 30px;
-  border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(10, 18, 36, 0.4), rgba(4, 7, 15, 0.9));
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  width: min(560px, 80%);
-  height: 1px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.65), transparent);
+  margin-top: clamp(48px, 7vw, 96px);
+  padding-block: clamp(60px, 7vw, 90px) 32px;
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .footer__top {
   display: grid;
-  gap: clamp(34px, 4vw, 60px);
+  gap: clamp(38px, 4vw, 64px);
 }
 
 /* Brand ------------------------------------------------------------------ */
@@ -36,53 +28,68 @@
   flex-shrink: 0;
   width: 46px;
   height: 46px;
-  border-radius: 14px;
-  background: var(--grad-brand);
-  color: #04121f;
-  font-size: 17px;
-  font-weight: 800;
-  box-shadow: 0 12px 30px -14px rgba(56, 189, 248, 0.85);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .footer__brand strong {
   display: block;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .footer__brand small {
   display: block;
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 12px;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11.5px;
   line-height: 1.45;
 }
 
 .footer__tagline {
-  margin-top: 24px;
-  max-width: 52ch;
-  color: var(--text);
-  font-size: clamp(16px, 1.5vw, 19px);
-  font-weight: 600;
-  line-height: 1.6;
+  margin-top: 28px;
+  max-width: 46ch;
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: clamp(19px, 1.9vw, 25px);
+  font-weight: 400;
+  line-height: 1.5;
   letter-spacing: -0.015em;
 }
 
 .footer__blurb {
-  margin-top: 12px;
-  max-width: 58ch;
-  color: var(--muted);
+  margin-top: 16px;
+  max-width: 56ch;
+  color: rgba(255, 255, 255, 0.55);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .footer__expertise {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: 26px;
+}
+
+/* Chips need an inverted treatment on the ink block. */
+.footer__expertise .chip {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer__expertise .chip:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
 }
 
 /* Link columns ----------------------------------------------------------- */
@@ -94,37 +101,37 @@
 }
 
 .footer__columnTitle {
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .footer__column ul {
-  margin-top: 16px;
+  margin-top: 18px;
   display: grid;
-  gap: 11px;
+  gap: 12px;
 }
 
 .footer__column a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--muted);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14.5px;
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .footer__column a svg {
-  color: var(--blue-400);
+  color: #7dd3fc;
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .footer__column a:hover {
-  color: var(--white);
+  color: #fff;
   transform: translateX(3px);
 }
 
@@ -141,15 +148,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-top: clamp(36px, 4vw, 54px);
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
+  margin-top: clamp(44px, 5vw, 64px);
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 13px;
 }
 
 .footer__built {
-  color: rgba(141, 156, 184, 0.75);
+  color: rgba(255, 255, 255, 0.35);
   font-size: 12.5px;
 }
 
