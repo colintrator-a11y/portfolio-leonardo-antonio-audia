@@ -206,3 +206,58 @@
     gap: 64px;
   }
 }
+
+/* Capability examples ---------------------------------------------------- */
+
+.examples__head {
+  margin-top: clamp(64px, 8vw, 110px);
+  padding-top: clamp(48px, 6vw, 80px);
+  border-top: 1px solid var(--line);
+  max-width: 680px;
+}
+
+.examples__title {
+  margin-top: 4px;
+  font-size: clamp(24px, 2.6vw, 34px);
+  letter-spacing: -0.02em;
+}
+
+.examples__intro {
+  margin-top: 14px;
+  color: var(--body);
+  font-size: 15.5px;
+  max-width: 62ch;
+}
+
+/* Marks a row as a reference build rather than a client delivery. */
+.project__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 4px 12px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.examples__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-hair);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.examples__note svg {
+  flex-shrink: 0;
+  color: var(--faint);
+}

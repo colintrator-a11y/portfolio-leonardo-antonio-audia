@@ -354,6 +354,56 @@ export const projects = {
   ],
 }
 
+/**
+ * Capability examples — reference builds that demonstrate the chatbot and
+ * Python automation skills listed on the profile. These are NOT client
+ * deliveries, and the site labels them as such wherever they appear.
+ */
+export const examples = {
+  eyebrow: 'Capability Examples',
+  heading: 'Chatbot and Python automation builds',
+  intro:
+    'Reference builds rather than client deliveries — shown to make concrete what the chatbot and Python work on my skills list actually looks like in practice.',
+  badge: 'Capability example',
+  note: 'These two are reference builds, not client projects. Every project above was delivered for a paying client.',
+  items: [
+    {
+      id: 'support-chatbot',
+      visual: 'chatbot',
+      category: 'Chatbot',
+      title: 'Customer Support Chatbot',
+      overview:
+        'A support assistant that answers questions from a company knowledge base, handles routine requests end to end, and hands anything sensitive to a person with the full conversation attached. Deployed to a website widget and to messaging channels through the same API.',
+      tech: ['Chatbot', 'Node.js', 'Python', 'REST API'],
+      features: [
+        'Intent matching against a knowledge base',
+        'Human handover with full conversation context',
+        'Website widget and messaging channels from one backend',
+        'Dashboard showing what the bot could not answer',
+      ],
+      value:
+        'Takes repetitive first-line questions off the team and shows exactly which gaps in the knowledge base are worth filling next.',
+    },
+    {
+      id: 'python-automation',
+      visual: 'python',
+      category: 'Python Automation',
+      title: 'Scheduled Python Data Pipeline',
+      overview:
+        'A scheduled Python job that pulls data from an API and a spreadsheet, validates and normalises it, writes the result to a single source of truth, and emails a report — replacing a manual routine somebody used to run by hand each morning.',
+      tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
+      features: [
+        'Cron-scheduled extract, transform and load',
+        'Validation and normalisation before anything is written',
+        'Automated reporting once the run completes',
+        'Run log and failure alerting for every execution',
+      ],
+      value:
+        'Turns a recurring manual task into something that runs on its own and reports when it does not, so nobody has to remember it.',
+    },
+  ],
+}
+
 export const process = {
   eyebrow: 'Work Process',
   heading: 'A disciplined path from idea to production',

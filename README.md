@@ -80,7 +80,18 @@ rendered at its own aspect ratio with `width`/`height` attributes set from `imag
 `content.js`, so no layout shift occurs and nothing is cropped.
 
 The seventh (the Pipefy protocols centre) has no published screenshot, so it falls back to an inline
-SVG process diagram in `ProjectVisual.jsx`. They stay crisp at any resolution, cost no network requests, and can be
+SVG process diagram in `ProjectVisual.jsx`.
+
+### Capability examples
+
+Below the client work sits a separate **Capability examples** block (`examples` in `content.js`) with
+two reference builds — a customer support chatbot and a scheduled Python data pipeline — added to
+demonstrate the Chatbot and Python skills on the profile, which have no client project behind them.
+
+These are **not** client deliveries and the site never presents them as such: they live under their
+own heading, are numbered "Example 01/02" rather than "Project", each carries a dashed *Capability
+example* badge, and a closing line states that every project above was delivered for a paying client.
+Delete the `examples` export and its two blocks in `Projects.jsx` to remove them entirely. They stay crisp at any resolution, cost no network requests, and can be
 swapped for real screenshots by replacing `<ProjectVisual />` in `Projects.jsx` with an `<img>`.
 
 ## Design system
