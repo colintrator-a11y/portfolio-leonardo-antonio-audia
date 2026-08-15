@@ -1,0 +1,122 @@
+.testimonials__grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: clamp(26px, 2.6vw, 34px);
+  transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.36);
+  box-shadow: var(--shadow-lg);
+}
+
+.testimonial__mark {
+  position: relative;
+  color: rgba(96, 165, 250, 0.3);
+  transition: color 0.5s var(--ease);
+}
+
+.testimonial:hover .testimonial__mark {
+  color: rgba(96, 165, 250, 0.55);
+}
+
+.testimonial__quote {
+  position: relative;
+  margin: 18px 0 0;
+  flex-grow: 1;
+  color: var(--text);
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.testimonial__author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial__avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: linear-gradient(140deg, rgba(59, 130, 246, 0.3), rgba(34, 211, 238, 0.16));
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.3);
+  color: var(--blue-300);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.testimonial__meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.testimonial__meta strong {
+  color: var(--white);
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.testimonial__meta small {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.testimonial__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+
+.testimonial__location svg {
+  color: var(--blue-300);
+}
+
+.testimonials__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 34px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.testimonials__note svg {
+  flex-shrink: 0;
+  color: var(--blue-300);
+}
+
+@media (max-width: 420px) {
+  .testimonial__location {
+    display: none;
+  }
+}

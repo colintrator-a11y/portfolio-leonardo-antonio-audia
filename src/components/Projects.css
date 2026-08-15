@@ -1,0 +1,203 @@
+.projects__list {
+  display: grid;
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.project__card {
+  display: grid;
+  gap: clamp(24px, 3vw, 44px);
+  padding: clamp(20px, 2.4vw, 30px);
+  transition: transform 0.55s var(--ease), border-color 0.55s var(--ease), box-shadow 0.55s var(--ease);
+}
+
+.project__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.36);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Media ------------------------------------------------------------------ */
+
+.project__media {
+  position: relative;
+}
+
+.project__mediaFrame {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(150deg, rgba(59, 130, 246, 0.14), rgba(8, 13, 27, 0.6));
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.project__mediaFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.07) 50%, transparent 58%);
+  transform: translateX(-100%);
+  transition: transform 0.9s var(--ease);
+  pointer-events: none;
+}
+
+.project__card:hover .project__mediaFrame::after {
+  transform: translateX(100%);
+}
+
+.projectVisual {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.project__category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 13px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 999px;
+  background: rgba(9, 16, 33, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--blue-300);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* Body ------------------------------------------------------------------- */
+
+.project__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 4px 8px;
+}
+
+.project__number {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project__title {
+  margin-top: 10px;
+  font-size: clamp(21px, 2.1vw, 27px);
+  letter-spacing: -0.02em;
+}
+
+.project__overview {
+  margin-top: 12px;
+  color: var(--text-soft);
+  font-size: 14.8px;
+  line-height: 1.7;
+}
+
+.project__block {
+  margin-top: 24px;
+}
+
+.project__label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.project__label--inline {
+  color: var(--blue-300);
+}
+
+.project__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project__features {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.project__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.project__features svg {
+  flex-shrink: 0;
+  margin-top: 5px;
+  color: var(--cyan-400);
+}
+
+.project__value {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-top: 26px;
+  padding: 16px 18px;
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  border-left: 3px solid var(--blue-500);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(59, 130, 246, 0.11), rgba(34, 211, 238, 0.04));
+}
+
+.project__valueIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--cyan-400);
+}
+
+.project__value p {
+  margin-top: 6px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Breakpoints ------------------------------------------------------------ */
+
+@media (min-width: 900px) {
+  .project__card {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .project--flip .project__media {
+    order: 2;
+  }
+
+  .project--flip .project__body {
+    order: 1;
+  }
+
+  .project__features {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1140px) {
+  .project__card {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    padding: clamp(24px, 2vw, 32px);
+  }
+}

@@ -1,0 +1,71 @@
+import { footer, profile } from '../data/content'
+import scrollToSection from '../utils/scrollToSection'
+import Icon from './ui/Icon'
+import './Footer.css'
+
+export default function Footer() {
+  const year = new Date().getFullYear()
+
+  const go = (id) => (event) => {
+    event.preventDefault()
+    scrollToSection(id)
+  }
+
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__top">
+          <div className="footer__brandBlock">
+            <a className="footer__brand" href="#home" onClick={go('home')}>
+              <span className="footer__mark" aria-hidden="true">
+                {profile.monogram}
+              </span>
+              <span>
+                <strong>{profile.name}</strong>
+                <small>{profile.title}</small>
+              </span>
+            </a>
+
+            <p className="footer__tagline">{footer.tagline}</p>
+            <p className="footer__blurb">{footer.blurb}</p>
+
+            <ul className="footer__expertise">
+              {footer.expertise.map((item) => (
+                <li key={item} className="chip">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="footer__nav">
+            {footer.columns.map((column) => (
+              <div className="footer__column" key={column.title}>
+                <h3 className="footer__columnTitle">{column.title}</h3>
+                <ul>
+                  {column.links.map((link) => (
+                    <li key={link.label}>
+                      <a href={`#${link.target}`} onClick={go(link.target)}>
+                        <Icon name="arrowRight" size={13} strokeWidth={2} />
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="footer__bottom">
+          <p>
+            © {year} {profile.name}. All rights reserved.
+          </p>
+          <p className="footer__built">
+            Designed &amp; developed with React — engineered for performance and accessibility.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
