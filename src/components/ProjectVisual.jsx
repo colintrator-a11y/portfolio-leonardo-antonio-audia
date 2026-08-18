@@ -9,6 +9,7 @@
  */
 
 import { extraScenes } from './ProjectScenes'
+import { P, Photo } from './visualPhotos'
 import { C, H, W } from './visualTokens'
 
 function Defs({ id }) {
@@ -191,7 +192,7 @@ function Pipefy() {
 }
 
 /* A support widget open on a live storefront. */
-function Chatbot() {
+function Chatbot({ id }) {
   const WX = 356
   const WY = 40
   const WW = 262
@@ -222,7 +223,16 @@ function Chatbot() {
       <circle cx="34" cy="20" r="4" fill="#e5e8ee" />
       <circle cx="48" cy="20" r="4" fill="#e5e8ee" />
       <rect x="68" y="11" width="200" height="18" rx="9" fill="#ffffff" stroke={C.border} />
-      {t(82, 24, 'bellaboutique.it', C.muted, 8.5)}
+      <path d="M79 19 v-2.2 a3.2 3.2 0 0 1 6.4 0 v2.2" fill="none" stroke={C.muted} strokeWidth="1" />
+      <rect x="78.6" y="19" width="7.2" height="5.6" rx="1.4" fill={C.muted} opacity="0.6" />
+      {[44, 28, 58].reduce(
+        (acc, bw) => {
+          acc.nodes.push(<rect key={acc.x} x={acc.x} y="18" width={bw} height="4" rx="2" fill={C.muted} opacity="0.26" />)
+          acc.x += bw + 7
+          return acc
+        },
+        { x: 94, nodes: [] }
+      ).nodes}
 
       {t(28, 72, 'BELLA BOUTIQUE', C.ink, 11, '700')}
       {['New in', 'Dresses', 'Shoes', 'Sale'].map((label, i) => t(150 + i * 52, 72, label, C.muted, 8.5))}
@@ -236,9 +246,17 @@ function Chatbot() {
       {[0, 1, 2].map((i) => (
         <g key={i}>
           <rect x={28 + i * 100} y="252" width="88" height="112" rx="8" fill={C.panel} stroke={C.border} />
-          <rect x={36 + i * 100} y="260" width="72" height="62" rx="6" fill={C.accentSoft} opacity={0.5 + i * 0.2} />
-          {t(36 + i * 100, 338, ['Linen shirt', 'Wool coat', 'Silk scarf'][i], C.ink, 8.5, '600')}
-          {t(36 + i * 100, 352, ['€ 89', '€ 240', '€ 65'][i], C.muted, 8.5)}
+          <Photo
+            id={`${id}-shelf${i}`}
+            src={[P.woolCoat, P.quiltedOuterwear, P.knitScarf][i]}
+            x={36 + i * 100}
+            y={260}
+            w={72}
+            h={62}
+            r={6}
+          />
+          {t(36 + i * 100, 338, ['Wool coat', 'Quilted jacket', 'Knit scarf'][i], C.ink, 8.5, '600')}
+          {t(36 + i * 100, 352, ['€ 240', '€ 175', '€ 65'][i], C.muted, 8.5)}
         </g>
       ))}
 
@@ -308,11 +326,11 @@ function PythonAutomation() {
   const CW = 5.32
   const X0 = 92
   const code = [
-    [['import', 'kw'], [' requests, schedule', 'pl']],
+    [['import', 'kw'], [' os, requests, schedule', 'pl']],
     [['import', 'kw'], [' pandas ', 'pl'], ['as', 'kw'], [' pd', 'pl']],
     [['from', 'kw'], [' datetime ', 'pl'], ['import', 'kw'], [' date', 'pl']],
     [],
-    [['API ', 'var'], ['= ', 'op'], ['"https://api.shop.local/v1/orders"', 'str']],
+    [['API ', 'var'], ['= ', 'op'], ['os', 'var'], ['.environ[', 'pl'], ['"ORDERS_API_URL"', 'str'], [']', 'pl']],
     [],
     [['def', 'kw'], [' ', 'pl'], ['fetch_orders', 'fn'], ['(day: date) -> pd.DataFrame:', 'pl']],
     [['    r ', 'pl'], ['= ', 'op'], ['requests', 'var'], ['.get(API, params={', 'pl'], ['"date"', 'str'], [': day}, timeout=', 'pl'], ['30', 'num'], [')', 'pl']],
@@ -338,10 +356,10 @@ function PythonAutomation() {
 
   const log = [
     ['09:00:01', 'INFO', 'job.start sync_daily', '#82aaff'],
-    ['09:00:04', 'INFO', 'fetched 1,284 orders from api.shop.local', '#a6accd'],
+    ['09:00:04', 'INFO', 'fetched 1,284 orders from the orders API', '#a6accd'],
     ['09:00:15', 'INFO', 'validated + normalised → 1,596 rows', '#a6accd'],
     ['09:00:21', 'INFO', 'warehouse.upsert ok', '#c3e88d'],
-    ['09:00:23', 'INFO', 'report emailed → ops@bellaboutique.it', '#c3e88d'],
+    ['09:00:23', 'INFO', 'daily report emailed to the operations team', '#c3e88d'],
   ]
 
   return (

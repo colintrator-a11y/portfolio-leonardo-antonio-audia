@@ -10,6 +10,7 @@
  */
 
 import { BRAND, C, MONO, SANS } from './visualTokens'
+import { P, Photo } from './visualPhotos'
 
 /* ------------------------------------------------------------------ */
 /* Primitives                                                          */
@@ -34,24 +35,42 @@ function T({ x, y, fill, size = 9, weight = '400', anchor = 'start', mono = fals
   )
 }
 
-/** Browser window chrome with an address bar, light or dark. */
-function BrowserBar({ url, height = 40, dark = false }) {
+/**
+ * Browser window chrome. The address field is deliberately anonymised - these
+ * are reference builds, so a domain in the bar would only invite someone to go
+ * looking for a site that is not there. `label` carries the context the URL
+ * used to: which admin, which framework.
+ */
+function BrowserBar({ label, height = 40, dark = false }) {
   const shell = dark ? '#111c33' : C.chrome
   const line = dark ? '#1e293b' : C.border
   const field = dark ? '#0f172a' : C.bg
   const ink = dark ? '#64748b' : C.muted
+  const cy = height / 2
 
   return (
     <g>
       <path d={`M14 0 H626 A14 14 0 0 1 640 14 V${height} H0 V14 A14 14 0 0 1 14 0 Z`} fill={shell} />
       <line x1="0" y1={height} x2="640" y2={height} stroke={line} />
-      <circle cx="20" cy={height / 2} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
-      <circle cx="34" cy={height / 2} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
-      <circle cx="48" cy={height / 2} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
-      <rect x="68" y={height / 2 - 9} width="210" height="18" rx="9" fill={field} stroke={line} />
-      <T x={82} y={height / 2 + 3} fill={ink} size={8.2} mono>
-        {url}
-      </T>
+      <circle cx="20" cy={cy} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
+      <circle cx="34" cy={cy} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
+      <circle cx="48" cy={cy} r="4" fill={dark ? '#334155' : '#e5e8ee'} />
+      <rect x="68" y={cy - 9} width="210" height="18" rx="9" fill={field} stroke={line} />
+      <path d={`M79 ${cy - 1} v-2.2 a3.2 3.2 0 0 1 6.4 0 v2.2`} fill="none" stroke={ink} strokeWidth="1" />
+      <rect x="78.6" y={cy - 1} width="7.2" height="5.6" rx="1.4" fill={ink} opacity="0.6" />
+      {[46, 30, 62].reduce(
+        (acc, bw) => {
+          acc.nodes.push(<rect key={acc.x} x={acc.x} y={cy - 2} width={bw} height="4" rx="2" fill={ink} opacity="0.26" />)
+          acc.x += bw + 7
+          return acc
+        },
+        { x: 94, nodes: [] }
+      ).nodes}
+      {label ? (
+        <T x={292} y={cy + 3} fill={ink} size={8.2}>
+          {label}
+        </T>
+      ) : null}
     </g>
   )
 }
@@ -67,13 +86,13 @@ function Card({ fill = '#ffffff' }) {
 }
 
 /** Small pill used for statuses, stock states and plan names. */
-function Pill({ x, y, w, label, color, size = 7.4, height = 15 }) {
+function Pill({ x, y, w, label, color, size = 7.4, height = 15, bg }) {
   const px = Number(x)
   const py = Number(y)
   const pw = Number(w ?? label.length * size * 0.68 + 14)
   return (
     <g>
-      <rect x={px} y={py} width={pw} height={height} rx={height / 2} fill={color} fillOpacity="0.13" />
+      <rect x={px} y={py} width={pw} height={height} rx={height / 2} fill={bg ?? color} fillOpacity={bg ? 1 : 0.13} />
       <T x={px + pw / 2} y={py + height / 2 + size * 0.36} fill={color} size={size} weight="700" anchor="middle">
         {label}
       </T>
@@ -89,11 +108,11 @@ function Pill({ x, y, w, label, color, size = 7.4, height = 15 }) {
  * A shop front page: promo bar, header, hero, then a product row. Used for the
  * builds whose whole point is the customer-facing shop.
  */
-function Storefront({ url, promo, brand, nav, accent, accentSoft, hero, heroSub, cta, heroTag, shelf, products }) {
+function Storefront({ id, heroPhoto, promo, brand, nav, accent, accentSoft, hero, heroSub, cta, heroTag, shelf, products }) {
   return (
     <>
       <Card />
-      <BrowserBar url={url} />
+      <BrowserBar />
 
       {/* Announcement bar */}
       <rect x="0" y="40" width="640" height="20" fill={accent} />
@@ -138,9 +157,7 @@ function Storefront({ url, promo, brand, nav, accent, accentSoft, hero, heroSub,
         Lookbook
       </T>
 
-      <rect x="380" y="112" width="234" height="126" rx="10" fill={accentSoft} />
-      <path d="M380 200 l52 -44 l44 38 l38 -28 l100 72 v0 a10 10 0 0 1 -10 10 H390 a10 10 0 0 1 -10 -10 Z" fill={accent} fillOpacity="0.18" />
-      <circle cx="440" cy="146" r="13" fill={accent} fillOpacity="0.28" />
+      <Photo id={`${id}-hero`} src={heroPhoto} x={380} y={112} w={234} h={126} r={10} />
       <rect x="392" y="206" width="120" height="22" rx="11" fill="#ffffff" />
       <circle cx="405" cy="217" r="5" fill={accent} />
       <T x={416} y={220} fill={C.ink} size={7.8} weight="600">
@@ -153,22 +170,21 @@ function Storefront({ url, promo, brand, nav, accent, accentSoft, hero, heroSub,
       </T>
       <line x1="26" y1="274" x2="614" y2="274" stroke={C.hair} />
 
-      {products.map(([name, price, tag, tagColor], i) => {
+      {products.map(([name, price, tag, tagColor, photo], i) => {
         const x = 26 + i * 149
         return (
           <g key={name}>
-            <rect x={x} y="284" width="137" height="100" rx="9" fill={C.panel} stroke={C.border} />
-            <rect x={x + 1} y="285" width="135" height="52" rx="8" fill={accentSoft} opacity={0.55 + i * 0.15} />
-            <circle cx={x + 68} cy="311" r="15" fill={accent} fillOpacity="0.2" />
-            {tag ? <Pill x={x + 8} y={292} label={tag} color={tagColor} size={6.6} /> : null}
-            <T x={x + 10} y={352} fill={C.ink} size={8.4} weight="600">
+            <rect x={x} y="278" width="137" height="106" rx="9" fill={C.panel} stroke={C.border} />
+            <Photo id={`${id}-p${i}`} src={photo} x={x + 1} y={279} w={135} h={62} r={8} />
+            {tag ? <Pill x={x + 8} y={286} label={tag} color={tagColor} size={6.6} bg="#ffffff" /> : null}
+            <T x={x + 10} y={356} fill={C.ink} size={8.4} weight="600">
               {name}
             </T>
-            <T x={x + 10} y={368} fill={C.ink} size={8.6} weight="700">
+            <T x={x + 10} y={371} fill={C.ink} size={8.6} weight="700">
               {price}
             </T>
-            <rect x={x + 84} y="357" width="44" height="17" rx="8.5" fill={accent} />
-            <T x={x + 106} y={369} fill="#ffffff" size={7} weight="700" anchor="middle">
+            <rect x={x + 84} y="359" width="44" height="17" rx="8.5" fill={accent} />
+            <T x={x + 106} y={371} fill="#ffffff" size={7} weight="700" anchor="middle">
               ADD
             </T>
           </g>
@@ -187,7 +203,7 @@ function Storefront({ url, promo, brand, nav, accent, accentSoft, hero, heroSub,
  * table. Used for the builds whose value lives in the admin, not the shop.
  */
 function AdminApp({
-  url,
+  chromeLabel,
   appName,
   monogram,
   accent,
@@ -208,7 +224,7 @@ function AdminApp({
   return (
     <>
       <Card />
-      <BrowserBar url={url} />
+      <BrowserBar label={chromeLabel} />
 
       {/* Sidebar */}
       <path d={`M0 40 H${SX} V400 H14 A14 14 0 0 1 0 386 Z`} fill={sidebarFill} />
@@ -455,10 +471,11 @@ function CodeConsole({ tabs, treeLabel, tree, treeActive, code, terminalMeta, pr
 /* ------------------------------------------------------------------ */
 
 /* A Shopify theme as the shopper sees it. */
-function ShopifyTheme() {
+function ShopifyTheme({ id }) {
   return (
     <Storefront
-      url="atelier-nord.myshopify.com"
+      id={id}
+      heroPhoto={P.fashionBoutique}
       promo="FREE SHIPPING OVER € 120 · 30-DAY RETURNS"
       brand="ATELIER NORD"
       nav={['New in', 'Knitwear', 'Outerwear', 'Journal', 'Sale']}
@@ -470,10 +487,10 @@ function ShopifyTheme() {
       heroTag="Rated 4.9 from 812 reviews"
       shelf="Best sellers this week"
       products={[
-        ['Merino crew', '€ 145', 'NEW', BRAND.shopify],
-        ['Wool overshirt', '€ 210', null, null],
-        ['Cashmere scarf', '€ 98', 'LOW STOCK', C.amber],
-        ['Quilted vest', '€ 175', null, null],
+        ['Merino crew', '€ 145', 'NEW', BRAND.shopify, P.knitSweater],
+        ['Wool overshirt', '€ 210', null, null, P.woolCoat],
+        ['Cashmere scarf', '€ 98', 'LOW STOCK', C.amber, P.knitScarf],
+        ['Quilted vest', '€ 175', null, null, P.quiltedOuterwear],
       ]}
     />
   )
@@ -481,7 +498,7 @@ function ShopifyTheme() {
 
 /* The same catalogue served through the Storefront API: query on the left,
    rendered product page on the right. */
-function ShopifyHeadless() {
+function ShopifyHeadless({ id }) {
   const CW = 5.15
   const query = [
     [['query', 'kw'], [' ', 'pl'], ['ProductByHandle', 'fn'], ['($handle: ', 'pl'], ['String!', 'var'], [') {', 'pl']],
@@ -501,7 +518,7 @@ function ShopifyHeadless() {
   return (
     <>
       <Card />
-      <BrowserBar url="atelier-nord.com/products/merino-crew  ·  Next.js" />
+      <BrowserBar label="Storefront API · Next.js" />
 
       {/* Query panel */}
       <rect x="0" y="40" width="286" height="360" fill="#0f172a" />
@@ -562,10 +579,12 @@ function ShopifyHeadless() {
       </T>
       <line x1="286" y1="76" x2="640" y2="76" stroke={C.hair} />
 
-      <rect x="306" y="92" width="148" height="176" rx="9" fill={BRAND.shopifySoft} />
-      <circle cx="380" cy="168" r="34" fill={BRAND.shopify} fillOpacity="0.22" />
-      {[0, 1, 2].map((i) => (
-        <rect key={i} x={306 + i * 34} y="276" width="30" height="30" rx="6" fill={BRAND.shopifySoft} stroke={i === 0 ? BRAND.shopify : C.border} />
+      <Photo id={`${id}-gallery`} src={P.knitSweater} x={306} y={92} w={148} h={176} r={9} />
+      {[P.knitSweater, P.woolCoat, P.knitScarf].map((src, i) => (
+        <g key={i}>
+          <Photo id={`${id}-thumb${i}`} src={src} x={306 + i * 34} y={276} w={30} h={30} r={6} />
+          <rect x={306 + i * 34} y="276" width="30" height="30" rx="6" fill="none" stroke={i === 0 ? BRAND.shopify : C.border} strokeWidth={i === 0 ? 1.6 : 1} />
+        </g>
       ))}
 
       <T x={472} y={112} fill={C.muted} size={7.6} weight="700">
@@ -629,7 +648,7 @@ function ShopifyHeadless() {
 function ShopifyApp() {
   return (
     <AdminApp
-      url="admin.shopify.com/apps/subscriptions"
+      chromeLabel="Shopify admin"
       appName="Subscriptions"
       monogram="S"
       accent={BRAND.shopify}
@@ -662,7 +681,7 @@ function ShopifyApp() {
 /* ------------------------------------------------------------------ */
 
 /* One React Native codebase, drawn as the three screens that carry a sale. */
-function MobileShopping() {
+function MobileShopping({ id }) {
   const A = BRAND.react
   const [x1, x2, x3] = phoneX
   const { y, w } = PH
@@ -689,22 +708,21 @@ function MobileShopping() {
           </g>
         ))}
         {[
-          ['Desk lamp', '€ 59'],
-          ['Headphones', '€ 129'],
-          ['Water bottle', '€ 24'],
-          ['Trail shoes', '€ 145'],
-        ].map(([name, price], i) => {
+          ['Desk lamp', '€ 59', P.deskLamp],
+          ['Headphones', '€ 129', P.headphones],
+          ['Water bottle', '€ 24', P.waterBottle],
+          ['Trail shoes', '€ 145', P.trailShoes],
+        ].map(([name, price, photo], i) => {
           const cx = x1 + 14 + (i % 2) * 72
           const cy = y + 132 + Math.floor(i / 2) * 78
           return (
             <g key={name}>
               <rect x={cx} y={cy} width="66" height="70" rx="8" fill={C.panel} stroke={C.border} />
-              <rect x={cx + 1} y={cy + 1} width="64" height="38" rx="7" fill={A} fillOpacity={0.1 + i * 0.04} />
-              <circle cx={cx + 33} cy={cy + 20} r="11" fill={A} fillOpacity="0.22" />
-              <T x={cx + 7} y={cy + 52} fill={C.ink} size={7.2} weight="600">
+              <Photo id={`${id}-cat${i}`} src={photo} x={cx + 1} y={cy + 1} w={64} h={42} r={7} />
+              <T x={cx + 7} y={cy + 56} fill={C.ink} size={7.2} weight="600">
                 {name}
               </T>
-              <T x={cx + 7} y={cy + 64} fill={C.ink} size={7.6} weight="700">
+              <T x={cx + 7} y={cy + 66} fill={C.ink} size={7.6} weight="700">
                 {price}
               </T>
             </g>
@@ -722,8 +740,7 @@ function MobileShopping() {
       {/* 2 - product */}
       <Phone x={x2} caption="Product detail">
         <AppBar x={x2} title="Headphones" fill="#ffffff" ink={C.ink} />
-        <rect x={x2 + 1} y={y + 66} width={w - 2} height="96" fill={A} fillOpacity="0.1" />
-        <circle cx={x2 + w / 2} cy={y + 112} r="30" fill={A} fillOpacity="0.24" />
+        <Photo id={`${id}-pdp`} src={P.headphonesWide} x={x2 + 1} y={y + 66} w={w - 2} h={96} r={0} />
         {[0, 1, 2, 3].map((i) => (
           <circle key={i} cx={x2 + 62 + i * 12} cy={y + 152} r="3" fill={i === 0 ? A : C.barMid} />
         ))}
@@ -762,11 +779,11 @@ function MobileShopping() {
       <Phone x={x3} caption="Checkout">
         <AppBar x={x3} title="Checkout" fill={C.ink} />
         {[
-          ['Studio ANC 3', '€ 129', 'Qty 1'],
-          ['Desk lamp', '€ 59', 'Qty 2'],
-        ].map(([name, price, qty], i) => (
+          ['Studio ANC 3', '€ 129', 'Qty 1', P.headphones],
+          ['Desk lamp', '€ 59', 'Qty 2', P.deskLamp],
+        ].map(([name, price, qty, photo], i) => (
           <g key={name}>
-            <rect x={x3 + 14} y={y + 78 + i * 46} width="34" height="34" rx="7" fill={A} fillOpacity="0.12" />
+            <Photo id={`${id}-bag${i}`} src={photo} x={x3 + 14} y={y + 78 + i * 46} w={34} h={34} r={7} />
             <T x={x3 + 56} y={y + 92 + i * 46} fill={C.ink} size={8.2} weight="600">
               {name}
             </T>
@@ -823,7 +840,7 @@ function MobileShopping() {
 
 /* Flutter delivery: customer tracking, the driver's run, and the proof of
    delivery that closes the job. */
-function MobileDelivery() {
+function MobileDelivery({ id }) {
   const A = BRAND.flutter
   const [x1, x2, x3] = phoneX
   const { y, w } = PH
@@ -923,9 +940,9 @@ function MobileDelivery() {
         <T x={x3 + w / 2} y={y + 178} fill={C.muted} size={6.8} anchor="middle">
           Signed by G. Marchetti
         </T>
-        <rect x={x3 + 14} y={y + 194} width="72" height="58" rx="8" fill={A} fillOpacity="0.1" stroke={C.border} />
-        <circle cx={x3 + 50} cy={y + 218} r="10" fill={A} fillOpacity="0.3" />
-        <T x={x3 + 50} y={y + 244} fill={C.muted} size={6.6} anchor="middle">
+        <Photo id={`${id}-pod`} src={P.giftBox} x={x3 + 14} y={y + 194} w={72} h={58} r={8} />
+        <rect x={x3 + 14} y={y + 236} width="72" height="16" rx="0" fill="#0d1b30" opacity="0.55" />
+        <T x={x3 + 50} y={y + 247} fill="#ffffff" size={6.6} anchor="middle">
           Photo attached
         </T>
         <rect x={x3 + 94} y={y + 194} width="60" height="58" rx="8" fill="#ffffff" stroke={C.border} />
@@ -1159,7 +1176,7 @@ function LaravelApi() {
 function PhpCrm() {
   return (
     <AdminApp
-      url="crm.studiolegale.it/invoices"
+      chromeLabel="Back office"
       appName="Studio CRM"
       monogram="SC"
       accent={BRAND.php}
@@ -1199,7 +1216,7 @@ function PaymentGateway() {
   return (
     <>
       <Card />
-      <BrowserBar url="api.shop.it/payments  ·  gateway adapter" />
+      <BrowserBar label="Gateway adapter" />
 
       <T x={26} y={70} fill={C.ink} size={11.5} weight="700">
         Payment adapter layer
@@ -1297,10 +1314,11 @@ function PaymentGateway() {
 /* ------------------------------------------------------------------ */
 
 /* WooCommerce from the shopper's side. */
-function WooStore() {
+function WooStore({ id }) {
   return (
     <Storefront
-      url="podere-santelena.it/shop"
+      id={id}
+      heroPhoto={P.oliveGrove}
       promo="HARVEST 2024 IS IN · SHIPPING ACROSS THE EU"
       brand="PODERE SANT’ELENA"
       nav={['Shop', 'Olive oil', 'Preserves', 'Gift boxes', 'Our farm']}
@@ -1312,10 +1330,10 @@ function WooStore() {
       heroTag="DOP certified · Puglia"
       shelf="Shop by product"
       products={[
-        ['Extra virgin 500ml', '€ 18,00', 'NEW HARVEST', BRAND.woo],
-        ['Tasting trio', '€ 46,00', null, null],
-        ['Sun-dried tomatoes', '€ 9,50', null, null],
-        ['Gift box · large', '€ 72,00', 'ONLY 6 LEFT', C.amber],
+        ['Extra virgin 500ml', '€ 18,00', 'NEW HARVEST', BRAND.woo, P.oliveOilBottle],
+        ['Tasting trio', '€ 46,00', null, null, P.oilTastingSet],
+        ['Sun-dried tomatoes', '€ 9,50', null, null, P.preservesJars],
+        ['Gift box · large', '€ 72,00', 'ONLY 6 LEFT', C.amber, P.giftBox],
       ]}
     />
   )
@@ -1323,7 +1341,7 @@ function WooStore() {
 
 /* The multilingual corporate site as the client edits it: WordPress block
    editor, with the translation state visible in the sidebar. */
-function WordPressEditor() {
+function WordPressEditor({ id }) {
   const WPBAR = BRAND.wpSidebar
   const BLUE = BRAND.wp
 
@@ -1372,16 +1390,17 @@ function WordPressEditor() {
       {/* Canvas */}
       <rect x="0" y="66" width="452" height="334" fill="#f0f0f1" />
       <rect x="34" y="82" width="384" height="300" fill="#ffffff" stroke="#e3e3e4" />
-      <rect x="34" y="82" width="384" height="86" fill={BLUE} fillOpacity="0.08" />
+      <Photo id={`${id}-cover`} src={P.industrialPlant} x={34} y={82} w={384} h={86} r={0} />
+      <rect x="34" y="82" width="384" height="86" fill="#0d1b30" opacity="0.58" />
       <rect x="33" y="81" width="386" height="88" fill="none" stroke={BLUE} strokeWidth="1.4" />
       <rect x="33" y="72" width="72" height="12" rx="2" fill={BLUE} />
       <T x={69} y={81} fill="#ffffff" size={6.6} weight="700" anchor="middle">
         COVER BLOCK
       </T>
-      <T x={54} y={118} fill={C.ink} size={16} weight="700">
+      <T x={54} y={118} fill="#ffffff" size={16} weight="700">
         Ingegneria dal 1978
       </T>
-      <T x={54} y={136} fill={C.muted} size={8.4}>
+      <T x={54} y={136} fill="#dbe3ec" size={8.4}>
         Progettazione industriale, impianti e collaudo in tutta Europa.
       </T>
       <rect x="54" y="144" width="76" height="18" rx="9" fill={BLUE} />
@@ -1482,7 +1501,7 @@ function WordPressEditor() {
 function WordPressPlugin() {
   return (
     <AdminApp
-      url="nordovest.it/wp-admin/admin.php?page=lead-routing"
+      chromeLabel="wp-admin"
       appName="Lead Routing"
       monogram="W"
       accent={BRAND.wp}
