@@ -5,7 +5,7 @@ import SectionHead from './ui/SectionHead'
 import './Skills.css'
 
 export default function Skills() {
-  const { skills, ui } = useContent()
+  const { skills } = useContent()
 
   return (
     <section className="section section--alt" id="skills" aria-labelledby="skills-title">
@@ -45,32 +45,6 @@ export default function Skills() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal className="verified">
-          <div className="verified__head">
-            <h3 className="verified__title">{ui.recordedExperience}</h3>
-            <p className="verified__note">{ui.recordedNote}</p>
-          </div>
-
-          <table className="verified__table">
-            <thead>
-              <tr>
-                <th scope="col">{ui.tableSkill}</th>
-                <th scope="col">{ui.tableProjects}</th>
-                <th scope="col">{ui.tableExperience}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {skills.verified.map((row) => (
-                <tr key={row.name}>
-                  <th scope="row">{row.name}</th>
-                  <td>{row.projects}</td>
-                  <td>{row.years}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </Reveal>
       </div>
     </section>
   )

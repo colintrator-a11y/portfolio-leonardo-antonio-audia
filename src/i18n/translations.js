@@ -43,11 +43,6 @@ const en = {
     exampleWord: 'Example',
     certifications: 'Certifications',
     languagesTitle: 'Languages',
-    recordedExperience: 'Recorded experience',
-    recordedNote: 'As published on my Workana profile',
-    tableSkill: 'Skill',
-    tableProjects: 'Projects',
-    tableExperience: 'Experience',
     completedEngagements: 'Completed engagements',
     clientPrefix: 'Client',
     viewProfile: 'View the verified profile',
@@ -164,7 +159,7 @@ const en = {
     eyebrow: 'Technical Skills',
     heading: 'The stack behind the solutions',
     intro:
-      'Every technology listed here appears on my verified Workana profile, with the experience level recorded against it.',
+      'Every technology listed here appears on my verified Workana profile.',
     categories: [
       ['Frontend', 'Interfaces that stay fast and clear on any screen.'],
       ['Backend', 'Server-side services and the APIs on top of them.'],
@@ -173,8 +168,6 @@ const en = {
       ['Responsive & UI', 'The discipline behind every layout I ship.'],
       ['Automation', 'Chatbots and workflows that cut manual effort.'],
     ],
-    projectsUnit: ['5 projects', '5 projects', '3 projects', '3 projects', '1 project', '1 project', '1 project'],
-    yearsUnit: ['+10 years', '+10 years', '+10 years', '5 to 10 years', '+10 years', '+10 years', '+10 years'],
   },
   projects: {
     eyebrow: 'Selected Work',
@@ -284,9 +277,9 @@ const en = {
   },
   examples: {
     eyebrow: 'Capability Examples',
-    heading: 'Mobile, PHP, WordPress, chatbot and Shopify builds',
+    heading: 'PHP, WordPress, Shopify, mobile and chatbot builds',
     intro:
-      'Reference builds rather than client deliveries — shown to make concrete what the mobile, PHP, WordPress, chatbot and Shopify work on my skills list actually looks like in practice.',
+      'Reference builds rather than client deliveries — shown to make concrete what the PHP, WordPress, Shopify, mobile and chatbot work on my skills list actually looks like in practice.',
     badge: 'Capability example',
     note: 'These are reference builds, not client projects. Every project above was delivered for a paying client.',
     items: {
@@ -595,11 +588,6 @@ const pt = {
     exampleWord: 'Exemplo',
     certifications: 'Certificações',
     languagesTitle: 'Idiomas',
-    recordedExperience: 'Experiência registada',
-    recordedNote: 'Conforme publicado no meu perfil Workana',
-    tableSkill: 'Competência',
-    tableProjects: 'Projetos',
-    tableExperience: 'Experiência',
     completedEngagements: 'Trabalhos concluídos',
     clientPrefix: 'Cliente',
     viewProfile: 'Ver o perfil verificado',
@@ -718,7 +706,7 @@ const pt = {
     eyebrow: 'Competências Técnicas',
     heading: 'A tecnologia por trás das soluções',
     intro:
-      'Todas as tecnologias aqui listadas constam do meu perfil verificado na Workana, com o nível de experiência registado.',
+      'Todas as tecnologias aqui listadas constam do meu perfil verificado na Workana.',
     categories: [
       ['Frontend', 'Interfaces que se mantêm rápidas e claras em qualquer ecrã.'],
       ['Backend', 'Serviços do lado do servidor e as APIs por cima deles.'],
@@ -727,8 +715,6 @@ const pt = {
       ['Responsivo e UI', 'A disciplina por trás de cada layout que entrego.'],
       ['Automação', 'Chatbots e fluxos que reduzem o esforço manual.'],
     ],
-    projectsUnit: ['5 projetos', '5 projetos', '3 projetos', '3 projetos', '1 projeto', '1 projeto', '1 projeto'],
-    yearsUnit: ['+10 anos', '+10 anos', '+10 anos', '5 a 10 anos', '+10 anos', '+10 anos', '+10 anos'],
   },
   projects: {
     eyebrow: 'Trabalhos Selecionados',
@@ -838,9 +824,9 @@ const pt = {
   },
   examples: {
     eyebrow: 'Exemplos de Capacidade',
-    heading: 'Projetos em mobile, PHP, WordPress, chatbot e Shopify',
+    heading: 'Projetos em PHP, WordPress, Shopify, mobile e chatbot',
     intro:
-      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de mobile, PHP, WordPress, chatbot e Shopify da minha lista de competências significa na prática.',
+      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de PHP, WordPress, Shopify, mobile e chatbot da minha lista de competências significa na prática.',
     badge: 'Exemplo de capacidade',
     note: 'Estes são projetos de referência, não trabalhos de clientes. Todos os projetos acima foram entregues a clientes reais.',
     items: {
@@ -1150,11 +1136,6 @@ const es = {
     exampleWord: 'Ejemplo',
     certifications: 'Certificaciones',
     languagesTitle: 'Idiomas',
-    recordedExperience: 'Experiencia registrada',
-    recordedNote: 'Según lo publicado en mi perfil de Workana',
-    tableSkill: 'Habilidad',
-    tableProjects: 'Proyectos',
-    tableExperience: 'Experiencia',
     completedEngagements: 'Trabajos completados',
     clientPrefix: 'Cliente',
     viewProfile: 'Ver el perfil verificado',
@@ -1273,7 +1254,7 @@ const es = {
     eyebrow: 'Habilidades Técnicas',
     heading: 'La tecnología detrás de las soluciones',
     intro:
-      'Todas las tecnologías aquí listadas aparecen en mi perfil verificado de Workana, con el nivel de experiencia registrado.',
+      'Todas las tecnologías aquí listadas aparecen en mi perfil verificado de Workana.',
     categories: [
       ['Frontend', 'Interfaces que siguen siendo rápidas y claras en cualquier pantalla.'],
       ['Backend', 'Servicios de servidor y las APIs que se apoyan en ellos.'],
@@ -1282,8 +1263,6 @@ const es = {
       ['Responsivo y UI', 'La disciplina detrás de cada maquetación que entrego.'],
       ['Automatización', 'Chatbots y flujos que reducen el esfuerzo manual.'],
     ],
-    projectsUnit: ['5 proyectos', '5 proyectos', '3 proyectos', '3 proyectos', '1 proyecto', '1 proyecto', '1 proyecto'],
-    yearsUnit: ['+10 años', '+10 años', '+10 años', '5 a 10 años', '+10 años', '+10 años', '+10 años'],
   },
   projects: {
     eyebrow: 'Trabajos Seleccionados',
@@ -1393,9 +1372,9 @@ const es = {
   },
   examples: {
     eyebrow: 'Ejemplos de Capacidad',
-    heading: 'Proyectos en móvil, PHP, WordPress, chatbot y Shopify',
+    heading: 'Proyectos en PHP, WordPress, Shopify, móvil y chatbot',
     intro:
-      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de móvil, PHP, WordPress, chatbot y Shopify de mi lista de habilidades.',
+      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de PHP, WordPress, Shopify, móvil y chatbot de mi lista de habilidades.',
     badge: 'Ejemplo de capacidad',
     note: 'Estos son proyectos de referencia, no trabajos de clientes. Todos los proyectos anteriores se entregaron a clientes reales.',
     items: {

@@ -63,16 +63,6 @@ const skillItems = [
   ['Chatbot', 'Process Automation', 'Third-Party Integrations'],
 ]
 
-const verifiedSkills = [
-  'React.js',
-  'Responsive Web Design',
-  'Node.js',
-  'E-commerce',
-  'WordPress',
-  'HTML',
-  'CSS',
-]
-
 /* Official test titles - left in their original language. */
 export const certifications = [
   { name: 'Android Avanzado', score: '96%' },
@@ -118,14 +108,15 @@ const projectMedia = {
 }
 
 /*
- * Both lists run in the same order: mobile first, then PHP and WordPress,
- * then WhatsApp and chat, then everything else. The row numbers in the UI are
- * derived from position, so reordering here renumbers the page.
+ * Both lists run in the same order: PHP, then Shopify, then mobile, then
+ * WhatsApp and chatbot, then everything else. WordPress and WooCommerce sit
+ * in the PHP group, since that is what they are built on. The row numbers in
+ * the UI are derived from position, so reordering here renumbers the page.
  */
 const projectOrder = [
-  // Mobile
+  // Mobile - no PHP, Shopify or chatbot work among the delivered projects
   'fitness-platform',
-  // Others - no PHP, WordPress or chat work among the delivered projects
+  // Others
   'premium-fashion',
   'modular-furniture',
   'multi-brand',
@@ -195,24 +186,25 @@ const exampleMedia = {
 }
 
 const exampleOrder = [
-  // Mobile
-  'react-native-shop-app',
-  'flutter-delivery-app',
-  'android-field-service',
-  // PHP, then WordPress - WooCommerce runs on WordPress, so it sits with it
+  // PHP, then the WordPress and WooCommerce builds that run on it
   'laravel-booking-api',
   'php-crm-invoicing',
   'php-payment-gateway',
   'woocommerce-store',
   'wordpress-multilingual-site',
   'wordpress-lead-plugin',
-  // WhatsApp and chat
-  'whatsapp-telegram-bot',
-  'support-chatbot',
-  // Others
+  // Shopify
   'shopify-fashion-theme',
   'shopify-headless',
   'shopify-subscription-app',
+  // Mobile
+  'react-native-shop-app',
+  'flutter-delivery-app',
+  'android-field-service',
+  // WhatsApp and chatbot
+  'whatsapp-telegram-bot',
+  'support-chatbot',
+  // Others
   'python-automation',
 ]
 
@@ -295,11 +287,6 @@ export function buildContent(lang) {
         caption,
         icon: skillIcons[i],
         items: skillItems[i],
-      })),
-      verified: verifiedSkills.map((name, i) => ({
-        name,
-        projects: t.skills.projectsUnit[i],
-        years: t.skills.yearsUnit[i],
       })),
     },
 
