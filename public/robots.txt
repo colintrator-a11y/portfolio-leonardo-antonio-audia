@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leonardoaudia.dev/sitemap.xml
+Sitemap: https://leonardo-audia.vercel.app/sitemap.xml
