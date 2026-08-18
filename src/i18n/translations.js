@@ -505,6 +505,266 @@ const en = {
         value:
           'Turns a recurring manual task into something that runs on its own and reports when it does not, so nobody has to remember it.',
       },
+      'angular-crm-portal': {
+        category: 'Sales Platform',
+        title: 'AngularJS Sales Pipeline Portal',
+        overview:
+          'A shared pipeline for four regional sales teams, built as an AngularJS front end on a Nest.js API. Every team sees the same deals and the same stage rules, so a deal cannot quietly mean something different in one office than in another.',
+        features: [
+          'One pipeline shared across four regional teams',
+          'Stage rules enforced on the API, not the browser',
+          'Role-based visibility per team and per region',
+          'Activity trail on every deal, exportable to CSV',
+        ],
+        value: 'One version of the pipeline instead of four spreadsheets that disagree.',
+      },
+      'laravel-saas-billing': {
+        category: 'Billing Platform',
+        title: 'Laravel Subscription & Billing Engine',
+        overview:
+          'Plans, seats, proration and failed-payment recovery for a subscription business. The hard part is not charging a card once; it is what happens on an upgrade mid-cycle, and what happens when the third charge fails.',
+        features: [
+          'Plan changes prorated to the day',
+          'Dunning with retries and a final grace period',
+          'Provider webhooks reconciled against local state',
+          'Invoices generated as PDFs with VAT handling',
+        ],
+        value: 'Revenue that keeps arriving after the first month, with failures chased automatically.',
+      },
+      'php-inventory-system': {
+        category: 'Warehouse System',
+        title: 'PHP Stock Control for Two Warehouses',
+        overview:
+          'Stock counted once across two warehouses, with reorder points that actually fire. Movements in and out are recorded as events rather than edits, so the current figure can always be explained by the history behind it.',
+        features: [
+          'Single stock figure across both warehouses',
+          'Reorder points that raise purchase suggestions',
+          'Movements stored as an auditable event log',
+          'Supplier lead times factored into reorder timing',
+        ],
+        value: 'Fewer stockouts, and a number the warehouse and the office both trust.',
+      },
+      'wordpress-membership-site': {
+        category: 'Membership Site',
+        title: 'WordPress Membership & Gated Content',
+        overview:
+          'Three membership tiers on WordPress, with content gated by rule rather than by hand. Editors keep writing in the normal editor; the plugin decides who can read what, and renewals run without anyone remembering to chase them.',
+        features: [
+          'Three tiers with rule-based content gating',
+          'Automatic renewals and expiry emails',
+          'Members area with invoices and downloads',
+          'Editors keep the standard WordPress editor',
+        ],
+        value: 'Recurring income from writing that was already being published for free.',
+      },
+      'woocommerce-multivendor': {
+        category: 'Marketplace',
+        title: 'WooCommerce Multi-Vendor Marketplace',
+        overview:
+          'One basket, many sellers. A customer checks out once; the order is split by vendor behind the scenes, commission is taken at source, and each seller sees only their own orders and payouts.',
+        features: [
+          'One checkout split into per-vendor orders',
+          'Commission taken automatically at source',
+          'Vendor dashboard with orders, stock and payouts',
+          'Payout runs with a statement per vendor',
+        ],
+        value: 'A shop that grows by adding sellers rather than by buying more stock.',
+      },
+      'shopify-b2b-wholesale': {
+        category: 'B2B Commerce',
+        title: 'Shopify B2B Wholesale Portal',
+        overview:
+          'Trade pricing on the same Shopify store that serves the public, hidden behind a login. Each company gets its own price list and payment terms, so the wholesale side does not need a second platform to live on.',
+        features: [
+          'Company-specific price lists behind a login',
+          'Payment terms per account, including net 30 and 60',
+          'Minimum order quantities and case-pack rules',
+          'Trade catalogue hidden from public search',
+        ],
+        value: 'Wholesale and retail on one platform instead of two systems to keep in step.',
+      },
+      'react-analytics-dashboard': {
+        category: 'Analytics',
+        title: 'React Checkout Funnel Dashboard',
+        overview:
+          'A funnel view over raw event data: where the basket is abandoned, by step and by device. Built so a marketing lead can answer a question without asking an engineer to write a query first.',
+        features: [
+          'Funnel, cohort and retention views over one event store',
+          'Segment by device, channel and campaign',
+          'Charts render from pre-aggregated queries for speed',
+          'Saved views shared across the team',
+        ],
+        value: 'Decisions made from the funnel rather than from opinions about it.',
+      },
+      'support-desk-handover': {
+        category: 'Support Platform',
+        title: 'Chatbot Handover Desk for Support Teams',
+        overview:
+          'The bot answers what it can and hands the rest to a person with the whole conversation attached. The desk shows why each chat was escalated, so the knowledge base gets fixed where it actually failed.',
+        features: [
+          'Automatic handover with full conversation context',
+          'One inbox for WhatsApp, Telegram and web chat',
+          'Escalation reasons recorded and reported',
+          'Canned replies and macros for repeat questions',
+        ],
+        value: 'Most questions answered instantly, and the rest reaching a person already briefed.',
+      },
+      'booking-scheduling-app': {
+        category: 'Scheduling',
+        title: 'Appointment Scheduling for Six Practitioners',
+        overview:
+          'One calendar for six practitioners, three rooms and a public booking page. Availability is computed from staff hours, room capacity and existing bookings, so the slot a client sees is a slot that genuinely exists.',
+        features: [
+          'Availability computed from staff, room and service rules',
+          'Public booking page with confirmation emails',
+          'SMS and email reminders that cut no-shows',
+          'Reschedule and cancellation windows enforced by rule',
+        ],
+        value: 'A diary that fills itself, without the double bookings a shared spreadsheet invites.',
+      },
+      'nest-microservices': {
+        category: 'Backend & API',
+        title: 'Nest.js Service Split into Queues',
+        overview:
+          'A monolith broken into queued workers by concern: orders, payments, stock, mail. Each queue retries with backoff and anything that still fails lands in a dead-letter queue to be replayed rather than lost.',
+        features: [
+          'Work split into queues by concern',
+          'Retry with exponential backoff per queue',
+          'Dead-letter queue with replay from the console',
+          'Throughput and lag visible per consumer',
+        ],
+        value: 'Traffic spikes absorbed by the queue instead of taking the checkout down with them.',
+      },
+      'nextjs-headless-blog': {
+        category: 'Editorial Site',
+        title: 'Next.js Editorial Site on a Headless CMS',
+        overview:
+          'An editorial site rendered by Next.js and written in a headless CMS. Pages are pre-rendered at build and revalidated at the edge, so the site stays fast without editors waiting for a deploy to publish.',
+        features: [
+          'Static pre-rendering with edge revalidation',
+          'Editors publish without a developer or a deploy',
+          'Structured data and sitemap generated automatically',
+          'Image pipeline serving modern formats per device',
+        ],
+        value: 'Publishing speed for the editors and load speed for the reader, at the same time.',
+      },
+      'laravel-queue-worker': {
+        category: 'Backend & API',
+        title: 'Laravel Queued Catalogue Importer',
+        overview:
+          'A nightly catalogue import moved off the web request and onto queued jobs. Work is chunked so one bad batch retries alone instead of failing the whole import, and the run reports what it rejected rather than silently dropping it.',
+        features: [
+          'Import chunked into independently retried batches',
+          'Exponential backoff with a capped retry count',
+          'Rejected rows reported, never silently discarded',
+          'Progress and failures visible while the job runs',
+        ],
+        value: 'An import that finishes overnight and tells you exactly what it could not accept.',
+      },
+      'wordpress-headless-api': {
+        category: 'Headless CMS',
+        title: 'Headless WordPress with a Next.js Front End',
+        overview:
+          'WordPress kept as the editor and turned into an API; the public site is rendered by Next.js. Editors keep the workflow they know, and the front end stops being limited by what a theme can do.',
+        features: [
+          'Custom REST routes returning block content as JSON',
+          'Edge cache invalidated the moment a post is saved',
+          'Editors keep the standard WordPress editor',
+          'Front end free of theme and plugin constraints',
+        ],
+        value: 'A modern front end without retraining the people who write the content.',
+      },
+      'shopify-inventory-sync': {
+        category: 'Integration',
+        title: 'Shopify to ERP Stock Synchronisation',
+        overview:
+          'Stock kept level between Shopify and a back-office system, in both directions. The ERP stays the source of truth, Shopify is updated within the API budget, and a reconciliation pass catches any drift each hour.',
+        features: [
+          'Two-way sync with the ERP as source of truth',
+          'Rate limiting that respects the Shopify API budget',
+          'Orders reserve stock in the ERP on payment',
+          'Hourly reconciliation reporting any drift',
+        ],
+        value: 'One stock figure across both systems, so nothing is sold that is not there.',
+      },
+      'node-realtime-orders': {
+        category: 'Backend & API',
+        title: 'Real-Time Order Board over WebSockets',
+        overview:
+          'Kitchen and counter screens that update the instant an order moves, without polling. State transitions are validated and locked in the database, so two screens cannot advance the same order twice.',
+        features: [
+          'Order state pushed to every screen in the same tick',
+          'Transitions validated and row-locked in the database',
+          'Silent reconnection after a network drop',
+          'Tested at 400 concurrent screens',
+        ],
+        value: 'Screens that agree with each other, in a room where seconds matter.',
+      },
+      'python-data-pipeline': {
+        category: 'Automation',
+        title: 'Nightly Python Reporting Pipeline',
+        overview:
+          'Six sources pulled every night, validated, and loaded into one reporting table. If too much of the input is rejected the run fails loudly rather than quietly publishing a report nobody should trust.',
+        features: [
+          'Six sources extracted, validated and loaded nightly',
+          'Run fails loudly when rejects pass a threshold',
+          'Rejected rows kept and reported, never dropped',
+          'Summary emailed to finance when the run completes',
+        ],
+        value: 'Numbers that arrive by breakfast, and a loud failure when they should not be trusted.',
+      },
+      'react-native-loyalty-app': {
+        category: 'Mobile Application',
+        title: 'React Native Loyalty & Rewards App',
+        overview:
+          'A loyalty card that lives on the phone: points, tiers and a code the till can scan. One React Native codebase ships to both stores, and the card keeps working when the shop has no signal.',
+        features: [
+          'Points and tiers with a scannable member code',
+          'Rewards catalogue with redemption at the till',
+          'Offers targeted by tier and by nearest shop',
+          'Card readable offline, syncing when signal returns',
+        ],
+        value: 'Repeat visits from customers already carrying the card in their pocket.',
+      },
+      'flutter-habit-tracker': {
+        category: 'Mobile Application',
+        title: 'Flutter Habit Tracker with Local Reminders',
+        overview:
+          'A habit tracker built once in Flutter for both stores. Streaks, a month view and reminders that fire from the device itself, so the app is useful on a train with no connection.',
+        features: [
+          'Daily checklist with streaks and a month view',
+          'Local notifications that work without a connection',
+          'All data stored on device, exportable as CSV',
+          'One Flutter codebase for iOS and Android',
+        ],
+        value: 'A habit app that still works in the places where habits actually happen.',
+      },
+      'android-pos-terminal': {
+        category: 'Mobile Application',
+        title: 'Android Point-of-Sale Terminal',
+        overview:
+          'A till that takes payment, prints a receipt and closes the day. Sales are written to the device first and synced afterwards, so a dropped connection never stops the queue at the counter.',
+        features: [
+          'Basket, payment and receipt printing on device',
+          'Sales queued locally and synced when signal returns',
+          'End-of-day report with card, cash and refunds',
+          'Card, cash and meal-voucher payment paths',
+        ],
+        value: 'A counter that keeps serving whether or not the internet is having a good day.',
+      },
+      'ios-property-viewings': {
+        category: 'Mobile Application',
+        title: 'iOS Property Search & Viewing Booking',
+        overview:
+          'Search, shortlist and book a viewing without leaving the app. The agent gets the appointment in their calendar and the buyer gets a confirmation, so the viewing is agreed before anyone picks up a phone.',
+        features: [
+          'Filtered search with saved shortlists',
+          'Viewing booked against the agent calendar',
+          'Confirmation and calendar entry for the buyer',
+          'In-app messaging with the listing agent',
+        ],
+        value: 'Viewings booked the moment interest is highest, rather than the next working day.',
+      },
     },
   },
   process: {
@@ -1052,6 +1312,266 @@ const pt = {
         value:
           'Transforma uma tarefa manual recorrente em algo que corre sozinho e avisa quando não corre, sem depender da memória de ninguém.',
       },
+      'angular-crm-portal': {
+        category: 'Plataforma de Vendas',
+        title: 'Portal de Pipeline de Vendas em AngularJS',
+        overview:
+          'Um pipeline partilhado por quatro equipas comerciais regionais, com front end em AngularJS sobre uma API Nest.js. Todas as equipas veem os mesmos negocios e as mesmas regras de fase, para que um negocio nao signifique coisas diferentes em escritorios diferentes.',
+        features: [
+          'Um pipeline partilhado por quatro equipas regionais',
+          'Regras de fase aplicadas na API, nao no browser',
+          'Visibilidade por funcao, equipa e regiao',
+          'Historico de atividade em cada negocio, exportavel para CSV',
+        ],
+        value: 'Uma so versao do pipeline em vez de quatro folhas de calculo que se contradizem.',
+      },
+      'laravel-saas-billing': {
+        category: 'Plataforma de Faturacao',
+        title: 'Motor de Subscricoes e Faturacao em Laravel',
+        overview:
+          'Planos, lugares, proporcionalidade e recuperacao de pagamentos falhados para um negocio por subscricao. O dificil nao e cobrar um cartao uma vez; e o que acontece numa mudanca de plano a meio do ciclo e quando a terceira cobranca falha.',
+        features: [
+          'Mudancas de plano calculadas ao dia',
+          'Cobranca insistente com tentativas e periodo de tolerancia',
+          'Webhooks do fornecedor reconciliados com o estado local',
+          'Faturas geradas em PDF com tratamento de IVA',
+        ],
+        value: 'Receita que continua a entrar depois do primeiro mes, com falhas perseguidas automaticamente.',
+      },
+      'php-inventory-system': {
+        category: 'Sistema de Armazem',
+        title: 'Controlo de Stock em PHP para Dois Armazens',
+        overview:
+          'Stock contado uma unica vez em dois armazens, com pontos de reposicao que disparam mesmo. As entradas e saidas sao registadas como eventos e nao como edicoes, para que o numero atual seja sempre explicavel pelo historico.',
+        features: [
+          'Um unico numero de stock para os dois armazens',
+          'Pontos de reposicao que geram sugestoes de compra',
+          'Movimentos guardados como registo auditavel',
+          'Prazos de entrega dos fornecedores no calculo da reposicao',
+        ],
+        value: 'Menos ruturas e um numero em que o armazem e o escritorio confiam.',
+      },
+      'wordpress-membership-site': {
+        category: 'Site de Membros',
+        title: 'Membros e Conteudo Restrito em WordPress',
+        overview:
+          'Tres niveis de adesao em WordPress, com conteudo restrito por regra e nao a mao. Os editores continuam a escrever no editor normal; o plugin decide quem pode ler o que, e as renovacoes correm sem ninguem se lembrar de as perseguir.',
+        features: [
+          'Tres niveis com restricao de conteudo por regra',
+          'Renovacoes automaticas e emails de expiracao',
+          'Area de membros com faturas e downloads',
+          'Os editores mantem o editor normal do WordPress',
+        ],
+        value: 'Receita recorrente a partir de textos que ja eram publicados de graca.',
+      },
+      'woocommerce-multivendor': {
+        category: 'Marketplace',
+        title: 'Marketplace Multi-Vendedor em WooCommerce',
+        overview:
+          'Um carrinho, varios vendedores. O cliente finaliza a compra uma vez; a encomenda e dividida por vendedor nos bastidores, a comissao e retida na origem e cada vendedor ve apenas as suas encomendas e pagamentos.',
+        features: [
+          'Um checkout dividido em encomendas por vendedor',
+          'Comissao retida automaticamente na origem',
+          'Painel do vendedor com encomendas, stock e pagamentos',
+          'Ciclos de pagamento com extrato por vendedor',
+        ],
+        value: 'Uma loja que cresce somando vendedores em vez de comprando mais stock.',
+      },
+      'shopify-b2b-wholesale': {
+        category: 'Comercio B2B',
+        title: 'Portal Grossista B2B em Shopify',
+        overview:
+          'Precos de revenda na mesma loja Shopify que serve o publico, escondidos atras de um login. Cada empresa tem a sua lista de precos e condicoes de pagamento, para que o grossista nao precise de uma segunda plataforma.',
+        features: [
+          'Listas de precos por empresa atras de login',
+          'Condicoes de pagamento por conta, incluindo 30 e 60 dias',
+          'Quantidades minimas e regras de caixa fechada',
+          'Catalogo de revenda escondido da pesquisa publica',
+        ],
+        value: 'Grossista e retalho numa so plataforma em vez de dois sistemas a manter alinhados.',
+      },
+      'react-analytics-dashboard': {
+        category: 'Analitica',
+        title: 'Painel de Funil de Checkout em React',
+        overview:
+          'Uma vista de funil sobre dados de eventos: onde o carrinho e abandonado, por passo e por dispositivo. Feito para que um responsavel de marketing responda a uma pergunta sem pedir a um programador que escreva uma consulta.',
+        features: [
+          'Vistas de funil, coorte e retencao sobre um so armazem de eventos',
+          'Segmentacao por dispositivo, canal e campanha',
+          'Graficos servidos a partir de consultas pre-agregadas',
+          'Vistas guardadas e partilhadas pela equipa',
+        ],
+        value: 'Decisoes tomadas a partir do funil e nao de opinioes sobre ele.',
+      },
+      'support-desk-handover': {
+        category: 'Plataforma de Suporte',
+        title: 'Balcao de Transferencia de Chatbot para Suporte',
+        overview:
+          'O bot responde ao que consegue e passa o resto a uma pessoa com a conversa toda anexada. O balcao mostra porque cada conversa foi escalada, para que a base de conhecimento seja corrigida onde falhou.',
+        features: [
+          'Transferencia automatica com o contexto completo',
+          'Uma caixa de entrada para WhatsApp, Telegram e chat web',
+          'Motivos de escalonamento registados e reportados',
+          'Respostas rapidas e macros para perguntas repetidas',
+        ],
+        value: 'A maioria das perguntas respondida na hora e o resto a chegar a uma pessoa ja informada.',
+      },
+      'booking-scheduling-app': {
+        category: 'Agendamento',
+        title: 'Marcacoes para Seis Profissionais',
+        overview:
+          'Um calendario para seis profissionais, tres salas e uma pagina publica de marcacoes. A disponibilidade e calculada a partir dos horarios, da capacidade das salas e das marcacoes existentes, por isso o horario que o cliente ve existe mesmo.',
+        features: [
+          'Disponibilidade calculada por profissional, sala e servico',
+          'Pagina publica de marcacao com emails de confirmacao',
+          'Lembretes por SMS e email que reduzem faltas',
+          'Janelas de remarcacao e cancelamento aplicadas por regra',
+        ],
+        value: 'Uma agenda que se preenche sozinha, sem as marcacoes duplicadas de uma folha partilhada.',
+      },
+      'nest-microservices': {
+        category: 'Backend e API',
+        title: 'Servico Nest.js Dividido em Filas',
+        overview:
+          'Um monolito dividido em trabalhadores em fila por area: encomendas, pagamentos, stock, email. Cada fila repete com espera crescente e o que continua a falhar vai para uma fila morta, para ser reprocessado e nao perdido.',
+        features: [
+          'Trabalho dividido em filas por area',
+          'Repeticao com espera exponencial por fila',
+          'Fila morta com reprocessamento a partir da consola',
+          'Debito e atraso visiveis por consumidor',
+        ],
+        value: 'Picos de trafego absorvidos pela fila em vez de derrubarem o checkout.',
+      },
+      'nextjs-headless-blog': {
+        category: 'Site Editorial',
+        title: 'Site Editorial em Next.js com CMS Headless',
+        overview:
+          'Um site editorial servido por Next.js e escrito num CMS headless. As paginas sao pre-geradas na compilacao e revalidadas na periferia, por isso o site mantem-se rapido sem os editores esperarem por um deploy.',
+        features: [
+          'Pre-geracao estatica com revalidacao na periferia',
+          'Editores publicam sem programador e sem deploy',
+          'Dados estruturados e sitemap gerados automaticamente',
+          'Imagens servidas em formatos modernos por dispositivo',
+        ],
+        value: 'Velocidade de publicacao para os editores e de carregamento para o leitor, ao mesmo tempo.',
+      },
+      'laravel-queue-worker': {
+        category: 'Backend e API',
+        title: 'Importador de Catalogo em Filas com Laravel',
+        overview:
+          'Uma importacao noturna de catalogo retirada do pedido web e passada para tarefas em fila. O trabalho e dividido em blocos, para que um bloco mau repita sozinho em vez de derrubar a importacao toda, e a execucao reporta o que rejeitou.',
+        features: [
+          'Importacao dividida em blocos repetidos de forma independente',
+          'Espera exponencial com limite de tentativas',
+          'Linhas rejeitadas reportadas e nunca descartadas em silencio',
+          'Progresso e falhas visiveis durante a execucao',
+        ],
+        value: 'Uma importacao que termina de noite e diz exatamente o que nao conseguiu aceitar.',
+      },
+      'wordpress-headless-api': {
+        category: 'CMS Headless',
+        title: 'WordPress Headless com Front End em Next.js',
+        overview:
+          'O WordPress mantido como editor e transformado em API; o site publico e servido por Next.js. Os editores mantem o fluxo que conhecem e o front end deixa de estar limitado ao que um tema consegue fazer.',
+        features: [
+          'Rotas REST proprias que devolvem blocos em JSON',
+          'Cache invalidada no momento em que um artigo e guardado',
+          'Editores mantem o editor normal do WordPress',
+          'Front end livre das limitacoes de temas e plugins',
+        ],
+        value: 'Um front end moderno sem ter de reensinar quem escreve o conteudo.',
+      },
+      'shopify-inventory-sync': {
+        category: 'Integracao',
+        title: 'Sincronizacao de Stock entre Shopify e ERP',
+        overview:
+          'Stock mantido alinhado entre o Shopify e um sistema de retaguarda, nos dois sentidos. O ERP continua a ser a fonte de verdade, o Shopify e atualizado dentro do orcamento da API e uma reconciliacao horaria apanha desvios.',
+        features: [
+          'Sincronizacao bidirecional com o ERP como fonte de verdade',
+          'Limitacao de ritmo que respeita o orcamento da API Shopify',
+          'Encomendas reservam stock no ERP no momento do pagamento',
+          'Reconciliacao horaria que reporta qualquer desvio',
+        ],
+        value: 'Um so numero de stock nos dois sistemas, para nao se vender o que nao existe.',
+      },
+      'node-realtime-orders': {
+        category: 'Backend e API',
+        title: 'Quadro de Encomendas em Tempo Real por WebSockets',
+        overview:
+          'Ecras de cozinha e balcao que atualizam no instante em que uma encomenda muda, sem sondagem. As transicoes de estado sao validadas e bloqueadas na base de dados, para que dois ecras nao avancem a mesma encomenda duas vezes.',
+        features: [
+          'Estado enviado a todos os ecras no mesmo instante',
+          'Transicoes validadas e com bloqueio de linha na base de dados',
+          'Reconexao silenciosa apos queda de rede',
+          'Testado com 400 ecras em simultaneo',
+        ],
+        value: 'Ecras que concordam entre si, numa sala onde os segundos contam.',
+      },
+      'python-data-pipeline': {
+        category: 'Automacao',
+        title: 'Pipeline Noturno de Relatorios em Python',
+        overview:
+          'Seis fontes recolhidas todas as noites, validadas e carregadas numa unica tabela de relatorio. Se demasiada informacao for rejeitada, a execucao falha de forma ruidosa em vez de publicar um relatorio em que ninguem deve confiar.',
+        features: [
+          'Seis fontes extraidas, validadas e carregadas todas as noites',
+          'A execucao falha de forma ruidosa acima do limite de rejeicoes',
+          'Linhas rejeitadas guardadas e reportadas, nunca descartadas',
+          'Resumo enviado por email a area financeira no fim',
+        ],
+        value: 'Numeros que chegam ao pequeno-almoco e uma falha ruidosa quando nao sao de confianca.',
+      },
+      'react-native-loyalty-app': {
+        category: 'Aplicacao Movel',
+        title: 'App de Fidelizacao e Recompensas em React Native',
+        overview:
+          'Um cartao de fidelizacao que vive no telemovel: pontos, niveis e um codigo que a caixa consegue ler. Uma so base de codigo React Native chega as duas lojas e o cartao continua a funcionar sem rede.',
+        features: [
+          'Pontos e niveis com codigo de membro legivel',
+          'Catalogo de recompensas com resgate na caixa',
+          'Ofertas dirigidas por nivel e por loja mais proxima',
+          'Cartao legivel offline, sincronizado quando ha rede',
+        ],
+        value: 'Visitas repetidas de clientes que ja levam o cartao no bolso.',
+      },
+      'flutter-habit-tracker': {
+        category: 'Aplicacao Movel',
+        title: 'Rastreador de Habitos em Flutter com Lembretes Locais',
+        overview:
+          'Um rastreador de habitos feito uma so vez em Flutter para as duas lojas. Sequencias, vista mensal e lembretes disparados pelo proprio dispositivo, para que a app seja util num comboio sem rede.',
+        features: [
+          'Lista diaria com sequencias e vista mensal',
+          'Notificacoes locais que funcionam sem ligacao',
+          'Dados guardados no dispositivo e exportaveis em CSV',
+          'Uma so base de codigo Flutter para iOS e Android',
+        ],
+        value: 'Uma app de habitos que funciona nos sitios onde os habitos acontecem.',
+      },
+      'android-pos-terminal': {
+        category: 'Aplicacao Movel',
+        title: 'Terminal de Ponto de Venda em Android',
+        overview:
+          'Uma caixa que recebe o pagamento, imprime o talao e fecha o dia. As vendas sao escritas primeiro no dispositivo e sincronizadas depois, para que uma quebra de ligacao nunca pare a fila ao balcao.',
+        features: [
+          'Carrinho, pagamento e impressao de talao no dispositivo',
+          'Vendas em fila local, sincronizadas quando ha rede',
+          'Relatorio de fecho com cartao, numerario e devolucoes',
+          'Pagamento por cartao, numerario e vale de refeicao',
+        ],
+        value: 'Um balcao que continua a servir, esteja a internet boa ou nao.',
+      },
+      'ios-property-viewings': {
+        category: 'Aplicacao Movel',
+        title: 'Procura de Imoveis e Marcacao de Visitas em iOS',
+        overview:
+          'Procurar, guardar e marcar uma visita sem sair da app. O agente recebe a marcacao no calendario e o comprador recebe a confirmacao, por isso a visita fica combinada antes de alguem pegar no telefone.',
+        features: [
+          'Procura com filtros e listas guardadas',
+          'Visita marcada contra o calendario do agente',
+          'Confirmacao e entrada de calendario para o comprador',
+          'Mensagens na app com o agente do anuncio',
+        ],
+        value: 'Visitas marcadas no momento de maior interesse e nao no dia util seguinte.',
+      },
     },
   },
   process: {
@@ -1598,6 +2118,266 @@ const es = {
         ],
         value:
           'Convierte una tarea manual recurrente en algo que se ejecuta solo y avisa cuando no lo hace, sin depender de que nadie lo recuerde.',
+      },
+      'angular-crm-portal': {
+        category: 'Plataforma de Ventas',
+        title: 'Portal de Pipeline de Ventas en AngularJS',
+        overview:
+          'Un pipeline compartido por cuatro equipos comerciales regionales, con front end en AngularJS sobre una API Nest.js. Todos los equipos ven los mismos negocios y las mismas reglas de etapa, para que un negocio no signifique cosas distintas en cada oficina.',
+        features: [
+          'Un pipeline compartido por cuatro equipos regionales',
+          'Reglas de etapa aplicadas en la API, no en el navegador',
+          'Visibilidad por rol, equipo y region',
+          'Historial de actividad en cada negocio, exportable a CSV',
+        ],
+        value: 'Una sola version del pipeline en lugar de cuatro hojas de calculo que se contradicen.',
+      },
+      'laravel-saas-billing': {
+        category: 'Plataforma de Facturacion',
+        title: 'Motor de Suscripciones y Facturacion en Laravel',
+        overview:
+          'Planes, asientos, prorrateo y recuperacion de pagos fallidos para un negocio por suscripcion. Lo dificil no es cobrar una tarjeta una vez; es lo que ocurre en un cambio de plan a mitad de ciclo y cuando falla el tercer cobro.',
+        features: [
+          'Cambios de plan prorrateados al dia',
+          'Reclamacion con reintentos y periodo de gracia',
+          'Webhooks del proveedor reconciliados con el estado local',
+          'Facturas generadas en PDF con tratamiento de IVA',
+        ],
+        value: 'Ingresos que siguen llegando despues del primer mes, con los fallos perseguidos automaticamente.',
+      },
+      'php-inventory-system': {
+        category: 'Sistema de Almacen',
+        title: 'Control de Stock en PHP para Dos Almacenes',
+        overview:
+          'Stock contado una sola vez en dos almacenes, con puntos de pedido que realmente saltan. Las entradas y salidas se registran como eventos y no como ediciones, de modo que la cifra actual siempre se explica por su historial.',
+        features: [
+          'Una unica cifra de stock para ambos almacenes',
+          'Puntos de pedido que generan sugerencias de compra',
+          'Movimientos guardados como registro auditable',
+          'Plazos de proveedor incluidos en el calculo de reposicion',
+        ],
+        value: 'Menos roturas de stock y una cifra en la que confian almacen y oficina.',
+      },
+      'wordpress-membership-site': {
+        category: 'Sitio de Membresias',
+        title: 'Membresias y Contenido Restringido en WordPress',
+        overview:
+          'Tres niveles de membresia en WordPress, con contenido restringido por regla y no a mano. Los editores siguen escribiendo en el editor de siempre; el plugin decide quien puede leer que, y las renovaciones se ejecutan sin que nadie tenga que acordarse.',
+        features: [
+          'Tres niveles con restriccion de contenido por regla',
+          'Renovaciones automaticas y correos de vencimiento',
+          'Area de socios con facturas y descargas',
+          'Los editores conservan el editor estandar de WordPress',
+        ],
+        value: 'Ingresos recurrentes a partir de textos que ya se publicaban gratis.',
+      },
+      'woocommerce-multivendor': {
+        category: 'Marketplace',
+        title: 'Marketplace Multivendedor en WooCommerce',
+        overview:
+          'Un carrito, varios vendedores. El cliente paga una vez; el pedido se divide por vendedor de forma interna, la comision se retiene en origen y cada vendedor ve solo sus pedidos y liquidaciones.',
+        features: [
+          'Un checkout dividido en pedidos por vendedor',
+          'Comision retenida automaticamente en origen',
+          'Panel del vendedor con pedidos, stock y liquidaciones',
+          'Ciclos de pago con extracto por vendedor',
+        ],
+        value: 'Una tienda que crece sumando vendedores en vez de comprando mas stock.',
+      },
+      'shopify-b2b-wholesale': {
+        category: 'Comercio B2B',
+        title: 'Portal Mayorista B2B en Shopify',
+        overview:
+          'Precios de mayorista en la misma tienda Shopify que atiende al publico, ocultos tras un login. Cada empresa tiene su lista de precios y sus condiciones de pago, de modo que el canal mayorista no necesita una segunda plataforma.',
+        features: [
+          'Listas de precios por empresa tras un login',
+          'Condiciones de pago por cuenta, incluidos 30 y 60 dias',
+          'Cantidades minimas y reglas de caja completa',
+          'Catalogo mayorista oculto de la busqueda publica',
+        ],
+        value: 'Mayorista y minorista en una sola plataforma en lugar de dos sistemas que sincronizar.',
+      },
+      'react-analytics-dashboard': {
+        category: 'Analitica',
+        title: 'Panel de Embudo de Checkout en React',
+        overview:
+          'Una vista de embudo sobre datos de eventos: donde se abandona el carrito, por paso y por dispositivo. Hecho para que una responsable de marketing conteste una pregunta sin pedir a un desarrollador que escriba una consulta.',
+        features: [
+          'Vistas de embudo, cohorte y retencion sobre un solo almacen de eventos',
+          'Segmentacion por dispositivo, canal y campana',
+          'Graficos servidos desde consultas preagregadas',
+          'Vistas guardadas y compartidas por el equipo',
+        ],
+        value: 'Decisiones tomadas desde el embudo y no desde opiniones sobre el.',
+      },
+      'support-desk-handover': {
+        category: 'Plataforma de Soporte',
+        title: 'Mesa de Transferencia de Chatbot para Soporte',
+        overview:
+          'El bot responde lo que puede y pasa el resto a una persona con la conversacion completa adjunta. La mesa muestra por que se escalo cada chat, de modo que la base de conocimiento se corrige donde realmente fallo.',
+        features: [
+          'Transferencia automatica con el contexto completo',
+          'Una bandeja para WhatsApp, Telegram y chat web',
+          'Motivos de escalado registrados y reportados',
+          'Respuestas rapidas y macros para preguntas repetidas',
+        ],
+        value: 'La mayoria de preguntas resueltas al instante y el resto llegando a una persona ya informada.',
+      },
+      'booking-scheduling-app': {
+        category: 'Agendamiento',
+        title: 'Gestion de Citas para Seis Profesionales',
+        overview:
+          'Un calendario para seis profesionales, tres salas y una pagina publica de reservas. La disponibilidad se calcula a partir de horarios, capacidad de salas y citas existentes, de modo que el hueco que ve el cliente existe de verdad.',
+        features: [
+          'Disponibilidad calculada por profesional, sala y servicio',
+          'Pagina publica de reserva con correos de confirmacion',
+          'Recordatorios por SMS y correo que reducen ausencias',
+          'Ventanas de cambio y cancelacion aplicadas por regla',
+        ],
+        value: 'Una agenda que se llena sola, sin las citas duplicadas que invita una hoja compartida.',
+      },
+      'nest-microservices': {
+        category: 'Backend y API',
+        title: 'Servicio Nest.js Dividido en Colas',
+        overview:
+          'Un monolito dividido en trabajadores en cola por area: pedidos, pagos, stock, correo. Cada cola reintenta con espera creciente y lo que sigue fallando acaba en una cola muerta, para reprocesarlo en vez de perderlo.',
+        features: [
+          'Trabajo dividido en colas por area',
+          'Reintento con espera exponencial por cola',
+          'Cola muerta con reproceso desde la consola',
+          'Rendimiento y retraso visibles por consumidor',
+        ],
+        value: 'Picos de trafico absorbidos por la cola en lugar de tumbar el checkout.',
+      },
+      'nextjs-headless-blog': {
+        category: 'Sitio Editorial',
+        title: 'Sitio Editorial en Next.js con CMS Headless',
+        overview:
+          'Un sitio editorial servido por Next.js y redactado en un CMS headless. Las paginas se pregeneran en el build y se revalidan en el edge, de modo que el sitio sigue siendo rapido sin que los editores esperen a un despliegue.',
+        features: [
+          'Pregeneracion estatica con revalidacion en el edge',
+          'Los editores publican sin desarrollador ni despliegue',
+          'Datos estructurados y sitemap generados automaticamente',
+          'Imagenes servidas en formatos modernos segun el dispositivo',
+        ],
+        value: 'Velocidad de publicacion para los editores y de carga para el lector, a la vez.',
+      },
+      'laravel-queue-worker': {
+        category: 'Backend y API',
+        title: 'Importador de Catalogo en Colas con Laravel',
+        overview:
+          'Una importacion nocturna de catalogo sacada de la peticion web y llevada a trabajos en cola. El trabajo se divide en bloques, de modo que un bloque defectuoso reintenta solo en vez de tumbar toda la importacion, y la ejecucion informa de lo que rechazo.',
+        features: [
+          'Importacion dividida en bloques que reintentan por separado',
+          'Espera exponencial con limite de reintentos',
+          'Filas rechazadas informadas y nunca descartadas en silencio',
+          'Progreso y fallos visibles mientras corre el trabajo',
+        ],
+        value: 'Una importacion que termina de noche y dice exactamente que no pudo aceptar.',
+      },
+      'wordpress-headless-api': {
+        category: 'CMS Headless',
+        title: 'WordPress Headless con Front End en Next.js',
+        overview:
+          'WordPress se mantiene como editor y se convierte en API; el sitio publico lo renderiza Next.js. Los editores conservan el flujo que conocen y el front end deja de estar limitado a lo que puede hacer una plantilla.',
+        features: [
+          'Rutas REST propias que devuelven bloques en JSON',
+          'Cache invalidada en cuanto se guarda una entrada',
+          'Los editores conservan el editor estandar de WordPress',
+          'Front end libre de las limitaciones de temas y plugins',
+        ],
+        value: 'Un front end moderno sin reeducar a quien escribe el contenido.',
+      },
+      'shopify-inventory-sync': {
+        category: 'Integracion',
+        title: 'Sincronizacion de Stock entre Shopify y ERP',
+        overview:
+          'Stock mantenido a la par entre Shopify y un sistema de retaguardia, en ambos sentidos. El ERP sigue siendo la fuente de verdad, Shopify se actualiza dentro del presupuesto de la API y una reconciliacion horaria detecta desviaciones.',
+        features: [
+          'Sincronizacion bidireccional con el ERP como fuente de verdad',
+          'Limitacion de ritmo que respeta el presupuesto de la API de Shopify',
+          'Los pedidos reservan stock en el ERP al pagar',
+          'Reconciliacion horaria que informa de cualquier desviacion',
+        ],
+        value: 'Una sola cifra de stock en ambos sistemas, para no vender lo que no hay.',
+      },
+      'node-realtime-orders': {
+        category: 'Backend y API',
+        title: 'Tablero de Pedidos en Tiempo Real por WebSockets',
+        overview:
+          'Pantallas de cocina y mostrador que se actualizan en cuanto un pedido cambia, sin sondeo. Las transiciones de estado se validan y bloquean en la base de datos, de modo que dos pantallas no avanzan el mismo pedido dos veces.',
+        features: [
+          'Estado enviado a todas las pantallas en el mismo instante',
+          'Transiciones validadas y con bloqueo de fila en la base de datos',
+          'Reconexion silenciosa tras una caida de red',
+          'Probado con 400 pantallas simultaneas',
+        ],
+        value: 'Pantallas que coinciden entre si, en una sala donde los segundos importan.',
+      },
+      'python-data-pipeline': {
+        category: 'Automatizacion',
+        title: 'Pipeline Nocturno de Informes en Python',
+        overview:
+          'Seis fuentes recogidas cada noche, validadas y cargadas en una unica tabla de informes. Si se rechaza demasiada entrada, la ejecucion falla de forma ruidosa en lugar de publicar un informe en el que nadie deberia confiar.',
+        features: [
+          'Seis fuentes extraidas, validadas y cargadas cada noche',
+          'La ejecucion falla de forma ruidosa al superar el umbral de rechazos',
+          'Filas rechazadas conservadas e informadas, nunca descartadas',
+          'Resumen enviado por correo a finanzas al terminar',
+        ],
+        value: 'Numeros que llegan al desayuno y un fallo ruidoso cuando no son de fiar.',
+      },
+      'react-native-loyalty-app': {
+        category: 'Aplicacion Movil',
+        title: 'App de Fidelizacion y Recompensas en React Native',
+        overview:
+          'Una tarjeta de fidelizacion que vive en el movil: puntos, niveles y un codigo que la caja puede escanear. Una sola base de codigo React Native llega a ambas tiendas y la tarjeta sigue funcionando sin cobertura.',
+        features: [
+          'Puntos y niveles con codigo de socio escaneable',
+          'Catalogo de recompensas con canje en caja',
+          'Ofertas dirigidas por nivel y por tienda mas cercana',
+          'Tarjeta legible sin conexion, sincronizada al volver la senal',
+        ],
+        value: 'Visitas repetidas de clientes que ya llevan la tarjeta en el bolsillo.',
+      },
+      'flutter-habit-tracker': {
+        category: 'Aplicacion Movil',
+        title: 'Rastreador de Habitos en Flutter con Recordatorios Locales',
+        overview:
+          'Un rastreador de habitos hecho una sola vez en Flutter para ambas tiendas. Rachas, vista mensual y recordatorios que dispara el propio dispositivo, para que la app sirva en un tren sin cobertura.',
+        features: [
+          'Lista diaria con rachas y vista mensual',
+          'Notificaciones locales que funcionan sin conexion',
+          'Datos guardados en el dispositivo y exportables a CSV',
+          'Una sola base de codigo Flutter para iOS y Android',
+        ],
+        value: 'Una app de habitos que sigue funcionando donde los habitos ocurren.',
+      },
+      'android-pos-terminal': {
+        category: 'Aplicacion Movil',
+        title: 'Terminal de Punto de Venta en Android',
+        overview:
+          'Una caja que cobra, imprime el ticket y cierra el dia. Las ventas se escriben primero en el dispositivo y se sincronizan despues, de modo que una caida de conexion nunca detiene la cola del mostrador.',
+        features: [
+          'Cesta, cobro e impresion de ticket en el dispositivo',
+          'Ventas en cola local, sincronizadas al volver la senal',
+          'Informe de cierre con tarjeta, efectivo y devoluciones',
+          'Cobro con tarjeta, efectivo y vale de comida',
+        ],
+        value: 'Un mostrador que sigue atendiendo tenga o no buen dia internet.',
+      },
+      'ios-property-viewings': {
+        category: 'Aplicacion Movil',
+        title: 'Busqueda de Inmuebles y Reserva de Visitas en iOS',
+        overview:
+          'Buscar, guardar y reservar una visita sin salir de la app. El agente recibe la cita en su calendario y el comprador la confirmacion, de modo que la visita queda cerrada antes de que nadie coja el telefono.',
+        features: [
+          'Busqueda con filtros y listas guardadas',
+          'Visita reservada contra el calendario del agente',
+          'Confirmacion y entrada de calendario para el comprador',
+          'Mensajeria en la app con el agente del anuncio',
+        ],
+        value: 'Visitas reservadas en el momento de mayor interes y no al siguiente dia habil.',
       },
     },
   },

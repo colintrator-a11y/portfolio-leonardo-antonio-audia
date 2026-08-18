@@ -230,6 +230,106 @@ const exampleMedia = {
     visual: 'python',
     tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
   },
+  'angular-crm-portal': {
+    tags: ['frontend', 'api'],
+    visual: 'angularCrm',
+    tech: ['AngularJS', 'Nest.js', 'REST API', 'API Integration', 'Modern UI Development'],
+  },
+  'laravel-saas-billing': {
+    tags: ['php', 'api'],
+    visual: 'laravelBilling',
+    tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'Webhooks'],
+  },
+  'php-inventory-system': {
+    tags: ['php'],
+    visual: 'phpInventory',
+    tech: ['PHP', 'MySQL', 'REST API', 'Responsive Web Design'],
+  },
+  'wordpress-membership-site': {
+    tags: ['wordpress', 'php'],
+    visual: 'wpMembership',
+    tech: ['WordPress', 'PHP', 'MySQL', 'Responsive Web Design'],
+  },
+  'woocommerce-multivendor': {
+    tags: ['ecommerce', 'wordpress', 'php'],
+    visual: 'wooMarketplace',
+    tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'REST API'],
+  },
+  'shopify-b2b-wholesale': {
+    tags: ['ecommerce', 'shopify'],
+    visual: 'shopifyB2b',
+    tech: ['Shopify', 'Shopify App', 'Liquid', 'E-commerce', 'API Integration'],
+  },
+  'react-analytics-dashboard': {
+    tags: ['frontend', 'api'],
+    visual: 'reactAnalytics',
+    tech: ['React.js', 'TypeScript', 'REST API', 'Data Visualisation', 'Modern UI Development'],
+  },
+  'support-desk-handover': {
+    tags: ['chatbot', 'api'],
+    visual: 'supportDesk',
+    tech: ['Chatbot', 'Node.js', 'REST API', 'WhatsApp Business API', 'Telegram Bot API'],
+  },
+  'booking-scheduling-app': {
+    tags: ['frontend', 'api'],
+    visual: 'bookingAdmin',
+    tech: ['React.js', 'Node.js', 'REST API', 'API Integration', 'Responsive Web Design'],
+  },
+  'nest-microservices': {
+    tags: ['api'],
+    visual: 'nestServices',
+    tech: ['Nest.js', 'Node.js', 'REST API', 'Webhooks', 'API Integration'],
+  },
+  'nextjs-headless-blog': {
+    tags: ['frontend', 'api'],
+    visual: 'nextHeadlessBlog',
+    tech: ['Next.js', 'React.js', 'TypeScript', 'REST API', 'SEO'],
+  },
+  'laravel-queue-worker': {
+    tags: ['php', 'api', 'automation'],
+    visual: 'laravelQueue',
+    tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'Process Automation'],
+  },
+  'wordpress-headless-api': {
+    tags: ['wordpress', 'php', 'frontend', 'api'],
+    visual: 'wpRestApi',
+    tech: ['WordPress', 'PHP', 'REST API', 'Next.js', 'React.js'],
+  },
+  'shopify-inventory-sync': {
+    tags: ['ecommerce', 'shopify', 'api', 'automation'],
+    visual: 'shopifySync',
+    tech: ['Shopify', 'Node.js', 'REST API', 'Webhooks', 'Process Automation'],
+  },
+  'node-realtime-orders': {
+    tags: ['api'],
+    visual: 'nodeRealtime',
+    tech: ['Node.js', 'REST API', 'Webhooks', 'API Integration'],
+  },
+  'python-data-pipeline': {
+    tags: ['api', 'automation'],
+    visual: 'pythonPipeline',
+    tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
+  },
+  'react-native-loyalty-app': {
+    tags: ['mobile', 'api'],
+    visual: 'rnLoyalty',
+    tech: ['React Native', 'iOS', 'Android', 'REST API', 'Mobile App Design'],
+  },
+  'flutter-habit-tracker': {
+    tags: ['mobile'],
+    visual: 'flutterHabit',
+    tech: ['Flutter', 'Android', 'iOS', 'Mobile App Design'],
+  },
+  'android-pos-terminal': {
+    tags: ['mobile', 'api'],
+    visual: 'androidPos',
+    tech: ['Android', 'Java', 'SQLite', 'REST API', 'Offline Sync'],
+  },
+  'ios-property-viewings': {
+    tags: ['mobile', 'api'],
+    visual: 'iosProperty',
+    tech: ['iOS', 'React Native', 'REST API', 'Mobile App Design'],
+  },
 }
 
 const exampleOrder = [
@@ -253,6 +353,27 @@ const exampleOrder = [
   'support-chatbot',
   // Others
   'python-automation',
+  // Added as a second set of reference builds
+  'angular-crm-portal',
+  'laravel-saas-billing',
+  'php-inventory-system',
+  'wordpress-membership-site',
+  'woocommerce-multivendor',
+  'shopify-b2b-wholesale',
+  'react-analytics-dashboard',
+  'support-desk-handover',
+  'booking-scheduling-app',
+  'nest-microservices',
+  'nextjs-headless-blog',
+  'laravel-queue-worker',
+  'wordpress-headless-api',
+  'shopify-inventory-sync',
+  'node-realtime-orders',
+  'python-data-pipeline',
+  'react-native-loyalty-app',
+  'flutter-habit-tracker',
+  'android-pos-terminal',
+  'ios-property-viewings',
 ]
 
 /**

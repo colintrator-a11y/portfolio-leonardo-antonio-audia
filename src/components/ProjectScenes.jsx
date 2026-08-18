@@ -17,7 +17,7 @@ import { P, Photo } from './visualPhotos'
 /* ------------------------------------------------------------------ */
 
 /** A single run of text. A component rather than a helper so `key` works. */
-function T({ x, y, fill, size = 9, weight = '400', anchor = 'start', mono = false, opacity, children }) {
+export function T({ x, y, fill, size = 9, weight = '400', anchor = 'start', mono = false, opacity, children }) {
   return (
     <text
       x={x}
@@ -41,7 +41,7 @@ function T({ x, y, fill, size = 9, weight = '400', anchor = 'start', mono = fals
  * looking for a site that is not there. `label` carries the context the URL
  * used to: which admin, which framework.
  */
-function BrowserBar({ label, height = 40, dark = false }) {
+export function BrowserBar({ label, height = 40, dark = false }) {
   const shell = dark ? '#111c33' : C.chrome
   const line = dark ? '#1e293b' : C.border
   const field = dark ? '#0f172a' : C.bg
@@ -76,7 +76,7 @@ function BrowserBar({ label, height = 40, dark = false }) {
 }
 
 /** The rounded page body every light scene sits on. */
-function Card({ fill = '#ffffff' }) {
+export function Card({ fill = '#ffffff' }) {
   return (
     <>
       <rect x="0" y="0" width="640" height="400" rx="14" fill={fill} />
@@ -86,7 +86,7 @@ function Card({ fill = '#ffffff' }) {
 }
 
 /** Small pill used for statuses, stock states and plan names. */
-function Pill({ x, y, w, label, color, size = 7.4, height = 15, bg }) {
+export function Pill({ x, y, w, label, color, size = 7.4, height = 15, bg }) {
   const px = Number(x)
   const py = Number(y)
   const pw = Number(w ?? label.length * size * 0.68 + 14)
@@ -108,7 +108,7 @@ function Pill({ x, y, w, label, color, size = 7.4, height = 15, bg }) {
  * A shop front page: promo bar, header, hero, then a product row. Used for the
  * builds whose whole point is the customer-facing shop.
  */
-function Storefront({ id, heroPhoto, promo, brand, nav, accent, accentSoft, hero, heroSub, cta, heroTag, shelf, products }) {
+export function Storefront({ id, heroPhoto, promo, brand, nav, accent, accentSoft, hero, heroSub, cta, heroTag, shelf, products }) {
   return (
     <>
       <Card />
@@ -202,7 +202,7 @@ function Storefront({ id, heroPhoto, promo, brand, nav, accent, accentSoft, hero
  * A back-office screen: branded sidebar, page header, stat tiles and a data
  * table. Used for the builds whose value lives in the admin, not the shop.
  */
-function AdminApp({
+export function AdminApp({
   chromeLabel,
   appName,
   monogram,
@@ -314,11 +314,11 @@ function AdminApp({
 /* Template: phone                                                     */
 /* ------------------------------------------------------------------ */
 
-const PH = { w: 168, h: 336, y: 30 }
-const phoneX = [24, 236, 448]
+export const PH = { w: 168, h: 336, y: 30 }
+export const phoneX = [24, 236, 448]
 
 /** One handset: body, status bar, and whatever the screen draws inside it. */
-function Phone({ x, caption, statusFill = '#ffffff', statusInk = C.ink, children }) {
+export function Phone({ x, caption, statusFill = '#ffffff', statusInk = C.ink, children }) {
   const { w, h, y } = PH
   return (
     <g>
@@ -342,7 +342,7 @@ function Phone({ x, caption, statusFill = '#ffffff', statusInk = C.ink, children
 }
 
 /** App bar drawn at the top of a phone screen. */
-function AppBar({ x, title, fill, ink = '#ffffff', back = true }) {
+export function AppBar({ x, title, fill, ink = '#ffffff', back = true }) {
   const { y, w } = PH
   return (
     <g>
@@ -383,7 +383,7 @@ const SYNTAX = {
  * Editor on top, terminal underneath - the same shape as the Python scene, so
  * the back-end examples read as one family.
  */
-function CodeConsole({ tabs, treeLabel, tree, treeActive, code, terminalMeta, prompt, log, footer, codeTop = 54, treeW = 80 }) {
+export function CodeConsole({ tabs, treeLabel, tree, treeActive, code, terminalMeta, prompt, log, footer, codeTop = 54, treeW = 80 }) {
   const CW = 5.32
   const X0 = treeW + 12
 

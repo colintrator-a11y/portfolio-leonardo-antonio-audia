@@ -35,8 +35,13 @@ export default function Projects() {
     [active, projects.items]
   )
 
-  // Counting here rather than in the data keeps the buttons honest: a filter
-  // shows exactly what it will yield, and one that yields nothing is dropped.
+  /*
+   * Counting here rather than in the data keeps the buttons honest: a filter
+   * shows exactly what it will yield, and one that yields nothing is dropped.
+   * Ordered by that count, so the deepest bodies of work are read first and
+   * the order follows the portfolio rather than a hand-kept list. "All work"
+   * is pinned to the front, being the way back rather than a category.
+   */
   const filters = useMemo(
     () =>
       projects.filters
@@ -46,7 +51,12 @@ export default function Projects() {
           count: key === 'all' ? projects.items.length
                                : projects.items.filter((i) => i.tags?.includes(key)).length,
         }))
-        .filter(({ count }) => count > 0),
+        .filter(({ count }) => count > 0)
+        .sort((a, b) => {
+          if (a.key === 'all') return -1
+          if (b.key === 'all') return 1
+          return b.count - a.count || a.label.localeCompare(b.label)
+        }),
     [projects.filters, projects.items]
   )
 
