@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
@@ -19,10 +19,16 @@ import './Projects.css'
  * Client deliveries and reference builds sit in the same grid but reference
  * builds carry a marker, so a visitor is never led to read one as paid work.
  */
+/* Six to begin with, three more each time the end of the grid comes into view. */
+const FIRST_PAGE = 6
+const PAGE = 3
+
 export default function Projects() {
   const { projects, ui } = useContent()
   const [active, setActive] = useState('all')
   const [open, setOpen] = useState(null)
+  const [visible, setVisible] = useState(FIRST_PAGE)
+  const sentinel = useRef(null)
 
   const shown = useMemo(
     () => (active === 'all' ? projects.items : projects.items.filter((i) => i.tags?.includes(active))),
@@ -43,6 +49,29 @@ export default function Projects() {
         .filter(({ count }) => count > 0),
     [projects.filters, projects.items]
   )
+
+  const hasMore = visible < shown.length
+
+  // A new filter is a new list, so it starts from the top again.
+  useEffect(() => setVisible(FIRST_PAGE), [active])
+
+  /*
+   * Load the next page when the end of the grid approaches. The button below
+   * does the same thing on click, so this stays an accelerator rather than the
+   * only way through: without IntersectionObserver, or with keyboard-only
+   * navigation, the button still works.
+   */
+  useEffect(() => {
+    const node = sentinel.current
+    if (!hasMore || !node || typeof IntersectionObserver === 'undefined') return undefined
+
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setVisible((n) => n + PAGE),
+      { rootMargin: '260px 0px' }
+    )
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [hasMore, visible])
 
   const close = useCallback(() => setOpen(null), [])
 
@@ -73,11 +102,14 @@ export default function Projects() {
 
         {/* Keyed on the filter so the grid replays its entrance on every change. */}
         <div className="projects__grid" key={active}>
-          {shown.map((project, index) => (
+          {shown.slice(0, visible).map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
               index={index}
+              /* Staggered per row, not per list, or the last cards would wait
+                 over a second for a delay they never earned. */
+              delayIndex={index % FIRST_PAGE}
               label={project.reference ? ui.exampleWord : ui.projectWord}
               badge={project.badge}
               ui={ui}
@@ -88,6 +120,17 @@ export default function Projects() {
         </div>
 
         {!shown.length ? <p className="projects__empty">{ui.noMatches}</p> : null}
+
+        {hasMore ? (
+          <div className="projects__more" ref={sentinel}>
+            <button type="button" className="loadMore" onClick={() => setVisible((n) => n + PAGE)}>
+              {ui.loadMore}
+            </button>
+            <span className="projects__count" aria-live="polite">
+              {visible} / {shown.length}
+            </span>
+          </div>
+        ) : null}
 
         <Reveal className="examples__note">
           <Icon name="shield" size={16} />

@@ -5,8 +5,8 @@
  * Content is grounded in the verified Workana profile:
  * https://www.workana.com/freelancer/f9d69e5b850578f4e85687d42b23fbcf
  *
- * Skills, project titles, technologies, certifications, languages, ratings,
- * the client review and the project screenshots are taken from that profile.
+ * Skills, project titles, technologies, certifications, languages, ratings
+ * and the project screenshots are taken from that profile.
  * Project overviews and feature lists are written from each project's title
  * and technology stack - they deliberately contain no invented metrics.
  */
@@ -59,7 +59,6 @@ export const sectionIds = [
   'skills',
   'projects',
   'process',
-  'testimonials',
 ]
 
 /* Numbers and symbols carry across languages unchanged. */
@@ -256,29 +255,6 @@ const exampleOrder = [
   'python-automation',
 ]
 
-/* The published review, quoted in the language the client wrote it in. */
-const review = {
-  quote:
-    'Very happy with the result. Leonardo built a clean, modern, fully responsive landing page and was well organized throughout — clear communication, screenshots at every stage, and fast, accurate revisions. Recommended.',
-  author: 'Cejas',
-  initials: 'C',
-  tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Web Design', 'WordPress'],
-}
-
-/* Engagement titles as recorded on Workana, left in the original Portuguese. */
-const engagements = [
-  {
-    title:
-      'Implementação da Fase 2 da Central de Protocolos Internos no Pipefy para Kalk Distribuidora',
-    client: 'K. D.',
-  },
-  {
-    title:
-      'Implantação de Central de Protocolos Internos no Pipefy para Distribuidora de Medicamentos',
-    client: 'K. D.',
-  },
-]
-
 /**
  * Merges the translated strings for `lang` with the shared data above and
  * returns the complete content tree the components render from.
@@ -358,25 +334,6 @@ export function buildContent(lang) {
 
     process: t.process,
 
-    testimonials: {
-      eyebrow: t.testimonials.eyebrow,
-      heading: t.testimonials.heading,
-      intro: t.testimonials.intro,
-      repeatNote: t.testimonials.repeatNote,
-      verifyNote: t.testimonials.verifyNote,
-      items: [
-        {
-          ...review,
-          role: t.testimonials.reviewRole,
-          location: t.testimonials.reviewLocation,
-        },
-      ],
-      engagements: engagements.map((item, i) => ({
-        ...item,
-        rating: t.testimonials.engagementStatus[i],
-      })),
-    },
-
     footer: {
       tagline: t.tagline,
       blurb: t.footer.blurb,
@@ -395,7 +352,6 @@ export function buildContent(lang) {
           links: [
             { label: t.footer.links.projects, target: 'projects' },
             { label: t.footer.links.process, target: 'process' },
-            { label: t.footer.links.testimonials, target: 'testimonials' },
           ],
         },
       ],

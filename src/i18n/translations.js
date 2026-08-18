@@ -49,6 +49,7 @@ const en = {
       automation: 'Automation',
     },
     viewDetails: 'View details',
+    loadMore: 'Load more',
     closeDetails: 'Close',
     noMatches: 'Nothing in this category yet.',
     filterLabel: 'Filter projects by discipline',
@@ -77,7 +78,6 @@ const en = {
     skills: 'Skills',
     projects: 'Projects',
     process: 'Process',
-    testimonials: 'Testimonials',
   },
   hero: {
     badge: 'Ranked #1 in IT & Programming in Italy on Workana',
@@ -551,17 +551,6 @@ const en = {
       },
     ],
   },
-  testimonials: {
-    eyebrow: 'Client Feedback',
-    heading: 'Trusted by international clients',
-    intro:
-      'Verified feedback from my Workana profile, where I hold a 5.0 rating across every completed engagement.',
-    reviewRole: 'Modern Responsive Landing Page Development for Business',
-    reviewLocation: 'Workana · 5.0 ★',
-    repeatNote: 'One client has hired me on more than one occasion.',
-    verifyNote: 'Every rating and review shown here is published on my verified Workana profile.',
-    engagementStatus: ['5.0 ★', 'Completed'],
-  },
   footer: {
     blurb:
       'Full-stack engineering from Italy across web platforms, e-commerce, mobile applications, REST APIs and process automation — delivered remotely for clients worldwide.',
@@ -572,7 +561,6 @@ const en = {
       skills: 'Technical Skills',
       projects: 'Projects',
       process: 'Work Process',
-      testimonials: 'Client Feedback',
     },
     expertise: ['Full-Stack Web', 'E-Commerce', 'Mobile Apps', 'REST APIs', 'Responsive Design', 'Automation'],
   },
@@ -606,6 +594,7 @@ const pt = {
       automation: 'Automação',
     },
     viewDetails: 'Ver detalhes',
+    loadMore: 'Carregar mais',
     closeDetails: 'Fechar',
     noMatches: 'Ainda não há nada nesta categoria.',
     filterLabel: 'Filtrar projetos por disciplina',
@@ -635,7 +624,6 @@ const pt = {
     skills: 'Competências',
     projects: 'Projetos',
     process: 'Processo',
-    testimonials: 'Depoimentos',
   },
   hero: {
     badge: '1.º lugar em TI e Programação em Itália na Workana',
@@ -1110,18 +1098,6 @@ const pt = {
       },
     ],
   },
-  testimonials: {
-    eyebrow: 'Opinião dos Clientes',
-    heading: 'A confiança de clientes internacionais',
-    intro:
-      'Comentários verificados do meu perfil Workana, onde mantenho uma avaliação de 5.0 em todos os trabalhos concluídos.',
-    reviewRole: 'Desenvolvimento de Landing Page Responsiva Moderna para Empresa',
-    reviewLocation: 'Workana · 5.0 ★',
-    repeatNote: 'Um cliente contratou-me em mais do que uma ocasião.',
-    verifyNote:
-      'Todas as avaliações e comentários aqui apresentados estão publicados no meu perfil verificado da Workana.',
-    engagementStatus: ['5.0 ★', 'Concluído'],
-  },
   footer: {
     blurb:
       'Engenharia full-stack a partir de Itália em plataformas web, e-commerce, aplicações móveis, APIs REST e automação de processos — entregue remotamente a clientes de todo o mundo.',
@@ -1132,7 +1108,6 @@ const pt = {
       skills: 'Competências Técnicas',
       projects: 'Projetos',
       process: 'Processo de Trabalho',
-      testimonials: 'Opinião dos Clientes',
     },
     expertise: ['Web Full-Stack', 'E-Commerce', 'Apps Móveis', 'APIs REST', 'Design Responsivo', 'Automação'],
   },
@@ -1166,6 +1141,7 @@ const es = {
       automation: 'Automatización',
     },
     viewDetails: 'Ver detalles',
+    loadMore: 'Cargar más',
     closeDetails: 'Cerrar',
     noMatches: 'Todavía no hay nada en esta categoría.',
     filterLabel: 'Filtrar proyectos por disciplina',
@@ -1195,7 +1171,6 @@ const es = {
     skills: 'Habilidades',
     projects: 'Proyectos',
     process: 'Proceso',
-    testimonials: 'Testimonios',
   },
   hero: {
     badge: 'Primer puesto en TI y Programación en Italia en Workana',
@@ -1670,18 +1645,6 @@ const es = {
       },
     ],
   },
-  testimonials: {
-    eyebrow: 'Opinión de Clientes',
-    heading: 'La confianza de clientes internacionales',
-    intro:
-      'Comentarios verificados de mi perfil de Workana, donde mantengo una valoración de 5.0 en todos los trabajos completados.',
-    reviewRole: 'Desarrollo de Landing Page Responsiva Moderna para Empresa',
-    reviewLocation: 'Workana · 5.0 ★',
-    repeatNote: 'Un cliente me ha contratado en más de una ocasión.',
-    verifyNote:
-      'Todas las valoraciones y reseñas aquí mostradas están publicadas en mi perfil verificado de Workana.',
-    engagementStatus: ['5.0 ★', 'Completado'],
-  },
   footer: {
     blurb:
       'Ingeniería full-stack desde Italia en plataformas web, e-commerce, aplicaciones móviles, APIs REST y automatización de procesos, entregada en remoto a clientes de todo el mundo.',
@@ -1692,7 +1655,6 @@ const es = {
       skills: 'Habilidades Técnicas',
       projects: 'Proyectos',
       process: 'Proceso de Trabajo',
-      testimonials: 'Opinión de Clientes',
     },
     expertise: ['Web Full-Stack', 'E-Commerce', 'Apps Móviles', 'APIs REST', 'Diseño Responsivo', 'Automatización'],
   },

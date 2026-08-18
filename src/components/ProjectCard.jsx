@@ -13,7 +13,16 @@ import ProjectVisual from './ProjectVisual'
  */
 const SHOWN_TECH = 3
 
-export default function ProjectCard({ project, index, label, badge, ui, onOpen, eager = false }) {
+export default function ProjectCard({
+  project,
+  index,
+  delayIndex = index,
+  label,
+  badge,
+  ui,
+  onOpen,
+  eager = false,
+}) {
   const shown = project.tech.slice(0, SHOWN_TECH)
   const extra = project.tech.length - shown.length
 
@@ -21,7 +30,7 @@ export default function ProjectCard({ project, index, label, badge, ui, onOpen, 
     <button
       type="button"
       className="pcard"
-      style={{ '--i': index }}
+      style={{ '--i': delayIndex }}
       onClick={() => onOpen(project)}
       aria-label={`${project.title} — ${ui.viewDetails}`}
     >
