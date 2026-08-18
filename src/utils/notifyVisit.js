@@ -1,12 +1,16 @@
 /**
- * Tells the notify endpoint that someone opened the site.
+ * Tells the shared notifier that someone opened the site.
+ *
+ * The notifier is its own service, used by every portfolio, and it holds the
+ * Telegram credentials - nothing secret is sent from here. Set its address in
+ * VITE_NOTIFY_URL; with the variable unset this does nothing at all, which is
+ * the right behaviour for a fork or a local checkout.
  *
  * Fires once per browser tab session, never in development, and always on idle
- * so it cannot delay first paint. The endpoint holds the Telegram credentials;
- * nothing secret is sent from here.
+ * so it cannot delay first paint.
  */
 
-const ENDPOINT = '/api/notify'
+const ENDPOINT = import.meta.env.VITE_NOTIFY_URL
 const SESSION_KEY = 'portfolio:visit-notified'
 
 function alreadyNotified() {
@@ -39,6 +43,7 @@ function send() {
 }
 
 export default function notifyVisit() {
+  if (!ENDPOINT) return
   if (import.meta.env.DEV) return
   if (typeof window === 'undefined') return
   if (alreadyNotified()) return
