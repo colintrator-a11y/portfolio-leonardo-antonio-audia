@@ -86,22 +86,35 @@ const projectMedia = {
   'premium-fashion': {
     image: premiumFashionImg,
     imageSize: [1380, 682],
-    tech: ['React.js', 'Node.js'],
+    tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'Responsive Web Design'],
   },
   'modular-furniture': {
     image: modularFurnitureImg,
     imageSize: [1425, 636],
-    tech: ['React.js', 'Node.js'],
+    tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'REST API'],
   },
-  'multi-brand': { image: multiBrandImg, imageSize: [1440, 702], tech: ['AngularJS', 'Nest.js'] },
+  'multi-brand': {
+    image: multiBrandImg,
+    imageSize: [1440, 702],
+    tech: ['AngularJS', 'Nest.js', 'REST API', 'API Integration', 'E-commerce'],
+  },
   'fitness-platform': {
     image: fitnessPlatformImg,
     imageSize: [1395, 627],
-    tech: ['React Native', 'Mobile App Design'],
+    tech: ['React Native', 'iOS', 'Android', 'Mobile App Design'],
   },
-  'apex-logistics': { visual: 'apexLogistics', tech: ['React.js', 'TypeScript'] },
-  'lumina-studio': { visual: 'luminaStudio', tech: ['Next.js', 'CSS3'] },
-  'pipefy-protocols': { visual: 'pipefy', tech: ['Pipefy', 'Process Automation', 'Integrations'] },
+  'apex-logistics': {
+    visual: 'apexLogistics',
+    tech: ['React.js', 'TypeScript', 'REST API', 'Data Visualisation', 'Modern UI Development'],
+  },
+  'lumina-studio': {
+    visual: 'luminaStudio',
+    tech: ['Next.js', 'React.js', 'CSS3', 'SEO', 'Performance Optimisation'],
+  },
+  'pipefy-protocols': {
+    visual: 'pipefy',
+    tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
+  },
 }
 
 const projectOrder = [
