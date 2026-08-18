@@ -21,6 +21,10 @@ import oliveGrove from '../assets/examples/olive-grove.webp'
 import oliveOilBottle from '../assets/examples/olive-oil-bottle.webp'
 import preservesJars from '../assets/examples/preserves-jars.webp'
 import quiltedOuterwear from '../assets/examples/quilted-outerwear.webp'
+import studioHero from '../assets/examples/studio-hero.webp'
+import studioWork1 from '../assets/examples/studio-work-1.webp'
+import studioWork2 from '../assets/examples/studio-work-2.webp'
+import studioWork3 from '../assets/examples/studio-work-3.webp'
 import trailShoes from '../assets/examples/trail-shoes.webp'
 import waterBottle from '../assets/examples/water-bottle.webp'
 import woolCoat from '../assets/examples/wool-coat.webp'
@@ -39,6 +43,10 @@ export const P = {
   oliveOilBottle,
   preservesJars,
   quiltedOuterwear,
+  studioHero,
+  studioWork1,
+  studioWork2,
+  studioWork3,
   trailShoes,
   waterBottle,
   woolCoat,

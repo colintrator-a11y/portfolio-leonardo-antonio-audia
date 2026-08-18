@@ -1532,9 +1532,253 @@ function WordPressPlugin() {
   )
 }
 
+
+/* ------------------------------------------------------------------ */
+/* Delivered projects without a usable screenshot                      */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Apex Logistics - the internal operations workspace: what is running, what is
+ * due, and the activity behind it, on one screen.
+ */
+function ApexLogistics({ id }) {
+  const A = C.accent
+  const SX = 146
+
+  const projects = [
+    ['Rotterdam hub migration', 'Nordkust BV', '12 Sep', 82, C.green],
+    ['Fleet telematics rollout', 'Vantage Freight', '19 Sep', 64, C.green],
+    ['Customs API integration', 'Meridian Cargo', '26 Sep', 41, C.amber],
+    ['Warehouse slotting audit', 'Nordkust BV', '03 Oct', 28, C.amber],
+    ['Driver app pilot', 'Vantage Freight', '10 Oct', 12, C.muted],
+  ]
+
+  return (
+    <>
+      <Card />
+      <BrowserBar label="Operations workspace" />
+
+      {/* Sidebar */}
+      <path d={`M0 40 H${SX} V400 H14 A14 14 0 0 1 0 386 Z`} fill={C.panel} />
+      <line x1={SX} y1="40" x2={SX} y2="400" stroke={C.border} />
+      <rect x="16" y="56" width="22" height="22" rx="6" fill={A} />
+      <T x={27} y={71} fill="#ffffff" size={9} weight="700" anchor="middle">
+        A
+      </T>
+      <T x={46} y={71} fill={C.ink} size={9.6} weight="700">
+        Apex Logistics
+      </T>
+      {['Dashboard', 'Projects', 'Tasks', 'Calendar', 'Documents', 'Invoicing'].map((label, i) => {
+        const y = 100 + i * 26
+        const on = label === 'Dashboard'
+        return (
+          <g key={label}>
+            {on ? <rect x="10" y={y - 12} width={SX - 20} height="22" rx="6" fill="#ffffff" stroke={C.border} /> : null}
+            <rect x="20" y={y - 6} width="9" height="9" rx="2" fill={on ? A : C.muted} fillOpacity={on ? 1 : 0.5} />
+            <T x={36} y={y + 2} fill={on ? C.ink : C.muted} size={8.6} weight={on ? '700' : '400'}>
+              {label}
+            </T>
+          </g>
+        )
+      })}
+      <rect x="10" y="332" width={SX - 20} height="46" rx="8" fill={C.accentSoft} />
+      <T x={22} y={350} fill={A} size={7.4} weight="700">
+        TYPESCRIPT
+      </T>
+      <T x={22} y={362} fill={C.ink} size={7.2}>
+        Strict mode · 0 any
+      </T>
+      <T x={22} y={372} fill={C.muted} size={6.8}>
+        Typed API contracts
+      </T>
+
+      {/* Header */}
+      <T x={166} y={68} fill={C.ink} size={13} weight="700">
+        Good morning, Alex
+      </T>
+      <T x={166} y={83} fill={C.muted} size={8.4}>
+        Five active projects · two deadlines this week
+      </T>
+      <rect x="530" y="54" width="90" height="26" rx="7" fill={A} />
+      <T x={575} y={70} fill="#ffffff" size={8.2} weight="700" anchor="middle">
+        New project
+      </T>
+      <line x1="166" y1="96" x2="620" y2="96" stroke={C.hair} />
+
+      {/* Stat tiles */}
+      {[
+        ['ACTIVE', '5', null],
+        ['ON TRACK', '3', C.green],
+        ['DUE THIS WEEK', '2', C.amber],
+        ['UNBILLED', '€ 41k', null],
+      ].map(([label, value, dot], i) => (
+        <g key={label}>
+          <rect x={166 + i * 116} y="106" width="106" height="48" rx="8" fill={C.panel} stroke={C.border} />
+          <T x={178 + i * 116} y={124} fill={C.muted} size={7} weight="600">
+            {label}
+          </T>
+          <T x={178 + i * 116} y={144} fill={C.ink} size={15} weight="700">
+            {value}
+          </T>
+          {dot ? <circle cx={260 + i * 116} cy={139} r="4" fill={dot} /> : null}
+        </g>
+      ))}
+
+      {/* Project table */}
+      <rect x="166" y="166" width="286" height="218" rx="9" fill="#ffffff" stroke={C.border} />
+      <T x={178} y={186} fill={C.ink} size={9} weight="700">
+        Projects
+      </T>
+      <T x={440} y={186} fill={C.muted} size={7.4} anchor="end">
+        Progress
+      </T>
+      <line x1="166" y1="194" x2="452" y2="194" stroke={C.hair} />
+      {projects.map(([name, client, due, pct, bar], i) => (
+        <g key={name}>
+          <T x={178} y={214 + i * 36} fill={C.ink} size={8} weight="600">
+            {name}
+          </T>
+          <T x={178} y={225 + i * 36} fill={C.muted} size={6.8}>
+            {client} · due {due}
+          </T>
+          <rect x={178} y={230 + i * 36} width="200" height="4" rx="2" fill={C.hair} />
+          <rect x={178} y={230 + i * 36} width={2 * pct} height="4" rx="2" fill={bar} />
+          <T x={440} y={228 + i * 36} fill={C.ink} size={7.6} weight="700" anchor="end">
+            {pct}%
+          </T>
+        </g>
+      ))}
+
+      {/* Activity chart */}
+      <rect x="462" y="166" width="158" height="104" rx="9" fill="#ffffff" stroke={C.border} />
+      <T x={474} y={186} fill={C.ink} size={8.4} weight="700">
+        Activity
+      </T>
+      <T x={608} y={186} fill={C.muted} size={6.8} anchor="end">
+        30 days
+      </T>
+      {[38, 52, 30, 61, 44, 72, 56, 80, 48, 66, 88, 70].map((v, i) => (
+        <rect key={i} x={474 + i * 11.6} y={258 - v * 0.6} width="7.6" height={v * 0.6} rx="2" fill={A} fillOpacity={0.35 + (i / 12) * 0.55} />
+      ))}
+      <line x1="474" y1="258" x2="610" y2="258" stroke={C.hair} />
+
+      {/* Upcoming */}
+      <rect x="462" y="280" width="158" height="104" rx="9" fill="#ffffff" stroke={C.border} />
+      <T x={474} y={300} fill={C.ink} size={8.4} weight="700">
+        Upcoming
+      </T>
+      {[
+        ['MON', 'Customs API review', C.amber],
+        ['WED', 'Hub migration go-live', C.green],
+        ['THU', 'Invoice run · Q3', A],
+        ['FRI', 'Driver app demo', C.muted],
+      ].map(([day, task, color], i) => (
+        <g key={task}>
+          <rect x={474} y={310 + i * 18} width="26" height="13" rx="3" fill={color} fillOpacity="0.14" />
+          <T x={487} y={319 + i * 18} fill={color} size={6.4} weight="700" anchor="middle">
+            {day}
+          </T>
+          <T x={506} y={320 + i * 18} fill={C.ink} size={7.4}>
+            {task}
+          </T>
+        </g>
+      ))}
+    </>
+  )
+}
+
+/**
+ * Lumina Studio - the public site: one server-rendered page carrying the
+ * studio's work, with the performance budget it was built to.
+ */
+function LuminaStudio({ id }) {
+  const INK = '#12100e'
+  const works = [
+    [P.studioWork1, 'Casa Ombra', 'Interiors · Milan'],
+    [P.studioWork2, 'Palazzo Vieri', 'Interiors · Florence'],
+    [P.studioWork3, 'Villa Sereno', 'Architecture · Como'],
+  ]
+
+  return (
+    <>
+      <Card />
+      <BrowserBar label="Next.js · server-rendered" />
+
+      {/* Site header */}
+      <T x={26} y={66} fill={INK} size={12} weight="700">
+        LUMINA STUDIO
+      </T>
+      {['Projects', 'Services', 'Studio', 'Journal'].map((label, i) => (
+        <T key={label} x={362 + i * 54} y={65} fill={C.muted} size={8.4}>
+          {label}
+        </T>
+      ))}
+      <rect x="566" y="52" width="48" height="20" rx="10" fill={INK} />
+      <T x={590} y={65} fill="#ffffff" size={7.6} weight="600" anchor="middle">
+        Contact
+      </T>
+      <line x1="0" y1="82" x2="640" y2="82" stroke={C.hair} />
+
+      {/* Hero */}
+      <Photo id={`${id}-hero`} src={P.studioHero} x={26} y={98} w={588} h={126} r={10} />
+      <rect x="26" y="98" width="588" height="126" rx="10" fill={INK} opacity="0.42" />
+      <T x={52} y={152} fill="#ffffff" size={22} weight="700">
+        Spaces made to age well
+      </T>
+      <T x={52} y={174} fill="#e8e4de" size={9}>
+        Interiors and architecture for people who intend to stay.
+      </T>
+      <rect x="52" y="186" width="104" height="26" rx="13" fill="#ffffff" />
+      <T x={104} y={203} fill={INK} size={8.4} weight="700" anchor="middle">
+        See the work
+      </T>
+
+      {/* Featured work */}
+      <T x={26} y={248} fill={INK} size={10.5} weight="700">
+        Selected projects
+      </T>
+      <T x={614} y={248} fill={C.muted} size={8} anchor="end">
+        All projects →
+      </T>
+      <line x1="26" y1="256" x2="614" y2="256" stroke={C.hair} />
+      {works.map(([src, title, meta], i) => (
+        <g key={title}>
+          <Photo id={`${id}-w${i}`} src={src} x={26 + i * 199} y={268} w={190} h={72} r={8} />
+          <T x={26 + i * 199} y={356} fill={INK} size={9} weight="700">
+            {title}
+          </T>
+          <T x={26 + i * 199} y={368} fill={C.muted} size={7.6}>
+            {meta}
+          </T>
+        </g>
+      ))}
+
+      {/* Build budget */}
+      <line x1="26" y1="378" x2="614" y2="378" stroke={C.hair} />
+      {[
+        ['LCP', '1.1 s'],
+        ['CLS', '0.00'],
+        ['SEO', '100'],
+        ['ROUTES', 'Statically generated'],
+      ].map(([label, value], i) => (
+        <g key={label}>
+          <T x={26 + i * 150} y={392} fill={C.muted} size={7} weight="700">
+            {label}
+          </T>
+          <T x={62 + i * 150} y={392} fill={INK} size={7.4} weight="600">
+            {value}
+          </T>
+        </g>
+      ))}
+    </>
+  )
+}
+
 /* ------------------------------------------------------------------ */
 
 export const extraScenes = {
+  apexLogistics: ApexLogistics,
+  luminaStudio: LuminaStudio,
   shopifyTheme: ShopifyTheme,
   shopifyHeadless: ShopifyHeadless,
   shopifyApp: ShopifyApp,

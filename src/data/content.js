@@ -18,8 +18,6 @@ import premiumFashionImg from '../assets/projects/premium-fashion.webp'
 import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
 import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
-import apexLogisticsImg from '../assets/projects/apex-logistics.webp'
-import luminaStudioImg from '../assets/projects/lumina-studio.webp'
 
 /* Identity - the same in every language. */
 export const profile = {
@@ -87,26 +85,22 @@ export const certifications = [
 const projectMedia = {
   'premium-fashion': {
     image: premiumFashionImg,
-    imageSize: [1440, 682],
+    imageSize: [1380, 682],
     tech: ['React.js', 'Node.js'],
   },
   'modular-furniture': {
     image: modularFurnitureImg,
-    imageSize: [1440, 688],
+    imageSize: [1425, 636],
     tech: ['React.js', 'Node.js'],
   },
   'multi-brand': { image: multiBrandImg, imageSize: [1440, 702], tech: ['AngularJS', 'Nest.js'] },
   'fitness-platform': {
     image: fitnessPlatformImg,
-    imageSize: [1440, 627],
+    imageSize: [1395, 627],
     tech: ['React Native', 'Mobile App Design'],
   },
-  'apex-logistics': {
-    image: apexLogisticsImg,
-    imageSize: [1024, 1024],
-    tech: ['React.js', 'TypeScript'],
-  },
-  'lumina-studio': { image: luminaStudioImg, imageSize: [1024, 1024], tech: ['Next.js', 'CSS3'] },
+  'apex-logistics': { visual: 'apexLogistics', tech: ['React.js', 'TypeScript'] },
+  'lumina-studio': { visual: 'luminaStudio', tech: ['Next.js', 'CSS3'] },
   'pipefy-protocols': { visual: 'pipefy', tech: ['Pipefy', 'Process Automation', 'Integrations'] },
 }
 
