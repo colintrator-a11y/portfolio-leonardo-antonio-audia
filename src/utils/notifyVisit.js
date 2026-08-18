@@ -1,16 +1,21 @@
 /**
  * Tells the shared notifier that someone opened the site.
  *
- * The notifier is its own service, used by every portfolio, and it holds the
- * Telegram credentials - nothing secret is sent from here. Set its address in
- * VITE_NOTIFY_URL; with the variable unset this does nothing at all, which is
- * the right behaviour for a fork or a local checkout.
+ * The notifier is its own service, shared by every portfolio, and it holds the
+ * Telegram credentials - nothing secret is sent from here, and the endpoint
+ * below is deliberately public. It only accepts posts from origins on its own
+ * allow-list, so publishing the address costs nothing.
+ *
+ * The default is baked in on purpose. Reading it from an environment variable
+ * meant an unset variable silently tree-shook this whole module out of the
+ * bundle, which is a confusing way to discover a missing config value.
+ * VITE_NOTIFY_URL still overrides it when you want to aim somewhere else.
  *
  * Fires once per browser tab session, never in development, and always on idle
  * so it cannot delay first paint.
  */
 
-const ENDPOINT = import.meta.env.VITE_NOTIFY_URL
+const ENDPOINT = import.meta.env.VITE_NOTIFY_URL || 'https://portfolio-notify.duckdns.org/api/notify'
 const SESSION_KEY = 'portfolio:visit-notified'
 
 function alreadyNotified() {
