@@ -436,32 +436,16 @@ svg {
   transform-style: preserve-3d;
 }
 
-/* The projected point field: real depth, drawn on a canvas. */
+/* The wireframe terrain, drawn on a canvas. Faded out well before it reaches
+   the headline: a horizon line running through a paragraph reads as a
+   strike-through, not as depth. */
 .backdrop__field {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-/* A ground plane laid into the same perspective, receding to a horizon. Held
-   far back and faded out well before the content, so it reads as depth under
-   the page rather than as a pattern on it. */
-.backdrop__plane {
-  position: absolute;
-  left: -25%;
-  right: -25%;
-  bottom: -18%;
-  height: 78%;
-  transform: rotateX(74deg) translateZ(-160px)
-    translate3d(calc(var(--px) * -22px), calc(var(--py) * -12px), 0);
-  transform-origin: 50% 100%;
-  background-image: linear-gradient(rgba(29, 78, 216, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(29, 78, 216, 0.3) 1px, transparent 1px);
-  background-size: 88px 88px;
-  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.45) 34%, transparent 82%);
-  mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.45) 34%, transparent 82%);
-  transition: transform 0.9s var(--ease);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 26%, transparent 72%);
+  mask-image: linear-gradient(to top, #000 0%, #000 26%, transparent 72%);
 }
 
 .backdrop__grid {
@@ -532,16 +516,12 @@ svg {
   }
 
   .backdrop__orb,
-  .backdrop__grid,
-  .backdrop__plane {
+  .backdrop__grid {
     translate: none;
     transform: none;
     transition: none;
   }
 
-  .backdrop__plane {
-    display: none;
-  }
 }
 
 /* --------------------------------------------------------------------------
