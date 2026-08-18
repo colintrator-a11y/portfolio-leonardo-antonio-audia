@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import About from './components/About'
 import BackToTop from './components/BackToTop'
 import Footer from './components/Footer'
@@ -9,9 +11,15 @@ import Services from './components/Services'
 import Skills from './components/Skills'
 import Testimonials from './components/Testimonials'
 import { useContent } from './i18n/LanguageContext'
+import notifyVisit from './utils/notifyVisit'
 
 export default function App() {
   const { ui } = useContent()
+
+  // Announce the visit once per session. No-op in development.
+  useEffect(() => {
+    notifyVisit()
+  }, [])
 
   return (
     <div className="app">
