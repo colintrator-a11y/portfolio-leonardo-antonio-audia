@@ -104,7 +104,13 @@
 
 /* Card -------------------------------------------------------------------- */
 
+/* The grid is the shared 3D space; each card tilts inside it. */
+.projects__grid {
+  perspective: 1200px;
+}
+
 .pcard {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -116,7 +122,10 @@
   text-align: left;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.4s var(--ease), box-shadow 0.45s var(--ease),
     border-color 0.45s var(--ease);
   /* Staggered entrance, ordered by position in the grid. */
   animation: pcard-in 0.62s var(--ease) both;
@@ -132,9 +141,30 @@
 
 .pcard:hover,
 .pcard:focus-visible {
-  transform: translateY(-6px);
+  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg))
+    translate3d(0, -6px, 26px);
   border-color: var(--line-strong);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 42px 70px -34px rgba(13, 27, 48, 0.42);
+}
+
+/* Follows the pointer across the face, so the tilt has a light source. */
+.pcard__sheen {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: radial-gradient(
+    260px circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(255, 255, 255, 0.38),
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+
+.pcard:hover .pcard__sheen {
+  opacity: 1;
 }
 
 /* Media ------------------------------------------------------------------- */
@@ -210,6 +240,8 @@
 /* Body -------------------------------------------------------------------- */
 
 .pcard__body {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -330,6 +362,7 @@
   z-index: 120;
   display: grid;
   place-items: center;
+  perspective: 1400px;
   padding: clamp(12px, 3vw, 40px);
   background: rgba(9, 18, 33, 0.55);
   backdrop-filter: blur(5px);
@@ -362,10 +395,11 @@
   overscroll-behavior: contain;
 }
 
+/* Opens as a panel swinging towards the reader rather than a box fading in. */
 @keyframes pdialog-rise {
   from {
     opacity: 0;
-    transform: translateY(26px) scale(0.97);
+    transform: perspective(1400px) translate3d(0, 30px, -180px) rotateX(9deg);
   }
 }
 
@@ -613,12 +647,32 @@
     animation: none;
   }
 
-  .pcard:hover {
+  .pcard,
+  .pcard:hover,
+  .pcard:focus-visible {
     transform: none;
+    transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  }
+
+  .pcard__sheen {
+    display: none;
   }
 
   .pcard:hover .pcard__shot,
   .pcard:hover .pcard__media .projectVisual {
     transform: none;
+  }
+}
+
+/* Touch and pen never get the tilt: there is no hover to lead it, and the
+   highlight would appear under the finger that is hiding it. */
+@media (hover: none), (pointer: coarse) {
+  .pcard,
+  .pcard:hover {
+    transform: none;
+  }
+
+  .pcard__sheen {
+    display: none;
   }
 }

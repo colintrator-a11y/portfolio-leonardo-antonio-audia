@@ -145,6 +145,9 @@
   /* Room for the badges that sit outside the window's top and bottom edges. */
   margin-block: 74px;
   animation: hero-in 1s var(--ease) 0.3s both;
+  /* The shared 3D space for the window and the badges that float around it. */
+  perspective: 1200px;
+  perspective-origin: 50% 45%;
 }
 
 .heroGlow {
@@ -155,17 +158,26 @@
   filter: blur(46px);
 }
 
+/*
+ * Turns towards the pointer using the --px/--py the page already publishes, so
+ * no listener is needed here at all. The badges turn further than the window
+ * and sit closer to the reader, which is what separates them in depth rather
+ * than a drop shadow pretending to.
+ */
 .codeWindow {
   position: relative;
   border-radius: var(--radius-lg);
   background: #0d1b30;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
+  transform: rotateY(calc(var(--px, 0) * -7deg)) rotateX(calc(var(--py, 0) * 4.5deg));
+  transform-style: preserve-3d;
   transition: transform 0.6s var(--ease);
 }
 
 .codeWindow:hover {
-  transform: translateY(-4px);
+  transform: rotateY(calc(var(--px, 0) * -7deg)) rotateX(calc(var(--py, 0) * 4.5deg))
+    translate3d(0, -4px, 24px);
 }
 
 .codeWindow__bar {
@@ -292,6 +304,13 @@
   border-radius: var(--radius);
   background: var(--paper-raised);
   box-shadow: var(--shadow-md);
+  /*
+   * Nearer the reader than the window, so they travel further as it turns.
+   * Set through `translate` rather than `transform` because the bob animation
+   * owns `transform` outright - composing here instead of fighting it.
+   */
+  translate: calc(var(--px, 0) * 24px) calc(var(--py, 0) * 14px);
+  transition: translate 0.6s var(--ease);
 }
 
 /* Badges sit clear of the code area — above and below the window, never
@@ -424,5 +443,21 @@
 
   .heroBadge__text small {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBadge,
+  .codeWindow {
+    translate: none;
+    transform: none;
+    transition: none;
+  }
+
+  .codeWindow,
+  .codeWindow:hover,
+  .heroBadge {
+    transform: none;
+    transition: none;
   }
 }

@@ -340,17 +340,59 @@ svg {
    Ambient background — restrained on light paper
    -------------------------------------------------------------------------- */
 
+:root {
+  /* Pointer position, -1..1, published by usePointerDepth. Declared here so
+     every layer has a sane value before the pointer has moved, and on touch
+     devices where it never will. */
+  --px: 0;
+  --py: 0;
+}
+
 .backdrop {
   position: fixed;
   inset: 0;
   z-index: -1;
   overflow: hidden;
   background: var(--paper);
+  /* Establishes the shared 3D space the layers below sit in. */
+  perspective: 900px;
+  perspective-origin: 50% 40%;
+  transform-style: preserve-3d;
+}
+
+/* The projected point field: real depth, drawn on a canvas. */
+.backdrop__field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* A ground plane laid into the same perspective, receding to a horizon. Held
+   far back and faded out well before the content, so it reads as depth under
+   the page rather than as a pattern on it. */
+.backdrop__plane {
+  position: absolute;
+  left: -25%;
+  right: -25%;
+  bottom: -18%;
+  height: 78%;
+  transform: rotateX(74deg) translateZ(-160px)
+    translate3d(calc(var(--px) * -22px), calc(var(--py) * -12px), 0);
+  transform-origin: 50% 100%;
+  background-image: linear-gradient(rgba(29, 78, 216, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 78, 216, 0.3) 1px, transparent 1px);
+  background-size: 88px 88px;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.45) 34%, transparent 82%);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.45) 34%, transparent 82%);
+  transition: transform 0.9s var(--ease);
 }
 
 .backdrop__grid {
   position: absolute;
   inset: 0;
+  transform: translate3d(calc(var(--px) * -14px), calc(var(--py) * -10px), 0);
+  transition: transform 0.7s var(--ease);
   background-image: linear-gradient(rgba(13, 27, 48, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(13, 27, 48, 0.045) 1px, transparent 1px);
   background-size: 76px 76px;
@@ -371,6 +413,8 @@ svg {
   height: 660px;
   background: radial-gradient(circle, rgba(29, 78, 216, 0.16), transparent 68%);
   animation: orb-drift 26s var(--ease) infinite alternate;
+  translate: calc(var(--px) * 40px) calc(var(--py) * 26px);
+  transition: translate 0.8s var(--ease);
 }
 
 .backdrop__orb--b {
@@ -380,6 +424,8 @@ svg {
   height: 600px;
   background: radial-gradient(circle, rgba(14, 165, 233, 0.14), transparent 70%);
   animation: orb-drift 32s var(--ease) infinite alternate-reverse;
+  translate: calc(var(--px) * -30px) calc(var(--py) * -18px);
+  transition: translate 0.8s var(--ease);
 }
 
 /* Third wash, low and to the right, so the lower half of the page is not left
@@ -392,6 +438,8 @@ svg {
   height: 620px;
   background: radial-gradient(circle, rgba(29, 78, 216, 0.11), transparent 70%);
   animation: orb-drift 38s var(--ease) infinite alternate;
+  translate: calc(var(--px) * 20px) calc(var(--py) * -14px);
+  transition: translate 0.8s var(--ease);
 }
 
 /* A slow drift keeps the page feeling alive without anything moving that the
@@ -405,6 +453,18 @@ svg {
 @media (prefers-reduced-motion: reduce) {
   .backdrop__orb {
     animation: none;
+  }
+
+  .backdrop__orb,
+  .backdrop__grid,
+  .backdrop__plane {
+    translate: none;
+    transform: none;
+    transition: none;
+  }
+
+  .backdrop__plane {
+    display: none;
   }
 }
 

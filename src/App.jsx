@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 import About from './components/About'
 import BackToTop from './components/BackToTop'
+import DepthField from './components/DepthField'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
@@ -10,10 +11,14 @@ import Projects from './components/Projects'
 import Services from './components/Services'
 import Skills from './components/Skills'
 import { useContent } from './i18n/LanguageContext'
+import usePointerDepth from './hooks/usePointerDepth'
 import notifyVisit from './utils/notifyVisit'
 
 export default function App() {
   const { ui } = useContent()
+
+  // Publishes the pointer as --px/--py for every parallax layer below.
+  usePointerDepth()
 
   // Announce the visit once per session. No-op in development.
   useEffect(() => {
@@ -24,6 +29,8 @@ export default function App() {
     <div className="app">
       <div className="backdrop" aria-hidden="true">
         <div className="backdrop__grid" />
+        <div className="backdrop__plane" />
+        <DepthField />
         <span className="backdrop__orb backdrop__orb--a" />
         <span className="backdrop__orb backdrop__orb--b" />
         <span className="backdrop__orb backdrop__orb--c" />

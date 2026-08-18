@@ -1,3 +1,5 @@
+import { useCallback, useRef } from 'react'
+
 import Icon from './ui/Icon'
 import ProjectVisual from './ProjectVisual'
 
@@ -13,6 +15,11 @@ import ProjectVisual from './ProjectVisual'
  */
 const SHOWN_TECH = 3
 
+/* Degrees of tilt at the very edge of the card. Small on purpose: past about
+   eight the text starts to look like it is sliding off. */
+const TILT_X = 7
+const TILT_Y = 9
+
 export default function ProjectCard({
   project,
   index,
@@ -25,12 +32,53 @@ export default function ProjectCard({
 }) {
   const shown = project.tech.slice(0, SHOWN_TECH)
   const extra = project.tech.length - shown.length
+  const ref = useRef(null)
+  const frame = useRef(0)
+
+  /*
+   * Tilts the card towards the pointer and moves a highlight with it, which is
+   * what reads as a solid object rather than a rectangle that grew a shadow.
+   * Written straight to CSS custom properties so React never re-renders for a
+   * mouse move, and coalesced into one frame because pointermove fires far
+   * more often than the screen refreshes.
+   */
+  const onPointerMove = useCallback((event) => {
+    const el = ref.current
+    if (!el || event.pointerType !== 'mouse') return
+    const { clientX, clientY } = event
+    if (frame.current) return
+    frame.current = requestAnimationFrame(() => {
+      frame.current = 0
+      const box = el.getBoundingClientRect()
+      const x = (clientX - box.left) / box.width
+      const y = (clientY - box.top) / box.height
+      el.style.setProperty('--tx', `${((0.5 - y) * TILT_X).toFixed(2)}deg`)
+      el.style.setProperty('--ty', `${((x - 0.5) * TILT_Y).toFixed(2)}deg`)
+      el.style.setProperty('--sx', `${(x * 100).toFixed(1)}%`)
+      el.style.setProperty('--sy', `${(y * 100).toFixed(1)}%`)
+    })
+  }, [])
+
+  const onPointerLeave = useCallback(() => {
+    const el = ref.current
+    if (!el) return
+    if (frame.current) {
+      cancelAnimationFrame(frame.current)
+      frame.current = 0
+    }
+    // Back to flat, and the transition carries it rather than a jump.
+    el.style.removeProperty('--tx')
+    el.style.removeProperty('--ty')
+  }, [])
 
   return (
     <button
       type="button"
       className="pcard"
       style={{ '--i': delayIndex }}
+      ref={ref}
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
       onClick={() => onOpen(project)}
       aria-label={`${project.title} — ${ui.viewDetails}`}
     >
@@ -54,6 +102,8 @@ export default function ProjectCard({
         </span>
         {badge ? <span className="pcard__badge">{badge}</span> : null}
       </span>
+
+      <span className="pcard__sheen" aria-hidden="true" />
 
       <span className="pcard__body">
         <span className="pcard__category">{project.category}</span>
