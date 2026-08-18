@@ -19,6 +19,13 @@ import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
 import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
+/*
+ * Filter groups for the projects section, in the order the buttons appear.
+ * Language-independent: the visible label comes from `ui.filters`, so a
+ * project never has to be re-tagged when a translation changes.
+ */
+export const disciplines = ['all', 'php', 'shopify', 'mobile', 'chat', 'web', 'automation']
+
 /* Identity - the same in every language. */
 export const profile = {
   name: 'Leonardo Antonio Audia',
@@ -74,34 +81,41 @@ export const certifications = [
 /* Screenshots, stacks and scene names, keyed by project id. */
 const projectMedia = {
   'premium-fashion': {
+    discipline: 'web',
     image: premiumFashionImg,
     imageSize: [1380, 682],
     tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'Responsive Web Design'],
   },
   'modular-furniture': {
+    discipline: 'web',
     image: modularFurnitureImg,
     imageSize: [1425, 636],
     tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'REST API'],
   },
   'multi-brand': {
+    discipline: 'web',
     image: multiBrandImg,
     imageSize: [1440, 702],
     tech: ['AngularJS', 'Nest.js', 'REST API', 'API Integration', 'E-commerce'],
   },
   'fitness-platform': {
+    discipline: 'mobile',
     image: fitnessPlatformImg,
     imageSize: [1395, 627],
     tech: ['React Native', 'iOS', 'Android', 'Mobile App Design'],
   },
   'apex-logistics': {
+    discipline: 'web',
     visual: 'apexLogistics',
     tech: ['React.js', 'TypeScript', 'REST API', 'Data Visualisation', 'Modern UI Development'],
   },
   'lumina-studio': {
+    discipline: 'web',
     visual: 'luminaStudio',
     tech: ['Next.js', 'React.js', 'CSS3', 'SEO', 'Performance Optimisation'],
   },
   'pipefy-protocols': {
+    discipline: 'automation',
     visual: 'pipefy',
     tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
   },
@@ -127,59 +141,77 @@ const projectOrder = [
 
 const exampleMedia = {
   'shopify-fashion-theme': {
+    discipline: 'shopify',
     visual: 'shopifyTheme',
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'Responsive Web Design'],
   },
   'shopify-headless': {
+    discipline: 'shopify',
     visual: 'shopifyHeadless',
     tech: ['Shopify', 'Storefront API', 'Next.js', 'React.js', 'TypeScript'],
   },
   'shopify-subscription-app': {
+    discipline: 'shopify',
     visual: 'shopifyApp',
     tech: ['Shopify', 'Shopify App', 'Node.js', 'REST API', 'Webhooks'],
   },
   'woocommerce-store': {
+    discipline: 'php',
     visual: 'wooStore',
     tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
   },
   'wordpress-multilingual-site': {
+    discipline: 'php',
     visual: 'wordpressEditor',
     tech: ['WordPress', 'PHP', 'Multilingual', 'SEO', 'Responsive Web Design'],
   },
   'wordpress-lead-plugin': {
+    discipline: 'php',
     visual: 'wordpressPlugin',
     tech: ['WordPress', 'PHP', 'REST API', 'Process Automation'],
   },
   'react-native-shop-app': {
+    discipline: 'mobile',
     visual: 'mobileShopping',
     tech: ['React Native', 'iOS', 'Android', 'REST API', 'Mobile App Design'],
   },
   'flutter-delivery-app': {
+    discipline: 'mobile',
     visual: 'mobileDelivery',
     tech: ['Flutter', 'Android', 'iOS', 'REST API', 'Mobile App Design'],
   },
   'android-field-service': {
+    discipline: 'mobile',
     visual: 'mobileField',
     tech: ['Android', 'Java', 'SQLite', 'REST API', 'Offline Sync'],
   },
   'laravel-booking-api': {
+    discipline: 'php',
     visual: 'laravelApi',
     tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'API Integration'],
   },
   'php-crm-invoicing': {
+    discipline: 'php',
     visual: 'phpCrm',
     tech: ['PHP', 'MySQL', 'REST API', 'Responsive Web Design'],
   },
   'php-payment-gateway': {
+    discipline: 'php',
     visual: 'paymentGateway',
     tech: ['PHP', 'REST API', 'Webhooks', 'API Integration'],
   },
   'whatsapp-telegram-bot': {
+    discipline: 'chat',
     visual: 'chatops',
     tech: ['Chatbot', 'WhatsApp Business API', 'Telegram Bot API', 'Node.js', 'Python', 'REST API'],
   },
-  'support-chatbot': { visual: 'chatbot', tech: ['Chatbot', 'Node.js', 'Python', 'REST API'] },
+  'support-chatbot': {
+    discipline: 'chat',
+    visual: 'chatbot',
+    tech: ['Chatbot', 'Node.js', 'Python', 'REST API'],
+  },
   'python-automation': {
+    discipline: 'automation',
     visual: 'python',
     tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
   },
@@ -295,6 +327,7 @@ export function buildContent(lang) {
       heading: t.projects.heading,
       intro: t.projects.intro,
       items: projectOrder.map((id) => ({ id, ...projectMedia[id], ...t.projects.items[id] })),
+      filters: disciplines.map((key) => ({ key, label: t.ui.filters[key] })),
     },
 
     examples: {
@@ -304,6 +337,7 @@ export function buildContent(lang) {
       badge: t.examples.badge,
       note: t.examples.note,
       items: exampleOrder.map((id) => ({ id, ...exampleMedia[id], ...t.examples.items[id] })),
+      filters: disciplines.map((key) => ({ key, label: t.ui.filters[key] })),
     },
 
     process: t.process,

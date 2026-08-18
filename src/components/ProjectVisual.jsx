@@ -669,9 +669,12 @@ const sizes = {
 
 /**
  * Falls back to a drawn scene for projects that have no published screenshot.
- * Projects carrying a real screenshot render an <img> in Projects.jsx instead.
+ * Projects carrying a real screenshot render an <img> instead.
+ *
+ * `fit` is "meet" wherever the whole scene matters, and "slice" on card tiles,
+ * which have a fixed aspect ratio the scene has to fill rather than letterbox.
  */
-export default function ProjectVisual({ variant, title }) {
+export default function ProjectVisual({ variant, title, fit = 'meet' }) {
   const Scene = scenes[variant]
   if (!Scene) return null
 
@@ -684,7 +687,7 @@ export default function ProjectVisual({ variant, title }) {
       viewBox={`0 0 ${vw} ${vh}`}
       role="img"
       aria-label={`Interface diagram for ${title}`}
-      preserveAspectRatio="xMidYMid meet"
+      preserveAspectRatio={`xMidYMid ${fit}`}
     >
       <title>{`${title} — process diagram`}</title>
       <Defs id={id} />
