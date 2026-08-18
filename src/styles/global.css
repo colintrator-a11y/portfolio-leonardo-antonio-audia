@@ -51,6 +51,18 @@
   --gutter: 24px;
   --nav-h: 78px;
 
+  /* Text that sits on an --ink background. --ink inverts between themes, so
+     anything painted with it needs a partner that inverts with it. */
+  --on-ink: #ffffff;
+  --footer-bg: var(--ink);
+
+  /* Surfaces that float above content and cannot inherit its background */
+  --overlay-raised: rgba(255, 255, 255, 0.9);
+  --overlay-soft: rgba(255, 255, 255, 0.75);
+  --sheen: rgba(255, 255, 255, 0.38);
+  --grid-ink: rgba(13, 27, 48, 0.045);
+  --dot-ink: rgba(13, 27, 48, 0.06);
+
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur: 0.5s;
@@ -60,6 +72,64 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+
+/* ==========================================================================
+   Dark theme
+   The light palette above stays the base, so a browser with no JavaScript
+   still gets a complete, readable page. `data-theme` is stamped on <html>
+   before the first paint, and dark is what the document ships with.
+   ========================================================================== */
+
+:root[data-theme='dark'] {
+  /* Paper — deep navy rather than grey, so it stays the same family as the ink */
+  --paper: #0b1120;
+  --paper-raised: #121c2f;
+  --paper-sunken: #0e1626;
+  --paper-tint: #16253f;
+
+  /* Ink */
+  --ink: #eaf0fb;
+  --ink-soft: #c5d1e6;
+  --body: #a2b3cc;
+  --muted: #8092ab;
+  --faint: #64758f;
+
+  /* Accent — lifted, because the light-mode blue is too dark to read on navy */
+  --accent: #6aa8fb;
+  --accent-hover: #8bbcfd;
+  --accent-soft: #1b2f52;
+  --accent-ink: #d3e2ff;
+  --sky: #38bdf8;
+
+  /* Lines */
+  --line: rgba(234, 240, 251, 0.13);
+  --line-strong: rgba(234, 240, 251, 0.24);
+  --line-hair: rgba(234, 240, 251, 0.08);
+
+  --grad-brand: linear-gradient(120deg, #3b82f6 0%, #22d3ee 100%);
+  --grad-text: linear-gradient(115deg, #7cb5fb 0%, #38bdf8 60%, #22d3ee 100%);
+
+  /* Shadows carry no light on a dark ground; they only deepen it. */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 14px 34px -18px rgba(0, 0, 0, 0.75);
+  --shadow-lg: 0 34px 70px -34px rgba(0, 0, 0, 0.85);
+
+  --on-ink: #0b1120;
+  /* Deeper than the page, so the footer still reads as its own field rather
+     than the near-white slab --ink would now paint. */
+  --footer-bg: #070d18;
+
+  --overlay-raised: rgba(18, 28, 47, 0.92);
+  --overlay-soft: rgba(255, 255, 255, 0.08);
+  /* A white sheen on a dark card reads as glare, so it is barely there. */
+  --sheen: rgba(255, 255, 255, 0.13);
+  --grid-ink: rgba(234, 240, 251, 0.05);
+  --dot-ink: rgba(234, 240, 251, 0.06);
+
+  color-scheme: dark;
 }
 
 *,
@@ -265,7 +335,7 @@ svg {
 }
 
 .btn--primary {
-  color: #fff;
+  color: var(--on-ink);
   background: var(--ink);
   box-shadow: var(--shadow-md);
 }
@@ -393,8 +463,8 @@ svg {
   inset: 0;
   transform: translate3d(calc(var(--px) * -14px), calc(var(--py) * -10px), 0);
   transition: transform 0.7s var(--ease);
-  background-image: linear-gradient(rgba(13, 27, 48, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 27, 48, 0.045) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-ink) 1px, transparent 1px);
   background-size: 76px 76px;
   mask-image: radial-gradient(1100px 760px at 50% 4%, #000 0%, transparent 78%);
   -webkit-mask-image: radial-gradient(1100px 760px at 50% 4%, #000 0%, transparent 78%);
@@ -480,7 +550,7 @@ svg {
   padding: 12px 22px;
   border-radius: 0 0 10px 10px;
   background: var(--ink);
-  color: #fff;
+  color: var(--on-ink);
   font-weight: 600;
   transform: translateX(-50%);
   transition: top 0.3s var(--ease);

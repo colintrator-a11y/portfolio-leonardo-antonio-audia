@@ -17,7 +17,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(13, 27, 48, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot-ink) 1px, transparent 1px);
   background-size: 26px 26px;
   -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 42%);
   mask-image: linear-gradient(180deg, #000 0%, transparent 42%);
@@ -155,7 +155,7 @@
   border-radius: inherit;
   background: radial-gradient(
     260px circle at var(--sx, 50%) var(--sy, 50%),
-    rgba(255, 255, 255, 0.38),
+    var(--sheen),
     rgba(255, 255, 255, 0) 60%
   );
   opacity: 0;
@@ -229,7 +229,7 @@
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.92);
-  color: var(--ink-soft);
+  color: #33445e;
   font-size: 9.5px;
   font-weight: 650;
   letter-spacing: 0.1em;
@@ -414,7 +414,7 @@
   height: 34px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--overlay-raised);
   color: var(--ink-soft);
   cursor: pointer;
   backdrop-filter: blur(6px);
@@ -423,7 +423,7 @@
 
 .pdialog__close:hover {
   background: var(--ink);
-  color: #fff;
+  color: var(--on-ink);
   transform: rotate(90deg);
 }
 
@@ -569,7 +569,7 @@
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--overlay-soft);
   color: var(--accent);
 }
 

@@ -1,9 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#faf9f6" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+
+    <!--
+      Applies the saved theme before the first paint. Inline and synchronous on
+      purpose: loading it as a module would let the default paint first and the
+      page would flash the wrong theme on every visit.
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          if (saved === 'light' || saved === 'dark') {
+            document.documentElement.dataset.theme = saved
+          }
+        } catch (e) {
+          /* Private mode blocks storage; the dark default in the tag stands. */
+        }
+      })()
+    </script>
 
     <title>Leonardo Antonio Audia | Full-Stack, Mobile &amp; E-Commerce Developer</title>
     <meta

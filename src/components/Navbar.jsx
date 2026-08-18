@@ -4,6 +4,7 @@ import useScrollSpy from '../hooks/useScrollSpy'
 import scrollToSection from '../utils/scrollToSection'
 import Icon from './ui/Icon'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from './ThemeToggle'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -72,6 +73,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__actions">
+          <ThemeToggle />
           <LanguageSwitcher />
 
           <a className="btn btn--primary nav__cta" href="#projects" onClick={go('projects')}>
@@ -112,6 +114,7 @@ export default function Navbar() {
             </a>
           ))}
 
+          <ThemeToggle variant="inline" />
           <LanguageSwitcher variant="inline" />
         </nav>
       </div>

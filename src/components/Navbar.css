@@ -266,3 +266,69 @@
     font-size: 15px;
   }
 }
+
+/* Theme toggle -------------------------------------------------------------- */
+
+.themeToggle {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper-raised);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease),
+    background 0.3s var(--ease), transform 0.4s var(--ease);
+}
+
+.themeToggle:hover {
+  border-color: var(--line-strong);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* The glyph turns as it swaps, so the change reads as one movement. */
+.themeToggle__icons {
+  display: grid;
+  place-items: center;
+  transition: transform 0.5s var(--ease);
+}
+
+.themeToggle:hover .themeToggle__icons {
+  transform: rotate(18deg);
+}
+
+.themeToggle--inline {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  grid-auto-flow: column;
+  justify-content: start;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  text-align: left;
+}
+
+.themeToggle__text {
+  color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themeToggle,
+  .themeToggle__icons {
+    transition: none;
+  }
+
+  .themeToggle:hover {
+    transform: none;
+  }
+
+  .themeToggle:hover .themeToggle__icons {
+    transform: none;
+  }
+}

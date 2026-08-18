@@ -31,6 +31,22 @@ export default function DepthField() {
     const ctx = canvas.getContext('2d', { alpha: true })
     if (!ctx) return undefined
 
+    /*
+     * Point colour follows the theme, read once when it changes rather than
+     * per frame - asking the DOM for a computed value sixty times a second is
+     * the cost this effect exists to avoid.
+     */
+    let ink = 'rgba(13, 27, 48, '
+    let accent = 'rgba(29, 78, 216, '
+    const readTheme = () => {
+      const dark = document.documentElement.dataset.theme === 'dark'
+      ink = dark ? 'rgba(226, 234, 250, ' : 'rgba(13, 27, 48, '
+      accent = dark ? 'rgba(125, 180, 252, ' : 'rgba(29, 78, 216, '
+    }
+    readTheme()
+    const themeWatch = new MutationObserver(readTheme)
+    themeWatch.observe(document.documentElement, { attributeFilter: ['data-theme'] })
+
     const dpr = Math.min(window.devicePixelRatio || 1, 2)
     let width = 0
     let height = 0
@@ -80,9 +96,7 @@ export default function DepthField() {
         const alpha = Math.min(0.5, scale * 0.62)
         ctx.beginPath()
         ctx.arc(sx, sy, radius, 0, Math.PI * 2)
-        ctx.fillStyle = p.accent
-          ? `rgba(29, 78, 216, ${alpha * 0.9})`
-          : `rgba(13, 27, 48, ${alpha * 0.5})`
+        ctx.fillStyle = p.accent ? `${accent}${alpha * 0.9})` : `${ink}${alpha * 0.55})`
         ctx.fill()
       }
 
@@ -104,6 +118,7 @@ export default function DepthField() {
     return () => {
       cancelAnimationFrame(raf)
       observer.disconnect()
+      themeWatch.disconnect()
       document.removeEventListener('visibilitychange', onVisibility)
     }
   }, [])
