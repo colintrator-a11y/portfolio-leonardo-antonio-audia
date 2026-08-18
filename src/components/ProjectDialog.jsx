@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 
 import Icon from './ui/Icon'
 import ProjectVisual from './ProjectVisual'
@@ -15,6 +16,12 @@ const FOCUSABLE = 'a[href], button:not([disabled]), input, textarea, select, [ta
  * cannot scroll, Tab is trapped inside, Escape closes, and focus returns to
  * the card that opened it. A dialog that loses the keyboard is worse than no
  * dialog at all.
+ *
+ * Rendered into the body rather than where it sits in the tree. `position:
+ * fixed` means "relative to the viewport" only while no ancestor establishes a
+ * containing block, and backdrop-filter on the section around it does exactly
+ * that - as would a transform, a filter, or will-change. Portalling puts the
+ * dialog out of reach of whatever the page does to that section later.
  */
 export default function ProjectDialog({ project, label, index, badge, ui, onClose }) {
   const panelRef = useRef(null)
@@ -63,7 +70,7 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
     }
   }, [onClose])
 
-  return (
+  const dialog = (
     <div className="pdialog" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <div
         className="pdialog__panel"
@@ -151,4 +158,6 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
       </div>
     </div>
   )
+
+  return typeof document === 'undefined' ? dialog : createPortal(dialog, document.body)
 }

@@ -9,10 +9,13 @@
      behind the page is visible through it; only --paper itself is solid,
      because it is what the backdrop paints. */
   --paper: #faf9f6;
-  --paper-raised: rgba(255, 255, 255, 0.74);
-  --paper-sunken: rgba(240, 239, 233, 0.6);
-  --paper-tint: rgba(238, 243, 251, 0.78);
+  --paper-raised: rgba(255, 255, 255, 0.58);
+  --paper-sunken: rgba(240, 239, 233, 0.4);
+  --paper-tint: rgba(238, 243, 251, 0.64);
   --paper-solid: #ffffff;
+  /* Dims the page behind a dialog. Has to be its own value: a fixed dark wash
+     barely registers once the page beneath it is already dark. */
+  --scrim: rgba(9, 18, 33, 0.55);
 
   /* Ink */
   --ink: #0d1b30;
@@ -93,10 +96,11 @@
 :root[data-theme='dark'] {
   /* Paper — deep navy rather than grey, so it stays the same family as the ink */
   --paper: #0b1120;
-  --paper-raised: rgba(20, 30, 50, 0.66);
-  --paper-sunken: rgba(12, 20, 35, 0.55);
-  --paper-tint: rgba(23, 38, 65, 0.72);
+  --paper-raised: rgba(20, 30, 50, 0.5);
+  --paper-sunken: rgba(12, 20, 35, 0.34);
+  --paper-tint: rgba(23, 38, 65, 0.56);
   --paper-solid: #121c2f;
+  --scrim: rgba(3, 7, 15, 0.74);
 
   /* Ink */
   --ink: #eaf0fb;
@@ -644,7 +648,7 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 300;
+  z-index: 110;
   width: 320px;
   height: 320px;
   margin: -160px 0 0 -160px;
