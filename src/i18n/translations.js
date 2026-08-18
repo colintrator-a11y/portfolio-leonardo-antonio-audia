@@ -38,11 +38,14 @@ const en = {
     chooseLanguage: 'Choose a language',
     filters: {
       all: 'All work',
-      php: 'PHP & WordPress',
+      ecommerce: 'E-commerce',
       shopify: 'Shopify',
+      wordpress: 'WordPress',
+      php: 'PHP & Laravel',
       mobile: 'Mobile',
-      chat: 'Chatbots',
-      web: 'Web apps',
+      frontend: 'Front-end',
+      api: 'APIs & Integrations',
+      chatbot: 'Chatbots',
       automation: 'Automation',
     },
     viewDetails: 'View details',
@@ -184,9 +187,9 @@ const en = {
   },
   projects: {
     eyebrow: 'Selected Work',
-    heading: 'Projects delivered for real clients',
+    heading: 'Projects across web, mobile and e-commerce',
     intro:
-      'Featured work from my Workana portfolio. Each entry lists the technologies actually used on the project.',
+      'Client deliveries from my Workana portfolio alongside my own reference builds, filtered by discipline. Each entry lists the technologies actually used; reference builds are marked as such.',
     items: {
       'premium-fashion': {
         category: 'E-Commerce',
@@ -289,12 +292,8 @@ const en = {
     },
   },
   examples: {
-    eyebrow: 'Capability Examples',
-    heading: 'PHP, WordPress, Shopify, mobile and chatbot builds',
-    intro:
-      'Reference builds rather than client deliveries — shown to make concrete what the PHP, WordPress, Shopify, mobile and chatbot work on my skills list actually looks like in practice.',
-    badge: 'Capability example',
-    note: 'These are reference builds, not client projects. Every project above was delivered for a paying client.',
+    badge: 'Reference build',
+    note: 'Entries marked as reference builds are my own demonstrations, not client work. Everything else was delivered for a paying client.',
     items: {
       'shopify-fashion-theme': {
         category: 'Shopify',
@@ -596,11 +595,14 @@ const pt = {
     chooseLanguage: 'Escolher idioma',
     filters: {
       all: 'Todos',
-      php: 'PHP e WordPress',
+      ecommerce: 'E-commerce',
       shopify: 'Shopify',
+      wordpress: 'WordPress',
+      php: 'PHP e Laravel',
       mobile: 'Mobile',
-      chat: 'Chatbots',
-      web: 'Aplicações web',
+      frontend: 'Front-end',
+      api: 'APIs e Integrações',
+      chatbot: 'Chatbots',
       automation: 'Automação',
     },
     viewDetails: 'Ver detalhes',
@@ -744,9 +746,9 @@ const pt = {
   },
   projects: {
     eyebrow: 'Trabalhos Selecionados',
-    heading: 'Projetos entregues a clientes reais',
+    heading: 'Projetos em web, mobile e e-commerce',
     intro:
-      'Trabalhos em destaque do meu portefólio na Workana. Cada entrada indica as tecnologias realmente utilizadas no projeto.',
+      'Entregas a clientes do meu portefólio na Workana, juntamente com projetos de referência próprios, filtráveis por disciplina. Cada entrada indica as tecnologias realmente utilizadas; os projetos de referência estão assinalados.',
     items: {
       'premium-fashion': {
         category: 'E-Commerce',
@@ -849,12 +851,8 @@ const pt = {
     },
   },
   examples: {
-    eyebrow: 'Exemplos de Capacidade',
-    heading: 'Projetos em PHP, WordPress, Shopify, mobile e chatbot',
-    intro:
-      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de PHP, WordPress, Shopify, mobile e chatbot da minha lista de competências significa na prática.',
-    badge: 'Exemplo de capacidade',
-    note: 'Estes são projetos de referência, não trabalhos de clientes. Todos os projetos acima foram entregues a clientes reais.',
+    badge: 'Projeto de referência',
+    note: 'As entradas assinaladas como projetos de referência são demonstrações próprias, não trabalhos de clientes. Todas as restantes foram entregues a clientes reais.',
     items: {
       'shopify-fashion-theme': {
         category: 'Shopify',
@@ -1157,11 +1155,14 @@ const es = {
     chooseLanguage: 'Elegir idioma',
     filters: {
       all: 'Todos',
-      php: 'PHP y WordPress',
+      ecommerce: 'E-commerce',
       shopify: 'Shopify',
+      wordpress: 'WordPress',
+      php: 'PHP y Laravel',
       mobile: 'Móvil',
-      chat: 'Chatbots',
-      web: 'Aplicaciones web',
+      frontend: 'Front-end',
+      api: 'APIs e Integraciones',
+      chatbot: 'Chatbots',
       automation: 'Automatización',
     },
     viewDetails: 'Ver detalles',
@@ -1305,9 +1306,9 @@ const es = {
   },
   projects: {
     eyebrow: 'Trabajos Seleccionados',
-    heading: 'Proyectos entregados a clientes reales',
+    heading: 'Proyectos en web, móvil y e-commerce',
     intro:
-      'Trabajos destacados de mi portafolio en Workana. Cada entrada indica las tecnologías realmente utilizadas en el proyecto.',
+      'Entregas a clientes de mi portafolio en Workana, junto con proyectos de referencia propios, filtrables por disciplina. Cada entrada indica las tecnologías realmente utilizadas; los proyectos de referencia están señalados.',
     items: {
       'premium-fashion': {
         category: 'E-Commerce',
@@ -1410,12 +1411,8 @@ const es = {
     },
   },
   examples: {
-    eyebrow: 'Ejemplos de Capacidad',
-    heading: 'Proyectos en PHP, WordPress, Shopify, móvil y chatbot',
-    intro:
-      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de PHP, WordPress, Shopify, móvil y chatbot de mi lista de habilidades.',
-    badge: 'Ejemplo de capacidad',
-    note: 'Estos son proyectos de referencia, no trabajos de clientes. Todos los proyectos anteriores se entregaron a clientes reales.',
+    badge: 'Proyecto de referencia',
+    note: 'Las entradas señaladas como proyectos de referencia son demostraciones propias, no trabajos de clientes. Todas las demás se entregaron a clientes reales.',
     items: {
       'shopify-fashion-theme': {
         category: 'Shopify',

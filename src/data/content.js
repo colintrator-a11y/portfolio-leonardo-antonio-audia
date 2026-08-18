@@ -20,11 +20,27 @@ import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
 /*
- * Filter groups for the projects section, in the order the buttons appear.
- * Language-independent: the visible label comes from `ui.filters`, so a
- * project never has to be re-tagged when a translation changes.
+ * Filter buttons, in the order they appear. Language-independent: the visible
+ * label comes from `ui.filters`, so a project never has to be re-tagged when a
+ * translation changes.
+ *
+ * Projects carry several tags rather than one discipline, because most of them
+ * genuinely belong in more than one place - a headless Shopify storefront is
+ * Shopify work, front-end work and API work at once, and a visitor hunting for
+ * any of the three should find it.
  */
-export const disciplines = ['all', 'php', 'shopify', 'mobile', 'chat', 'web', 'automation']
+export const filterKeys = [
+  'all',
+  'ecommerce',
+  'shopify',
+  'wordpress',
+  'php',
+  'mobile',
+  'frontend',
+  'api',
+  'chatbot',
+  'automation',
+]
 
 /* Identity - the same in every language. */
 export const profile = {
@@ -81,41 +97,41 @@ export const certifications = [
 /* Screenshots, stacks and scene names, keyed by project id. */
 const projectMedia = {
   'premium-fashion': {
-    discipline: 'web',
+    tags: ['ecommerce', 'frontend'],
     image: premiumFashionImg,
     imageSize: [1380, 682],
     tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'Responsive Web Design'],
   },
   'modular-furniture': {
-    discipline: 'web',
+    tags: ['ecommerce', 'frontend', 'api'],
     image: modularFurnitureImg,
     imageSize: [1425, 636],
     tech: ['React.js', 'Node.js', 'JavaScript', 'E-commerce', 'REST API'],
   },
   'multi-brand': {
-    discipline: 'web',
+    tags: ['ecommerce', 'frontend', 'api'],
     image: multiBrandImg,
     imageSize: [1440, 702],
     tech: ['AngularJS', 'Nest.js', 'REST API', 'API Integration', 'E-commerce'],
   },
   'fitness-platform': {
-    discipline: 'mobile',
+    tags: ['mobile'],
     image: fitnessPlatformImg,
     imageSize: [1395, 627],
     tech: ['React Native', 'iOS', 'Android', 'Mobile App Design'],
   },
   'apex-logistics': {
-    discipline: 'web',
+    tags: ['frontend', 'api'],
     visual: 'apexLogistics',
     tech: ['React.js', 'TypeScript', 'REST API', 'Data Visualisation', 'Modern UI Development'],
   },
   'lumina-studio': {
-    discipline: 'web',
+    tags: ['frontend'],
     visual: 'luminaStudio',
     tech: ['Next.js', 'React.js', 'CSS3', 'SEO', 'Performance Optimisation'],
   },
   'pipefy-protocols': {
-    discipline: 'automation',
+    tags: ['automation'],
     visual: 'pipefy',
     tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
   },
@@ -141,77 +157,77 @@ const projectOrder = [
 
 const exampleMedia = {
   'shopify-fashion-theme': {
-    discipline: 'shopify',
+    tags: ['ecommerce', 'shopify', 'frontend'],
     visual: 'shopifyTheme',
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'Responsive Web Design'],
   },
   'shopify-headless': {
-    discipline: 'shopify',
+    tags: ['ecommerce', 'shopify', 'frontend', 'api'],
     visual: 'shopifyHeadless',
     tech: ['Shopify', 'Storefront API', 'Next.js', 'React.js', 'TypeScript'],
   },
   'shopify-subscription-app': {
-    discipline: 'shopify',
+    tags: ['ecommerce', 'shopify', 'api'],
     visual: 'shopifyApp',
     tech: ['Shopify', 'Shopify App', 'Node.js', 'REST API', 'Webhooks'],
   },
   'woocommerce-store': {
-    discipline: 'php',
+    tags: ['ecommerce', 'wordpress', 'php', 'frontend'],
     visual: 'wooStore',
     tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
   },
   'wordpress-multilingual-site': {
-    discipline: 'php',
+    tags: ['wordpress', 'php', 'frontend'],
     visual: 'wordpressEditor',
     tech: ['WordPress', 'PHP', 'Multilingual', 'SEO', 'Responsive Web Design'],
   },
   'wordpress-lead-plugin': {
-    discipline: 'php',
+    tags: ['wordpress', 'php', 'api', 'automation'],
     visual: 'wordpressPlugin',
     tech: ['WordPress', 'PHP', 'REST API', 'Process Automation'],
   },
   'react-native-shop-app': {
-    discipline: 'mobile',
+    tags: ['mobile', 'api'],
     visual: 'mobileShopping',
     tech: ['React Native', 'iOS', 'Android', 'REST API', 'Mobile App Design'],
   },
   'flutter-delivery-app': {
-    discipline: 'mobile',
+    tags: ['mobile', 'api'],
     visual: 'mobileDelivery',
     tech: ['Flutter', 'Android', 'iOS', 'REST API', 'Mobile App Design'],
   },
   'android-field-service': {
-    discipline: 'mobile',
+    tags: ['mobile', 'api'],
     visual: 'mobileField',
     tech: ['Android', 'Java', 'SQLite', 'REST API', 'Offline Sync'],
   },
   'laravel-booking-api': {
-    discipline: 'php',
+    tags: ['php', 'api'],
     visual: 'laravelApi',
     tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'API Integration'],
   },
   'php-crm-invoicing': {
-    discipline: 'php',
+    tags: ['php', 'frontend', 'api'],
     visual: 'phpCrm',
     tech: ['PHP', 'MySQL', 'REST API', 'Responsive Web Design'],
   },
   'php-payment-gateway': {
-    discipline: 'php',
+    tags: ['php', 'api'],
     visual: 'paymentGateway',
     tech: ['PHP', 'REST API', 'Webhooks', 'API Integration'],
   },
   'whatsapp-telegram-bot': {
-    discipline: 'chat',
+    tags: ['api', 'chatbot'],
     visual: 'chatops',
     tech: ['Chatbot', 'WhatsApp Business API', 'Telegram Bot API', 'Node.js', 'Python', 'REST API'],
   },
   'support-chatbot': {
-    discipline: 'chat',
+    tags: ['api', 'chatbot'],
     visual: 'chatbot',
     tech: ['Chatbot', 'Node.js', 'Python', 'REST API'],
   },
   'python-automation': {
-    discipline: 'automation',
+    tags: ['api', 'automation'],
     visual: 'python',
     tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
   },
@@ -326,18 +342,18 @@ export function buildContent(lang) {
       eyebrow: t.projects.eyebrow,
       heading: t.projects.heading,
       intro: t.projects.intro,
-      items: projectOrder.map((id) => ({ id, ...projectMedia[id], ...t.projects.items[id] })),
-      filters: disciplines.map((key) => ({ key, label: t.ui.filters[key] })),
-    },
-
-    examples: {
-      eyebrow: t.examples.eyebrow,
-      heading: t.examples.heading,
-      intro: t.examples.intro,
-      badge: t.examples.badge,
       note: t.examples.note,
-      items: exampleOrder.map((id) => ({ id, ...exampleMedia[id], ...t.examples.items[id] })),
-      filters: disciplines.map((key) => ({ key, label: t.ui.filters[key] })),
+      items: [
+        ...projectOrder.map((id) => ({ id, ...projectMedia[id], ...t.projects.items[id] })),
+        ...exampleOrder.map((id) => ({
+          id,
+          reference: true,
+          badge: t.examples.badge,
+          ...exampleMedia[id],
+          ...t.examples.items[id],
+        })),
+      ],
+      filters: filterKeys.map((key) => ({ key, label: t.ui.filters[key] })),
     },
 
     process: t.process,

@@ -39,7 +39,10 @@
 }
 
 .filter {
-  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px 8px 16px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper-raised);
@@ -57,6 +60,24 @@
   border-color: var(--line-strong);
   color: var(--ink);
   transform: translateY(-1px);
+}
+
+/* The count makes a filter's yield visible before it is pressed. */
+.filter__count {
+  min-width: 18px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--paper-sunken);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-align: center;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.filter.is-active .filter__count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
 }
 
 .filter.is-active {
