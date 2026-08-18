@@ -117,11 +117,18 @@ const projectMedia = {
   },
 }
 
+/*
+ * Both lists run in the same order: mobile first, then PHP and WordPress,
+ * then WhatsApp and chat, then everything else. The row numbers in the UI are
+ * derived from position, so reordering here renumbers the page.
+ */
 const projectOrder = [
+  // Mobile
+  'fitness-platform',
+  // Others - no PHP, WordPress or chat work among the delivered projects
   'premium-fashion',
   'modular-furniture',
   'multi-brand',
-  'fitness-platform',
   'apex-logistics',
   'lumina-studio',
   'pipefy-protocols',
@@ -188,20 +195,24 @@ const exampleMedia = {
 }
 
 const exampleOrder = [
-  'shopify-fashion-theme',
-  'shopify-headless',
-  'shopify-subscription-app',
-  'woocommerce-store',
-  'wordpress-multilingual-site',
-  'wordpress-lead-plugin',
+  // Mobile
   'react-native-shop-app',
   'flutter-delivery-app',
   'android-field-service',
+  // PHP, then WordPress - WooCommerce runs on WordPress, so it sits with it
   'laravel-booking-api',
   'php-crm-invoicing',
   'php-payment-gateway',
+  'woocommerce-store',
+  'wordpress-multilingual-site',
+  'wordpress-lead-plugin',
+  // WhatsApp and chat
   'whatsapp-telegram-bot',
   'support-chatbot',
+  // Others
+  'shopify-fashion-theme',
+  'shopify-headless',
+  'shopify-subscription-app',
   'python-automation',
 ]
 

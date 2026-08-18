@@ -284,9 +284,9 @@ const en = {
   },
   examples: {
     eyebrow: 'Capability Examples',
-    heading: 'Shopify, WordPress, mobile, PHP and automation builds',
+    heading: 'Mobile, PHP, WordPress, chatbot and Shopify builds',
     intro:
-      'Reference builds rather than client deliveries — shown to make concrete what the Shopify, WordPress, mobile, PHP and automation work on my skills list actually looks like in practice.',
+      'Reference builds rather than client deliveries — shown to make concrete what the mobile, PHP, WordPress, chatbot and Shopify work on my skills list actually looks like in practice.',
     badge: 'Capability example',
     note: 'These are reference builds, not client projects. Every project above was delivered for a paying client.',
     items: {
@@ -838,9 +838,9 @@ const pt = {
   },
   examples: {
     eyebrow: 'Exemplos de Capacidade',
-    heading: 'Projetos em Shopify, WordPress, mobile, PHP e automação',
+    heading: 'Projetos em mobile, PHP, WordPress, chatbot e Shopify',
     intro:
-      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de Shopify, WordPress, mobile, PHP e automação da minha lista de competências significa na prática.',
+      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de mobile, PHP, WordPress, chatbot e Shopify da minha lista de competências significa na prática.',
     badge: 'Exemplo de capacidade',
     note: 'Estes são projetos de referência, não trabalhos de clientes. Todos os projetos acima foram entregues a clientes reais.',
     items: {
@@ -1393,9 +1393,9 @@ const es = {
   },
   examples: {
     eyebrow: 'Ejemplos de Capacidad',
-    heading: 'Proyectos en Shopify, WordPress, móvil, PHP y automatización',
+    heading: 'Proyectos en móvil, PHP, WordPress, chatbot y Shopify',
     intro:
-      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de Shopify, WordPress, móvil, PHP y automatización de mi lista de habilidades.',
+      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de móvil, PHP, WordPress, chatbot y Shopify de mi lista de habilidades.',
     badge: 'Ejemplo de capacidad',
     note: 'Estos son proyectos de referencia, no trabajos de clientes. Todos los proyectos anteriores se entregaron a clientes reales.',
     items: {
