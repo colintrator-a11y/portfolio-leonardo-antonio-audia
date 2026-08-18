@@ -122,27 +122,40 @@
   text-align: left;
   cursor: pointer;
   overflow: hidden;
-  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  /*
+   * The tilt tracks the cursor, so it needs almost no transition while the
+   * pointer is over the card - a long one here means the card is always that
+   * far behind the cursor, which reads as lag rather than weight. The duration
+   * only opens up once :hover is lost, so the card eases back to flat.
+   *
+   * The lift is a separate property from the rotation precisely so the two can
+   * run at different speeds: fast tracking, slow settle. Perspective comes from
+   * the grid, so the Z of the lift is projected too.
+   */
+  --tilt-dur: 0.85s;
+  transform: rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
   transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.4s var(--ease), box-shadow 0.45s var(--ease),
-    border-color 0.45s var(--ease);
-  /* Staggered entrance, ordered by position in the grid. */
-  animation: pcard-in 0.62s var(--ease) both;
-  animation-delay: calc(var(--i, 0) * 55ms);
+  will-change: transform, translate;
+  transition: transform var(--tilt-dur) var(--ease), translate 0.55s var(--ease),
+    box-shadow 0.55s var(--ease), border-color 0.55s var(--ease);
+  /* Staggered entrance, ordered by position in the grid. `backwards` rather
+     than `both`: holding the final keyframe would leave the animation owning
+     transform after it finished, and the hover tilt would never take. */
+  animation: pcard-in 0.85s var(--ease) backwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
 }
 
 @keyframes pcard-in {
   from {
     opacity: 0;
-    transform: translateY(22px) scale(0.985);
+    transform: translateY(26px) rotateX(6deg) scale(0.98);
   }
 }
 
 .pcard:hover,
 .pcard:focus-visible {
-  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg))
-    translate3d(0, -6px, 26px);
+  --tilt-dur: 0.09s;
+  translate: 0 -8px 30px;
   border-color: var(--line-strong);
   box-shadow: 0 42px 70px -34px rgba(13, 27, 48, 0.42);
 }
@@ -160,7 +173,7 @@
   );
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s var(--ease);
+  transition: opacity 0.55s var(--ease);
 }
 
 .pcard:hover .pcard__sheen {
@@ -184,7 +197,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.7s var(--ease);
+  transition: transform 0.95s var(--ease);
 }
 
 .pcard:hover .pcard__shot,
@@ -651,6 +664,7 @@
   .pcard:hover,
   .pcard:focus-visible {
     transform: none;
+    translate: none;
     transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
   }
 
@@ -670,6 +684,7 @@
   .pcard,
   .pcard:hover {
     transform: none;
+    translate: none;
   }
 
   .pcard__sheen {

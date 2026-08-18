@@ -34,6 +34,7 @@ export default function ProjectCard({
   const extra = project.tech.length - shown.length
   const ref = useRef(null)
   const frame = useRef(0)
+  const latest = useRef({ x: 0, y: 0 })
 
   /*
    * Tilts the card towards the pointer and moves a highlight with it, which is
@@ -45,13 +46,19 @@ export default function ProjectCard({
   const onPointerMove = useCallback((event) => {
     const el = ref.current
     if (!el || event.pointerType !== 'mouse') return
-    const { clientX, clientY } = event
+
+    // The newest position, not the one that happened to open the frame: a
+    // frame opened by the first event and then read that same event would
+    // discard every move in between and always trail the cursor.
+    latest.current.x = event.clientX
+    latest.current.y = event.clientY
     if (frame.current) return
+
     frame.current = requestAnimationFrame(() => {
       frame.current = 0
       const box = el.getBoundingClientRect()
-      const x = (clientX - box.left) / box.width
-      const y = (clientY - box.top) / box.height
+      const x = (latest.current.x - box.left) / box.width
+      const y = (latest.current.y - box.top) / box.height
       el.style.setProperty('--tx', `${((0.5 - y) * TILT_X).toFixed(2)}deg`)
       el.style.setProperty('--ty', `${((x - 0.5) * TILT_Y).toFixed(2)}deg`)
       el.style.setProperty('--sx', `${(x * 100).toFixed(1)}%`)
