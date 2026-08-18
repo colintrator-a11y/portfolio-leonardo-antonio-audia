@@ -2,8 +2,7 @@ import { useEffect } from 'react'
 
 import About from './components/About'
 import BackToTop from './components/BackToTop'
-import CursorTrail from './components/CursorTrail'
-import BackdropWave from './components/BackdropWave'
+import BackdropSolids from './components/BackdropSolids'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
@@ -30,7 +29,7 @@ export default function App() {
     <div className="app">
       <div className="backdrop" aria-hidden="true">
         <div className="backdrop__grid" />
-        <BackdropWave />
+        <BackdropSolids />
         <span className="backdrop__orb backdrop__orb--a" />
         <span className="backdrop__orb backdrop__orb--b" />
         <span className="backdrop__orb backdrop__orb--c" />
@@ -52,7 +51,7 @@ export default function App() {
       </main>
 
       <Footer />
-      <CursorTrail />
+      <div className="cursorGlow" aria-hidden="true" />
       <BackToTop />
     </div>
   )

@@ -27,6 +27,8 @@ export default function usePointerDepth() {
     let frame = 0
     let x = 0
     let y = 0
+    let px = 0
+    let py = 0
 
     // Writes are coalesced into one frame: pointermove fires far more often
     // than the screen refreshes, and every write invalidates style.
@@ -34,11 +36,17 @@ export default function usePointerDepth() {
       frame = 0
       root.style.setProperty('--px', x.toFixed(3))
       root.style.setProperty('--py', y.toFixed(3))
+      // Pixel coordinates too, so a layer can sit exactly under the pointer
+      // without a script moving it frame by frame.
+      root.style.setProperty('--pointer-x', `${px}px`)
+      root.style.setProperty('--pointer-y', `${py}px`)
     }
 
     const onMove = (event) => {
-      x = (event.clientX / window.innerWidth) * 2 - 1
-      y = (event.clientY / window.innerHeight) * 2 - 1
+      px = event.clientX
+      py = event.clientY
+      x = (px / window.innerWidth) * 2 - 1
+      y = (py / window.innerHeight) * 2 - 1
       pointer.x = x
       pointer.y = y
       if (!frame) frame = requestAnimationFrame(write)
@@ -52,6 +60,8 @@ export default function usePointerDepth() {
       pointer.y = 0
       root.style.removeProperty('--px')
       root.style.removeProperty('--py')
+      root.style.removeProperty('--pointer-x')
+      root.style.removeProperty('--pointer-y')
     }
   }, [])
 }

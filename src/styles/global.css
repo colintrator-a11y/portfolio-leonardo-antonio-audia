@@ -5,11 +5,14 @@
    ========================================================================== */
 
 :root {
-  /* Paper */
+  /* Paper. Everything above the backdrop is translucent, so the field drifting
+     behind the page is visible through it; only --paper itself is solid,
+     because it is what the backdrop paints. */
   --paper: #faf9f6;
-  --paper-raised: #ffffff;
-  --paper-sunken: #f2f1ec;
-  --paper-tint: #eef3fb;
+  --paper-raised: rgba(255, 255, 255, 0.74);
+  --paper-sunken: rgba(240, 239, 233, 0.6);
+  --paper-tint: rgba(238, 243, 251, 0.78);
+  --paper-solid: #ffffff;
 
   /* Ink */
   --ink: #0d1b30;
@@ -64,6 +67,7 @@
   --overlay-raised: rgba(255, 255, 255, 0.9);
   --overlay-soft: rgba(255, 255, 255, 0.75);
   --card-glow: rgba(29, 78, 216, 0.09);
+  --cursor-glow: rgba(29, 78, 216, 0.1);
   --grid-ink: rgba(13, 27, 48, 0.045);
   --dot-ink: rgba(13, 27, 48, 0.06);
 
@@ -89,9 +93,10 @@
 :root[data-theme='dark'] {
   /* Paper — deep navy rather than grey, so it stays the same family as the ink */
   --paper: #0b1120;
-  --paper-raised: #121c2f;
-  --paper-sunken: #0e1626;
-  --paper-tint: #16253f;
+  --paper-raised: rgba(20, 30, 50, 0.66);
+  --paper-sunken: rgba(12, 20, 35, 0.55);
+  --paper-tint: rgba(23, 38, 65, 0.72);
+  --paper-solid: #121c2f;
 
   /* Ink */
   --ink: #eaf0fb;
@@ -132,6 +137,7 @@
   --overlay-soft: rgba(255, 255, 255, 0.08);
   /* Accent light pools further on a dark ground before it looks like glare. */
   --card-glow: rgba(106, 168, 251, 0.14);
+  --cursor-glow: rgba(106, 168, 251, 0.13);
   --grid-ink: rgba(234, 240, 251, 0.05);
   --dot-ink: rgba(234, 240, 251, 0.06);
 
@@ -436,16 +442,15 @@ svg {
   transform-style: preserve-3d;
 }
 
-/* The wireframe terrain, drawn on a canvas. Faded out well before it reaches
-   the headline: a horizon line running through a paragraph reads as a
-   strike-through, not as depth. */
+/* The drifting wireframes, drawn on a canvas. Held back from the centre of
+   the frame, where the reading happens, and left strongest around the edges. */
 .backdrop__field {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 26%, transparent 72%);
-  mask-image: linear-gradient(to top, #000 0%, #000 26%, transparent 72%);
+  -webkit-mask-image: radial-gradient(115% 85% at 50% 45%, transparent 8%, #000 58%);
+  mask-image: radial-gradient(115% 85% at 50% 45%, transparent 8%, #000 58%);
 }
 
 .backdrop__grid {
@@ -622,27 +627,42 @@ svg {
   }
 }
 
-/* Cursor trail --------------------------------------------------------------
-   Above the page but inert: it must never intercept a click, and it is decor,
-   so it is hidden from assistive technology entirely. */
+/* The band sections read as glass over the drifting field rather than as a
+   flat slab, which is what keeps the backdrop legible through them. */
+.section--alt,
+.section--projects {
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
 
-.cursorTrail {
+/* Cursor glow --------------------------------------------------------------
+   A soft light sitting exactly under the pointer. Moved by the compositor from
+   the coordinates the pointer hook publishes, so there is no script running a
+   frame loop to keep it in place, and no trail lagging behind it. */
+
+.cursorGlow {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   z-index: 300;
-  width: 100%;
-  height: 100%;
+  width: 320px;
+  height: 320px;
+  margin: -160px 0 0 -160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--cursor-glow), transparent 68%);
+  translate: var(--pointer-x, -50vw) var(--pointer-y, -50vh);
   pointer-events: none;
+  will-change: translate;
 }
 
 @media (hover: none), (pointer: coarse) {
-  .cursorTrail {
+  .cursorGlow {
     display: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cursorTrail {
+  .cursorGlow {
     display: none;
   }
 }
