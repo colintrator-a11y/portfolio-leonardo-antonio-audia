@@ -63,7 +63,7 @@
   /* Surfaces that float above content and cannot inherit its background */
   --overlay-raised: rgba(255, 255, 255, 0.9);
   --overlay-soft: rgba(255, 255, 255, 0.75);
-  --sheen: rgba(255, 255, 255, 0.38);
+  --card-glow: rgba(29, 78, 216, 0.09);
   --grid-ink: rgba(13, 27, 48, 0.045);
   --dot-ink: rgba(13, 27, 48, 0.06);
 
@@ -130,8 +130,8 @@
 
   --overlay-raised: rgba(18, 28, 47, 0.92);
   --overlay-soft: rgba(255, 255, 255, 0.08);
-  /* A white sheen on a dark card reads as glare, so it is barely there. */
-  --sheen: rgba(255, 255, 255, 0.13);
+  /* Accent light pools further on a dark ground before it looks like glare. */
+  --card-glow: rgba(106, 168, 251, 0.14);
   --grid-ink: rgba(234, 240, 251, 0.05);
   --dot-ink: rgba(234, 240, 251, 0.06);
 
@@ -639,5 +639,30 @@ svg {
   body {
     font-size: 16px;
     line-height: 1.7;
+  }
+}
+
+/* Cursor trail --------------------------------------------------------------
+   Above the page but inert: it must never intercept a click, and it is decor,
+   so it is hidden from assistive technology entirely. */
+
+.cursorTrail {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursorTrail {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursorTrail {
+    display: none;
   }
 }

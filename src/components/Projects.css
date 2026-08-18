@@ -122,22 +122,11 @@
   text-align: left;
   cursor: pointer;
   overflow: hidden;
-  /*
-   * The tilt tracks the cursor, so it needs almost no transition while the
-   * pointer is over the card - a long one here means the card is always that
-   * far behind the cursor, which reads as lag rather than weight. The duration
-   * only opens up once :hover is lost, so the card eases back to flat.
-   *
-   * The lift is a separate property from the rotation precisely so the two can
-   * run at different speeds: fast tracking, slow settle. Perspective comes from
-   * the grid, so the Z of the lift is projected too.
-   */
-  --tilt-dur: 0.85s;
-  transform: rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
-  transform-style: preserve-3d;
-  will-change: transform, translate;
-  transition: transform var(--tilt-dur) var(--ease), translate 0.55s var(--ease),
-    box-shadow 0.55s var(--ease), border-color 0.55s var(--ease);
+  /* The card stays square to the reader and simply rises; the pointer moves
+     the light around it rather than turning the card itself. */
+  will-change: translate;
+  transition: translate 0.55s var(--ease), box-shadow 0.55s var(--ease),
+    border-color 0.55s var(--ease);
   /* Staggered entrance, ordered by position in the grid. `backwards` rather
      than `both`: holding the final keyframe would leave the animation owning
      transform after it finished, and the hover tilt would never take. */
@@ -154,29 +143,59 @@
 
 .pcard:hover,
 .pcard:focus-visible {
-  --tilt-dur: 0.09s;
-  translate: 0 -8px 30px;
-  border-color: var(--line-strong);
-  box-shadow: 0 42px 70px -34px rgba(13, 27, 48, 0.42);
+  translate: 0 -10px;
+  border-color: transparent;
+  box-shadow: 0 40px 68px -34px rgba(13, 27, 48, 0.4);
 }
 
-/* Follows the pointer across the face, so the tilt has a light source. */
-.pcard__sheen {
+/*
+ * The edge lights up where the pointer is. Drawn as a gradient behind the
+ * card and punched out to a one-pixel rim, which is the only way to give a
+ * border a gradient - `border-color` takes a single colour.
+ */
+.pcard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    340px circle at var(--sx, 50%) var(--sy, 50%),
+    var(--accent),
+    transparent 58%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease);
+}
+
+.pcard:hover::after,
+.pcard:focus-visible::after {
+  opacity: 1;
+}
+
+/* A soft pool of accent light under the copy, following the same point. */
+.pcard__glow {
   position: absolute;
   inset: 0;
   z-index: 1;
   border-radius: inherit;
   background: radial-gradient(
-    260px circle at var(--sx, 50%) var(--sy, 50%),
-    var(--sheen),
-    rgba(255, 255, 255, 0) 60%
+    300px circle at var(--sx, 50%) var(--sy, 50%),
+    var(--card-glow),
+    transparent 62%
   );
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.55s var(--ease);
 }
 
-.pcard:hover .pcard__sheen {
+.pcard:hover .pcard__glow {
   opacity: 1;
 }
 
@@ -663,12 +682,11 @@
   .pcard,
   .pcard:hover,
   .pcard:focus-visible {
-    transform: none;
     translate: none;
     transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
   }
 
-  .pcard__sheen {
+  .pcard__glow {
     display: none;
   }
 
@@ -683,11 +701,11 @@
 @media (hover: none), (pointer: coarse) {
   .pcard,
   .pcard:hover {
-    transform: none;
     translate: none;
   }
 
-  .pcard__sheen {
+  .pcard__glow,
+  .pcard::after {
     display: none;
   }
 }

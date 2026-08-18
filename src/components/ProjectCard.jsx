@@ -15,11 +15,6 @@ import ProjectVisual from './ProjectVisual'
  */
 const SHOWN_TECH = 3
 
-/* Degrees of tilt at the very edge of the card. Small on purpose: past about
-   eight the text starts to look like it is sliding off. */
-const TILT_X = 7
-const TILT_Y = 9
-
 export default function ProjectCard({
   project,
   index,
@@ -37,11 +32,11 @@ export default function ProjectCard({
   const latest = useRef({ x: 0, y: 0 })
 
   /*
-   * Tilts the card towards the pointer and moves a highlight with it, which is
-   * what reads as a solid object rather than a rectangle that grew a shadow.
-   * Written straight to CSS custom properties so React never re-renders for a
-   * mouse move, and coalesced into one frame because pointermove fires far
-   * more often than the screen refreshes.
+   * Reports where the pointer is on the card, as a percentage, so the border
+   * and the glow can light up around it. Written straight to CSS custom
+   * properties so React never re-renders for a mouse move, and coalesced into
+   * one frame because pointermove fires far more often than the screen
+   * refreshes.
    */
   const onPointerMove = useCallback((event) => {
     const el = ref.current
@@ -59,8 +54,6 @@ export default function ProjectCard({
       const box = el.getBoundingClientRect()
       const x = (latest.current.x - box.left) / box.width
       const y = (latest.current.y - box.top) / box.height
-      el.style.setProperty('--tx', `${((0.5 - y) * TILT_X).toFixed(2)}deg`)
-      el.style.setProperty('--ty', `${((x - 0.5) * TILT_Y).toFixed(2)}deg`)
       el.style.setProperty('--sx', `${(x * 100).toFixed(1)}%`)
       el.style.setProperty('--sy', `${(y * 100).toFixed(1)}%`)
     })
@@ -73,9 +66,9 @@ export default function ProjectCard({
       cancelAnimationFrame(frame.current)
       frame.current = 0
     }
-    // Back to flat, and the transition carries it rather than a jump.
-    el.style.removeProperty('--tx')
-    el.style.removeProperty('--ty')
+    // Park the light back in the middle so the next hover starts centred.
+    el.style.removeProperty('--sx')
+    el.style.removeProperty('--sy')
   }, [])
 
   return (
@@ -110,7 +103,7 @@ export default function ProjectCard({
         {badge ? <span className="pcard__badge">{badge}</span> : null}
       </span>
 
-      <span className="pcard__sheen" aria-hidden="true" />
+      <span className="pcard__glow" aria-hidden="true" />
 
       <span className="pcard__body">
         <span className="pcard__category">{project.category}</span>
