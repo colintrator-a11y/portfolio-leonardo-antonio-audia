@@ -365,23 +365,47 @@ svg {
 }
 
 .backdrop__orb--a {
-  top: -220px;
-  right: -140px;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(circle, rgba(29, 78, 216, 0.1), transparent 68%);
+  top: -240px;
+  right: -160px;
+  width: 660px;
+  height: 660px;
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.16), transparent 68%);
+  animation: orb-drift 26s var(--ease) infinite alternate;
 }
 
 .backdrop__orb--b {
-  top: 26%;
-  left: -220px;
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.09), transparent 70%);
+  top: 22%;
+  left: -240px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.14), transparent 70%);
+  animation: orb-drift 32s var(--ease) infinite alternate-reverse;
 }
 
+/* Third wash, low and to the right, so the lower half of the page is not left
+   flat once the first two have faded out. */
 .backdrop__orb--c {
-  display: none;
+  display: block;
+  right: -180px;
+  bottom: -220px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.11), transparent 70%);
+  animation: orb-drift 38s var(--ease) infinite alternate;
+}
+
+/* A slow drift keeps the page feeling alive without anything moving that the
+   eye has to track. */
+@keyframes orb-drift {
+  to {
+    transform: translate3d(-38px, 30px, 0) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop__orb {
+    animation: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
