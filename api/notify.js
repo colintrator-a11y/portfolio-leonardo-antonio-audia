@@ -158,6 +158,22 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
     return res.status(204).end()
   }
+  // GET is a health check: open /api/notify in a browser to confirm the
+  // function deployed and the environment variables landed. It reports only
+  // whether each value is present, never the value itself.
+  if (req.method === 'GET') {
+    return res.status(200).json({
+      ok: true,
+      deployed: true,
+      configured: {
+        TELEGRAM_BOT_TOKEN: Boolean(process.env.TELEGRAM_BOT_TOKEN),
+        TELEGRAM_CHAT_ID: Boolean(process.env.TELEGRAM_CHAT_ID),
+        SITE_NAME: process.env.SITE_NAME || '(unset, will fall back to host)',
+      },
+      allowedOrigins: allowList,
+    })
+  }
+
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method_not_allowed' })
   if (!originOk) return res.status(403).json({ ok: false, error: 'origin_not_allowed' })
 
