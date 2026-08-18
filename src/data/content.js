@@ -47,7 +47,7 @@ const statValues = ['10+', '5.0', '#1', '4']
 const pillarDetails = [
   'React.js · Next.js · Node.js · Nest.js',
   'React Native · Android · iOS · Flutter',
-  'Storefronts · WooCommerce · WordPress',
+  'Shopify · WooCommerce · WordPress',
   'REST API · Integrations · Chatbots',
 ]
 
@@ -58,9 +58,9 @@ const skillIcons = ['layout', 'server', 'mobile', 'cart', 'tools', 'ai']
 /* Technology names are proper nouns and stay untranslated. */
 const skillItems = [
   ['React.js', 'Next.js', 'AngularJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
-  ['Node.js', 'Nest.js', 'PHP', 'Python', 'REST API', 'API Integration'],
+  ['Node.js', 'Nest.js', 'PHP', 'Laravel', 'Python', 'REST API', 'API Integration'],
   ['React Native', 'Android', 'iOS', 'Flutter', 'Windows Mobile', 'Mobile App Design'],
-  ['E-commerce', 'WooCommerce', 'WordPress', 'Marketing'],
+  ['E-commerce', 'Shopify', 'WooCommerce', 'WordPress', 'Marketing'],
   ['Responsive Web Design', 'Modern UI Development', 'Cross-Device Layouts'],
   ['Chatbot', 'Process Automation', 'Third-Party Integrations'],
 ]
@@ -121,6 +121,54 @@ const projectOrder = [
 ]
 
 const exampleMedia = {
+  'shopify-fashion-theme': {
+    visual: 'shopifyTheme',
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'Responsive Web Design'],
+  },
+  'shopify-headless': {
+    visual: 'shopifyHeadless',
+    tech: ['Shopify', 'Storefront API', 'Next.js', 'React.js', 'TypeScript'],
+  },
+  'shopify-subscription-app': {
+    visual: 'shopifyApp',
+    tech: ['Shopify', 'Shopify App', 'Node.js', 'REST API', 'Webhooks'],
+  },
+  'woocommerce-store': {
+    visual: 'wooStore',
+    tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
+  },
+  'wordpress-multilingual-site': {
+    visual: 'wordpressEditor',
+    tech: ['WordPress', 'PHP', 'Multilingual', 'SEO', 'Responsive Web Design'],
+  },
+  'wordpress-lead-plugin': {
+    visual: 'wordpressPlugin',
+    tech: ['WordPress', 'PHP', 'REST API', 'Process Automation'],
+  },
+  'react-native-shop-app': {
+    visual: 'mobileShopping',
+    tech: ['React Native', 'iOS', 'Android', 'REST API', 'Mobile App Design'],
+  },
+  'flutter-delivery-app': {
+    visual: 'mobileDelivery',
+    tech: ['Flutter', 'Android', 'iOS', 'REST API', 'Mobile App Design'],
+  },
+  'android-field-service': {
+    visual: 'mobileField',
+    tech: ['Android', 'Java', 'SQLite', 'REST API', 'Offline Sync'],
+  },
+  'laravel-booking-api': {
+    visual: 'laravelApi',
+    tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'API Integration'],
+  },
+  'php-crm-invoicing': {
+    visual: 'phpCrm',
+    tech: ['PHP', 'MySQL', 'REST API', 'Responsive Web Design'],
+  },
+  'php-payment-gateway': {
+    visual: 'paymentGateway',
+    tech: ['PHP', 'REST API', 'Webhooks', 'API Integration'],
+  },
   'whatsapp-telegram-bot': {
     visual: 'chatops',
     tech: ['Chatbot', 'WhatsApp Business API', 'Telegram Bot API', 'Node.js', 'Python', 'REST API'],
@@ -132,7 +180,23 @@ const exampleMedia = {
   },
 }
 
-const exampleOrder = ['whatsapp-telegram-bot', 'support-chatbot', 'python-automation']
+const exampleOrder = [
+  'shopify-fashion-theme',
+  'shopify-headless',
+  'shopify-subscription-app',
+  'woocommerce-store',
+  'wordpress-multilingual-site',
+  'wordpress-lead-plugin',
+  'react-native-shop-app',
+  'flutter-delivery-app',
+  'android-field-service',
+  'laravel-booking-api',
+  'php-crm-invoicing',
+  'php-payment-gateway',
+  'whatsapp-telegram-bot',
+  'support-chatbot',
+  'python-automation',
+]
 
 /* The published review, quoted in the language the client wrote it in. */
 const review = {

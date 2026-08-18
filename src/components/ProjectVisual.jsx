@@ -1,31 +1,15 @@
 /**
  * Inline-SVG scenes for entries with no published screenshot: the Pipefy
- * engagement, and the two capability examples. Delivered client projects use
- * their real screenshots instead.
+ * engagement, and the capability examples. Delivered client projects use their
+ * real screenshots instead.
+ *
+ * The Shopify, mobile, PHP and WordPress scenes live in `ProjectScenes.jsx`
+ * and are merged into the scene map below; both files share one palette so the
+ * whole set reads as the same product family.
  */
 
-const W = 640
-const H = 400
-
-/* Shared light-UI palette so every scene reads as the same product family. */
-const C = {
-  bg: '#ffffff',
-  chrome: '#f5f6f9',
-  border: '#e4e7ee',
-  hair: '#eef0f5',
-  panel: '#f8f9fc',
-  barLight: '#e7eaf1',
-  barMid: '#ccd3e0',
-  barDark: '#aab4c6',
-  ink: '#0d1b30',
-  muted: '#8a95a6',
-  accent: '#1d4ed8',
-  accentSoft: '#e4edfc',
-  sky: '#0ea5e9',
-  green: '#16a34a',
-  amber: '#d97706',
-  red: '#dc2626',
-}
+import { extraScenes } from './ProjectScenes'
+import { C, H, W } from './visualTokens'
 
 function Defs({ id }) {
   return (
@@ -657,6 +641,7 @@ const scenes = {
   chatbot: Chatbot,
   python: PythonAutomation,
   chatops: ChatOps,
+  ...extraScenes,
 }
 
 /* Scenes that need a canvas other than the default 640x400. */

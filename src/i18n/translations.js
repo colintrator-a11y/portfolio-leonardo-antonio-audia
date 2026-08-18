@@ -284,12 +284,180 @@ const en = {
   },
   examples: {
     eyebrow: 'Capability Examples',
-    heading: 'Chatbot, messaging and Python automation builds',
+    heading: 'Shopify, WordPress, mobile, PHP and automation builds',
     intro:
-      'Reference builds rather than client deliveries — shown to make concrete what the chatbot, messaging and Python work on my skills list actually looks like in practice.',
+      'Reference builds rather than client deliveries — shown to make concrete what the Shopify, WordPress, mobile, PHP and automation work on my skills list actually looks like in practice.',
     badge: 'Capability example',
     note: 'These are reference builds, not client projects. Every project above was delivered for a paying client.',
     items: {
+      'shopify-fashion-theme': {
+        category: 'Shopify',
+        title: 'Custom Shopify Theme for a Fashion Label',
+        overview:
+          'A Shopify storefront built as a custom theme rather than a bought one — Liquid templates, a hand-built section library the client can rearrange in the theme editor, and a product page tuned for the way a fashion shopper actually browses.',
+        features: [
+          'Custom Liquid theme with reorderable sections',
+          'Collection filtering, quick view and size guides',
+          'Cart drawer and upsell blocks without extra apps',
+          'Performance budget held on mobile connections',
+        ],
+        value:
+          'Gives the brand a storefront that looks like nobody else’s while staying inside Shopify — so the client edits pages themselves and pays for fewer apps.',
+      },
+      'shopify-headless': {
+        category: 'Headless Commerce',
+        title: 'Headless Shopify Storefront on Next.js',
+        overview:
+          'The same Shopify catalogue served through a Next.js front end using the Storefront API — pages rendered and cached at the edge, with checkout handed back to Shopify so payments, taxes and fraud stay where they belong.',
+        features: [
+          'Storefront API queries for catalogue, variants and cart',
+          'Server-rendered product pages revalidated at the edge',
+          'Checkout handed off to the Shopify-hosted flow',
+          'TypeScript end to end, from query to component',
+        ],
+        value:
+          'Front-end freedom and load speed without rebuilding payments — the catalogue stays in Shopify while the experience stops being limited by a theme.',
+      },
+      'shopify-subscription-app': {
+        category: 'Shopify App',
+        title: 'Shopify Subscription & Bundles App',
+        overview:
+          'An embedded Shopify app that adds recurring orders and product bundles to a store — selling plans, contract management and dunning retries, all rendered inside Shopify admin so the merchant never has to leave it.',
+        features: [
+          'Selling plans and subscription contracts',
+          'Bundle builder priced against the live catalogue',
+          'Automatic retry and dunning on failed payments',
+          'Idempotent webhooks so nothing is billed twice',
+        ],
+        value:
+          'Turns one-off buyers into recurring revenue, and stops a failed card from quietly becoming churn.',
+      },
+      'woocommerce-store': {
+        category: 'WooCommerce',
+        title: 'WooCommerce Store for an Artisan Food Producer',
+        overview:
+          'A WooCommerce shop for a farm selling direct — seasonal products, gift boxes, EU shipping rules and VAT handled by the store rather than by hand, on a WordPress install the owner already knows how to use.',
+        features: [
+          'Product, variation and gift-box configuration',
+          'Zone-based EU shipping and VAT rules',
+          'Stock, harvest batches and pre-orders',
+          'Checkout tuned for completion on mobile',
+        ],
+        value:
+          'Lets a small producer sell across Europe without a distributor, and edit the shop from the WordPress admin they already have.',
+      },
+      'wordpress-multilingual-site': {
+        category: 'WordPress',
+        title: 'Multilingual WordPress Corporate Site',
+        overview:
+          'A corporate WordPress site published in four languages from one editorial workflow — block editor pages, reusable blocks for anything that repeats, and per-language SEO so each market has its own canonical pages.',
+        features: [
+          'Block editor pages with reusable, centrally edited blocks',
+          'Four languages with translation status visible to editors',
+          'Per-language metadata, canonicals and sitemaps',
+          'Core Web Vitals passing on mobile and desktop',
+        ],
+        value:
+          'The marketing team publishes in every market without a developer, and each language ranks on its own instead of competing with the others.',
+      },
+      'wordpress-lead-plugin': {
+        category: 'WordPress Plugin',
+        title: 'Custom WordPress Lead Routing Plugin',
+        overview:
+          'A purpose-built WordPress plugin instead of a stack of general-purpose ones — leads captured as a custom post type, routed to the right sales team by rule, and pushed to the CRM with a retry queue behind it.',
+        features: [
+          'Custom post type with its own admin columns and filters',
+          'Rule-based routing by source, region and product',
+          'CRM sync over REST with retries and a failure log',
+          'Everything managed inside wp-admin',
+        ],
+        value:
+          'Replaces four overlapping plugins with one that does exactly the job, so leads reach the right person automatically and none are lost to a silent sync failure.',
+      },
+      'react-native-shop-app': {
+        category: 'Mobile Application',
+        title: 'React Native Shopping App for iOS & Android',
+        overview:
+          'A shopping app shipped to both stores from a single React Native codebase — catalogue, product detail, cart and payment, with native behaviour on each platform and one shared API layer behind them.',
+        features: [
+          'One codebase released to the App Store and Play Store',
+          'Catalogue, search and filtering against a REST API',
+          'Native payment sheets and saved cards',
+          'Push notifications for orders and back-in-stock',
+        ],
+        value:
+          'Two stores served by one team and one release cycle, instead of two native builds slowly drifting apart.',
+      },
+      'flutter-delivery-app': {
+        category: 'Mobile Application',
+        title: 'Flutter Delivery & Driver Tracking App',
+        overview:
+          'Two Flutter apps from one project: customers watch their order move in real time, drivers work an optimised run sheet and close each stop with a signature, a photo and a GPS stamp.',
+        features: [
+          'Live driver position and arrival estimate',
+          'Optimised run sheet with hand-off to navigation',
+          'Proof of delivery: signature, photo and location',
+          'Uploads queued while the driver has no signal',
+        ],
+        value:
+          'Cuts “where is my order?” calls to almost nothing and leaves the operator a delivery record for every single stop.',
+      },
+      'android-field-service': {
+        category: 'Mobile Application',
+        title: 'Android Field Service App with Offline Sync',
+        overview:
+          'A native Android app for engineers working in basements and plant rooms where there is no signal. Every screen reads and writes to a local database first, and the queue syncs with an audit trail once the phone is back online.',
+        features: [
+          'Full offline read and write on a local SQLite store',
+          'Job checklists, parts used and time capture',
+          'Signature and photo capture on site',
+          'Sync queue with conflict handling and audit log',
+        ],
+        value:
+          'Engineers stop filling in paper and retyping it later — the office sees a completed job minutes after it is finished rather than days.',
+      },
+      'laravel-booking-api': {
+        category: 'Backend & API',
+        title: 'Laravel Booking & Scheduling API',
+        overview:
+          'A Laravel API for booking a finite resource, where the hard part is not the endpoint but the race — two people hitting the same slot in the same second. Solved with a row lock inside a transaction, and covered by concurrency tests.',
+        features: [
+          'Availability and booking endpoints with a locked write path',
+          'Concurrency tests proving no double-booking',
+          'Calendar sync and confirmation e-mails on events',
+          'Webhook delivery with automatic retries',
+        ],
+        value:
+          'A booking system that stays correct under load — the one property a customer notices immediately when it is missing.',
+      },
+      'php-crm-invoicing': {
+        category: 'Business Application',
+        title: 'PHP Client & Invoicing CRM',
+        overview:
+          'A PHP back office for a professional firm: clients, quotes, time sheets and invoices in one model, with the ageing of every unpaid invoice visible on the first screen rather than buried in a report.',
+        features: [
+          'Clients, quotes, time sheets and invoices in one place',
+          'Invoice ageing and overdue tracking',
+          'Role-based access for partners and assistants',
+          'PDF generation and payment reconciliation',
+        ],
+        value:
+          'Shows who owes what and for how long without anyone rebuilding a spreadsheet — the number a firm actually runs on.',
+      },
+      'php-payment-gateway': {
+        category: 'Integration',
+        title: 'PHP Payment Gateway Integration Layer',
+        overview:
+          'One PHP interface in front of three payment providers. Checkout calls authorize, capture and refund; which provider runs is configuration. Webhooks are signature-checked and replay-safe, so a duplicate delivery never credits an order twice.',
+        features: [
+          'Single interface over card, wallet and local payment methods',
+          'Signature verification on every inbound webhook',
+          'Idempotent reconciliation against the order ledger',
+          'A provider added or swapped without touching checkout',
+        ],
+        value:
+          'Adding a payment method becomes a configuration change, and the ledger stays right even when a provider sends the same event twice.',
+      },
       'whatsapp-telegram-bot': {
         category: 'Messaging Chatbot',
         title: 'WhatsApp & Telegram Chatbot',
@@ -670,12 +838,180 @@ const pt = {
   },
   examples: {
     eyebrow: 'Exemplos de Capacidade',
-    heading: 'Projetos de chatbot, mensagens e automação em Python',
+    heading: 'Projetos em Shopify, WordPress, mobile, PHP e automação',
     intro:
-      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de chatbot, mensagens e Python da minha lista de competências significa na prática.',
+      'Projetos de referência e não entregas a clientes — mostrados para tornar concreto o que o trabalho de Shopify, WordPress, mobile, PHP e automação da minha lista de competências significa na prática.',
     badge: 'Exemplo de capacidade',
     note: 'Estes são projetos de referência, não trabalhos de clientes. Todos os projetos acima foram entregues a clientes reais.',
     items: {
+      'shopify-fashion-theme': {
+        category: 'Shopify',
+        title: 'Tema Shopify Sob Medida para Marca de Moda',
+        overview:
+          'Uma loja Shopify construída como tema próprio, e não comprado — templates em Liquid, uma biblioteca de seções que o cliente reorganiza sozinho no editor de temas e uma página de produto pensada para o jeito como o cliente de moda realmente navega.',
+        features: [
+          'Tema Liquid próprio com seções reordenáveis',
+          'Filtros de coleção, visualização rápida e guia de tamanhos',
+          'Carrinho lateral e blocos de upsell sem apps extras',
+          'Orçamento de performance mantido no celular',
+        ],
+        value:
+          'Dá à marca uma loja que não se parece com nenhuma outra sem sair do Shopify — o cliente edita as páginas sozinho e paga por menos apps.',
+      },
+      'shopify-headless': {
+        category: 'Comércio Headless',
+        title: 'Loja Shopify Headless em Next.js',
+        overview:
+          'O mesmo catálogo Shopify servido por um front-end Next.js através da Storefront API — páginas renderizadas e cacheadas na borda, com o checkout devolvido ao Shopify para que pagamentos, impostos e antifraude continuem onde devem estar.',
+        features: [
+          'Consultas à Storefront API para catálogo, variantes e carrinho',
+          'Páginas de produto renderizadas no servidor e revalidadas na borda',
+          'Checkout entregue ao fluxo hospedado do Shopify',
+          'TypeScript de ponta a ponta, da consulta ao componente',
+        ],
+        value:
+          'Liberdade de front-end e velocidade de carregamento sem reconstruir pagamentos — o catálogo continua no Shopify e a experiência deixa de ser limitada pelo tema.',
+      },
+      'shopify-subscription-app': {
+        category: 'App Shopify',
+        title: 'App Shopify de Assinaturas e Kits',
+        overview:
+          'Um app Shopify embutido que acrescenta pedidos recorrentes e kits de produtos à loja — planos de venda, gestão de contratos e novas tentativas de cobrança, tudo renderizado dentro do admin do Shopify para o lojista nunca precisar sair de lá.',
+        features: [
+          'Planos de venda e contratos de assinatura',
+          'Montador de kits precificado sobre o catálogo ao vivo',
+          'Nova tentativa automática em pagamentos recusados',
+          'Webhooks idempotentes para nada ser cobrado duas vezes',
+        ],
+        value:
+          'Transforma compras avulsas em receita recorrente e impede que um cartão recusado vire cancelamento silencioso.',
+      },
+      'woocommerce-store': {
+        category: 'WooCommerce',
+        title: 'Loja WooCommerce para Produtor Artesanal',
+        overview:
+          'Uma loja WooCommerce para uma fazenda que vende direto ao consumidor — produtos sazonais, caixas-presente, regras de frete na UE e impostos tratados pela loja em vez de na mão, sobre uma instalação WordPress que o dono já sabe usar.',
+        features: [
+          'Configuração de produtos, variações e caixas-presente',
+          'Regras de frete e impostos por zona na UE',
+          'Estoque, lotes de safra e pré-venda',
+          'Checkout ajustado para conversão no celular',
+        ],
+        value:
+          'Permite a um pequeno produtor vender em toda a Europa sem distribuidor e editar a loja pelo próprio admin WordPress que já tem.',
+      },
+      'wordpress-multilingual-site': {
+        category: 'WordPress',
+        title: 'Site Corporativo WordPress Multilíngue',
+        overview:
+          'Um site corporativo WordPress publicado em quatro idiomas a partir de um único fluxo editorial — páginas no editor de blocos, blocos reutilizáveis para tudo que se repete e SEO por idioma, para que cada mercado tenha as próprias páginas canônicas.',
+        features: [
+          'Páginas no editor de blocos com blocos reutilizáveis e centralizados',
+          'Quatro idiomas com status de tradução visível ao editor',
+          'Metadados, canônicas e sitemaps por idioma',
+          'Core Web Vitals aprovados no celular e no desktop',
+        ],
+        value:
+          'O time de marketing publica em todos os mercados sem depender de um desenvolvedor, e cada idioma se posiciona sozinho em vez de competir com os outros.',
+      },
+      'wordpress-lead-plugin': {
+        category: 'Plugin WordPress',
+        title: 'Plugin WordPress de Roteamento de Leads',
+        overview:
+          'Um plugin WordPress feito sob medida no lugar de uma pilha de plugins genéricos — leads capturados como post type próprio, roteados por regra para a equipe comercial certa e enviados ao CRM com uma fila de retentativa por trás.',
+        features: [
+          'Post type próprio com colunas e filtros no admin',
+          'Roteamento por regra de origem, região e produto',
+          'Sincronização com o CRM via REST, com retentativas e log de falhas',
+          'Tudo gerenciado dentro do wp-admin',
+        ],
+        value:
+          'Substitui quatro plugins sobrepostos por um que faz exatamente o trabalho: o lead chega sozinho à pessoa certa e nenhum se perde numa sincronização que falhou em silêncio.',
+      },
+      'react-native-shop-app': {
+        category: 'Aplicativo Mobile',
+        title: 'App de Compras em React Native para iOS e Android',
+        overview:
+          'Um aplicativo de compras publicado nas duas lojas a partir de uma única base React Native — catálogo, detalhe do produto, carrinho e pagamento, com comportamento nativo em cada plataforma e uma camada de API compartilhada por trás.',
+        features: [
+          'Uma base de código publicada na App Store e na Play Store',
+          'Catálogo, busca e filtros sobre uma REST API',
+          'Folhas de pagamento nativas e cartões salvos',
+          'Notificações push de pedidos e reposição de estoque',
+        ],
+        value:
+          'Duas lojas atendidas por um time e um ciclo de release, em vez de dois apps nativos se afastando aos poucos.',
+      },
+      'flutter-delivery-app': {
+        category: 'Aplicativo Mobile',
+        title: 'App Flutter de Entregas e Rastreamento de Motoristas',
+        overview:
+          'Dois aplicativos Flutter em um só projeto: o cliente acompanha o pedido em tempo real e o motorista trabalha uma rota otimizada, encerrando cada parada com assinatura, foto e marcação de GPS.',
+        features: [
+          'Posição do motorista e previsão de chegada ao vivo',
+          'Rota otimizada com passagem para a navegação',
+          'Comprovante de entrega: assinatura, foto e localização',
+          'Envios enfileirados enquanto o motorista está sem sinal',
+        ],
+        value:
+          'Reduz a quase nada as ligações de “cadê meu pedido?” e deixa para o operador um registro de entrega de cada parada.',
+      },
+      'android-field-service': {
+        category: 'Aplicativo Mobile',
+        title: 'App Android de Serviço em Campo com Sincronização Offline',
+        overview:
+          'Um app Android nativo para técnicos que trabalham em subsolos e casas de máquinas, onde não há sinal. Toda tela lê e grava primeiro num banco local, e a fila sincroniza com trilha de auditoria assim que o aparelho volta a ter rede.',
+        features: [
+          'Leitura e escrita totalmente offline num banco SQLite local',
+          'Checklists de ordem de serviço, peças usadas e apontamento de horas',
+          'Captura de assinatura e fotos no local',
+          'Fila de sincronização com tratamento de conflito e log de auditoria',
+        ],
+        value:
+          'O técnico deixa de preencher papel para redigitar depois — o escritório vê a ordem concluída minutos depois do fim do serviço, não dias.',
+      },
+      'laravel-booking-api': {
+        category: 'Back-end e API',
+        title: 'API Laravel de Reservas e Agendamento',
+        overview:
+          'Uma API Laravel para reservar um recurso finito, onde a parte difícil não é o endpoint e sim a corrida — duas pessoas pegando o mesmo horário no mesmo segundo. Resolvido com bloqueio de linha dentro de uma transação e coberto por testes de concorrência.',
+        features: [
+          'Endpoints de disponibilidade e reserva com escrita sob bloqueio',
+          'Testes de concorrência que provam a ausência de reserva dupla',
+          'Sincronização de agenda e e-mails de confirmação por evento',
+          'Entrega de webhooks com retentativa automática',
+        ],
+        value:
+          'Um sistema de reservas que continua correto sob carga — a única propriedade que o cliente percebe na hora quando falta.',
+      },
+      'php-crm-invoicing': {
+        category: 'Aplicação de Negócio',
+        title: 'CRM de Clientes e Faturamento em PHP',
+        overview:
+          'Um back-office em PHP para um escritório profissional: clientes, propostas, apontamento de horas e faturas num modelo só, com o vencimento de cada fatura em aberto visível já na primeira tela, e não escondido num relatório.',
+        features: [
+          'Clientes, propostas, horas e faturas em um único lugar',
+          'Aging de faturas e acompanhamento de inadimplência',
+          'Acesso por perfil para sócios e assistentes',
+          'Geração de PDF e conciliação de pagamentos',
+        ],
+        value:
+          'Mostra quem deve o quê e há quanto tempo sem ninguém refazer uma planilha — o número do qual o escritório realmente depende.',
+      },
+      'php-payment-gateway': {
+        category: 'Integração',
+        title: 'Camada PHP de Integração com Gateways de Pagamento',
+        overview:
+          'Uma única interface PHP na frente de três provedores de pagamento. O checkout chama autorizar, capturar e estornar; qual provedor executa é configuração. Os webhooks têm assinatura verificada e são à prova de reenvio, então uma entrega duplicada nunca credita o pedido duas vezes.',
+        features: [
+          'Interface única sobre cartão, carteira digital e meio de pagamento local',
+          'Verificação de assinatura em todo webhook recebido',
+          'Conciliação idempotente contra o razão de pedidos',
+          'Provedor adicionado ou trocado sem tocar no checkout',
+        ],
+        value:
+          'Adicionar um meio de pagamento vira uma mudança de configuração, e o razão continua certo mesmo quando o provedor manda o mesmo evento duas vezes.',
+      },
       'whatsapp-telegram-bot': {
         category: 'Chatbot de Mensagens',
         title: 'Chatbot para WhatsApp e Telegram',
@@ -1057,12 +1393,180 @@ const es = {
   },
   examples: {
     eyebrow: 'Ejemplos de Capacidad',
-    heading: 'Proyectos de chatbot, mensajería y automatización en Python',
+    heading: 'Proyectos en Shopify, WordPress, móvil, PHP y automatización',
     intro:
-      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de chatbot, mensajería y Python de mi lista de habilidades.',
+      'Proyectos de referencia y no entregas a clientes: se muestran para concretar qué significan en la práctica el trabajo de Shopify, WordPress, móvil, PHP y automatización de mi lista de habilidades.',
     badge: 'Ejemplo de capacidad',
     note: 'Estos son proyectos de referencia, no trabajos de clientes. Todos los proyectos anteriores se entregaron a clientes reales.',
     items: {
+      'shopify-fashion-theme': {
+        category: 'Shopify',
+        title: 'Tema Shopify a Medida para una Marca de Moda',
+        overview:
+          'Una tienda Shopify construida como tema propio y no comprado — plantillas en Liquid, una biblioteca de secciones que el cliente reordena solo desde el editor de temas y una página de producto pensada para cómo navega de verdad quien compra moda.',
+        features: [
+          'Tema Liquid propio con secciones reordenables',
+          'Filtros de colección, vista rápida y guía de tallas',
+          'Carrito lateral y bloques de upsell sin apps adicionales',
+          'Presupuesto de rendimiento mantenido en móvil',
+        ],
+        value:
+          'Le da a la marca una tienda que no se parece a ninguna otra sin salir de Shopify — el cliente edita las páginas por su cuenta y paga menos apps.',
+      },
+      'shopify-headless': {
+        category: 'Comercio Headless',
+        title: 'Tienda Shopify Headless sobre Next.js',
+        overview:
+          'El mismo catálogo de Shopify servido por un front-end Next.js a través de la Storefront API — páginas renderizadas y cacheadas en el edge, con el checkout devuelto a Shopify para que pagos, impuestos y antifraude sigan donde corresponde.',
+        features: [
+          'Consultas a la Storefront API para catálogo, variantes y carrito',
+          'Páginas de producto renderizadas en servidor y revalidadas en el edge',
+          'Checkout entregado al flujo alojado por Shopify',
+          'TypeScript de punta a punta, de la consulta al componente',
+        ],
+        value:
+          'Libertad de front-end y velocidad de carga sin rehacer los pagos — el catálogo se queda en Shopify y la experiencia deja de estar limitada por el tema.',
+      },
+      'shopify-subscription-app': {
+        category: 'App de Shopify',
+        title: 'App de Suscripciones y Packs para Shopify',
+        overview:
+          'Una app integrada en Shopify que añade pedidos recurrentes y packs de producto a la tienda — planes de venta, gestión de contratos y reintentos de cobro, todo renderizado dentro del admin de Shopify para que el comerciante no tenga que salir de allí.',
+        features: [
+          'Planes de venta y contratos de suscripción',
+          'Constructor de packs con precio sobre el catálogo en vivo',
+          'Reintento automático ante pagos rechazados',
+          'Webhooks idempotentes para no cobrar dos veces',
+        ],
+        value:
+          'Convierte compras puntuales en ingresos recurrentes y evita que una tarjeta rechazada acabe siendo una baja silenciosa.',
+      },
+      'woocommerce-store': {
+        category: 'WooCommerce',
+        title: 'Tienda WooCommerce para un Productor Artesanal',
+        overview:
+          'Una tienda WooCommerce para una finca que vende directo — productos de temporada, cajas regalo, reglas de envío en la UE e IVA resueltos por la tienda y no a mano, sobre una instalación WordPress que el dueño ya sabe usar.',
+        features: [
+          'Configuración de productos, variaciones y cajas regalo',
+          'Reglas de envío e IVA por zona en la UE',
+          'Stock, lotes de cosecha y prepedidos',
+          'Checkout ajustado para completarse en móvil',
+        ],
+        value:
+          'Permite a un productor pequeño vender en toda Europa sin distribuidor y editar la tienda desde el admin de WordPress que ya tiene.',
+      },
+      'wordpress-multilingual-site': {
+        category: 'WordPress',
+        title: 'Sitio Corporativo WordPress Multilingüe',
+        overview:
+          'Un sitio corporativo WordPress publicado en cuatro idiomas desde un único flujo editorial — páginas en el editor de bloques, bloques reutilizables para todo lo que se repite y SEO por idioma, de modo que cada mercado tenga sus propias páginas canónicas.',
+        features: [
+          'Páginas en el editor de bloques con bloques reutilizables y centralizados',
+          'Cuatro idiomas con el estado de traducción visible para el editor',
+          'Metadatos, canónicas y sitemaps por idioma',
+          'Core Web Vitals aprobados en móvil y escritorio',
+        ],
+        value:
+          'El equipo de marketing publica en cada mercado sin depender de un desarrollador, y cada idioma posiciona por sí mismo en lugar de competir con los demás.',
+      },
+      'wordpress-lead-plugin': {
+        category: 'Plugin de WordPress',
+        title: 'Plugin WordPress de Enrutamiento de Leads',
+        overview:
+          'Un plugin de WordPress hecho a medida en lugar de una pila de plugins genéricos — leads capturados como custom post type, enrutados por regla al equipo comercial correcto y enviados al CRM con una cola de reintentos detrás.',
+        features: [
+          'Custom post type con sus propias columnas y filtros en el admin',
+          'Enrutamiento por regla según origen, región y producto',
+          'Sincronización con el CRM vía REST, con reintentos y registro de fallos',
+          'Todo gestionado dentro de wp-admin',
+        ],
+        value:
+          'Sustituye cuatro plugins solapados por uno que hace exactamente el trabajo: el lead llega solo a la persona correcta y ninguno se pierde en una sincronización fallida.',
+      },
+      'react-native-shop-app': {
+        category: 'Aplicación Móvil',
+        title: 'App de Compras en React Native para iOS y Android',
+        overview:
+          'Una app de compras publicada en ambas tiendas desde una sola base de código React Native — catálogo, ficha de producto, carrito y pago, con comportamiento nativo en cada plataforma y una capa de API compartida por detrás.',
+        features: [
+          'Una base de código publicada en App Store y Play Store',
+          'Catálogo, búsqueda y filtros sobre una REST API',
+          'Hojas de pago nativas y tarjetas guardadas',
+          'Notificaciones push de pedidos y reposición de stock',
+        ],
+        value:
+          'Dos tiendas atendidas por un equipo y un ciclo de publicación, en vez de dos apps nativas que se van separando poco a poco.',
+      },
+      'flutter-delivery-app': {
+        category: 'Aplicación Móvil',
+        title: 'App Flutter de Reparto y Seguimiento de Repartidores',
+        overview:
+          'Dos apps Flutter salidas de un mismo proyecto: el cliente ve avanzar su pedido en tiempo real y el repartidor trabaja una ruta optimizada, cerrando cada parada con firma, foto y sello de GPS.',
+        features: [
+          'Posición del repartidor y hora estimada de llegada en vivo',
+          'Ruta optimizada con paso a la navegación',
+          'Prueba de entrega: firma, foto y ubicación',
+          'Envíos en cola mientras el repartidor no tiene cobertura',
+        ],
+        value:
+          'Reduce casi a cero las llamadas de “¿dónde está mi pedido?” y deja al operador un registro de entrega de cada parada.',
+      },
+      'android-field-service': {
+        category: 'Aplicación Móvil',
+        title: 'App Android de Servicio en Campo con Sincronización Offline',
+        overview:
+          'Una app Android nativa para técnicos que trabajan en sótanos y salas de máquinas, donde no hay cobertura. Cada pantalla lee y escribe primero en una base local, y la cola se sincroniza con traza de auditoría en cuanto el teléfono vuelve a tener red.',
+        features: [
+          'Lectura y escritura totalmente offline sobre una base SQLite local',
+          'Checklists de orden de trabajo, piezas usadas y registro de horas',
+          'Captura de firma y fotos en el sitio',
+          'Cola de sincronización con gestión de conflictos y registro de auditoría',
+        ],
+        value:
+          'El técnico deja de rellenar papel para teclearlo después — la oficina ve el trabajo cerrado minutos después de terminarlo, no días.',
+      },
+      'laravel-booking-api': {
+        category: 'Back-end y API',
+        title: 'API Laravel de Reservas y Agenda',
+        overview:
+          'Una API Laravel para reservar un recurso finito, donde lo difícil no es el endpoint sino la carrera — dos personas pidiendo la misma franja en el mismo segundo. Resuelto con bloqueo de fila dentro de una transacción y cubierto por pruebas de concurrencia.',
+        features: [
+          'Endpoints de disponibilidad y reserva con escritura bajo bloqueo',
+          'Pruebas de concurrencia que demuestran que no hay doble reserva',
+          'Sincronización de calendario y correos de confirmación por evento',
+          'Entrega de webhooks con reintentos automáticos',
+        ],
+        value:
+          'Un sistema de reservas que sigue siendo correcto bajo carga — la única propiedad que el cliente nota de inmediato cuando falta.',
+      },
+      'php-crm-invoicing': {
+        category: 'Aplicación de Negocio',
+        title: 'CRM de Clientes y Facturación en PHP',
+        overview:
+          'Un back-office en PHP para un despacho profesional: clientes, presupuestos, partes de horas y facturas en un solo modelo, con la antigüedad de cada factura pendiente visible en la primera pantalla y no enterrada en un informe.',
+        features: [
+          'Clientes, presupuestos, horas y facturas en un mismo sitio',
+          'Antigüedad de facturas y seguimiento de impagos',
+          'Acceso por rol para socios y asistentes',
+          'Generación de PDF y conciliación de cobros',
+        ],
+        value:
+          'Muestra quién debe qué y desde cuándo sin que nadie rehaga una hoja de cálculo — la cifra de la que realmente vive un despacho.',
+      },
+      'php-payment-gateway': {
+        category: 'Integración',
+        title: 'Capa PHP de Integración con Pasarelas de Pago',
+        overview:
+          'Una única interfaz PHP delante de tres proveedores de pago. El checkout llama a autorizar, capturar y reembolsar; qué proveedor se ejecuta es configuración. Los webhooks llevan firma verificada y son a prueba de reenvíos, así que una entrega duplicada nunca abona el pedido dos veces.',
+        features: [
+          'Interfaz única sobre tarjeta, monedero y método de pago local',
+          'Verificación de firma en cada webhook entrante',
+          'Conciliación idempotente contra el libro de pedidos',
+          'Un proveedor añadido o cambiado sin tocar el checkout',
+        ],
+        value:
+          'Añadir un método de pago pasa a ser un cambio de configuración, y el libro sigue cuadrando aunque el proveedor mande el mismo evento dos veces.',
+      },
       'whatsapp-telegram-bot': {
         category: 'Chatbot de Mensajería',
         title: 'Chatbot para WhatsApp y Telegram',
