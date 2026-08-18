@@ -55,6 +55,10 @@
      anything painted with it needs a partner that inverts with it. */
   --on-ink: #ffffff;
   --footer-bg: var(--ink);
+  /* The header once it leaves the top of the page. Translucent, so it has to
+     name its own colour rather than inherit one. */
+  --nav-scrolled: rgba(250, 249, 246, 0.86);
+  --nav-shadow: 0 1px 0 rgba(13, 27, 48, 0.02), 0 12px 30px -26px rgba(13, 27, 48, 0.4);
 
   /* Surfaces that float above content and cannot inherit its background */
   --overlay-raised: rgba(255, 255, 255, 0.9);
@@ -118,6 +122,8 @@
   --shadow-lg: 0 34px 70px -34px rgba(0, 0, 0, 0.85);
 
   --on-ink: #0b1120;
+  --nav-scrolled: rgba(10, 16, 30, 0.86);
+  --nav-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 12px 30px -26px rgba(0, 0, 0, 0.9);
   /* Deeper than the page, so the footer still reads as its own field rather
      than the near-white slab --ink would now paint. */
   --footer-bg: #070d18;
