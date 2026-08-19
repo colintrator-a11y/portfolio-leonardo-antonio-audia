@@ -24,8 +24,10 @@ export default function ThemeToggle({ variant = 'default' }) {
       aria-label={label}
       aria-pressed={dark}
     >
+      {/* The icon shows what pressing it gives you, which is what the label
+          says too - showing the current theme instead reads as a contradiction. */}
       <span className="themeToggle__icons" aria-hidden="true">
-        <Icon name={dark ? 'moon' : 'sun'} size={16} strokeWidth={1.9} />
+        <Icon name={dark ? 'sun' : 'moon'} size={16} strokeWidth={1.9} />
       </span>
       {variant === 'inline' ? <span className="themeToggle__text">{label}</span> : null}
     </button>

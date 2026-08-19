@@ -670,3 +670,67 @@ svg {
     display: none;
   }
 }
+
+/* Click pulse ---------------------------------------------------------------
+   Above everything, including the dialog, because it answers the click rather
+   than any one control - and inert, so it can never swallow the next one. */
+
+.pulses {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  pointer-events: none;
+}
+
+.pulse {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.75;
+  animation: pulse-out 620ms var(--ease) forwards;
+}
+
+/* A dot at the point of contact, gone well before the ring is. Sized and
+   centred rather than animated open: the ring around it is already growing,
+   and animating width against a fixed inset over-constrains the box. */
+.pulse::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 360ms var(--ease) forwards;
+}
+
+@keyframes pulse-dot {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+@keyframes pulse-out {
+  to {
+    width: 116px;
+    height: 116px;
+    margin: -58px 0 0 -58px;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulses {
+    display: none;
+  }
+}
