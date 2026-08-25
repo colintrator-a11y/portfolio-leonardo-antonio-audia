@@ -19,6 +19,8 @@ const codeLines = [
     { t: "'10+ years'", c: 'str' },
     { t: ',', c: 'op' },
   ],
+  /* Five entries do not fit the window on one line, so the array wraps the way
+     a formatter would rather than running past the edge. */
   [
     { t: '  stack', c: 'key' },
     { t: ': [', c: 'op' },
@@ -26,7 +28,14 @@ const codeLines = [
     { t: ', ', c: 'op' },
     { t: "'Node'", c: 'str' },
     { t: ', ', c: 'op' },
-    { t: "'PHP'", c: 'str' },
+    { t: "'WordPress'", c: 'str' },
+    { t: ',', c: 'op' },
+  ],
+  [
+    { t: '    ', c: 'op' },
+    { t: "'Shopify'", c: 'str' },
+    { t: ', ', c: 'op' },
+    { t: "'Python'", c: 'str' },
     { t: '],', c: 'op' },
   ],
   [
