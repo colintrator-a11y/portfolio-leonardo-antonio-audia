@@ -19,6 +19,37 @@ import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
 import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
+/* Client sites, captured from the live builds. */
+import keyzarImg from '../assets/clients/keyzar.webp'
+import instaladorImg from '../assets/clients/instalador.webp'
+import rembrrImg from '../assets/clients/rembrr.webp'
+import dawsonImg from '../assets/clients/dawson.webp'
+import dentalisImg from '../assets/clients/dentalis.webp'
+import elevarImg from '../assets/clients/elevar.webp'
+import cdametaisImg from '../assets/clients/cdametais.webp'
+import tools4tradeImg from '../assets/clients/tools4trade.webp'
+import xelanImg from '../assets/clients/xelan.webp'
+import breckandfoxImg from '../assets/clients/breckandfox.webp'
+import garnetImg from '../assets/clients/garnet.webp'
+import lumenwildImg from '../assets/clients/lumenwild.webp'
+import velocitekImg from '../assets/clients/velocitek.webp'
+import daphnesImg from '../assets/clients/daphnes.webp'
+import consciousinkImg from '../assets/clients/consciousink.webp'
+import wildfangImg from '../assets/clients/wildfang.webp'
+import videomilkshakeImg from '../assets/clients/videomilkshake.webp'
+import miroteaImg from '../assets/clients/mirotea.webp'
+import takecareImg from '../assets/clients/takecare.webp'
+import illumiveinImg from '../assets/clients/illumivein.webp'
+import perriconeImg from '../assets/clients/perricone.webp'
+import hisenseImg from '../assets/clients/hisense.webp'
+import troubadourImg from '../assets/clients/troubadour.webp'
+import velodromeImg from '../assets/clients/velodrome.webp'
+import belayImg from '../assets/clients/belay.webp'
+import webfxImg from '../assets/clients/webfx.webp'
+import lyfeImg from '../assets/clients/lyfe.webp'
+import hubspotImg from '../assets/clients/hubspot.webp'
+import ironpaperImg from '../assets/clients/ironpaper.webp'
+
 /*
  * Filter buttons, in the order they appear. Language-independent: the visible
  * label comes from `ui.filters`, so a project never has to be re-tagged when a
@@ -134,6 +165,180 @@ const projectMedia = {
     visual: 'pipefy',
     tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
   },
+  'keyzar-jewelry': {
+    tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
+    image: keyzarImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'E-commerce'],
+  },
+  'instalador-portas': {
+    tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
+    image: instaladorImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
+  },
+  'rembrr-app': {
+    tags: ['frontend', 'api', 'chatbot'],
+    image: rembrrImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'JavaScript', 'Chatbot', 'REST API', 'Responsive Web Design'],
+  },
+  'dawson-home-care': {
+    tags: ['frontend', 'chatbot'],
+    image: dawsonImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
+  },
+  'dentalis': {
+    tags: ['frontend', 'api'],
+    image: dentalisImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'API Integration'],
+  },
+  'elevar-empilhadeiras': {
+    tags: ['frontend', 'api'],
+    image: elevarImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
+  },
+  'cda-metais': {
+    tags: ['frontend', 'api'],
+    image: cdametaisImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
+  },
+  'tools4trade': {
+    tags: ['ecommerce', 'shopify', 'frontend', 'api'],
+    image: tools4tradeImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'E-commerce'],
+  },
+  'xelan-wheelchairs': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: xelanImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'breck-and-fox': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: breckandfoxImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'garnet-marketplace': {
+    tags: ['ecommerce', 'shopify', 'frontend', 'api'],
+    image: garnetImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Shopify App', 'JavaScript', 'REST API', 'E-commerce'],
+  },
+  'lumenwild-fine-art': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: lumenwildImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'velocitek-prostart': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: velocitekImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'daphnes-headcovers': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: daphnesImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'conscious-ink': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: consciousinkImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'wildfang': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: wildfangImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'video-milkshake': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: videomilkshakeImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'miro-tea': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: miroteaImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'take-care-shop': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: takecareImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'illumivein': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: illumiveinImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'perricone-md': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: perriconeImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'hisense-bolivia': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: hisenseImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'troubadour-goods': {
+    tags: ['ecommerce', 'shopify', 'frontend'],
+    image: troubadourImg,
+    imageSize: [1280, 800],
+    tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
+  },
+  'velodrome-shop': {
+    tags: ['ecommerce', 'wordpress', 'php', 'frontend'],
+    image: velodromeImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
+  },
+  'belay-solutions': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: belayImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
+  },
+  'webfx': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: webfxImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
+  },
+  'lyfe-marketing': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: lyfeImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
+  },
+  'hubspot': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: hubspotImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
+  },
+  'ironpaper': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: ironpaperImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
+  },
 }
 
 /*
@@ -152,6 +357,36 @@ const projectOrder = [
   'apex-logistics',
   'lumina-studio',
   'pipefy-protocols',
+  // Client sites delivered on Shopify and WordPress
+  'keyzar-jewelry',
+  'instalador-portas',
+  'rembrr-app',
+  'dawson-home-care',
+  'dentalis',
+  'elevar-empilhadeiras',
+  'cda-metais',
+  'tools4trade',
+  'xelan-wheelchairs',
+  'breck-and-fox',
+  'garnet-marketplace',
+  'lumenwild-fine-art',
+  'velocitek-prostart',
+  'daphnes-headcovers',
+  'conscious-ink',
+  'wildfang',
+  'video-milkshake',
+  'miro-tea',
+  'take-care-shop',
+  'illumivein',
+  'perricone-md',
+  'hisense-bolivia',
+  'troubadour-goods',
+  'velodrome-shop',
+  'belay-solutions',
+  'webfx',
+  'lyfe-marketing',
+  'hubspot',
+  'ironpaper',
 ]
 
 const exampleMedia = {
@@ -230,106 +465,6 @@ const exampleMedia = {
     visual: 'python',
     tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
   },
-  'angular-crm-portal': {
-    tags: ['frontend', 'api'],
-    visual: 'angularCrm',
-    tech: ['AngularJS', 'Nest.js', 'REST API', 'API Integration', 'Modern UI Development'],
-  },
-  'laravel-saas-billing': {
-    tags: ['php', 'api'],
-    visual: 'laravelBilling',
-    tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'Webhooks'],
-  },
-  'php-inventory-system': {
-    tags: ['php'],
-    visual: 'phpInventory',
-    tech: ['PHP', 'MySQL', 'REST API', 'Responsive Web Design'],
-  },
-  'wordpress-membership-site': {
-    tags: ['wordpress', 'php'],
-    visual: 'wpMembership',
-    tech: ['WordPress', 'PHP', 'MySQL', 'Responsive Web Design'],
-  },
-  'woocommerce-multivendor': {
-    tags: ['ecommerce', 'wordpress', 'php'],
-    visual: 'wooMarketplace',
-    tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'REST API'],
-  },
-  'shopify-b2b-wholesale': {
-    tags: ['ecommerce', 'shopify'],
-    visual: 'shopifyB2b',
-    tech: ['Shopify', 'Shopify App', 'Liquid', 'E-commerce', 'API Integration'],
-  },
-  'react-analytics-dashboard': {
-    tags: ['frontend', 'api'],
-    visual: 'reactAnalytics',
-    tech: ['React.js', 'TypeScript', 'REST API', 'Data Visualisation', 'Modern UI Development'],
-  },
-  'support-desk-handover': {
-    tags: ['chatbot', 'api'],
-    visual: 'supportDesk',
-    tech: ['Chatbot', 'Node.js', 'REST API', 'WhatsApp Business API', 'Telegram Bot API'],
-  },
-  'booking-scheduling-app': {
-    tags: ['frontend', 'api'],
-    visual: 'bookingAdmin',
-    tech: ['React.js', 'Node.js', 'REST API', 'API Integration', 'Responsive Web Design'],
-  },
-  'nest-microservices': {
-    tags: ['api'],
-    visual: 'nestServices',
-    tech: ['Nest.js', 'Node.js', 'REST API', 'Webhooks', 'API Integration'],
-  },
-  'nextjs-headless-blog': {
-    tags: ['frontend', 'api'],
-    visual: 'nextHeadlessBlog',
-    tech: ['Next.js', 'React.js', 'TypeScript', 'REST API', 'SEO'],
-  },
-  'laravel-queue-worker': {
-    tags: ['php', 'api', 'automation'],
-    visual: 'laravelQueue',
-    tech: ['PHP', 'Laravel', 'MySQL', 'REST API', 'Process Automation'],
-  },
-  'wordpress-headless-api': {
-    tags: ['wordpress', 'php', 'frontend', 'api'],
-    visual: 'wpRestApi',
-    tech: ['WordPress', 'PHP', 'REST API', 'Next.js', 'React.js'],
-  },
-  'shopify-inventory-sync': {
-    tags: ['ecommerce', 'shopify', 'api', 'automation'],
-    visual: 'shopifySync',
-    tech: ['Shopify', 'Node.js', 'REST API', 'Webhooks', 'Process Automation'],
-  },
-  'node-realtime-orders': {
-    tags: ['api'],
-    visual: 'nodeRealtime',
-    tech: ['Node.js', 'REST API', 'Webhooks', 'API Integration'],
-  },
-  'python-data-pipeline': {
-    tags: ['api', 'automation'],
-    visual: 'pythonPipeline',
-    tech: ['Python', 'REST API', 'Process Automation', 'Integrations'],
-  },
-  'react-native-loyalty-app': {
-    tags: ['mobile', 'api'],
-    visual: 'rnLoyalty',
-    tech: ['React Native', 'iOS', 'Android', 'REST API', 'Mobile App Design'],
-  },
-  'flutter-habit-tracker': {
-    tags: ['mobile'],
-    visual: 'flutterHabit',
-    tech: ['Flutter', 'Android', 'iOS', 'Mobile App Design'],
-  },
-  'android-pos-terminal': {
-    tags: ['mobile', 'api'],
-    visual: 'androidPos',
-    tech: ['Android', 'Java', 'SQLite', 'REST API', 'Offline Sync'],
-  },
-  'ios-property-viewings': {
-    tags: ['mobile', 'api'],
-    visual: 'iosProperty',
-    tech: ['iOS', 'React Native', 'REST API', 'Mobile App Design'],
-  },
 }
 
 const exampleOrder = [
@@ -353,27 +488,6 @@ const exampleOrder = [
   'support-chatbot',
   // Others
   'python-automation',
-  // Added as a second set of reference builds
-  'angular-crm-portal',
-  'laravel-saas-billing',
-  'php-inventory-system',
-  'wordpress-membership-site',
-  'woocommerce-multivendor',
-  'shopify-b2b-wholesale',
-  'react-analytics-dashboard',
-  'support-desk-handover',
-  'booking-scheduling-app',
-  'nest-microservices',
-  'nextjs-headless-blog',
-  'laravel-queue-worker',
-  'wordpress-headless-api',
-  'shopify-inventory-sync',
-  'node-realtime-orders',
-  'python-data-pipeline',
-  'react-native-loyalty-app',
-  'flutter-habit-tracker',
-  'android-pos-terminal',
-  'ios-property-viewings',
 ]
 
 /**

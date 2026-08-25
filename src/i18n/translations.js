@@ -291,6 +291,383 @@ const en = {
         value:
           'Gives the distributor one trackable route for internal protocols, so nothing depends on remembering an informal process.',
       },
+      'keyzar-jewelry': {
+        category: 'Shopify · Jewellery',
+        title: 'Keyzar Jewelry Storefront',
+        overview:
+          'A Shopify storefront for a fine-jewellery brand selling engagement rings, wedding bands and lab-grown diamonds, with an assistant on the page to answer the questions buyers ask before a purchase this size.',
+        features: [
+          'Ring, band and diamond catalogues with guided browsing',
+          'Education pages covering cut, carat and setting',
+          'On-site chatbot handling sizing and delivery questions',
+          'Consultation booking for high-value orders',
+        ],
+        value: 'A purchase people research for weeks, answered on the page instead of by email.',
+      },
+      'instalador-portas': {
+        category: 'Shopify · Trade Services',
+        title: 'Instalador de Portas Service Site',
+        overview:
+          'A site for a door-installation firm working across the east, west, north and south of Sao Paulo and the ABC region, built to turn a visit into a quote request rather than a phone call.',
+        features: [
+          'Service areas and installation types laid out plainly',
+          'Quote request reachable from every section',
+          'Chatbot qualifying jobs before a human replies',
+          'Completed-installation count as proof of volume',
+        ],
+        value: 'A trade business that books work from the page, at any hour.',
+      },
+      'rembrr-app': {
+        category: 'Product Site · SaaS',
+        title: 'Rembrr Reminder Assistant',
+        overview:
+          'The product site for an assistant that organises reminders, tasks and calendar entries from plain speech, presented in Spanish with a free trial as the single call to action.',
+        features: [
+          'Product tour built around the spoken-input idea',
+          'Plans and trial signup on one page',
+          'Assistant answering feature questions in-page',
+          'Multilingual copy for a Spanish-speaking market',
+        ],
+        value: 'A product explained in the words its users would use, not in feature lists.',
+      },
+      'dawson-home-care': {
+        category: 'Shopify · Healthcare',
+        title: 'Dawson & Dawson Home Care',
+        overview:
+          'A site for an in-home care provider operating since 2002, written for families making a decision under pressure: services, licensing and availability visible without a form in the way.',
+        features: [
+          'Services and care types explained without jargon',
+          'Licensing, insurance and 24/7 availability stated up front',
+          'Free care assessment as the primary action',
+          'Chatbot answering eligibility and coverage questions',
+        ],
+        value: 'A family can find what they need at midnight, which is often when they look.',
+      },
+      'dentalis': {
+        category: 'Shopify · Dental',
+        title: 'Dentalis Practice Platform',
+        overview:
+          'A site for a dental practice management product, promising round-the-clock automated administration so a clinic can attend to patients rather than to its diary, with WhatsApp as the route into a conversation.',
+        features: [
+          'Product positioning built around automated scheduling',
+          'Practice results presented as figures, not adjectives',
+          'WhatsApp handover from any page',
+          'Content and blog structure for ongoing search traffic',
+        ],
+        value: 'Clinics start the conversation on the channel they already use all day.',
+      },
+      'elevar-empilhadeiras': {
+        category: 'Shopify · Industrial',
+        title: 'Elevar Forklift Rental',
+        overview:
+          'A site for a forklift rental business in Caxias do Sul, built loud and direct for an industrial buyer who wants the machine, the terms and a person on WhatsApp, in that order.',
+        features: [
+          'Fleet and rental terms presented without a catalogue to dig through',
+          'High-contrast layout that reads on a warehouse phone',
+          'WhatsApp enquiry fixed to the screen',
+          'Service coverage stated by region',
+        ],
+        value: 'An enquiry takes one tap from a shop floor, where nobody fills in forms.',
+      },
+      'cda-metais': {
+        category: 'Shopify · Manufacturing',
+        title: 'CDA Metais Aluminium Systems',
+        overview:
+          'A site for an aluminium systems manufacturer covering frames, facades, extrusion, electrostatic painting and nationwide distribution, led by the buildings the work ends up in.',
+        features: [
+          'Completed facades carrying the case for the product',
+          'Capabilities split by extrusion, painting and distribution',
+          'Project gallery as the primary proof',
+          'WhatsApp route for specification enquiries',
+        ],
+        value: 'A manufacturer judged on finished buildings rather than on a spec sheet.',
+      },
+      'tools4trade': {
+        category: 'Shopify · Tools Retail',
+        title: 'Tools4Trade Online Store',
+        overview:
+          'A UK trade-tools store carrying power tools, storage, safety wear and workwear, organised so a tradesperson can find a part by category, brand or number without leaving the header.',
+        features: [
+          'Search by category, brand or part number from the header',
+          'Promotional rails for bundles, giveaways and clearance',
+          'Brand-led navigation across a deep catalogue',
+          'WhatsApp enquiry for stock and trade pricing',
+        ],
+        value: 'A deep catalogue that still answers a one-part question in seconds.',
+      },
+      'xelan-wheelchairs': {
+        category: 'Shopify · Mobility',
+        title: 'Xe Lan Hoang Son Wheelchair Store',
+        overview:
+          'A Vietnamese storefront selling manual, electric and specialist wheelchairs, where the buyer is usually a family member comparing models on price, weight and folding size.',
+        features: [
+          'Wheelchair types split by manual, electric and specialist',
+          'Prices and discounts shown on every card',
+          'Product comparison by weight, width and folding size',
+          'Phone and messaging contact fixed to the page',
+        ],
+        value: 'A category bought once, in a hurry, made comparable at a glance.',
+      },
+      'breck-and-fox': {
+        category: 'Shopify · Home & Decor',
+        title: 'Breck + Fox Home Store',
+        overview:
+          'A home store spanning lighting, outdoor, decor, kitchen, dining and bath, where the shelf is photographed as a room rather than as a product grid.',
+        features: [
+          'Room photography leading each collection',
+          'Six departments under one navigation',
+          'Seasonal sale rails without breaking the look',
+          'Cart and search reachable from every page',
+        ],
+        value: 'Furniture sold the way it is chosen: in a room, not on a shelf.',
+      },
+      'garnet-marketplace': {
+        category: 'Shopify · Marketplace',
+        title: 'Garnet Multi-Vendor Marketplace',
+        overview:
+          'The product site for a Shopify app that turns a single store into a multi-vendor B2B and B2C marketplace, aimed at merchants who need vendor onboarding to be somebody else\'s problem.',
+        features: [
+          'Positioning for B2B and B2C marketplaces on one platform',
+          'Vendor onboarding presented as the differentiator',
+          'Documentation and pricing reachable from the header',
+          'Scaling roadmap explained as a walkthrough',
+        ],
+        value: 'A store becomes a marketplace without becoming a platform project.',
+      },
+      'lumenwild-fine-art': {
+        category: 'Shopify · Fine Art',
+        title: 'Lumenwild Fine Art Gallery',
+        overview:
+          'A gallery storefront for landscape and nature photography, given the restraint the work needs: full-width imagery, thin type and almost no interface between the visitor and the picture.',
+        features: [
+          'Full-bleed gallery with minimal chrome',
+          'Print sizes and finishes chosen on the product page',
+          'Story pages about the work and the process',
+          'Quiet navigation that stays out of the image',
+        ],
+        value: 'Photography sold the way a gallery hangs it, not the way a catalogue lists it.',
+      },
+      'velocitek-prostart': {
+        category: 'Shopify · Marine Instruments',
+        title: 'Velocitek ProStart Product Page',
+        overview:
+          'A single-product page for a sailing race timer, written for a buyer who already knows the category and wants latency, mounting and what is in the box before anything else.',
+        features: [
+          'Specification led rather than lifestyle led',
+          'What is in the box stated before the buy button',
+          'Manufacturing origin and lead time disclosed',
+          'Support and manual linked from the page',
+        ],
+        value: 'A technical buyer gets the specification first and the marketing never.',
+      },
+      'daphnes-headcovers': {
+        category: 'Shopify · Golf Accessories',
+        title: 'Daphne\'s Headcovers Store',
+        overview:
+          'A storefront for hand-crafted golf headcovers made since 1988, where the product is a character and the catalogue is browsed the way a toy shop is.',
+        features: [
+          'Shop by animal, character and licence',
+          'Best sellers and new arrivals on the front page',
+          'Craft story carried alongside the catalogue',
+          'Review count shown as social proof',
+        ],
+        value: 'A gift bought on delight, presented so the delight survives the checkout.',
+      },
+      'conscious-ink': {
+        category: 'Shopify · Lifestyle',
+        title: 'Conscious Ink Temporary Tattoos',
+        overview:
+          'A store selling affirmation temporary tattoos, where the product is a sentence somebody wants to read on their own skin, so the copy carries as much weight as the photography.',
+        features: [
+          'Message-led product cards rather than SKU-led',
+          'Customer quotes used as the main proof',
+          'Bundles and gift sets as the upsell path',
+          'Free shipping threshold stated in the header',
+        ],
+        value: 'A product whose value is the wording, merchandised on the wording.',
+      },
+      'wildfang': {
+        category: 'Shopify · Apparel',
+        title: 'Wildfang Apparel Store',
+        overview:
+          'An apparel storefront with a clear point of view, carrying suiting, workwear and everyday pieces, shot on real people and organised so the brand reads before the catalogue does.',
+        features: [
+          'Editorial imagery ahead of the product grid',
+          'Shop by category with suiting and workwear split out',
+          'Sale and new arrivals without diluting the brand',
+          'Size and fit guidance on the product page',
+        ],
+        value: 'A brand people buy into, given room to be a brand before it is a shop.',
+      },
+      'video-milkshake': {
+        category: 'Shopify · Digital Goods',
+        title: 'Video Milkshake Asset Store',
+        overview:
+          'A store selling film mattes, textures and editing assets as downloads, where every product has to be shown moving before anyone can judge whether it is worth buying.',
+        features: [
+          'Preview-led cards for assets that must be seen in motion',
+          'Assets grouped by category and by bundle',
+          'Instant download delivery after checkout',
+          'Bundle pricing set against single-asset pricing',
+        ],
+        value: 'Digital goods that sell on the preview, merchandised around the preview.',
+      },
+      'miro-tea': {
+        category: 'Shopify · Food & Drink',
+        title: 'Miro Tea Online Shop',
+        overview:
+          'The online shop for a Seattle tea house selling single-estate leaf, blends and teaware, where a loose tea has to be described well enough that somebody buys it without smelling it.',
+        features: [
+          'Leaf photographed individually rather than in packaging',
+          'Collections by caffeine level, season and origin',
+          'Teaware carried alongside the leaf',
+          'Tasting notes as the core of each product page',
+        ],
+        value: 'A shop counter\'s knowledge written down, so the leaf sells at a distance.',
+      },
+      'take-care-shop': {
+        category: 'Shopify · Beauty & Wellness',
+        title: 'Take Care Beauty & Wellness',
+        overview:
+          'A Washington DC beauty and wellness shop selling face, body, hair and wellness ranges, with a soft palette and a front page that has carried both launches and a closing sale.',
+        features: [
+          'Departments split across face, body, hair and wellness',
+          'Brand directory alongside category browsing',
+          'Front page able to carry campaign messaging',
+          'Gift and bundle routes through the catalogue',
+        ],
+        value: 'A curated shop whose front page can change its message without a rebuild.',
+      },
+      'illumivein': {
+        category: 'Shopify · Medical Device',
+        title: 'Illumivein Vein Finder Store',
+        overview:
+          'A single-device store for a handheld vein finder sold to nurses, phlebotomists and paramedics, where the buying decision rests on whether it works in the room they work in.',
+        features: [
+          'Demonstration imagery showing the device in use',
+          'Regulatory and battery details stated plainly',
+          'Single price, single decision, no configurator',
+          'Guarantee and return terms beside the buy button',
+        ],
+        value: 'A clinical tool sold on evidence rather than on adjectives.',
+      },
+      'perricone-md': {
+        category: 'Shopify · Skincare',
+        title: 'Perricone MD Skincare Store',
+        overview:
+          'A skincare storefront with a deep catalogue across shop, best sellers, offers and clearance, carrying promotional messaging without letting it bury the routine a customer came to rebuild.',
+        features: [
+          'Catalogue split by shop, best sellers, offers and clearance',
+          'Promotional bars for seasonal sales and codes',
+          'Loyalty and email capture woven into the header',
+          'Routine-led browsing across concern and product type',
+        ],
+        value: 'A large catalogue that still leads a returning customer back to their routine.',
+      },
+      'hisense-bolivia': {
+        category: 'Shopify · Consumer Electronics',
+        title: 'Hisense Bolivia Storefront',
+        overview:
+          'A regional storefront for a consumer electronics brand covering televisions, refrigerators, washing machines and air conditioning, carrying global campaign creative into a local catalogue.',
+        features: [
+          'Campaign creative running across the front page',
+          'Categories split by television, refrigeration and climate',
+          'Specifications comparable within a category',
+          'Local availability and dealer information',
+        ],
+        value: 'A global brand presented locally without losing the campaign it arrived with.',
+      },
+      'troubadour-goods': {
+        category: 'Shopify · Bags & Leather',
+        title: 'Troubadour Goods Store',
+        overview:
+          'A storefront for technical bags and leather goods, shot in motion on city streets, where the case for a bag is made by showing it carried rather than photographed flat.',
+        features: [
+          'Lifestyle film and photography leading the catalogue',
+          'Collections by travel, work and everyday',
+          'Award and press marks used as proof',
+          'Material and warranty detail on the product page',
+        ],
+        value: 'A considered purchase argued in use, not in a product shot.',
+      },
+      'velodrome-shop': {
+        category: 'WordPress · Cycling Retail',
+        title: 'Velodrome Track Cycling Shop',
+        overview:
+          'A shop for track cycling equipment - frames, wheels, gearing, cockpit and tools - built for a sport where parts have to match a discipline before they matter at all.',
+        features: [
+          'Catalogue organised by track discipline and part type',
+          'Gearing and component compatibility surfaced early',
+          'Quick order route for riders who know the part',
+          'Editorial imagery from the track itself',
+        ],
+        value: 'A specialist catalogue that respects how specialists actually shop.',
+      },
+      'belay-solutions': {
+        category: 'WordPress · Staffing',
+        title: 'BELAY Solutions Website',
+        overview:
+          'A site for a company placing US-based assistants and bookkeepers with businesses, where the visitor is weighing a hire against a service and needs the difference made obvious.',
+        features: [
+          'Assistant and financial services split into their own paths',
+          'Pricing framed against the cost of a full-time hire',
+          'Request-pricing flow rather than a public price list',
+          'Resource library feeding organic search',
+        ],
+        value: 'A service sold against the alternative the buyer is already considering.',
+      },
+      'webfx': {
+        category: 'WordPress · Marketing Agency',
+        title: 'WebFX Agency Website',
+        overview:
+          'A large agency site spanning SEO, paid media, CRO and web services, where the argument is revenue rather than traffic and the proof has to be visible before the contact form.',
+        features: [
+          'Services split across search, paid, CRO and UX',
+          'Revenue figures and client counts as the opening claim',
+          'Proposal request reachable from every page',
+          'Deep resource and glossary content for search',
+        ],
+        value: 'An agency judged on revenue proof, with the proof placed before the pitch.',
+      },
+      'lyfe-marketing': {
+        category: 'WordPress · Social Media',
+        title: 'LYFE Marketing Agency Site',
+        overview:
+          'A site for a social media management agency, leaning on awards, press marks and named partners to answer the first question a small business asks: has anyone credible vouched for you.',
+        features: [
+          'Award and partner marks placed above the fold',
+          'Services split by social, ads and email marketing',
+          'Custom proposal as the single conversion path',
+          'Case results carried through to service pages',
+        ],
+        value: 'Credibility answered in the first screen, where a small business decides.',
+      },
+      'hubspot': {
+        category: 'WordPress · SaaS Platform',
+        title: 'HubSpot Marketing Site',
+        overview:
+          'A marketing site for a customer platform spanning marketing, sales and service, where the job is to route very different visitors - trial, demo, enterprise - without splitting the site into three.',
+        features: [
+          'Products, solutions and pricing under one navigation',
+          'Demo and free trial offered side by side',
+          'Segmented routes for small business and enterprise',
+          'Extensive resource content feeding organic acquisition',
+        ],
+        value: 'One site serving a self-serve trial and an enterprise demo at the same time.',
+      },
+      'ironpaper': {
+        category: 'WordPress · B2B Agency',
+        title: 'Ironpaper B2B Growth Agency',
+        overview:
+          'A site for a B2B growth agency working on long and complex sales cycles, written in type rather than imagery, because the claim is thinking and thinking is read.',
+        features: [
+          'Typographic hero carrying the positioning statement',
+          'Services split across demand generation, ABM and content',
+          'Long sales cycles addressed directly in the copy',
+          'Insight articles supporting the credibility claim',
+        ],
+        value: 'An agency that sells on argument, given a site built to be read.',
+      },
     },
   },
   examples: {
@@ -506,266 +883,6 @@ const en = {
         ],
         value:
           'Turns a recurring manual task into something that runs on its own and reports when it does not, so nobody has to remember it.',
-      },
-      'angular-crm-portal': {
-        category: 'Sales Platform',
-        title: 'AngularJS Sales Pipeline Portal',
-        overview:
-          'A shared pipeline for four regional sales teams, built as an AngularJS front end on a Nest.js API. Every team sees the same deals and the same stage rules, so a deal cannot quietly mean something different in one office than in another.',
-        features: [
-          'One pipeline shared across four regional teams',
-          'Stage rules enforced on the API, not the browser',
-          'Role-based visibility per team and per region',
-          'Activity trail on every deal, exportable to CSV',
-        ],
-        value: 'One version of the pipeline instead of four spreadsheets that disagree.',
-      },
-      'laravel-saas-billing': {
-        category: 'Billing Platform',
-        title: 'Laravel Subscription & Billing Engine',
-        overview:
-          'Plans, seats, proration and failed-payment recovery for a subscription business. The hard part is not charging a card once; it is what happens on an upgrade mid-cycle, and what happens when the third charge fails.',
-        features: [
-          'Plan changes prorated to the day',
-          'Dunning with retries and a final grace period',
-          'Provider webhooks reconciled against local state',
-          'Invoices generated as PDFs with VAT handling',
-        ],
-        value: 'Revenue that keeps arriving after the first month, with failures chased automatically.',
-      },
-      'php-inventory-system': {
-        category: 'Warehouse System',
-        title: 'PHP Stock Control for Two Warehouses',
-        overview:
-          'Stock counted once across two warehouses, with reorder points that actually fire. Movements in and out are recorded as events rather than edits, so the current figure can always be explained by the history behind it.',
-        features: [
-          'Single stock figure across both warehouses',
-          'Reorder points that raise purchase suggestions',
-          'Movements stored as an auditable event log',
-          'Supplier lead times factored into reorder timing',
-        ],
-        value: 'Fewer stockouts, and a number the warehouse and the office both trust.',
-      },
-      'wordpress-membership-site': {
-        category: 'Membership Site',
-        title: 'WordPress Membership & Gated Content',
-        overview:
-          'Three membership tiers on WordPress, with content gated by rule rather than by hand. Editors keep writing in the normal editor; the plugin decides who can read what, and renewals run without anyone remembering to chase them.',
-        features: [
-          'Three tiers with rule-based content gating',
-          'Automatic renewals and expiry emails',
-          'Members area with invoices and downloads',
-          'Editors keep the standard WordPress editor',
-        ],
-        value: 'Recurring income from writing that was already being published for free.',
-      },
-      'woocommerce-multivendor': {
-        category: 'Marketplace',
-        title: 'WooCommerce Multi-Vendor Marketplace',
-        overview:
-          'One basket, many sellers. A customer checks out once; the order is split by vendor behind the scenes, commission is taken at source, and each seller sees only their own orders and payouts.',
-        features: [
-          'One checkout split into per-vendor orders',
-          'Commission taken automatically at source',
-          'Vendor dashboard with orders, stock and payouts',
-          'Payout runs with a statement per vendor',
-        ],
-        value: 'A shop that grows by adding sellers rather than by buying more stock.',
-      },
-      'shopify-b2b-wholesale': {
-        category: 'B2B Commerce',
-        title: 'Shopify B2B Wholesale Portal',
-        overview:
-          'Trade pricing on the same Shopify store that serves the public, hidden behind a login. Each company gets its own price list and payment terms, so the wholesale side does not need a second platform to live on.',
-        features: [
-          'Company-specific price lists behind a login',
-          'Payment terms per account, including net 30 and 60',
-          'Minimum order quantities and case-pack rules',
-          'Trade catalogue hidden from public search',
-        ],
-        value: 'Wholesale and retail on one platform instead of two systems to keep in step.',
-      },
-      'react-analytics-dashboard': {
-        category: 'Analytics',
-        title: 'React Checkout Funnel Dashboard',
-        overview:
-          'A funnel view over raw event data: where the basket is abandoned, by step and by device. Built so a marketing lead can answer a question without asking an engineer to write a query first.',
-        features: [
-          'Funnel, cohort and retention views over one event store',
-          'Segment by device, channel and campaign',
-          'Charts render from pre-aggregated queries for speed',
-          'Saved views shared across the team',
-        ],
-        value: 'Decisions made from the funnel rather than from opinions about it.',
-      },
-      'support-desk-handover': {
-        category: 'Support Platform',
-        title: 'Chatbot Handover Desk for Support Teams',
-        overview:
-          'The bot answers what it can and hands the rest to a person with the whole conversation attached. The desk shows why each chat was escalated, so the knowledge base gets fixed where it actually failed.',
-        features: [
-          'Automatic handover with full conversation context',
-          'One inbox for WhatsApp, Telegram and web chat',
-          'Escalation reasons recorded and reported',
-          'Canned replies and macros for repeat questions',
-        ],
-        value: 'Most questions answered instantly, and the rest reaching a person already briefed.',
-      },
-      'booking-scheduling-app': {
-        category: 'Scheduling',
-        title: 'Appointment Scheduling for Six Practitioners',
-        overview:
-          'One calendar for six practitioners, three rooms and a public booking page. Availability is computed from staff hours, room capacity and existing bookings, so the slot a client sees is a slot that genuinely exists.',
-        features: [
-          'Availability computed from staff, room and service rules',
-          'Public booking page with confirmation emails',
-          'SMS and email reminders that cut no-shows',
-          'Reschedule and cancellation windows enforced by rule',
-        ],
-        value: 'A diary that fills itself, without the double bookings a shared spreadsheet invites.',
-      },
-      'nest-microservices': {
-        category: 'Backend & API',
-        title: 'Nest.js Service Split into Queues',
-        overview:
-          'A monolith broken into queued workers by concern: orders, payments, stock, mail. Each queue retries with backoff and anything that still fails lands in a dead-letter queue to be replayed rather than lost.',
-        features: [
-          'Work split into queues by concern',
-          'Retry with exponential backoff per queue',
-          'Dead-letter queue with replay from the console',
-          'Throughput and lag visible per consumer',
-        ],
-        value: 'Traffic spikes absorbed by the queue instead of taking the checkout down with them.',
-      },
-      'nextjs-headless-blog': {
-        category: 'Editorial Site',
-        title: 'Next.js Editorial Site on a Headless CMS',
-        overview:
-          'An editorial site rendered by Next.js and written in a headless CMS. Pages are pre-rendered at build and revalidated at the edge, so the site stays fast without editors waiting for a deploy to publish.',
-        features: [
-          'Static pre-rendering with edge revalidation',
-          'Editors publish without a developer or a deploy',
-          'Structured data and sitemap generated automatically',
-          'Image pipeline serving modern formats per device',
-        ],
-        value: 'Publishing speed for the editors and load speed for the reader, at the same time.',
-      },
-      'laravel-queue-worker': {
-        category: 'Backend & API',
-        title: 'Laravel Queued Catalogue Importer',
-        overview:
-          'A nightly catalogue import moved off the web request and onto queued jobs. Work is chunked so one bad batch retries alone instead of failing the whole import, and the run reports what it rejected rather than silently dropping it.',
-        features: [
-          'Import chunked into independently retried batches',
-          'Exponential backoff with a capped retry count',
-          'Rejected rows reported, never silently discarded',
-          'Progress and failures visible while the job runs',
-        ],
-        value: 'An import that finishes overnight and tells you exactly what it could not accept.',
-      },
-      'wordpress-headless-api': {
-        category: 'Headless CMS',
-        title: 'Headless WordPress with a Next.js Front End',
-        overview:
-          'WordPress kept as the editor and turned into an API; the public site is rendered by Next.js. Editors keep the workflow they know, and the front end stops being limited by what a theme can do.',
-        features: [
-          'Custom REST routes returning block content as JSON',
-          'Edge cache invalidated the moment a post is saved',
-          'Editors keep the standard WordPress editor',
-          'Front end free of theme and plugin constraints',
-        ],
-        value: 'A modern front end without retraining the people who write the content.',
-      },
-      'shopify-inventory-sync': {
-        category: 'Integration',
-        title: 'Shopify to ERP Stock Synchronisation',
-        overview:
-          'Stock kept level between Shopify and a back-office system, in both directions. The ERP stays the source of truth, Shopify is updated within the API budget, and a reconciliation pass catches any drift each hour.',
-        features: [
-          'Two-way sync with the ERP as source of truth',
-          'Rate limiting that respects the Shopify API budget',
-          'Orders reserve stock in the ERP on payment',
-          'Hourly reconciliation reporting any drift',
-        ],
-        value: 'One stock figure across both systems, so nothing is sold that is not there.',
-      },
-      'node-realtime-orders': {
-        category: 'Backend & API',
-        title: 'Real-Time Order Board over WebSockets',
-        overview:
-          'Kitchen and counter screens that update the instant an order moves, without polling. State transitions are validated and locked in the database, so two screens cannot advance the same order twice.',
-        features: [
-          'Order state pushed to every screen in the same tick',
-          'Transitions validated and row-locked in the database',
-          'Silent reconnection after a network drop',
-          'Tested at 400 concurrent screens',
-        ],
-        value: 'Screens that agree with each other, in a room where seconds matter.',
-      },
-      'python-data-pipeline': {
-        category: 'Automation',
-        title: 'Nightly Python Reporting Pipeline',
-        overview:
-          'Six sources pulled every night, validated, and loaded into one reporting table. If too much of the input is rejected the run fails loudly rather than quietly publishing a report nobody should trust.',
-        features: [
-          'Six sources extracted, validated and loaded nightly',
-          'Run fails loudly when rejects pass a threshold',
-          'Rejected rows kept and reported, never dropped',
-          'Summary emailed to finance when the run completes',
-        ],
-        value: 'Numbers that arrive by breakfast, and a loud failure when they should not be trusted.',
-      },
-      'react-native-loyalty-app': {
-        category: 'Mobile Application',
-        title: 'React Native Loyalty & Rewards App',
-        overview:
-          'A loyalty card that lives on the phone: points, tiers and a code the till can scan. One React Native codebase ships to both stores, and the card keeps working when the shop has no signal.',
-        features: [
-          'Points and tiers with a scannable member code',
-          'Rewards catalogue with redemption at the till',
-          'Offers targeted by tier and by nearest shop',
-          'Card readable offline, syncing when signal returns',
-        ],
-        value: 'Repeat visits from customers already carrying the card in their pocket.',
-      },
-      'flutter-habit-tracker': {
-        category: 'Mobile Application',
-        title: 'Flutter Habit Tracker with Local Reminders',
-        overview:
-          'A habit tracker built once in Flutter for both stores. Streaks, a month view and reminders that fire from the device itself, so the app is useful on a train with no connection.',
-        features: [
-          'Daily checklist with streaks and a month view',
-          'Local notifications that work without a connection',
-          'All data stored on device, exportable as CSV',
-          'One Flutter codebase for iOS and Android',
-        ],
-        value: 'A habit app that still works in the places where habits actually happen.',
-      },
-      'android-pos-terminal': {
-        category: 'Mobile Application',
-        title: 'Android Point-of-Sale Terminal',
-        overview:
-          'A till that takes payment, prints a receipt and closes the day. Sales are written to the device first and synced afterwards, so a dropped connection never stops the queue at the counter.',
-        features: [
-          'Basket, payment and receipt printing on device',
-          'Sales queued locally and synced when signal returns',
-          'End-of-day report with card, cash and refunds',
-          'Card, cash and meal-voucher payment paths',
-        ],
-        value: 'A counter that keeps serving whether or not the internet is having a good day.',
-      },
-      'ios-property-viewings': {
-        category: 'Mobile Application',
-        title: 'iOS Property Search & Viewing Booking',
-        overview:
-          'Search, shortlist and book a viewing without leaving the app. The agent gets the appointment in their calendar and the buyer gets a confirmation, so the viewing is agreed before anyone picks up a phone.',
-        features: [
-          'Filtered search with saved shortlists',
-          'Viewing booked against the agent calendar',
-          'Confirmation and calendar entry for the buyer',
-          'In-app messaging with the listing agent',
-        ],
-        value: 'Viewings booked the moment interest is highest, rather than the next working day.',
       },
     },
   },
@@ -1100,6 +1217,383 @@ const pt = {
         value:
           'Dá à distribuidora um percurso único e rastreável para os protocolos internos, sem depender de alguém se lembrar de um processo informal.',
       },
+      'keyzar-jewelry': {
+        category: 'Shopify · Joalharia',
+        title: 'Loja Keyzar Jewelry',
+        overview:
+          'Uma loja Shopify para uma marca de alta joalharia que vende aneis de noivado, aliancas e diamantes de laboratorio, com um assistente na pagina para responder as perguntas que antecedem uma compra deste valor.',
+        features: [
+          'Catalogos de aneis, aliancas e diamantes com navegacao guiada',
+          'Paginas educativas sobre lapidacao, quilates e engaste',
+          'Chatbot no site para duvidas de tamanho e entrega',
+          'Marcacao de consulta para encomendas de valor elevado',
+        ],
+        value: 'Uma compra que se pesquisa durante semanas, respondida na pagina em vez de por email.',
+      },
+      'instalador-portas': {
+        category: 'Shopify · Servicos',
+        title: 'Site Instalador de Portas',
+        overview:
+          'Um site para uma empresa de instalacao de portas que atende as zonas leste, oeste, norte e sul de Sao Paulo e o ABC, feito para transformar uma visita num pedido de orcamento em vez de um telefonema.',
+        features: [
+          'Zonas de atendimento e tipos de instalacao apresentados com clareza',
+          'Pedido de orcamento acessivel a partir de qualquer seccao',
+          'Chatbot que qualifica o servico antes da resposta humana',
+          'Contagem de instalacoes concluidas como prova de volume',
+        ],
+        value: 'Uma empresa de servicos que agenda trabalho pela pagina, a qualquer hora.',
+      },
+      'rembrr-app': {
+        category: 'Site de Produto · SaaS',
+        title: 'Assistente de Lembretes Rembrr',
+        overview:
+          'O site de produto de um assistente que organiza lembretes, tarefas e entradas de calendario a partir da fala, apresentado em espanhol e com o teste gratuito como unica chamada a acao.',
+        features: [
+          'Apresentacao construida em torno da ideia de comando falado',
+          'Planos e inscricao no teste numa so pagina',
+          'Assistente que responde a duvidas de funcionalidades na pagina',
+          'Texto multilingue para um mercado de lingua espanhola',
+        ],
+        value: 'Um produto explicado nas palavras de quem o usa, e nao em listas de funcionalidades.',
+      },
+      'dawson-home-care': {
+        category: 'Shopify · Saude',
+        title: 'Dawson & Dawson Home Care',
+        overview:
+          'Um site para um prestador de cuidados domiciliarios ativo desde 2002, escrito para familias que decidem sob pressao: servicos, licenciamento e disponibilidade visiveis sem um formulario pelo meio.',
+        features: [
+          'Servicos e tipos de cuidado explicados sem jargao',
+          'Licenciamento, seguro e disponibilidade 24/7 em destaque',
+          'Avaliacao gratuita como acao principal',
+          'Chatbot que responde a duvidas de elegibilidade e cobertura',
+        ],
+        value: 'Uma familia encontra o que precisa a meia-noite, que e muitas vezes quando procura.',
+      },
+      'dentalis': {
+        category: 'Shopify · Dentaria',
+        title: 'Plataforma Dentalis para Clinicas',
+        overview:
+          'Um site para um produto de gestao de clinicas dentarias, com a promessa de administracao automatizada 24 horas para que a clinica cuide dos pacientes e nao da agenda, tendo o WhatsApp como porta de entrada.',
+        features: [
+          'Posicionamento construido em torno do agendamento automatico',
+          'Resultados apresentados em numeros e nao em adjetivos',
+          'Passagem para WhatsApp a partir de qualquer pagina',
+          'Estrutura de conteudo e blogue para trafego de pesquisa',
+        ],
+        value: 'As clinicas iniciam a conversa no canal que ja usam o dia todo.',
+      },
+      'elevar-empilhadeiras': {
+        category: 'Shopify · Industrial',
+        title: 'Elevar Aluguer de Empilhadeiras',
+        overview:
+          'Um site para uma empresa de aluguer de empilhadeiras em Caxias do Sul, direto e de alto contraste para um comprador industrial que quer a maquina, as condicoes e uma pessoa no WhatsApp, por essa ordem.',
+        features: [
+          'Frota e condicoes de aluguer sem catalogo para percorrer',
+          'Layout de alto contraste legivel num telemovel de armazem',
+          'Contacto por WhatsApp fixo no ecra',
+          'Cobertura de servico indicada por regiao',
+        ],
+        value: 'Um pedido fica a um toque no chao de fabrica, onde ninguem preenche formularios.',
+      },
+      'cda-metais': {
+        category: 'Shopify · Industria',
+        title: 'CDA Metais Sistemas em Aluminio',
+        overview:
+          'Um site para um fabricante de sistemas em aluminio que abrange esquadrias, fachadas, extrusao, pintura eletrostatica e distribuicao para todo o pais, conduzido pelos edificios onde o trabalho acaba.',
+        features: [
+          'Fachadas concluidas a sustentar o argumento do produto',
+          'Capacidades divididas entre extrusao, pintura e distribuicao',
+          'Galeria de projetos como prova principal',
+          'Contacto por WhatsApp para pedidos de especificacao',
+        ],
+        value: 'Um fabricante avaliado por edificios acabados e nao por uma ficha tecnica.',
+      },
+      'tools4trade': {
+        category: 'Shopify · Ferramentas',
+        title: 'Loja Online Tools4Trade',
+        overview:
+          'Uma loja britanica de ferramentas profissionais com ferramentas eletricas, arrumacao, protecao e vestuario de trabalho, organizada para que um profissional encontre uma peca por categoria, marca ou referencia sem sair do cabecalho.',
+        features: [
+          'Pesquisa por categoria, marca ou referencia a partir do cabecalho',
+          'Faixas promocionais para conjuntos, sorteios e saldos',
+          'Navegacao por marca num catalogo extenso',
+          'Contacto por WhatsApp para stock e precos profissionais',
+        ],
+        value: 'Um catalogo extenso que ainda assim responde a uma pergunta de uma peca em segundos.',
+      },
+      'xelan-wheelchairs': {
+        category: 'Shopify · Mobilidade',
+        title: 'Loja de Cadeiras de Rodas Xe Lan Hoang Son',
+        overview:
+          'Uma loja vietnamita que vende cadeiras de rodas manuais, eletricas e especiais, onde quem compra e normalmente um familiar a comparar modelos por preco, peso e tamanho dobrado.',
+        features: [
+          'Tipos divididos entre manual, eletrica e especial',
+          'Precos e descontos visiveis em cada cartao',
+          'Comparacao por peso, largura e tamanho dobrado',
+          'Contacto telefonico e por mensagem fixo na pagina',
+        ],
+        value: 'Uma categoria comprada uma vez, com pressa, tornada comparavel num relance.',
+      },
+      'breck-and-fox': {
+        category: 'Shopify · Casa e Decoracao',
+        title: 'Loja Breck + Fox',
+        overview:
+          'Uma loja de casa que abrange iluminacao, exterior, decoracao, cozinha, sala e banho, onde a prateleira e fotografada como um espaco e nao como uma grelha de produtos.',
+        features: [
+          'Fotografia de ambiente a abrir cada colecao',
+          'Seis departamentos sob uma so navegacao',
+          'Faixas de saldos sazonais sem quebrar a estetica',
+          'Carrinho e pesquisa acessiveis em todas as paginas',
+        ],
+        value: 'Mobiliario vendido como e escolhido: num espaco, nao numa prateleira.',
+      },
+      'garnet-marketplace': {
+        category: 'Shopify · Marketplace',
+        title: 'Marketplace Multi-Vendedor Garnet',
+        overview:
+          'O site de produto de uma app Shopify que transforma uma loja unica num marketplace B2B e B2C multi-vendedor, dirigido a comerciantes que querem que a integracao de vendedores deixe de ser problema seu.',
+        features: [
+          'Posicionamento para marketplaces B2B e B2C na mesma plataforma',
+          'Integracao de vendedores apresentada como diferencial',
+          'Documentacao e precos acessiveis a partir do cabecalho',
+          'Roteiro de crescimento explicado passo a passo',
+        ],
+        value: 'Uma loja passa a marketplace sem se tornar um projeto de plataforma.',
+      },
+      'lumenwild-fine-art': {
+        category: 'Shopify · Arte',
+        title: 'Galeria Lumenwild Fine Art',
+        overview:
+          'Uma loja-galeria de fotografia de paisagem e natureza, com a contencao que o trabalho exige: imagem a toda a largura, tipografia fina e quase nenhuma interface entre o visitante e a fotografia.',
+        features: [
+          'Galeria a sangrar com o minimo de interface',
+          'Tamanhos e acabamentos de impressao escolhidos na pagina do produto',
+          'Paginas sobre o trabalho e o processo',
+          'Navegacao discreta que nao invade a imagem',
+        ],
+        value: 'Fotografia vendida como uma galeria a expoe, nao como um catalogo a lista.',
+      },
+      'velocitek-prostart': {
+        category: 'Shopify · Instrumentos Nauticos',
+        title: 'Pagina de Produto Velocitek ProStart',
+        overview:
+          'Uma pagina de produto unico para um cronometro de regata, escrita para quem ja conhece a categoria e quer saber latencia, fixacao e o conteudo da caixa antes de mais nada.',
+        features: [
+          'Conduzida pela especificacao e nao pelo estilo de vida',
+          'Conteudo da caixa indicado antes do botao de compra',
+          'Origem de fabrico e prazo de entrega declarados',
+          'Suporte e manual ligados a partir da pagina',
+        ],
+        value: 'Um comprador tecnico recebe primeiro a especificacao e nunca o marketing.',
+      },
+      'daphnes-headcovers': {
+        category: 'Shopify · Acessorios de Golfe',
+        title: 'Loja Daphne\'s Headcovers',
+        overview:
+          'Uma loja de capas de tacos de golfe feitas a mao desde 1988, onde o produto e uma personagem e o catalogo se percorre como uma loja de brinquedos.',
+        features: [
+          'Compra por animal, personagem e licenca',
+          'Mais vendidos e novidades na pagina inicial',
+          'Historia do fabrico a par do catalogo',
+          'Numero de avaliacoes como prova social',
+        ],
+        value: 'Um presente comprado por encanto, apresentado para que o encanto sobreviva ao checkout.',
+      },
+      'conscious-ink': {
+        category: 'Shopify · Lifestyle',
+        title: 'Tatuagens Temporarias Conscious Ink',
+        overview:
+          'Uma loja de tatuagens temporarias de afirmacoes, onde o produto e uma frase que alguem quer ler na propria pele, pelo que o texto pesa tanto quanto a fotografia.',
+        features: [
+          'Cartoes de produto conduzidos pela mensagem e nao pela referencia',
+          'Citacoes de clientes como prova principal',
+          'Conjuntos e caixas de oferta como caminho de venda adicional',
+          'Limite de portes gratis indicado no cabecalho',
+        ],
+        value: 'Um produto cujo valor e a frase, exposto pela frase.',
+      },
+      'wildfang': {
+        category: 'Shopify · Vestuario',
+        title: 'Loja de Vestuario Wildfang',
+        overview:
+          'Uma loja de vestuario com um ponto de vista claro, com fatos, roupa de trabalho e pecas do dia a dia, fotografada em pessoas reais e organizada para que a marca se leia antes do catalogo.',
+        features: [
+          'Imagem editorial antes da grelha de produtos',
+          'Compra por categoria com fatos e roupa de trabalho separados',
+          'Saldos e novidades sem diluir a marca',
+          'Guia de tamanhos e caimento na pagina do produto',
+        ],
+        value: 'Uma marca em que as pessoas aderem, com espaco para ser marca antes de ser loja.',
+      },
+      'video-milkshake': {
+        category: 'Shopify · Produtos Digitais',
+        title: 'Loja de Recursos Video Milkshake',
+        overview:
+          'Uma loja que vende mattes de filme, texturas e recursos de edicao em download, onde cada produto tem de ser mostrado em movimento antes que alguem possa avaliar se vale a compra.',
+        features: [
+          'Cartoes conduzidos pela pre-visualizacao para recursos que so se veem em movimento',
+          'Recursos agrupados por categoria e por pacote',
+          'Entrega imediata por download apos o pagamento',
+          'Preco de pacote apresentado face ao preco unitario',
+        ],
+        value: 'Bens digitais que se vendem pela pre-visualizacao, expostos em torno dela.',
+      },
+      'miro-tea': {
+        category: 'Shopify · Alimentacao',
+        title: 'Loja Online Miro Tea',
+        overview:
+          'A loja online de uma casa de cha de Seattle que vende folha de origem unica, misturas e utensilios, onde um cha a granel tem de ser descrito bem o suficiente para que alguem o compre sem o cheirar.',
+        features: [
+          'Folha fotografada individualmente e nao na embalagem',
+          'Colecoes por nivel de cafeina, estacao e origem',
+          'Utensilios de cha a par da folha',
+          'Notas de prova como nucleo de cada pagina de produto',
+        ],
+        value: 'O conhecimento do balcao posto por escrito, para que a folha se venda a distancia.',
+      },
+      'take-care-shop': {
+        category: 'Shopify · Beleza e Bem-Estar',
+        title: 'Take Care Beleza e Bem-Estar',
+        overview:
+          'Uma loja de beleza e bem-estar em Washington DC com gamas de rosto, corpo, cabelo e bem-estar, de paleta suave e com uma pagina inicial que ja sustentou lancamentos e uma liquidacao.',
+        features: [
+          'Departamentos divididos entre rosto, corpo, cabelo e bem-estar',
+          'Diretorio de marcas a par da navegacao por categoria',
+          'Pagina inicial capaz de sustentar mensagens de campanha',
+          'Percursos de oferta e conjuntos pelo catalogo',
+        ],
+        value: 'Uma loja curada cuja pagina inicial muda de mensagem sem obras.',
+      },
+      'illumivein': {
+        category: 'Shopify · Dispositivo Medico',
+        title: 'Loja do Localizador de Veias Illumivein',
+        overview:
+          'Uma loja de dispositivo unico para um localizador de veias portatil vendido a enfermeiros, flebotomistas e paramedicos, onde a decisao assenta em saber se funciona na sala onde trabalham.',
+        features: [
+          'Imagens de demonstracao com o dispositivo em uso',
+          'Dados regulamentares e de bateria indicados com clareza',
+          'Preco unico, decisao unica, sem configurador',
+          'Garantia e condicoes de devolucao junto ao botao de compra',
+        ],
+        value: 'Uma ferramenta clinica vendida por evidencia e nao por adjetivos.',
+      },
+      'perricone-md': {
+        category: 'Shopify · Cosmetica',
+        title: 'Loja de Cosmetica Perricone MD',
+        overview:
+          'Uma loja de cosmetica com catalogo extenso entre loja, mais vendidos, promocoes e liquidacao, que sustenta mensagens promocionais sem enterrar a rotina que o cliente veio repor.',
+        features: [
+          'Catalogo dividido entre loja, mais vendidos, promocoes e liquidacao',
+          'Barras promocionais para saldos e codigos sazonais',
+          'Fidelizacao e recolha de email integradas no cabecalho',
+          'Navegacao por rotina, preocupacao e tipo de produto',
+        ],
+        value: 'Um catalogo grande que ainda leva o cliente habitual de volta a sua rotina.',
+      },
+      'hisense-bolivia': {
+        category: 'Shopify · Eletronica de Consumo',
+        title: 'Loja Hisense Bolivia',
+        overview:
+          'Uma loja regional para uma marca de eletronica de consumo com televisores, frigorificos, maquinas de lavar e ar condicionado, que traz a criatividade da campanha global para um catalogo local.',
+        features: [
+          'Criatividade de campanha a percorrer a pagina inicial',
+          'Categorias divididas entre televisao, frio e climatizacao',
+          'Especificacoes comparaveis dentro de cada categoria',
+          'Disponibilidade local e informacao de revendedores',
+        ],
+        value: 'Uma marca global apresentada localmente sem perder a campanha com que chegou.',
+      },
+      'troubadour-goods': {
+        category: 'Shopify · Malas e Pele',
+        title: 'Loja Troubadour Goods',
+        overview:
+          'Uma loja de malas tecnicas e artigos em pele, fotografada em movimento nas ruas, onde o argumento a favor de uma mala se faz mostrando-a a ser usada e nao pousada.',
+        features: [
+          'Filme e fotografia de estilo de vida a abrir o catalogo',
+          'Colecoes por viagem, trabalho e dia a dia',
+          'Premios e imprensa usados como prova',
+          'Detalhe de materiais e garantia na pagina do produto',
+        ],
+        value: 'Uma compra ponderada defendida em uso e nao numa fotografia de estudio.',
+      },
+      'velodrome-shop': {
+        category: 'WordPress · Ciclismo',
+        title: 'Loja de Ciclismo de Pista Velodrome',
+        overview:
+          'Uma loja de equipamento de ciclismo de pista - quadros, rodas, transmissao, comando e ferramentas - feita para um desporto onde as pecas tem de servir a disciplina antes de importarem.',
+        features: [
+          'Catalogo organizado por disciplina de pista e tipo de peca',
+          'Compatibilidade de transmissao e componentes visivel cedo',
+          'Percurso de encomenda rapida para quem ja sabe a peca',
+          'Imagem editorial captada na propria pista',
+        ],
+        value: 'Um catalogo especializado que respeita como os especialistas realmente compram.',
+      },
+      'belay-solutions': {
+        category: 'WordPress · Recrutamento',
+        title: 'Site BELAY Solutions',
+        overview:
+          'Um site para uma empresa que coloca assistentes e contabilistas nos Estados Unidos junto de negocios, onde o visitante compara uma contratacao com um servico e precisa que a diferenca seja obvia.',
+        features: [
+          'Servicos de assistencia e financeiros em percursos separados',
+          'Preco enquadrado face ao custo de uma contratacao a tempo inteiro',
+          'Pedido de proposta em vez de tabela publica',
+          'Biblioteca de recursos a alimentar a pesquisa organica',
+        ],
+        value: 'Um servico vendido contra a alternativa que o comprador ja esta a pesar.',
+      },
+      'webfx': {
+        category: 'WordPress · Agencia',
+        title: 'Site da Agencia WebFX',
+        overview:
+          'Um site de agencia extenso que abrange SEO, media paga, CRO e servicos web, onde o argumento e receita e nao trafego, e a prova tem de estar visivel antes do formulario de contacto.',
+        features: [
+          'Servicos divididos entre pesquisa, media paga, CRO e UX',
+          'Numeros de receita e de clientes como argumento inicial',
+          'Pedido de proposta acessivel em qualquer pagina',
+          'Conteudo extenso de recursos e glossario para pesquisa',
+        ],
+        value: 'Uma agencia avaliada por prova de receita, com a prova colocada antes do discurso.',
+      },
+      'lyfe-marketing': {
+        category: 'WordPress · Redes Sociais',
+        title: 'Site da Agencia LYFE Marketing',
+        overview:
+          'Um site para uma agencia de gestao de redes sociais, apoiado em premios, imprensa e parceiros nomeados para responder a primeira pergunta de um pequeno negocio: alguem credivel ja respondeu por voces.',
+        features: [
+          'Premios e parceiros colocados acima da dobra',
+          'Servicos divididos entre social, anuncios e email marketing',
+          'Proposta personalizada como unico caminho de conversao',
+          'Resultados de casos levados ate as paginas de servico',
+        ],
+        value: 'Credibilidade respondida no primeiro ecra, onde um pequeno negocio decide.',
+      },
+      'hubspot': {
+        category: 'WordPress · Plataforma SaaS',
+        title: 'Site de Marketing da HubSpot',
+        overview:
+          'Um site de marketing para uma plataforma de clientes que abrange marketing, vendas e servico, onde a tarefa e encaminhar visitantes muito diferentes - teste, demonstracao, empresa - sem dividir o site em tres.',
+        features: [
+          'Produtos, solucoes e precos sob uma so navegacao',
+          'Demonstracao e teste gratuito oferecidos lado a lado',
+          'Percursos segmentados para pequeno negocio e empresa',
+          'Conteudo de recursos extenso a alimentar a aquisicao organica',
+        ],
+        value: 'Um site a servir ao mesmo tempo um teste self-service e uma demonstracao empresarial.',
+      },
+      'ironpaper': {
+        category: 'WordPress · Agencia B2B',
+        title: 'Ironpaper Agencia de Crescimento B2B',
+        overview:
+          'Um site para uma agencia de crescimento B2B que trabalha ciclos de venda longos e complexos, escrito em tipografia e nao em imagem, porque o argumento e pensamento e pensamento le-se.',
+        features: [
+          'Cabecalho tipografico a sustentar o posicionamento',
+          'Servicos divididos entre geracao de procura, ABM e conteudo',
+          'Ciclos de venda longos tratados diretamente no texto',
+          'Artigos de analise a sustentar a credibilidade',
+        ],
+        value: 'Uma agencia que vende por argumento, com um site feito para ser lido.',
+      },
     },
   },
   examples: {
@@ -1315,266 +1809,6 @@ const pt = {
         ],
         value:
           'Transforma uma tarefa manual recorrente em algo que corre sozinho e avisa quando não corre, sem depender da memória de ninguém.',
-      },
-      'angular-crm-portal': {
-        category: 'Plataforma de Vendas',
-        title: 'Portal de Pipeline de Vendas em AngularJS',
-        overview:
-          'Um pipeline partilhado por quatro equipas comerciais regionais, com front end em AngularJS sobre uma API Nest.js. Todas as equipas veem os mesmos negocios e as mesmas regras de fase, para que um negocio nao signifique coisas diferentes em escritorios diferentes.',
-        features: [
-          'Um pipeline partilhado por quatro equipas regionais',
-          'Regras de fase aplicadas na API, nao no browser',
-          'Visibilidade por funcao, equipa e regiao',
-          'Historico de atividade em cada negocio, exportavel para CSV',
-        ],
-        value: 'Uma so versao do pipeline em vez de quatro folhas de calculo que se contradizem.',
-      },
-      'laravel-saas-billing': {
-        category: 'Plataforma de Faturacao',
-        title: 'Motor de Subscricoes e Faturacao em Laravel',
-        overview:
-          'Planos, lugares, proporcionalidade e recuperacao de pagamentos falhados para um negocio por subscricao. O dificil nao e cobrar um cartao uma vez; e o que acontece numa mudanca de plano a meio do ciclo e quando a terceira cobranca falha.',
-        features: [
-          'Mudancas de plano calculadas ao dia',
-          'Cobranca insistente com tentativas e periodo de tolerancia',
-          'Webhooks do fornecedor reconciliados com o estado local',
-          'Faturas geradas em PDF com tratamento de IVA',
-        ],
-        value: 'Receita que continua a entrar depois do primeiro mes, com falhas perseguidas automaticamente.',
-      },
-      'php-inventory-system': {
-        category: 'Sistema de Armazem',
-        title: 'Controlo de Stock em PHP para Dois Armazens',
-        overview:
-          'Stock contado uma unica vez em dois armazens, com pontos de reposicao que disparam mesmo. As entradas e saidas sao registadas como eventos e nao como edicoes, para que o numero atual seja sempre explicavel pelo historico.',
-        features: [
-          'Um unico numero de stock para os dois armazens',
-          'Pontos de reposicao que geram sugestoes de compra',
-          'Movimentos guardados como registo auditavel',
-          'Prazos de entrega dos fornecedores no calculo da reposicao',
-        ],
-        value: 'Menos ruturas e um numero em que o armazem e o escritorio confiam.',
-      },
-      'wordpress-membership-site': {
-        category: 'Site de Membros',
-        title: 'Membros e Conteudo Restrito em WordPress',
-        overview:
-          'Tres niveis de adesao em WordPress, com conteudo restrito por regra e nao a mao. Os editores continuam a escrever no editor normal; o plugin decide quem pode ler o que, e as renovacoes correm sem ninguem se lembrar de as perseguir.',
-        features: [
-          'Tres niveis com restricao de conteudo por regra',
-          'Renovacoes automaticas e emails de expiracao',
-          'Area de membros com faturas e downloads',
-          'Os editores mantem o editor normal do WordPress',
-        ],
-        value: 'Receita recorrente a partir de textos que ja eram publicados de graca.',
-      },
-      'woocommerce-multivendor': {
-        category: 'Marketplace',
-        title: 'Marketplace Multi-Vendedor em WooCommerce',
-        overview:
-          'Um carrinho, varios vendedores. O cliente finaliza a compra uma vez; a encomenda e dividida por vendedor nos bastidores, a comissao e retida na origem e cada vendedor ve apenas as suas encomendas e pagamentos.',
-        features: [
-          'Um checkout dividido em encomendas por vendedor',
-          'Comissao retida automaticamente na origem',
-          'Painel do vendedor com encomendas, stock e pagamentos',
-          'Ciclos de pagamento com extrato por vendedor',
-        ],
-        value: 'Uma loja que cresce somando vendedores em vez de comprando mais stock.',
-      },
-      'shopify-b2b-wholesale': {
-        category: 'Comercio B2B',
-        title: 'Portal Grossista B2B em Shopify',
-        overview:
-          'Precos de revenda na mesma loja Shopify que serve o publico, escondidos atras de um login. Cada empresa tem a sua lista de precos e condicoes de pagamento, para que o grossista nao precise de uma segunda plataforma.',
-        features: [
-          'Listas de precos por empresa atras de login',
-          'Condicoes de pagamento por conta, incluindo 30 e 60 dias',
-          'Quantidades minimas e regras de caixa fechada',
-          'Catalogo de revenda escondido da pesquisa publica',
-        ],
-        value: 'Grossista e retalho numa so plataforma em vez de dois sistemas a manter alinhados.',
-      },
-      'react-analytics-dashboard': {
-        category: 'Analitica',
-        title: 'Painel de Funil de Checkout em React',
-        overview:
-          'Uma vista de funil sobre dados de eventos: onde o carrinho e abandonado, por passo e por dispositivo. Feito para que um responsavel de marketing responda a uma pergunta sem pedir a um programador que escreva uma consulta.',
-        features: [
-          'Vistas de funil, coorte e retencao sobre um so armazem de eventos',
-          'Segmentacao por dispositivo, canal e campanha',
-          'Graficos servidos a partir de consultas pre-agregadas',
-          'Vistas guardadas e partilhadas pela equipa',
-        ],
-        value: 'Decisoes tomadas a partir do funil e nao de opinioes sobre ele.',
-      },
-      'support-desk-handover': {
-        category: 'Plataforma de Suporte',
-        title: 'Balcao de Transferencia de Chatbot para Suporte',
-        overview:
-          'O bot responde ao que consegue e passa o resto a uma pessoa com a conversa toda anexada. O balcao mostra porque cada conversa foi escalada, para que a base de conhecimento seja corrigida onde falhou.',
-        features: [
-          'Transferencia automatica com o contexto completo',
-          'Uma caixa de entrada para WhatsApp, Telegram e chat web',
-          'Motivos de escalonamento registados e reportados',
-          'Respostas rapidas e macros para perguntas repetidas',
-        ],
-        value: 'A maioria das perguntas respondida na hora e o resto a chegar a uma pessoa ja informada.',
-      },
-      'booking-scheduling-app': {
-        category: 'Agendamento',
-        title: 'Marcacoes para Seis Profissionais',
-        overview:
-          'Um calendario para seis profissionais, tres salas e uma pagina publica de marcacoes. A disponibilidade e calculada a partir dos horarios, da capacidade das salas e das marcacoes existentes, por isso o horario que o cliente ve existe mesmo.',
-        features: [
-          'Disponibilidade calculada por profissional, sala e servico',
-          'Pagina publica de marcacao com emails de confirmacao',
-          'Lembretes por SMS e email que reduzem faltas',
-          'Janelas de remarcacao e cancelamento aplicadas por regra',
-        ],
-        value: 'Uma agenda que se preenche sozinha, sem as marcacoes duplicadas de uma folha partilhada.',
-      },
-      'nest-microservices': {
-        category: 'Backend e API',
-        title: 'Servico Nest.js Dividido em Filas',
-        overview:
-          'Um monolito dividido em trabalhadores em fila por area: encomendas, pagamentos, stock, email. Cada fila repete com espera crescente e o que continua a falhar vai para uma fila morta, para ser reprocessado e nao perdido.',
-        features: [
-          'Trabalho dividido em filas por area',
-          'Repeticao com espera exponencial por fila',
-          'Fila morta com reprocessamento a partir da consola',
-          'Debito e atraso visiveis por consumidor',
-        ],
-        value: 'Picos de trafego absorvidos pela fila em vez de derrubarem o checkout.',
-      },
-      'nextjs-headless-blog': {
-        category: 'Site Editorial',
-        title: 'Site Editorial em Next.js com CMS Headless',
-        overview:
-          'Um site editorial servido por Next.js e escrito num CMS headless. As paginas sao pre-geradas na compilacao e revalidadas na periferia, por isso o site mantem-se rapido sem os editores esperarem por um deploy.',
-        features: [
-          'Pre-geracao estatica com revalidacao na periferia',
-          'Editores publicam sem programador e sem deploy',
-          'Dados estruturados e sitemap gerados automaticamente',
-          'Imagens servidas em formatos modernos por dispositivo',
-        ],
-        value: 'Velocidade de publicacao para os editores e de carregamento para o leitor, ao mesmo tempo.',
-      },
-      'laravel-queue-worker': {
-        category: 'Backend e API',
-        title: 'Importador de Catalogo em Filas com Laravel',
-        overview:
-          'Uma importacao noturna de catalogo retirada do pedido web e passada para tarefas em fila. O trabalho e dividido em blocos, para que um bloco mau repita sozinho em vez de derrubar a importacao toda, e a execucao reporta o que rejeitou.',
-        features: [
-          'Importacao dividida em blocos repetidos de forma independente',
-          'Espera exponencial com limite de tentativas',
-          'Linhas rejeitadas reportadas e nunca descartadas em silencio',
-          'Progresso e falhas visiveis durante a execucao',
-        ],
-        value: 'Uma importacao que termina de noite e diz exatamente o que nao conseguiu aceitar.',
-      },
-      'wordpress-headless-api': {
-        category: 'CMS Headless',
-        title: 'WordPress Headless com Front End em Next.js',
-        overview:
-          'O WordPress mantido como editor e transformado em API; o site publico e servido por Next.js. Os editores mantem o fluxo que conhecem e o front end deixa de estar limitado ao que um tema consegue fazer.',
-        features: [
-          'Rotas REST proprias que devolvem blocos em JSON',
-          'Cache invalidada no momento em que um artigo e guardado',
-          'Editores mantem o editor normal do WordPress',
-          'Front end livre das limitacoes de temas e plugins',
-        ],
-        value: 'Um front end moderno sem ter de reensinar quem escreve o conteudo.',
-      },
-      'shopify-inventory-sync': {
-        category: 'Integracao',
-        title: 'Sincronizacao de Stock entre Shopify e ERP',
-        overview:
-          'Stock mantido alinhado entre o Shopify e um sistema de retaguarda, nos dois sentidos. O ERP continua a ser a fonte de verdade, o Shopify e atualizado dentro do orcamento da API e uma reconciliacao horaria apanha desvios.',
-        features: [
-          'Sincronizacao bidirecional com o ERP como fonte de verdade',
-          'Limitacao de ritmo que respeita o orcamento da API Shopify',
-          'Encomendas reservam stock no ERP no momento do pagamento',
-          'Reconciliacao horaria que reporta qualquer desvio',
-        ],
-        value: 'Um so numero de stock nos dois sistemas, para nao se vender o que nao existe.',
-      },
-      'node-realtime-orders': {
-        category: 'Backend e API',
-        title: 'Quadro de Encomendas em Tempo Real por WebSockets',
-        overview:
-          'Ecras de cozinha e balcao que atualizam no instante em que uma encomenda muda, sem sondagem. As transicoes de estado sao validadas e bloqueadas na base de dados, para que dois ecras nao avancem a mesma encomenda duas vezes.',
-        features: [
-          'Estado enviado a todos os ecras no mesmo instante',
-          'Transicoes validadas e com bloqueio de linha na base de dados',
-          'Reconexao silenciosa apos queda de rede',
-          'Testado com 400 ecras em simultaneo',
-        ],
-        value: 'Ecras que concordam entre si, numa sala onde os segundos contam.',
-      },
-      'python-data-pipeline': {
-        category: 'Automacao',
-        title: 'Pipeline Noturno de Relatorios em Python',
-        overview:
-          'Seis fontes recolhidas todas as noites, validadas e carregadas numa unica tabela de relatorio. Se demasiada informacao for rejeitada, a execucao falha de forma ruidosa em vez de publicar um relatorio em que ninguem deve confiar.',
-        features: [
-          'Seis fontes extraidas, validadas e carregadas todas as noites',
-          'A execucao falha de forma ruidosa acima do limite de rejeicoes',
-          'Linhas rejeitadas guardadas e reportadas, nunca descartadas',
-          'Resumo enviado por email a area financeira no fim',
-        ],
-        value: 'Numeros que chegam ao pequeno-almoco e uma falha ruidosa quando nao sao de confianca.',
-      },
-      'react-native-loyalty-app': {
-        category: 'Aplicacao Movel',
-        title: 'App de Fidelizacao e Recompensas em React Native',
-        overview:
-          'Um cartao de fidelizacao que vive no telemovel: pontos, niveis e um codigo que a caixa consegue ler. Uma so base de codigo React Native chega as duas lojas e o cartao continua a funcionar sem rede.',
-        features: [
-          'Pontos e niveis com codigo de membro legivel',
-          'Catalogo de recompensas com resgate na caixa',
-          'Ofertas dirigidas por nivel e por loja mais proxima',
-          'Cartao legivel offline, sincronizado quando ha rede',
-        ],
-        value: 'Visitas repetidas de clientes que ja levam o cartao no bolso.',
-      },
-      'flutter-habit-tracker': {
-        category: 'Aplicacao Movel',
-        title: 'Rastreador de Habitos em Flutter com Lembretes Locais',
-        overview:
-          'Um rastreador de habitos feito uma so vez em Flutter para as duas lojas. Sequencias, vista mensal e lembretes disparados pelo proprio dispositivo, para que a app seja util num comboio sem rede.',
-        features: [
-          'Lista diaria com sequencias e vista mensal',
-          'Notificacoes locais que funcionam sem ligacao',
-          'Dados guardados no dispositivo e exportaveis em CSV',
-          'Uma so base de codigo Flutter para iOS e Android',
-        ],
-        value: 'Uma app de habitos que funciona nos sitios onde os habitos acontecem.',
-      },
-      'android-pos-terminal': {
-        category: 'Aplicacao Movel',
-        title: 'Terminal de Ponto de Venda em Android',
-        overview:
-          'Uma caixa que recebe o pagamento, imprime o talao e fecha o dia. As vendas sao escritas primeiro no dispositivo e sincronizadas depois, para que uma quebra de ligacao nunca pare a fila ao balcao.',
-        features: [
-          'Carrinho, pagamento e impressao de talao no dispositivo',
-          'Vendas em fila local, sincronizadas quando ha rede',
-          'Relatorio de fecho com cartao, numerario e devolucoes',
-          'Pagamento por cartao, numerario e vale de refeicao',
-        ],
-        value: 'Um balcao que continua a servir, esteja a internet boa ou nao.',
-      },
-      'ios-property-viewings': {
-        category: 'Aplicacao Movel',
-        title: 'Procura de Imoveis e Marcacao de Visitas em iOS',
-        overview:
-          'Procurar, guardar e marcar uma visita sem sair da app. O agente recebe a marcacao no calendario e o comprador recebe a confirmacao, por isso a visita fica combinada antes de alguem pegar no telefone.',
-        features: [
-          'Procura com filtros e listas guardadas',
-          'Visita marcada contra o calendario do agente',
-          'Confirmacao e entrada de calendario para o comprador',
-          'Mensagens na app com o agente do anuncio',
-        ],
-        value: 'Visitas marcadas no momento de maior interesse e nao no dia util seguinte.',
       },
     },
   },
@@ -1909,6 +2143,383 @@ const es = {
         value:
           'Da a la distribuidora una ruta única y trazable para los protocolos internos, sin depender de que alguien recuerde un proceso informal.',
       },
+      'keyzar-jewelry': {
+        category: 'Shopify · Joyeria',
+        title: 'Tienda Keyzar Jewelry',
+        overview:
+          'Una tienda Shopify para una marca de alta joyeria que vende anillos de compromiso, alianzas y diamantes de laboratorio, con un asistente en la pagina para responder las preguntas previas a una compra de este tamano.',
+        features: [
+          'Catalogos de anillos, alianzas y diamantes con navegacion guiada',
+          'Paginas educativas sobre talla, quilates y engaste',
+          'Chatbot en el sitio para dudas de talla y envio',
+          'Reserva de consulta para pedidos de alto valor',
+        ],
+        value: 'Una compra que se investiga durante semanas, resuelta en la pagina y no por correo.',
+      },
+      'instalador-portas': {
+        category: 'Shopify · Servicios',
+        title: 'Sitio Instalador de Portas',
+        overview:
+          'Un sitio para una empresa de instalacion de puertas que cubre el este, oeste, norte y sur de Sao Paulo y la region ABC, hecho para convertir una visita en una solicitud de presupuesto en lugar de una llamada.',
+        features: [
+          'Zonas de servicio y tipos de instalacion expuestos con claridad',
+          'Solicitud de presupuesto accesible desde cualquier seccion',
+          'Chatbot que califica el trabajo antes de la respuesta humana',
+          'Recuento de instalaciones completadas como prueba de volumen',
+        ],
+        value: 'Un negocio de servicios que agenda trabajo desde la pagina, a cualquier hora.',
+      },
+      'rembrr-app': {
+        category: 'Sitio de Producto · SaaS',
+        title: 'Asistente de Recordatorios Rembrr',
+        overview:
+          'El sitio de producto de un asistente que organiza recordatorios, tareas y entradas de calendario a partir del habla, presentado en espanol y con la prueba gratuita como unica llamada a la accion.',
+        features: [
+          'Recorrido de producto construido sobre la idea de la voz',
+          'Planes y alta de prueba en una sola pagina',
+          'Asistente que responde dudas de funciones en la pagina',
+          'Textos multilingues para un mercado hispanohablante',
+        ],
+        value: 'Un producto explicado con las palabras de quien lo usa, no con listas de funciones.',
+      },
+      'dawson-home-care': {
+        category: 'Shopify · Salud',
+        title: 'Dawson & Dawson Home Care',
+        overview:
+          'Un sitio para un proveedor de cuidados a domicilio activo desde 2002, escrito para familias que deciden bajo presion: servicios, licencias y disponibilidad visibles sin un formulario de por medio.',
+        features: [
+          'Servicios y tipos de cuidado explicados sin jerga',
+          'Licencias, seguro y disponibilidad 24/7 en primer plano',
+          'Evaluacion gratuita como accion principal',
+          'Chatbot que responde dudas de elegibilidad y cobertura',
+        ],
+        value: 'Una familia encuentra lo que necesita a medianoche, que suele ser cuando busca.',
+      },
+      'dentalis': {
+        category: 'Shopify · Dental',
+        title: 'Plataforma Dentalis para Clinicas',
+        overview:
+          'Un sitio para un producto de gestion de clinicas dentales, con la promesa de administracion automatizada 24 horas para que la clinica atienda pacientes y no su agenda, con WhatsApp como via de entrada.',
+        features: [
+          'Posicionamiento construido sobre la programacion automatica',
+          'Resultados presentados en cifras y no en adjetivos',
+          'Paso a WhatsApp desde cualquier pagina',
+          'Estructura de contenidos y blog para trafico de busqueda',
+        ],
+        value: 'Las clinicas empiezan la conversacion en el canal que ya usan todo el dia.',
+      },
+      'elevar-empilhadeiras': {
+        category: 'Shopify · Industrial',
+        title: 'Elevar Alquiler de Montacargas',
+        overview:
+          'Un sitio para una empresa de alquiler de montacargas en Caxias do Sul, directo y de alto contraste para un comprador industrial que quiere la maquina, las condiciones y una persona en WhatsApp, en ese orden.',
+        features: [
+          'Flota y condiciones de alquiler sin catalogo que recorrer',
+          'Diseno de alto contraste legible en un movil de almacen',
+          'Consulta por WhatsApp fija en pantalla',
+          'Cobertura de servicio indicada por region',
+        ],
+        value: 'Una consulta queda a un toque desde la nave, donde nadie rellena formularios.',
+      },
+      'cda-metais': {
+        category: 'Shopify · Industria',
+        title: 'CDA Metais Sistemas de Aluminio',
+        overview:
+          'Un sitio para un fabricante de sistemas de aluminio que cubre carpinteria, fachadas, extrusion, pintura electrostatica y distribucion nacional, guiado por los edificios donde acaba el trabajo.',
+        features: [
+          'Fachadas terminadas sosteniendo el argumento del producto',
+          'Capacidades divididas en extrusion, pintura y distribucion',
+          'Galeria de proyectos como prueba principal',
+          'Via de WhatsApp para consultas de especificacion',
+        ],
+        value: 'Un fabricante juzgado por edificios acabados y no por una ficha tecnica.',
+      },
+      'tools4trade': {
+        category: 'Shopify · Herramientas',
+        title: 'Tienda Online Tools4Trade',
+        overview:
+          'Una tienda britanica de herramientas profesionales con electroportatiles, almacenaje, proteccion y ropa de trabajo, organizada para que un profesional encuentre una pieza por categoria, marca o referencia sin salir de la cabecera.',
+        features: [
+          'Busqueda por categoria, marca o referencia desde la cabecera',
+          'Franjas promocionales para lotes, sorteos y liquidacion',
+          'Navegacion por marca en un catalogo profundo',
+          'Consulta por WhatsApp para stock y precios profesionales',
+        ],
+        value: 'Un catalogo profundo que aun responde una pregunta de una sola pieza en segundos.',
+      },
+      'xelan-wheelchairs': {
+        category: 'Shopify · Movilidad',
+        title: 'Tienda de Sillas de Ruedas Xe Lan Hoang Son',
+        overview:
+          'Una tienda vietnamita que vende sillas de ruedas manuales, electricas y especiales, donde quien compra suele ser un familiar comparando modelos por precio, peso y tamano plegado.',
+        features: [
+          'Tipos divididos en manual, electrica y especial',
+          'Precios y descuentos visibles en cada tarjeta',
+          'Comparacion por peso, ancho y tamano plegado',
+          'Contacto telefonico y por mensajeria fijo en la pagina',
+        ],
+        value: 'Una categoria que se compra una vez, con prisa, hecha comparable de un vistazo.',
+      },
+      'breck-and-fox': {
+        category: 'Shopify · Hogar y Decoracion',
+        title: 'Tienda Breck + Fox',
+        overview:
+          'Una tienda de hogar que abarca iluminacion, exterior, decoracion, cocina, comedor y bano, donde el producto se fotografia como una estancia y no como una cuadricula.',
+        features: [
+          'Fotografia de ambiente encabezando cada coleccion',
+          'Seis departamentos bajo una sola navegacion',
+          'Franjas de rebajas sin romper la estetica',
+          'Carrito y busqueda accesibles en todas las paginas',
+        ],
+        value: 'Mobiliario vendido como se elige: en una estancia, no en un estante.',
+      },
+      'garnet-marketplace': {
+        category: 'Shopify · Marketplace',
+        title: 'Marketplace Multivendedor Garnet',
+        overview:
+          'El sitio de producto de una app de Shopify que convierte una tienda unica en un marketplace B2B y B2C multivendedor, dirigido a comerciantes que quieren que el alta de vendedores deje de ser su problema.',
+        features: [
+          'Posicionamiento para marketplaces B2B y B2C en una plataforma',
+          'Alta de vendedores presentada como diferencial',
+          'Documentacion y precios accesibles desde la cabecera',
+          'Hoja de ruta de escalado explicada paso a paso',
+        ],
+        value: 'Una tienda se vuelve marketplace sin convertirse en un proyecto de plataforma.',
+      },
+      'lumenwild-fine-art': {
+        category: 'Shopify · Arte',
+        title: 'Galeria Lumenwild Fine Art',
+        overview:
+          'Una tienda-galeria de fotografia de paisaje y naturaleza, con la contencion que la obra pide: imagen a sangre, tipografia fina y casi ninguna interfaz entre el visitante y la foto.',
+        features: [
+          'Galeria a sangre con la minima interfaz',
+          'Tamanos y acabados de impresion elegidos en la ficha',
+          'Paginas sobre la obra y el proceso',
+          'Navegacion discreta que no invade la imagen',
+        ],
+        value: 'Fotografia vendida como la cuelga una galeria, no como la lista un catalogo.',
+      },
+      'velocitek-prostart': {
+        category: 'Shopify · Instrumentos Nauticos',
+        title: 'Pagina de Producto Velocitek ProStart',
+        overview:
+          'Una pagina de producto unico para un cronometro de regata, escrita para quien ya conoce la categoria y quiere latencia, montaje y contenido de la caja antes que nada.',
+        features: [
+          'Guiada por la especificacion y no por el estilo de vida',
+          'Contenido de la caja indicado antes del boton de compra',
+          'Origen de fabricacion y plazo de entrega declarados',
+          'Soporte y manual enlazados desde la pagina',
+        ],
+        value: 'Un comprador tecnico recibe primero la especificacion y nunca el marketing.',
+      },
+      'daphnes-headcovers': {
+        category: 'Shopify · Accesorios de Golf',
+        title: 'Tienda Daphne\'s Headcovers',
+        overview:
+          'Una tienda de fundas de palos de golf hechas a mano desde 1988, donde el producto es un personaje y el catalogo se recorre como una jugueteria.',
+        features: [
+          'Compra por animal, personaje y licencia',
+          'Mas vendidos y novedades en la portada',
+          'Historia del oficio junto al catalogo',
+          'Numero de resenas como prueba social',
+        ],
+        value: 'Un regalo que se compra por gusto, presentado para que el gusto sobreviva al pago.',
+      },
+      'conscious-ink': {
+        category: 'Shopify · Lifestyle',
+        title: 'Tatuajes Temporales Conscious Ink',
+        overview:
+          'Una tienda de tatuajes temporales de afirmaciones, donde el producto es una frase que alguien quiere leer en su propia piel, asi que el texto pesa tanto como la fotografia.',
+        features: [
+          'Fichas guiadas por el mensaje y no por la referencia',
+          'Citas de clientes como prueba principal',
+          'Lotes y sets de regalo como via de venta adicional',
+          'Umbral de envio gratis indicado en la cabecera',
+        ],
+        value: 'Un producto cuyo valor es la frase, expuesto por la frase.',
+      },
+      'wildfang': {
+        category: 'Shopify · Moda',
+        title: 'Tienda de Ropa Wildfang',
+        overview:
+          'Una tienda de ropa con un punto de vista claro, con trajeria, ropa de trabajo y prendas diarias, fotografiada en personas reales y organizada para que la marca se lea antes que el catalogo.',
+        features: [
+          'Imagen editorial por delante de la cuadricula',
+          'Compra por categoria con trajeria y ropa de trabajo separadas',
+          'Rebajas y novedades sin diluir la marca',
+          'Guia de tallas y ajuste en la ficha de producto',
+        ],
+        value: 'Una marca a la que la gente se apunta, con espacio para ser marca antes que tienda.',
+      },
+      'video-milkshake': {
+        category: 'Shopify · Productos Digitales',
+        title: 'Tienda de Recursos Video Milkshake',
+        overview:
+          'Una tienda que vende mattes de pelicula, texturas y recursos de edicion en descarga, donde cada producto debe mostrarse en movimiento antes de que nadie pueda juzgar si merece la compra.',
+        features: [
+          'Fichas guiadas por la vista previa para recursos que solo se ven en movimiento',
+          'Recursos agrupados por categoria y por lote',
+          'Entrega inmediata por descarga tras el pago',
+          'Precio de lote frente al precio unitario',
+        ],
+        value: 'Bienes digitales que se venden por la vista previa, expuestos en torno a ella.',
+      },
+      'miro-tea': {
+        category: 'Shopify · Alimentacion',
+        title: 'Tienda Online Miro Tea',
+        overview:
+          'La tienda online de una casa de te de Seattle que vende hoja de origen unico, mezclas y utensilios, donde un te a granel debe describirse lo bastante bien como para que alguien lo compre sin olerlo.',
+        features: [
+          'Hoja fotografiada individualmente y no en el envase',
+          'Colecciones por nivel de cafeina, temporada y origen',
+          'Utensilios de te junto a la hoja',
+          'Notas de cata como nucleo de cada ficha',
+        ],
+        value: 'El conocimiento del mostrador puesto por escrito, para que la hoja se venda a distancia.',
+      },
+      'take-care-shop': {
+        category: 'Shopify · Belleza y Bienestar',
+        title: 'Take Care Belleza y Bienestar',
+        overview:
+          'Una tienda de belleza y bienestar en Washington DC con gamas de rostro, cuerpo, cabello y bienestar, de paleta suave y con una portada que ha sostenido lanzamientos y una liquidacion.',
+        features: [
+          'Departamentos divididos en rostro, cuerpo, cabello y bienestar',
+          'Directorio de marcas junto a la navegacion por categoria',
+          'Portada capaz de sostener mensajes de campana',
+          'Rutas de regalo y lotes por el catalogo',
+        ],
+        value: 'Una tienda curada cuya portada cambia de mensaje sin reconstruirla.',
+      },
+      'illumivein': {
+        category: 'Shopify · Dispositivo Medico',
+        title: 'Tienda del Localizador de Venas Illumivein',
+        overview:
+          'Una tienda de dispositivo unico para un localizador de venas portatil vendido a enfermeras, flebotomistas y paramedicos, donde la decision depende de si funciona en la sala donde trabajan.',
+        features: [
+          'Imagenes de demostracion con el dispositivo en uso',
+          'Datos regulatorios y de bateria indicados con claridad',
+          'Precio unico, decision unica, sin configurador',
+          'Garantia y condiciones de devolucion junto al boton de compra',
+        ],
+        value: 'Una herramienta clinica vendida por evidencia y no por adjetivos.',
+      },
+      'perricone-md': {
+        category: 'Shopify · Cosmetica',
+        title: 'Tienda de Cosmetica Perricone MD',
+        overview:
+          'Una tienda de cosmetica con catalogo amplio entre tienda, mas vendidos, ofertas y liquidacion, que sostiene mensajes promocionales sin enterrar la rutina que el cliente vino a reponer.',
+        features: [
+          'Catalogo dividido en tienda, mas vendidos, ofertas y liquidacion',
+          'Barras promocionales para rebajas y codigos de temporada',
+          'Fidelizacion y captura de correo integradas en la cabecera',
+          'Navegacion por rutina, preocupacion y tipo de producto',
+        ],
+        value: 'Un catalogo grande que aun devuelve al cliente habitual a su rutina.',
+      },
+      'hisense-bolivia': {
+        category: 'Shopify · Electronica de Consumo',
+        title: 'Tienda Hisense Bolivia',
+        overview:
+          'Una tienda regional para una marca de electronica de consumo con televisores, refrigeradores, lavadoras y aire acondicionado, que lleva la creatividad de la campana global a un catalogo local.',
+        features: [
+          'Creatividad de campana recorriendo la portada',
+          'Categorias divididas en television, refrigeracion y climatizacion',
+          'Especificaciones comparables dentro de cada categoria',
+          'Disponibilidad local e informacion de distribuidores',
+        ],
+        value: 'Una marca global presentada en local sin perder la campana con la que llego.',
+      },
+      'troubadour-goods': {
+        category: 'Shopify · Bolsos y Piel',
+        title: 'Tienda Troubadour Goods',
+        overview:
+          'Una tienda de bolsos tecnicos y articulos de piel, fotografiada en movimiento por la ciudad, donde el argumento de un bolso se hace mostrandolo en uso y no posado.',
+        features: [
+          'Video y fotografia de estilo de vida encabezando el catalogo',
+          'Colecciones por viaje, trabajo y diario',
+          'Premios y prensa usados como prueba',
+          'Detalle de materiales y garantia en la ficha',
+        ],
+        value: 'Una compra meditada defendida en uso y no en una foto de estudio.',
+      },
+      'velodrome-shop': {
+        category: 'WordPress · Ciclismo',
+        title: 'Tienda de Ciclismo en Pista Velodrome',
+        overview:
+          'Una tienda de equipamiento de ciclismo en pista - cuadros, ruedas, transmision, mando y herramientas - hecha para un deporte donde las piezas deben encajar con la disciplina antes de importar.',
+        features: [
+          'Catalogo organizado por disciplina de pista y tipo de pieza',
+          'Compatibilidad de transmision y componentes visible pronto',
+          'Ruta de pedido rapido para quien ya sabe la pieza',
+          'Imagen editorial tomada en la propia pista',
+        ],
+        value: 'Un catalogo especializado que respeta como compran los especialistas de verdad.',
+      },
+      'belay-solutions': {
+        category: 'WordPress · Personal',
+        title: 'Sitio BELAY Solutions',
+        overview:
+          'Un sitio para una empresa que coloca asistentes y contables en Estados Unidos con negocios, donde el visitante compara una contratacion con un servicio y necesita que la diferencia sea obvia.',
+        features: [
+          'Servicios de asistencia y financieros en rutas separadas',
+          'Precio enmarcado frente al coste de una contratacion a tiempo completo',
+          'Solicitud de propuesta en lugar de tarifa publica',
+          'Biblioteca de recursos alimentando la busqueda organica',
+        ],
+        value: 'Un servicio vendido contra la alternativa que el comprador ya esta sopesando.',
+      },
+      'webfx': {
+        category: 'WordPress · Agencia',
+        title: 'Sitio de la Agencia WebFX',
+        overview:
+          'Un sitio de agencia amplio que abarca SEO, medios pagados, CRO y servicios web, donde el argumento es ingresos y no trafico, y la prueba debe verse antes del formulario.',
+        features: [
+          'Servicios divididos en busqueda, pago, CRO y UX',
+          'Cifras de ingresos y de clientes como afirmacion inicial',
+          'Solicitud de propuesta accesible desde cualquier pagina',
+          'Contenido extenso de recursos y glosario para busqueda',
+        ],
+        value: 'Una agencia juzgada por prueba de ingresos, con la prueba antes del discurso.',
+      },
+      'lyfe-marketing': {
+        category: 'WordPress · Redes Sociales',
+        title: 'Sitio de la Agencia LYFE Marketing',
+        overview:
+          'Un sitio para una agencia de gestion de redes sociales, apoyado en premios, prensa y socios nombrados para responder la primera pregunta de un pequeno negocio: ha respondido por vosotros alguien creible.',
+        features: [
+          'Premios y socios colocados sobre la linea de flotacion',
+          'Servicios divididos en social, anuncios y email marketing',
+          'Propuesta personalizada como unica via de conversion',
+          'Resultados de casos llevados hasta las paginas de servicio',
+        ],
+        value: 'La credibilidad resuelta en la primera pantalla, donde decide un pequeno negocio.',
+      },
+      'hubspot': {
+        category: 'WordPress · Plataforma SaaS',
+        title: 'Sitio de Marketing de HubSpot',
+        overview:
+          'Un sitio de marketing para una plataforma de clientes que abarca marketing, ventas y servicio, donde la tarea es encaminar visitantes muy distintos - prueba, demo, empresa - sin partir el sitio en tres.',
+        features: [
+          'Productos, soluciones y precios bajo una sola navegacion',
+          'Demo y prueba gratuita ofrecidas en paralelo',
+          'Rutas segmentadas para pequena empresa y corporacion',
+          'Contenido extenso de recursos alimentando la adquisicion organica',
+        ],
+        value: 'Un sitio que atiende a la vez una prueba self-service y una demo empresarial.',
+      },
+      'ironpaper': {
+        category: 'WordPress · Agencia B2B',
+        title: 'Ironpaper Agencia de Crecimiento B2B',
+        overview:
+          'Un sitio para una agencia de crecimiento B2B que trabaja ciclos de venta largos y complejos, escrito en tipografia y no en imagen, porque el argumento es pensamiento y el pensamiento se lee.',
+        features: [
+          'Cabecera tipografica sosteniendo el posicionamiento',
+          'Servicios divididos en generacion de demanda, ABM y contenido',
+          'Ciclos de venta largos tratados directamente en el texto',
+          'Articulos de analisis sosteniendo la credibilidad',
+        ],
+        value: 'Una agencia que vende por argumento, con un sitio hecho para leerse.',
+      },
     },
   },
   examples: {
@@ -2124,266 +2735,6 @@ const es = {
         ],
         value:
           'Convierte una tarea manual recurrente en algo que se ejecuta solo y avisa cuando no lo hace, sin depender de que nadie lo recuerde.',
-      },
-      'angular-crm-portal': {
-        category: 'Plataforma de Ventas',
-        title: 'Portal de Pipeline de Ventas en AngularJS',
-        overview:
-          'Un pipeline compartido por cuatro equipos comerciales regionales, con front end en AngularJS sobre una API Nest.js. Todos los equipos ven los mismos negocios y las mismas reglas de etapa, para que un negocio no signifique cosas distintas en cada oficina.',
-        features: [
-          'Un pipeline compartido por cuatro equipos regionales',
-          'Reglas de etapa aplicadas en la API, no en el navegador',
-          'Visibilidad por rol, equipo y region',
-          'Historial de actividad en cada negocio, exportable a CSV',
-        ],
-        value: 'Una sola version del pipeline en lugar de cuatro hojas de calculo que se contradicen.',
-      },
-      'laravel-saas-billing': {
-        category: 'Plataforma de Facturacion',
-        title: 'Motor de Suscripciones y Facturacion en Laravel',
-        overview:
-          'Planes, asientos, prorrateo y recuperacion de pagos fallidos para un negocio por suscripcion. Lo dificil no es cobrar una tarjeta una vez; es lo que ocurre en un cambio de plan a mitad de ciclo y cuando falla el tercer cobro.',
-        features: [
-          'Cambios de plan prorrateados al dia',
-          'Reclamacion con reintentos y periodo de gracia',
-          'Webhooks del proveedor reconciliados con el estado local',
-          'Facturas generadas en PDF con tratamiento de IVA',
-        ],
-        value: 'Ingresos que siguen llegando despues del primer mes, con los fallos perseguidos automaticamente.',
-      },
-      'php-inventory-system': {
-        category: 'Sistema de Almacen',
-        title: 'Control de Stock en PHP para Dos Almacenes',
-        overview:
-          'Stock contado una sola vez en dos almacenes, con puntos de pedido que realmente saltan. Las entradas y salidas se registran como eventos y no como ediciones, de modo que la cifra actual siempre se explica por su historial.',
-        features: [
-          'Una unica cifra de stock para ambos almacenes',
-          'Puntos de pedido que generan sugerencias de compra',
-          'Movimientos guardados como registro auditable',
-          'Plazos de proveedor incluidos en el calculo de reposicion',
-        ],
-        value: 'Menos roturas de stock y una cifra en la que confian almacen y oficina.',
-      },
-      'wordpress-membership-site': {
-        category: 'Sitio de Membresias',
-        title: 'Membresias y Contenido Restringido en WordPress',
-        overview:
-          'Tres niveles de membresia en WordPress, con contenido restringido por regla y no a mano. Los editores siguen escribiendo en el editor de siempre; el plugin decide quien puede leer que, y las renovaciones se ejecutan sin que nadie tenga que acordarse.',
-        features: [
-          'Tres niveles con restriccion de contenido por regla',
-          'Renovaciones automaticas y correos de vencimiento',
-          'Area de socios con facturas y descargas',
-          'Los editores conservan el editor estandar de WordPress',
-        ],
-        value: 'Ingresos recurrentes a partir de textos que ya se publicaban gratis.',
-      },
-      'woocommerce-multivendor': {
-        category: 'Marketplace',
-        title: 'Marketplace Multivendedor en WooCommerce',
-        overview:
-          'Un carrito, varios vendedores. El cliente paga una vez; el pedido se divide por vendedor de forma interna, la comision se retiene en origen y cada vendedor ve solo sus pedidos y liquidaciones.',
-        features: [
-          'Un checkout dividido en pedidos por vendedor',
-          'Comision retenida automaticamente en origen',
-          'Panel del vendedor con pedidos, stock y liquidaciones',
-          'Ciclos de pago con extracto por vendedor',
-        ],
-        value: 'Una tienda que crece sumando vendedores en vez de comprando mas stock.',
-      },
-      'shopify-b2b-wholesale': {
-        category: 'Comercio B2B',
-        title: 'Portal Mayorista B2B en Shopify',
-        overview:
-          'Precios de mayorista en la misma tienda Shopify que atiende al publico, ocultos tras un login. Cada empresa tiene su lista de precios y sus condiciones de pago, de modo que el canal mayorista no necesita una segunda plataforma.',
-        features: [
-          'Listas de precios por empresa tras un login',
-          'Condiciones de pago por cuenta, incluidos 30 y 60 dias',
-          'Cantidades minimas y reglas de caja completa',
-          'Catalogo mayorista oculto de la busqueda publica',
-        ],
-        value: 'Mayorista y minorista en una sola plataforma en lugar de dos sistemas que sincronizar.',
-      },
-      'react-analytics-dashboard': {
-        category: 'Analitica',
-        title: 'Panel de Embudo de Checkout en React',
-        overview:
-          'Una vista de embudo sobre datos de eventos: donde se abandona el carrito, por paso y por dispositivo. Hecho para que una responsable de marketing conteste una pregunta sin pedir a un desarrollador que escriba una consulta.',
-        features: [
-          'Vistas de embudo, cohorte y retencion sobre un solo almacen de eventos',
-          'Segmentacion por dispositivo, canal y campana',
-          'Graficos servidos desde consultas preagregadas',
-          'Vistas guardadas y compartidas por el equipo',
-        ],
-        value: 'Decisiones tomadas desde el embudo y no desde opiniones sobre el.',
-      },
-      'support-desk-handover': {
-        category: 'Plataforma de Soporte',
-        title: 'Mesa de Transferencia de Chatbot para Soporte',
-        overview:
-          'El bot responde lo que puede y pasa el resto a una persona con la conversacion completa adjunta. La mesa muestra por que se escalo cada chat, de modo que la base de conocimiento se corrige donde realmente fallo.',
-        features: [
-          'Transferencia automatica con el contexto completo',
-          'Una bandeja para WhatsApp, Telegram y chat web',
-          'Motivos de escalado registrados y reportados',
-          'Respuestas rapidas y macros para preguntas repetidas',
-        ],
-        value: 'La mayoria de preguntas resueltas al instante y el resto llegando a una persona ya informada.',
-      },
-      'booking-scheduling-app': {
-        category: 'Agendamiento',
-        title: 'Gestion de Citas para Seis Profesionales',
-        overview:
-          'Un calendario para seis profesionales, tres salas y una pagina publica de reservas. La disponibilidad se calcula a partir de horarios, capacidad de salas y citas existentes, de modo que el hueco que ve el cliente existe de verdad.',
-        features: [
-          'Disponibilidad calculada por profesional, sala y servicio',
-          'Pagina publica de reserva con correos de confirmacion',
-          'Recordatorios por SMS y correo que reducen ausencias',
-          'Ventanas de cambio y cancelacion aplicadas por regla',
-        ],
-        value: 'Una agenda que se llena sola, sin las citas duplicadas que invita una hoja compartida.',
-      },
-      'nest-microservices': {
-        category: 'Backend y API',
-        title: 'Servicio Nest.js Dividido en Colas',
-        overview:
-          'Un monolito dividido en trabajadores en cola por area: pedidos, pagos, stock, correo. Cada cola reintenta con espera creciente y lo que sigue fallando acaba en una cola muerta, para reprocesarlo en vez de perderlo.',
-        features: [
-          'Trabajo dividido en colas por area',
-          'Reintento con espera exponencial por cola',
-          'Cola muerta con reproceso desde la consola',
-          'Rendimiento y retraso visibles por consumidor',
-        ],
-        value: 'Picos de trafico absorbidos por la cola en lugar de tumbar el checkout.',
-      },
-      'nextjs-headless-blog': {
-        category: 'Sitio Editorial',
-        title: 'Sitio Editorial en Next.js con CMS Headless',
-        overview:
-          'Un sitio editorial servido por Next.js y redactado en un CMS headless. Las paginas se pregeneran en el build y se revalidan en el edge, de modo que el sitio sigue siendo rapido sin que los editores esperen a un despliegue.',
-        features: [
-          'Pregeneracion estatica con revalidacion en el edge',
-          'Los editores publican sin desarrollador ni despliegue',
-          'Datos estructurados y sitemap generados automaticamente',
-          'Imagenes servidas en formatos modernos segun el dispositivo',
-        ],
-        value: 'Velocidad de publicacion para los editores y de carga para el lector, a la vez.',
-      },
-      'laravel-queue-worker': {
-        category: 'Backend y API',
-        title: 'Importador de Catalogo en Colas con Laravel',
-        overview:
-          'Una importacion nocturna de catalogo sacada de la peticion web y llevada a trabajos en cola. El trabajo se divide en bloques, de modo que un bloque defectuoso reintenta solo en vez de tumbar toda la importacion, y la ejecucion informa de lo que rechazo.',
-        features: [
-          'Importacion dividida en bloques que reintentan por separado',
-          'Espera exponencial con limite de reintentos',
-          'Filas rechazadas informadas y nunca descartadas en silencio',
-          'Progreso y fallos visibles mientras corre el trabajo',
-        ],
-        value: 'Una importacion que termina de noche y dice exactamente que no pudo aceptar.',
-      },
-      'wordpress-headless-api': {
-        category: 'CMS Headless',
-        title: 'WordPress Headless con Front End en Next.js',
-        overview:
-          'WordPress se mantiene como editor y se convierte en API; el sitio publico lo renderiza Next.js. Los editores conservan el flujo que conocen y el front end deja de estar limitado a lo que puede hacer una plantilla.',
-        features: [
-          'Rutas REST propias que devuelven bloques en JSON',
-          'Cache invalidada en cuanto se guarda una entrada',
-          'Los editores conservan el editor estandar de WordPress',
-          'Front end libre de las limitaciones de temas y plugins',
-        ],
-        value: 'Un front end moderno sin reeducar a quien escribe el contenido.',
-      },
-      'shopify-inventory-sync': {
-        category: 'Integracion',
-        title: 'Sincronizacion de Stock entre Shopify y ERP',
-        overview:
-          'Stock mantenido a la par entre Shopify y un sistema de retaguardia, en ambos sentidos. El ERP sigue siendo la fuente de verdad, Shopify se actualiza dentro del presupuesto de la API y una reconciliacion horaria detecta desviaciones.',
-        features: [
-          'Sincronizacion bidireccional con el ERP como fuente de verdad',
-          'Limitacion de ritmo que respeta el presupuesto de la API de Shopify',
-          'Los pedidos reservan stock en el ERP al pagar',
-          'Reconciliacion horaria que informa de cualquier desviacion',
-        ],
-        value: 'Una sola cifra de stock en ambos sistemas, para no vender lo que no hay.',
-      },
-      'node-realtime-orders': {
-        category: 'Backend y API',
-        title: 'Tablero de Pedidos en Tiempo Real por WebSockets',
-        overview:
-          'Pantallas de cocina y mostrador que se actualizan en cuanto un pedido cambia, sin sondeo. Las transiciones de estado se validan y bloquean en la base de datos, de modo que dos pantallas no avanzan el mismo pedido dos veces.',
-        features: [
-          'Estado enviado a todas las pantallas en el mismo instante',
-          'Transiciones validadas y con bloqueo de fila en la base de datos',
-          'Reconexion silenciosa tras una caida de red',
-          'Probado con 400 pantallas simultaneas',
-        ],
-        value: 'Pantallas que coinciden entre si, en una sala donde los segundos importan.',
-      },
-      'python-data-pipeline': {
-        category: 'Automatizacion',
-        title: 'Pipeline Nocturno de Informes en Python',
-        overview:
-          'Seis fuentes recogidas cada noche, validadas y cargadas en una unica tabla de informes. Si se rechaza demasiada entrada, la ejecucion falla de forma ruidosa en lugar de publicar un informe en el que nadie deberia confiar.',
-        features: [
-          'Seis fuentes extraidas, validadas y cargadas cada noche',
-          'La ejecucion falla de forma ruidosa al superar el umbral de rechazos',
-          'Filas rechazadas conservadas e informadas, nunca descartadas',
-          'Resumen enviado por correo a finanzas al terminar',
-        ],
-        value: 'Numeros que llegan al desayuno y un fallo ruidoso cuando no son de fiar.',
-      },
-      'react-native-loyalty-app': {
-        category: 'Aplicacion Movil',
-        title: 'App de Fidelizacion y Recompensas en React Native',
-        overview:
-          'Una tarjeta de fidelizacion que vive en el movil: puntos, niveles y un codigo que la caja puede escanear. Una sola base de codigo React Native llega a ambas tiendas y la tarjeta sigue funcionando sin cobertura.',
-        features: [
-          'Puntos y niveles con codigo de socio escaneable',
-          'Catalogo de recompensas con canje en caja',
-          'Ofertas dirigidas por nivel y por tienda mas cercana',
-          'Tarjeta legible sin conexion, sincronizada al volver la senal',
-        ],
-        value: 'Visitas repetidas de clientes que ya llevan la tarjeta en el bolsillo.',
-      },
-      'flutter-habit-tracker': {
-        category: 'Aplicacion Movil',
-        title: 'Rastreador de Habitos en Flutter con Recordatorios Locales',
-        overview:
-          'Un rastreador de habitos hecho una sola vez en Flutter para ambas tiendas. Rachas, vista mensual y recordatorios que dispara el propio dispositivo, para que la app sirva en un tren sin cobertura.',
-        features: [
-          'Lista diaria con rachas y vista mensual',
-          'Notificaciones locales que funcionan sin conexion',
-          'Datos guardados en el dispositivo y exportables a CSV',
-          'Una sola base de codigo Flutter para iOS y Android',
-        ],
-        value: 'Una app de habitos que sigue funcionando donde los habitos ocurren.',
-      },
-      'android-pos-terminal': {
-        category: 'Aplicacion Movil',
-        title: 'Terminal de Punto de Venta en Android',
-        overview:
-          'Una caja que cobra, imprime el ticket y cierra el dia. Las ventas se escriben primero en el dispositivo y se sincronizan despues, de modo que una caida de conexion nunca detiene la cola del mostrador.',
-        features: [
-          'Cesta, cobro e impresion de ticket en el dispositivo',
-          'Ventas en cola local, sincronizadas al volver la senal',
-          'Informe de cierre con tarjeta, efectivo y devoluciones',
-          'Cobro con tarjeta, efectivo y vale de comida',
-        ],
-        value: 'Un mostrador que sigue atendiendo tenga o no buen dia internet.',
-      },
-      'ios-property-viewings': {
-        category: 'Aplicacion Movil',
-        title: 'Busqueda de Inmuebles y Reserva de Visitas en iOS',
-        overview:
-          'Buscar, guardar y reservar una visita sin salir de la app. El agente recibe la cita en su calendario y el comprador la confirmacion, de modo que la visita queda cerrada antes de que nadie coja el telefono.',
-        features: [
-          'Busqueda con filtros y listas guardadas',
-          'Visita reservada contra el calendario del agente',
-          'Confirmacion y entrada de calendario para el comprador',
-          'Mensajeria en la app con el agente del anuncio',
-        ],
-        value: 'Visitas reservadas en el momento de mayor interes y no al siguiente dia habil.',
       },
     },
   },

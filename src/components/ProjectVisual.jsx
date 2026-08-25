@@ -9,7 +9,6 @@
  */
 
 import { extraScenes } from './ProjectScenes'
-import { moreScenes } from './ProjectScenesMore'
 import { P, Photo } from './visualPhotos'
 import { C, H, W } from './visualTokens'
 
@@ -661,7 +660,6 @@ const scenes = {
   python: PythonAutomation,
   chatops: ChatOps,
   ...extraScenes,
-  ...moreScenes,
 }
 
 /* Scenes that need a canvas other than the default 640x400. */
