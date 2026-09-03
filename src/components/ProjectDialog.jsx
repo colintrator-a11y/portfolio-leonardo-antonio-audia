@@ -144,6 +144,32 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
             </ul>
           </div>
 
+          {/*
+            * Links to the work itself. `noopener` is not optional on a target
+            * of _blank: without it the opened page can reach back through
+            * window.opener and navigate this one.
+            */}
+          {project.links?.length ? (
+            <div className="pdialog__block">
+              <h4 className="pdialog__label">{ui.seeItLive}</h4>
+              <ul className="pdialog__links">
+                {project.links.map(({ label, url }) => (
+                  <li key={url}>
+                    <a
+                      className="pdialog__link"
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="arrowRight" size={13} strokeWidth={2.2} />
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
           <div className="pdialog__value">
             <span className="pdialog__valueIcon">
               <Icon name="spark" size={16} />

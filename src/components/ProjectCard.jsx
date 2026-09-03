@@ -120,7 +120,7 @@ export default function ProjectCard({
         </span>
 
         <span className="pcard__cta">
-          {ui.viewDetails}
+          {project.links?.length ? ui.viewLive : ui.viewDetails}
           <Icon name="arrowRight" size={14} strokeWidth={2.2} />
         </span>
       </span>

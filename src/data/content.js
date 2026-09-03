@@ -19,6 +19,27 @@ import modularFurnitureImg from '../assets/projects/modular-furniture.webp'
 import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
+/* Earlier delivered work: apps, sites and stores. */
+import appAmaneTaxiImg from '../assets/work/app-amane-taxi.webp'
+import appAspireSchoolManagementImg from '../assets/work/app-aspire-school-management.webp'
+import appLetsDoYogaImg from '../assets/work/app-lets-do-yoga.webp'
+import appLumyBeautyImg from '../assets/work/app-lumy-beauty.webp'
+import appScanDocaiScannerImg from '../assets/work/app-scan-docai-scanner.webp'
+import appVpnClientImg from '../assets/work/app-vpn-client.webp'
+import appTrakmdDoctorImg from '../assets/work/app-trakmd-doctor.webp'
+import appWebOnDemandServiceImg from '../assets/work/app-web-on-demand-service.webp'
+import webHoteljobsJobPortalImg from '../assets/work/web-hoteljobs-job-portal.webp'
+import webAimroMarketResearchImg from '../assets/work/web-aimro-market-research.webp'
+import webBethemeWordpressThemeImg from '../assets/work/web-betheme-wordpress-theme.webp'
+import webLearningPoolImg from '../assets/work/web-learning-pool.webp'
+import webMammolinkHealthcareImg from '../assets/work/web-mammolink-healthcare.webp'
+import webJennySchatzleCoachingImg from '../assets/work/web-jenny-schatzle-coaching.webp'
+import webShraderMendezAttorneyImg from '../assets/work/web-shrader-mendez-attorney.webp'
+import webVizuryEngage360Img from '../assets/work/web-vizury-engage360.webp'
+import shopMultivendorEcommerceImg from '../assets/work/shop-multivendor-ecommerce.webp'
+import shopSkyhighPartyRentalsImg from '../assets/work/shop-skyhigh-party-rentals.webp'
+import shopAppNetplusPharmacyImg from '../assets/work/shop-app-netplus-pharmacy.webp'
+
 /* Client sites, captured from the live builds. */
 import keyzarImg from '../assets/clients/keyzar.webp'
 import instaladorImg from '../assets/clients/instalador.webp'
@@ -339,6 +360,176 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
+  'app-amane-taxi': {
+    tags: ['mobile'],
+    image: appAmaneTaxiImg,
+    imageSize: [1280, 800],
+    tech: ['Swift', 'iOS', 'Android', 'Xamarin', 'Mobile App Design'],
+    links: [
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.amane.voyageur' },
+    ],
+  },
+  'app-aspire-school-management': {
+    tags: ['mobile', 'php'],
+    image: appAspireSchoolManagementImg,
+    imageSize: [1280, 800],
+    tech: ['PHP', 'Laravel', 'Mobile App Development', 'App Design', 'Responsive Web Design'],
+    links: [
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.aspiresms' },
+    ],
+  },
+  'app-lets-do-yoga': {
+    tags: ['mobile'],
+    image: appLetsDoYogaImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'Android', 'iOS', 'Mobile App Design'],
+  },
+  'app-lumy-beauty': {
+    tags: ['mobile', 'api'],
+    image: appLumyBeautyImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'Firebase Firestore', 'Stripe Connect', 'Android', 'iOS'],
+    links: [
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.cristhyan.lumybeauty' },
+    ],
+  },
+  'app-scan-docai-scanner': {
+    tags: ['mobile'],
+    image: appScanDocaiScannerImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'Android', 'iOS', 'Figma'],
+    links: [
+      { label: 'Demo', url: 'https://drive.google.com/file/d/1bueJ3Zxb8aZDk6lO-IvwnEmz6LM6rfId/view' },
+    ],
+  },
+  'app-vpn-client': {
+    tags: ['mobile'],
+    image: appVpnClientImg,
+    imageSize: [1280, 800],
+    tech: ['Android', 'OpenVPN', 'AdMob', 'Mobile App Design'],
+    links: [
+      { label: 'Demo', url: 'https://drive.google.com/file/d/1yCrdz23GOzRfEzvhAEkC8ljSLWXBapMX/view' },
+    ],
+  },
+  'app-trakmd-doctor': {
+    tags: ['mobile'],
+    image: appTrakmdDoctorImg,
+    imageSize: [1280, 800],
+    tech: ['React Native', 'iOS', 'Android', 'Mobile App Design'],
+    links: [
+      { label: 'App Store', url: 'https://apps.apple.com/us/app/trakmd-doctor-app/id1476907007' },
+    ],
+  },
+  'app-web-on-demand-service': {
+    tags: ['mobile', 'php', 'api'],
+    image: appWebOnDemandServiceImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'PHP', 'Laravel', 'Android', 'iOS'],
+    links: [
+      { label: 'Demo', url: 'https://study.vrtechinfo.com/' },
+    ],
+  },
+  'web-hoteljobs-job-portal': {
+    tags: ['frontend', 'api'],
+    image: webHoteljobsJobPortalImg,
+    imageSize: [1280, 800],
+    tech: ['JavaScript', 'HTML', 'CSS', 'Bootstrap', 'AJAX', 'Amazon SES'],
+    links: [
+      { label: 'Live site', url: 'https://www.hoteljobs.co.za' },
+    ],
+  },
+  'web-aimro-market-research': {
+    tags: ['frontend', 'api'],
+    image: webAimroMarketResearchImg,
+    imageSize: [1280, 800],
+    tech: ['React.js', 'Node.js', 'Web Design', 'SEO', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://www.aimro.ie/' },
+    ],
+  },
+  'web-betheme-wordpress-theme': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: webBethemeWordpressThemeImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'BeTheme', 'PHP', 'CSS', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://beck.id/' },
+    ],
+  },
+  'web-learning-pool': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: webLearningPoolImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'JavaScript', 'HTML', 'CSS', 'Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://learningpool.com/' },
+    ],
+  },
+  'web-mammolink-healthcare': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: webMammolinkHealthcareImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'Frontend Development', 'SEO', 'UX Research', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://www.mammolink.com/' },
+    ],
+  },
+  'web-jenny-schatzle-coaching': {
+    tags: ['frontend'],
+    image: webJennySchatzleCoachingImg,
+    imageSize: [1280, 800],
+    tech: ['Kajabi', 'Web Design', 'Website Testing', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://jennyschatzle.mykajabi.com/' },
+    ],
+  },
+  'web-shrader-mendez-attorney': {
+    tags: ['wordpress', 'php', 'frontend'],
+    image: webShraderMendezAttorneyImg,
+    imageSize: [1280, 800],
+    tech: ['WordPress', 'Frontend Development', 'SEO', 'Conversion Rate Optimization', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://www.shradermendez.com/' },
+    ],
+  },
+  'web-vizury-engage360': {
+    tags: ['php', 'frontend'],
+    image: webVizuryEngage360Img,
+    imageSize: [1280, 800],
+    tech: ['JavaScript', 'HTML', 'Laravel', 'Web Design', 'Responsive Web Design'],
+    links: [
+      { label: 'Live site', url: 'https://www.vizury.com/' },
+    ],
+  },
+  'shop-multivendor-ecommerce': {
+    tags: ['ecommerce', 'mobile', 'php', 'api'],
+    image: shopMultivendorEcommerceImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'PHP', 'Laravel', 'Android', 'iOS'],
+    links: [
+      { label: 'Web demo', url: 'https://re.vrtechinfo.com' },
+    ],
+  },
+  'shop-skyhigh-party-rentals': {
+    tags: ['ecommerce', 'php', 'frontend'],
+    image: shopSkyhighPartyRentalsImg,
+    imageSize: [1280, 800],
+    tech: ['Magento', 'PHP', 'Node.js', 'AngularJS', 'AWS', 'PayPal'],
+    links: [
+      { label: 'Live site', url: 'https://skyhighpartyrentals.com' },
+      { label: 'Delivery tracker', url: 'http://routestatus.net' },
+    ],
+  },
+  'shop-app-netplus-pharmacy': {
+    tags: ['ecommerce', 'mobile', 'php'],
+    image: shopAppNetplusPharmacyImg,
+    imageSize: [1280, 800],
+    tech: ['Flutter', 'PHP', 'Android', 'iOS', 'E-commerce'],
+    links: [
+      { label: 'Live site', url: 'https://net-plus.in/' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.netplus.med' },
+    ],
+  },
 }
 
 /*
@@ -387,6 +578,26 @@ const projectOrder = [
   'lyfe-marketing',
   'hubspot',
   'ironpaper',
+  // Apps, sites and stores delivered earlier
+  'app-amane-taxi',
+  'app-aspire-school-management',
+  'app-lets-do-yoga',
+  'app-lumy-beauty',
+  'app-scan-docai-scanner',
+  'app-vpn-client',
+  'app-trakmd-doctor',
+  'app-web-on-demand-service',
+  'web-hoteljobs-job-portal',
+  'web-aimro-market-research',
+  'web-betheme-wordpress-theme',
+  'web-learning-pool',
+  'web-mammolink-healthcare',
+  'web-jenny-schatzle-coaching',
+  'web-shrader-mendez-attorney',
+  'web-vizury-engage360',
+  'shop-multivendor-ecommerce',
+  'shop-skyhigh-party-rentals',
+  'shop-app-netplus-pharmacy',
 ]
 
 const exampleMedia = {

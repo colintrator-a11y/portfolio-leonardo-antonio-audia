@@ -49,6 +49,8 @@ const en = {
       automation: 'Automation',
     },
     viewDetails: 'View details',
+    seeItLive: 'See it live',
+    viewLive: 'View project',
     loadMore: 'Load more',
     switchToLight: 'Switch to the light theme',
     switchToDark: 'Switch to the dark theme',
@@ -668,6 +670,253 @@ const en = {
         ],
         value: 'An agency that sells on argument, given a site built to be read.',
       },
+      'app-amane-taxi': {
+        category: 'Mobile Application',
+        title: 'Amane Taxi Booking App',
+        overview:
+          'An on-demand chauffeur booking app: order a driven vehicle in one tap, around the clock, for a city trip or an airport run.',
+        features: [
+          'One-tap ride ordering by destination',
+          'Location-based pickup with live map tracking',
+          'Driver and vehicle detail before the car arrives',
+          'Cash payment and post-ride driver rating',
+        ],
+        value: 'A car booked in one tap, at the hour when calling a dispatcher is hardest.',
+      },
+      'app-aspire-school-management': {
+        category: 'Mobile Application',
+        title: 'Aspire School Management System',
+        overview:
+          'A school management system with e-learning delivery and a companion Android app, signing in students, teachers and parents to the same record from different sides of it.',
+        features: [
+          'Separate sign-in for students, teachers and parents',
+          'E-learning delivery inside the app',
+          'Laravel back office behind the mobile client',
+          'One record seen from three different roles',
+        ],
+        value: 'A school, its teachers and its families all reading the same record.',
+      },
+      'app-lets-do-yoga': {
+        category: 'Mobile Application',
+        title: 'Let\'s Do Yoga',
+        overview:
+          'A gentle yoga and fitness app for every level - stretching, yoga sessions, meditation and fitness plans, including a complete beginner series and the poses that matter first.',
+        features: [
+          'Beginner series and the poses worth learning first',
+          'Routines for sleep, posture and core strength',
+          'Breathing exercises and fat-burning sessions',
+          'A daily plan rather than a library to search',
+        ],
+        value: 'A practice someone can actually start, rather than a catalogue to browse.',
+      },
+      'app-lumy-beauty': {
+        category: 'Mobile Application',
+        title: 'Lumy Beauty Marketplace',
+        overview:
+          'A two-sided marketplace for a beauty startup: salons and specialists list their services, customers book appointments, and Stripe Connect settles each vendor separately.',
+        features: [
+          'Vendor service listings and availability',
+          'Customer appointment booking in-app',
+          'Stripe Connect marketplace payouts per vendor',
+          'Firestore as the shared data layer',
+        ],
+        value: 'Two sides of a marketplace, and the money reaching the right one.',
+      },
+      'app-scan-docai-scanner': {
+        category: 'Mobile Application',
+        title: 'Scan DocAI Document Scanner',
+        overview:
+          'A document scanner that turns a phone into a usable PDF scanner - documents, ID cards, books and handwritten notes - with edge detection and text recognition doing the work the camera cannot.',
+        features: [
+          'Smart edge detection and automatic cropping',
+          'Filters that make a photographed page readable',
+          'OCR text recognition on the captured page',
+          'PDF export and on-device file management',
+        ],
+        value: 'A phone camera made to behave like a scanner, page after page.',
+      },
+      'app-vpn-client': {
+        category: 'Mobile Application',
+        title: 'Multi-Region VPN Client',
+        overview:
+          'A one-tap Android VPN client over OpenVPN, with a global server list, no account to create and no root required - built light enough to run on the phones that need it most.',
+        features: [
+          'One-tap connect with automatic server choice',
+          'Server list spanning several regions',
+          'No registration and no root access required',
+          'AdMob integration funding the free tier',
+        ],
+        value: 'Private browsing on any Android phone, without an account or a rooted device.',
+      },
+      'app-trakmd-doctor': {
+        category: 'Mobile Application',
+        title: 'trakMD Doctor App',
+        overview:
+          'An electronic health record app for doctors and their patients, built so a practice is easier to reach: patients book themselves in, reminders go out on their own, and last-minute cancellations get filled.',
+        features: [
+          'Online booking that fills last-minute cancellations',
+          'Appointment reminders by SMS and email',
+          'Practice profile patients can find and recommend',
+          'Records reachable from the doctor\'s phone',
+        ],
+        value: 'A practice that is easier to book than to phone.',
+      },
+      'app-web-on-demand-service': {
+        category: 'Mobile & Web Platform',
+        title: 'On-Demand Services Platform',
+        overview:
+          'A services marketplace in the shape of UrbanClap, covering three audiences at once: a customer app for booking, a provider app for delivering, and an admin panel that runs both.',
+        features: [
+          'Customer app for booking any listed service',
+          'Provider app for accepting and delivering work',
+          'Admin panel governing the app and the website',
+          'Five payment gateways and a wallet system',
+        ],
+        value: 'Three applications that only work because they are one system.',
+      },
+      'web-hoteljobs-job-portal': {
+        category: 'Web Application',
+        title: 'HotelJobs Recruitment Portal',
+        overview:
+          'A recruitment platform for South Africa\'s hospitality industry, with three panels behind it - admin, recruiter and jobseeker - and the volume problems that come with a job board people actually use.',
+        features: [
+          'Admin, recruiter and jobseeker dashboards',
+          'Job-alert email delivery at 100,000+ recipients via Amazon SES',
+          'CV search with resume parsing and PDF conversion',
+          'Google for Jobs markup and sitemap automation',
+        ],
+        value: 'A job board that keeps answering when the mailing list reaches six figures.',
+      },
+      'web-aimro-market-research': {
+        category: 'Website',
+        title: 'AIMRO Market Research Association',
+        overview:
+          'A site for the association representing Ireland\'s market-research industry, which speaks for the sector to public authorities and maintains its professional standards - so the site has to read as an authority, not as a brochure.',
+        features: [
+          'Institutional tone carried through the layout',
+          'Member and standards information kept findable',
+          'Responsive across desktop, tablet and phone',
+          'Search-friendly structure for an authority site',
+        ],
+        value: 'A trade body that reads like one, to the people it represents itself to.',
+      },
+      'web-betheme-wordpress-theme': {
+        category: 'WordPress',
+        title: 'Custom Portfolio Theme on BeTheme',
+        overview:
+          'A custom WordPress portfolio built on a BeTheme foundation, with the whole of it - projects, skills, experience, testimonials, service packages - editable from the dashboard rather than from the code.',
+        features: [
+          'Custom theme work on a BeTheme foundation',
+          'Projects, skills and testimonials edited from the dashboard',
+          'Service packages maintained without a developer',
+          'Responsive across desktop, tablet and mobile',
+        ],
+        value: 'A portfolio its owner can keep current without opening an editor.',
+      },
+      'web-learning-pool': {
+        category: 'Website',
+        title: 'Learning Pool Corporate Site',
+        overview:
+          'The site for a company delivering online learning platforms, creative content and learning analytics to organisations - a broad offering that has to be navigable before it is persuasive.',
+        features: [
+          'Platform, content and analytics presented as one offering',
+          'Solution pages routed by audience',
+          'Editorial and case content supporting the pitch',
+          'Responsive layouts across the range',
+        ],
+        value: 'A broad offering made navigable, which is the first half of persuasive.',
+      },
+      'web-mammolink-healthcare': {
+        category: 'Website',
+        title: 'MammoLink Screening Access Portal',
+        overview:
+          'A site for a mobile screening provider, where the whole job is getting a patient from a search result to a booked appointment without a step that loses them.',
+        features: [
+          'Service pages written for patients, not clinicians',
+          'Appointment booking reachable from every page',
+          'Location information for a mobile service',
+          'Accessibility and performance treated as requirements',
+        ],
+        value: 'A screening appointment booked by someone who came to read one page.',
+      },
+      'web-jenny-schatzle-coaching': {
+        category: 'Website',
+        title: 'Personal Coaching Site on Kajabi',
+        overview:
+          'A personal-brand site for a coach and speaker, built on Kajabi and shaped so the message lands first and the programmes, courses and speaking enquiries follow from it.',
+        features: [
+          'Custom Kajabi design around a personal brand',
+          'Separate routes for coaching, courses and speaking',
+          'Community and testimonial sections',
+          'Clear sign-up and contact calls to action',
+        ],
+        value: 'A voice that arrives before the offer, which is the order that converts.',
+      },
+      'web-shrader-mendez-attorney': {
+        category: 'Website',
+        title: 'Shrader Mendez Attorney Website',
+        overview:
+          'A law-firm site for criminal defence work, where a visitor is usually in trouble and deciding fast: practice areas, the attorneys themselves, and a way to make contact without a form standing in the way.',
+        features: [
+          'Practice-area pages a worried visitor can scan',
+          'Attorney profiles carrying the credibility',
+          'Consultation contact reachable throughout',
+          'Awards and recognitions used as proof',
+        ],
+        value: 'A firm reachable at the moment somebody decides they need one.',
+      },
+      'web-vizury-engage360': {
+        category: 'Website',
+        title: 'Vizury Engage360 Platform Site',
+        overview:
+          'The site for a commerce marketing platform whose retargeting stack reaches shoppers across programmatic, push and email from one integrated proposition - a technical product that has to be explained to a marketer.',
+        features: [
+          'A technical platform explained for a marketing buyer',
+          'Channels presented as one proposition, not three products',
+          'Product pages routed by use case',
+          'Responsive layouts across a content-heavy site',
+        ],
+        value: 'A platform sold to the person who buys it, not to the one who runs it.',
+      },
+      'shop-multivendor-ecommerce': {
+        category: 'eCommerce',
+        title: 'Multi-Vendor Commerce App & Website',
+        overview:
+          'A commerce platform running on Android, iOS and the web from one Laravel back end, with the storefront configurable from the admin panel rather than from a deployment.',
+        features: [
+          'App and website configured from one admin panel',
+          'Ten payment gateways and OTP, Google and Facebook sign-up',
+          'Unlimited categories with ratings and reviews',
+          'Physical and digital products on the same platform',
+        ],
+        value: 'Three storefronts kept in step because they are one system underneath.',
+      },
+      'shop-skyhigh-party-rentals': {
+        category: 'eCommerce',
+        title: 'Sky High Party Rentals Store',
+        overview:
+          'A Magento store adapted to rent things rather than sell them - a booking layer over the product model - with a custom admin dashboard and a separate real-time delivery tracker built alongside it.',
+        features: [
+          'Booking and availability layered onto Magento products',
+          'Custom admin dashboard with agent and feedback reports',
+          'Monthly and yearly sales comparison',
+          'Separate real-time delivery tracking application',
+        ],
+        value: 'A rental business run from a platform that was built to sell, not to lend.',
+      },
+      'shop-app-netplus-pharmacy': {
+        category: 'eCommerce',
+        title: 'Net Plus Pharmacy App & Website',
+        overview:
+          'A pharmacy commerce app in Flutter with a companion website, carrying a full catalogue of medicine categories, brands and discounted lines behind an ordinary shopping flow.',
+        features: [
+          'Medicine catalogue by category, brand and type',
+          'Companion website sharing the app\'s catalogue',
+          'Discounted lines surfaced without breaking the flow',
+          'Ordering and account management from the phone',
+        ],
+        value: 'A pharmacy counter reachable from a phone, with the catalogue intact.',
+      },
     },
   },
   examples: {
@@ -973,6 +1222,8 @@ const pt = {
       automation: 'Automação',
     },
     viewDetails: 'Ver detalhes',
+    seeItLive: 'Ver online',
+    viewLive: 'Ver projeto',
     loadMore: 'Carregar mais',
     switchToLight: 'Mudar para o tema claro',
     switchToDark: 'Mudar para o tema escuro',
@@ -1594,6 +1845,253 @@ const pt = {
         ],
         value: 'Uma agencia que vende por argumento, com um site feito para ser lido.',
       },
+      'app-amane-taxi': {
+        category: 'Aplicacao Movel',
+        title: 'App de Reservas Amane Taxi',
+        overview:
+          'Uma app de reserva de motorista a pedido: pedir um veiculo com condutor num toque, a qualquer hora, para uma viagem na cidade ou uma ida ao aeroporto.',
+        features: [
+          'Pedido de viagem num toque por destino',
+          'Recolha por localizacao com mapa em tempo real',
+          'Dados do motorista e do veiculo antes da chegada',
+          'Pagamento em numerario e avaliacao no fim da viagem',
+        ],
+        value: 'Um carro reservado num toque, a hora em que ligar para uma central e mais dificil.',
+      },
+      'app-aspire-school-management': {
+        category: 'Aplicacao Movel',
+        title: 'Sistema de Gestao Escolar Aspire',
+        overview:
+          'Um sistema de gestao escolar com ensino a distancia e uma app Android que o acompanha, com alunos, professores e encarregados a entrar no mesmo registo por lados diferentes.',
+        features: [
+          'Entrada separada para alunos, professores e encarregados',
+          'Ensino a distancia dentro da aplicacao',
+          'Retaguarda em Laravel por tras do cliente movel',
+          'Um registo visto a partir de tres papeis diferentes',
+        ],
+        value: 'Uma escola, os seus professores e as familias a ler o mesmo registo.',
+      },
+      'app-lets-do-yoga': {
+        category: 'Aplicacao Movel',
+        title: 'Let\'s Do Yoga',
+        overview:
+          'Uma app suave de ioga e fitness para todos os niveis - alongamento, sessoes de ioga, meditacao e planos de treino, incluindo uma serie completa para iniciantes e as posturas que importam primeiro.',
+        features: [
+          'Serie para iniciantes e as posturas a aprender primeiro',
+          'Rotinas para sono, postura e forca do core',
+          'Exercicios de respiracao e sessoes de queima',
+          'Um plano diario em vez de uma biblioteca para pesquisar',
+        ],
+        value: 'Uma pratica que alguem consegue mesmo comecar, e nao um catalogo para percorrer.',
+      },
+      'app-lumy-beauty': {
+        category: 'Aplicacao Movel',
+        title: 'Marketplace Lumy Beauty',
+        overview:
+          'Um marketplace de dois lados para uma startup de beleza: saloes e especialistas listam servicos, os clientes marcam, e o Stripe Connect liquida cada vendedor separadamente.',
+        features: [
+          'Listagens de servicos e disponibilidade dos profissionais',
+          'Marcacao de consultas dentro da app',
+          'Pagamentos Stripe Connect por vendedor',
+          'Firestore como camada de dados partilhada',
+        ],
+        value: 'Dois lados de um marketplace, e o dinheiro a chegar ao lado certo.',
+      },
+      'app-scan-docai-scanner': {
+        category: 'Aplicacao Movel',
+        title: 'Scanner de Documentos Scan DocAI',
+        overview:
+          'Um scanner de documentos que transforma o telemovel num scanner de PDF utilizavel - documentos, cartoes, livros e notas manuscritas - com detecao de contornos e reconhecimento de texto a fazer o que a camara nao faz.',
+        features: [
+          'Detecao de contornos e recorte automatico',
+          'Filtros que tornam legivel uma pagina fotografada',
+          'Reconhecimento de texto na pagina captada',
+          'Exportacao para PDF e gestao de ficheiros no dispositivo',
+        ],
+        value: 'A camara de um telemovel a comportar-se como um scanner, pagina apos pagina.',
+      },
+      'app-vpn-client': {
+        category: 'Aplicacao Movel',
+        title: 'Cliente VPN Multi-Regiao',
+        overview:
+          'Um cliente VPN Android de um toque sobre OpenVPN, com lista global de servidores, sem conta para criar e sem necessidade de root - leve o suficiente para correr nos telemoveis que mais precisam dele.',
+        features: [
+          'Ligacao num toque com escolha automatica de servidor',
+          'Lista de servidores em varias regioes',
+          'Sem registo e sem necessidade de acesso root',
+          'Integracao AdMob a sustentar a versao gratuita',
+        ],
+        value: 'Navegacao privada em qualquer Android, sem conta e sem dispositivo com root.',
+      },
+      'app-trakmd-doctor': {
+        category: 'Aplicacao Movel',
+        title: 'App trakMD para Medicos',
+        overview:
+          'Uma app de registo clinico eletronico para medicos e pacientes, feita para tornar a clinica mais acessivel: os pacientes marcam sozinhos, os lembretes saem automaticamente e as desmarcacoes de ultima hora sao preenchidas.',
+        features: [
+          'Marcacao online que preenche desmarcacoes de ultima hora',
+          'Lembretes de consulta por SMS e email',
+          'Perfil da clinica que o paciente encontra e recomenda',
+          'Registos acessiveis a partir do telemovel do medico',
+        ],
+        value: 'Uma clinica mais facil de marcar do que de telefonar.',
+      },
+      'app-web-on-demand-service': {
+        category: 'Plataforma Movel e Web',
+        title: 'Plataforma de Servicos a Pedido',
+        overview:
+          'Um marketplace de servicos no formato UrbanClap, a cobrir tres publicos ao mesmo tempo: uma app de cliente para marcar, uma app de prestador para executar e um painel que gere ambas.',
+        features: [
+          'App de cliente para marcar qualquer servico listado',
+          'App de prestador para aceitar e executar trabalho',
+          'Painel de administracao que governa app e site',
+          'Cinco gateways de pagamento e sistema de carteira',
+        ],
+        value: 'Tres aplicacoes que so funcionam por serem um so sistema.',
+      },
+      'web-hoteljobs-job-portal': {
+        category: 'Aplicacao Web',
+        title: 'Portal de Recrutamento HotelJobs',
+        overview:
+          'Uma plataforma de recrutamento para a hotelaria sul-africana, com tres paineis por tras - administracao, recrutador e candidato - e os problemas de volume de um portal de emprego que e mesmo usado.',
+        features: [
+          'Paineis de administracao, recrutador e candidato',
+          'Envio de alertas de emprego a mais de 100.000 destinatarios via Amazon SES',
+          'Pesquisa de CV com leitura de curriculos e conversao para PDF',
+          'Marcacao Google for Jobs e automacao de sitemap',
+        ],
+        value: 'Um portal de emprego que continua a responder com uma lista de seis digitos.',
+      },
+      'web-aimro-market-research': {
+        category: 'Website',
+        title: 'Associacao de Estudos de Mercado AIMRO',
+        overview:
+          'Um site para a associacao que representa a industria irlandesa de estudos de mercado, que fala pelo setor junto das autoridades e mantem os seus padroes profissionais - por isso o site tem de se ler como autoridade e nao como brochura.',
+        features: [
+          'Tom institucional sustentado por toda a composicao',
+          'Informacao de membros e de padroes sempre localizavel',
+          'Responsivo em computador, tablet e telemovel',
+          'Estrutura amiga da pesquisa para um site de autoridade',
+        ],
+        value: 'Uma associacao setorial que se le como tal, perante quem a representa.',
+      },
+      'web-betheme-wordpress-theme': {
+        category: 'WordPress',
+        title: 'Tema de Portefolio Personalizado sobre BeTheme',
+        overview:
+          'Um portefolio WordPress personalizado construido sobre BeTheme, com tudo - projetos, competencias, experiencia, testemunhos, pacotes de servico - editavel a partir do painel e nao do codigo.',
+        features: [
+          'Trabalho de tema personalizado sobre uma base BeTheme',
+          'Projetos, competencias e testemunhos editados no painel',
+          'Pacotes de servico mantidos sem programador',
+          'Responsivo em computador, tablet e telemovel',
+        ],
+        value: 'Um portefolio que o proprio dono mantem atual sem abrir um editor.',
+      },
+      'web-learning-pool': {
+        category: 'Website',
+        title: 'Site Corporativo Learning Pool',
+        overview:
+          'O site de uma empresa que fornece plataformas de aprendizagem online, conteudo criativo e analise de formacao a organizacoes - uma oferta ampla que tem de ser navegavel antes de ser persuasiva.',
+        features: [
+          'Plataforma, conteudo e analise apresentados como uma oferta',
+          'Paginas de solucao encaminhadas por publico',
+          'Conteudo editorial e casos a sustentar o argumento',
+          'Composicoes responsivas em toda a gama',
+        ],
+        value: 'Uma oferta ampla tornada navegavel, que e a primeira metade de ser persuasiva.',
+      },
+      'web-mammolink-healthcare': {
+        category: 'Website',
+        title: 'Portal de Acesso a Rastreio MammoLink',
+        overview:
+          'Um site para um prestador de rastreio movel, onde a tarefa inteira e levar um paciente de um resultado de pesquisa a uma marcacao sem um passo que o perca.',
+        features: [
+          'Paginas de servico escritas para pacientes e nao para clinicos',
+          'Marcacao acessivel a partir de qualquer pagina',
+          'Informacao de localizacao para um servico movel',
+          'Acessibilidade e desempenho tratados como requisitos',
+        ],
+        value: 'Uma marcacao de rastreio feita por quem veio ler apenas uma pagina.',
+      },
+      'web-jenny-schatzle-coaching': {
+        category: 'Website',
+        title: 'Site de Coaching Pessoal em Kajabi',
+        overview:
+          'Um site de marca pessoal para uma coach e oradora, construido em Kajabi e desenhado para que a mensagem chegue primeiro e os programas, cursos e pedidos de palestra venham a seguir.',
+        features: [
+          'Design Kajabi personalizado em torno de uma marca pessoal',
+          'Percursos separados para coaching, cursos e palestras',
+          'Seccoes de comunidade e testemunhos',
+          'Chamadas a acao claras para inscricao e contacto',
+        ],
+        value: 'Uma voz que chega antes da oferta, que e a ordem que converte.',
+      },
+      'web-shrader-mendez-attorney': {
+        category: 'Website',
+        title: 'Site do Escritorio Shrader Mendez',
+        overview:
+          'Um site de escritorio de advogados de defesa criminal, onde o visitante esta normalmente em apuros e a decidir depressa: areas de pratica, os proprios advogados e uma forma de contactar sem um formulario pelo caminho.',
+        features: [
+          'Paginas de area de pratica que um visitante ansioso consegue percorrer',
+          'Perfis dos advogados a sustentar a credibilidade',
+          'Contacto para consulta acessivel em todo o site',
+          'Premios e reconhecimentos usados como prova',
+        ],
+        value: 'Um escritorio contactavel no momento em que alguem decide que precisa de um.',
+      },
+      'web-vizury-engage360': {
+        category: 'Website',
+        title: 'Site da Plataforma Vizury Engage360',
+        overview:
+          'O site de uma plataforma de marketing de comercio cuja tecnologia de retargeting alcanca compradores em programatico, push e email a partir de uma proposta integrada - um produto tecnico que tem de ser explicado a um profissional de marketing.',
+        features: [
+          'Uma plataforma tecnica explicada para quem compra marketing',
+          'Canais apresentados como uma proposta e nao como tres produtos',
+          'Paginas de produto encaminhadas por caso de uso',
+          'Composicoes responsivas num site denso em conteudo',
+        ],
+        value: 'Uma plataforma vendida a quem a compra, e nao a quem a opera.',
+      },
+      'shop-multivendor-ecommerce': {
+        category: 'Comercio Eletronico',
+        title: 'App e Site de Comercio Multi-Vendedor',
+        overview:
+          'Uma plataforma de comercio a correr em Android, iOS e web a partir de uma unica retaguarda Laravel, com a loja configuravel pelo painel de administracao e nao por um deploy.',
+        features: [
+          'App e site configurados a partir de um so painel',
+          'Dez gateways de pagamento e registo por OTP, Google e Facebook',
+          'Categorias ilimitadas com avaliacoes e comentarios',
+          'Produtos fisicos e digitais na mesma plataforma',
+        ],
+        value: 'Tres montras mantidas alinhadas por serem um so sistema por baixo.',
+      },
+      'shop-skyhigh-party-rentals': {
+        category: 'Comercio Eletronico',
+        title: 'Loja Sky High Party Rentals',
+        overview:
+          'Uma loja Magento adaptada para alugar em vez de vender - uma camada de reservas sobre o modelo de produto - com painel de administracao proprio e um rastreador de entregas em tempo real construido a par.',
+        features: [
+          'Reservas e disponibilidade sobre os produtos Magento',
+          'Painel proprio com relatorios de agentes e de feedback',
+          'Comparacao de vendas mensal e anual',
+          'Aplicacao separada de rastreio de entregas em tempo real',
+        ],
+        value: 'Um negocio de aluguer gerido numa plataforma feita para vender, nao para emprestar.',
+      },
+      'shop-app-netplus-pharmacy': {
+        category: 'Comercio Eletronico',
+        title: 'App e Site da Farmacia Net Plus',
+        overview:
+          'Uma app de comercio para farmacia em Flutter com site que a acompanha, com um catalogo completo de categorias de medicamentos, marcas e linhas com desconto por tras de um fluxo de compra comum.',
+        features: [
+          'Catalogo de medicamentos por categoria, marca e tipo',
+          'Site que partilha o catalogo da aplicacao',
+          'Linhas com desconto em destaque sem quebrar o fluxo',
+          'Encomendas e gestao de conta a partir do telemovel',
+        ],
+        value: 'Um balcao de farmacia acessivel pelo telemovel, com o catalogo intacto.',
+      },
     },
   },
   examples: {
@@ -1899,6 +2397,8 @@ const es = {
       automation: 'Automatización',
     },
     viewDetails: 'Ver detalles',
+    seeItLive: 'Verlo en vivo',
+    viewLive: 'Ver proyecto',
     loadMore: 'Cargar más',
     switchToLight: 'Cambiar al tema claro',
     switchToDark: 'Cambiar al tema oscuro',
@@ -2519,6 +3019,253 @@ const es = {
           'Articulos de analisis sosteniendo la credibilidad',
         ],
         value: 'Una agencia que vende por argumento, con un sitio hecho para leerse.',
+      },
+      'app-amane-taxi': {
+        category: 'Aplicacion Movil',
+        title: 'App de Reservas Amane Taxi',
+        overview:
+          'Una app de reserva de chofer bajo demanda: pedir un vehiculo con conductor en un toque, a cualquier hora, para un trayecto urbano o una ida al aeropuerto.',
+        features: [
+          'Pedido de viaje en un toque por destino',
+          'Recogida por ubicacion con mapa en tiempo real',
+          'Datos del conductor y del vehiculo antes de que llegue',
+          'Pago en efectivo y valoracion al terminar',
+        ],
+        value: 'Un coche reservado en un toque, a la hora en que llamar a una central cuesta mas.',
+      },
+      'app-aspire-school-management': {
+        category: 'Aplicacion Movil',
+        title: 'Sistema de Gestion Escolar Aspire',
+        overview:
+          'Un sistema de gestion escolar con formacion en linea y una app Android que lo acompana, con alumnos, profesores y familias entrando al mismo registro por lados distintos.',
+        features: [
+          'Acceso separado para alumnos, profesores y familias',
+          'Formacion en linea dentro de la aplicacion',
+          'Backoffice en Laravel tras el cliente movil',
+          'Un registro visto desde tres roles distintos',
+        ],
+        value: 'Un centro, su profesorado y las familias leyendo el mismo registro.',
+      },
+      'app-lets-do-yoga': {
+        category: 'Aplicacion Movil',
+        title: 'Let\'s Do Yoga',
+        overview:
+          'Una app suave de yoga y fitness para todos los niveles - estiramientos, sesiones de yoga, meditacion y planes de entrenamiento, con una serie completa para principiantes y las posturas que importan primero.',
+        features: [
+          'Serie para principiantes y las posturas que aprender primero',
+          'Rutinas para sueno, postura y fuerza del core',
+          'Ejercicios de respiracion y sesiones de quema',
+          'Un plan diario en lugar de una biblioteca que buscar',
+        ],
+        value: 'Una practica que alguien puede empezar de verdad, no un catalogo que recorrer.',
+      },
+      'app-lumy-beauty': {
+        category: 'Aplicacion Movil',
+        title: 'Marketplace Lumy Beauty',
+        overview:
+          'Un marketplace de dos lados para una startup de belleza: salones y especialistas publican servicios, los clientes reservan, y Stripe Connect liquida a cada vendedor por separado.',
+        features: [
+          'Fichas de servicio y disponibilidad de cada profesional',
+          'Reserva de citas dentro de la app',
+          'Pagos Stripe Connect por vendedor',
+          'Firestore como capa de datos compartida',
+        ],
+        value: 'Dos lados de un marketplace, y el dinero llegando al lado correcto.',
+      },
+      'app-scan-docai-scanner': {
+        category: 'Aplicacion Movil',
+        title: 'Escaner de Documentos Scan DocAI',
+        overview:
+          'Un escaner de documentos que convierte el movil en un escaner de PDF utilizable - documentos, carnes, libros y notas manuscritas - con deteccion de bordes y reconocimiento de texto haciendo lo que la camara no hace.',
+        features: [
+          'Deteccion de bordes y recorte automatico',
+          'Filtros que hacen legible una pagina fotografiada',
+          'Reconocimiento de texto en la pagina capturada',
+          'Exportacion a PDF y gestion de archivos en el dispositivo',
+        ],
+        value: 'La camara de un movil comportandose como un escaner, pagina tras pagina.',
+      },
+      'app-vpn-client': {
+        category: 'Aplicacion Movil',
+        title: 'Cliente VPN Multirregion',
+        overview:
+          'Un cliente VPN Android de un toque sobre OpenVPN, con lista global de servidores, sin cuenta que crear y sin root - lo bastante ligero para funcionar en los moviles que mas lo necesitan.',
+        features: [
+          'Conexion en un toque con eleccion automatica de servidor',
+          'Lista de servidores en varias regiones',
+          'Sin registro y sin acceso root',
+          'Integracion AdMob que sostiene la version gratuita',
+        ],
+        value: 'Navegacion privada en cualquier Android, sin cuenta y sin dispositivo rooteado.',
+      },
+      'app-trakmd-doctor': {
+        category: 'Aplicacion Movil',
+        title: 'App trakMD para Medicos',
+        overview:
+          'Una app de historia clinica electronica para medicos y pacientes, hecha para que la consulta sea mas accesible: los pacientes reservan solos, los recordatorios salen automaticamente y las cancelaciones de ultima hora se cubren.',
+        features: [
+          'Reserva en linea que cubre cancelaciones de ultima hora',
+          'Recordatorios de cita por SMS y correo',
+          'Perfil de la consulta que el paciente encuentra y recomienda',
+          'Historias accesibles desde el movil del medico',
+        ],
+        value: 'Una consulta mas facil de reservar que de telefonear.',
+      },
+      'app-web-on-demand-service': {
+        category: 'Plataforma Movil y Web',
+        title: 'Plataforma de Servicios a Demanda',
+        overview:
+          'Un marketplace de servicios al estilo UrbanClap, que cubre tres publicos a la vez: una app de cliente para reservar, una app de proveedor para ejecutar y un panel que gobierna ambas.',
+        features: [
+          'App de cliente para reservar cualquier servicio listado',
+          'App de proveedor para aceptar y ejecutar trabajo',
+          'Panel de administracion que gobierna app y web',
+          'Cinco pasarelas de pago y sistema de monedero',
+        ],
+        value: 'Tres aplicaciones que solo funcionan porque son un unico sistema.',
+      },
+      'web-hoteljobs-job-portal': {
+        category: 'Aplicacion Web',
+        title: 'Portal de Empleo HotelJobs',
+        overview:
+          'Una plataforma de reclutamiento para la hosteleria sudafricana, con tres paneles detras - administracion, reclutador y candidato - y los problemas de volumen de un portal que se usa de verdad.',
+        features: [
+          'Paneles de administracion, reclutador y candidato',
+          'Envio de alertas de empleo a mas de 100.000 destinatarios via Amazon SES',
+          'Busqueda de CV con lectura de curriculos y conversion a PDF',
+          'Marcado Google for Jobs y automatizacion de sitemap',
+        ],
+        value: 'Un portal de empleo que sigue respondiendo con una lista de seis cifras.',
+      },
+      'web-aimro-market-research': {
+        category: 'Sitio Web',
+        title: 'Asociacion de Estudios de Mercado AIMRO',
+        overview:
+          'Un sitio para la asociacion que representa a la industria irlandesa de estudios de mercado, que habla por el sector ante las autoridades y mantiene sus estandares profesionales - por eso el sitio debe leerse como autoridad y no como folleto.',
+        features: [
+          'Tono institucional sostenido en toda la composicion',
+          'Informacion de socios y estandares siempre localizable',
+          'Responsivo en escritorio, tableta y movil',
+          'Estructura amigable a la busqueda para un sitio de autoridad',
+        ],
+        value: 'Una asociacion sectorial que se lee como tal, ante quienes representa.',
+      },
+      'web-betheme-wordpress-theme': {
+        category: 'WordPress',
+        title: 'Tema de Portafolio a Medida sobre BeTheme',
+        overview:
+          'Un portafolio WordPress a medida construido sobre BeTheme, con todo - proyectos, habilidades, experiencia, testimonios, paquetes de servicio - editable desde el panel y no desde el codigo.',
+        features: [
+          'Trabajo de tema a medida sobre una base BeTheme',
+          'Proyectos, habilidades y testimonios editados desde el panel',
+          'Paquetes de servicio mantenidos sin desarrollador',
+          'Responsivo en escritorio, tableta y movil',
+        ],
+        value: 'Un portafolio que su dueno mantiene al dia sin abrir un editor.',
+      },
+      'web-learning-pool': {
+        category: 'Sitio Web',
+        title: 'Sitio Corporativo Learning Pool',
+        overview:
+          'El sitio de una empresa que ofrece plataformas de aprendizaje en linea, contenido creativo y analitica formativa a organizaciones - una oferta amplia que debe ser navegable antes que persuasiva.',
+        features: [
+          'Plataforma, contenido y analitica presentados como una oferta',
+          'Paginas de solucion encaminadas por publico',
+          'Contenido editorial y casos que sostienen el argumento',
+          'Composiciones responsivas en toda la gama',
+        ],
+        value: 'Una oferta amplia hecha navegable, que es la primera mitad de ser persuasiva.',
+      },
+      'web-mammolink-healthcare': {
+        category: 'Sitio Web',
+        title: 'Portal de Acceso a Cribado MammoLink',
+        overview:
+          'Un sitio para un proveedor de cribado movil, donde todo el trabajo es llevar a un paciente de un resultado de busqueda a una cita reservada sin un paso que lo pierda.',
+        features: [
+          'Paginas de servicio escritas para pacientes y no para clinicos',
+          'Reserva de cita accesible desde cualquier pagina',
+          'Informacion de ubicacion para un servicio movil',
+          'Accesibilidad y rendimiento tratados como requisitos',
+        ],
+        value: 'Una cita de cribado reservada por quien vino a leer una sola pagina.',
+      },
+      'web-jenny-schatzle-coaching': {
+        category: 'Sitio Web',
+        title: 'Sitio de Coaching Personal en Kajabi',
+        overview:
+          'Un sitio de marca personal para una coach y ponente, construido en Kajabi y disenado para que el mensaje llegue primero y los programas, cursos y peticiones de ponencia vengan despues.',
+        features: [
+          'Diseno Kajabi a medida en torno a una marca personal',
+          'Rutas separadas para coaching, cursos y ponencias',
+          'Secciones de comunidad y testimonios',
+          'Llamadas a la accion claras para alta y contacto',
+        ],
+        value: 'Una voz que llega antes que la oferta, que es el orden que convierte.',
+      },
+      'web-shrader-mendez-attorney': {
+        category: 'Sitio Web',
+        title: 'Sitio del Bufete Shrader Mendez',
+        overview:
+          'Un sitio de bufete de defensa penal, donde el visitante suele estar en problemas y decide rapido: areas de practica, los propios abogados y una forma de contactar sin un formulario de por medio.',
+        features: [
+          'Paginas de area de practica que un visitante inquieto puede recorrer',
+          'Perfiles de los abogados sosteniendo la credibilidad',
+          'Contacto para consulta accesible en todo el sitio',
+          'Premios y reconocimientos usados como prueba',
+        ],
+        value: 'Un bufete localizable en el momento en que alguien decide que necesita uno.',
+      },
+      'web-vizury-engage360': {
+        category: 'Sitio Web',
+        title: 'Sitio de la Plataforma Vizury Engage360',
+        overview:
+          'El sitio de una plataforma de marketing de comercio cuya tecnologia de retargeting alcanza compradores en programatico, push y correo desde una propuesta integrada - un producto tecnico que hay que explicar a un profesional de marketing.',
+        features: [
+          'Una plataforma tecnica explicada para quien compra marketing',
+          'Canales presentados como una propuesta y no como tres productos',
+          'Paginas de producto encaminadas por caso de uso',
+          'Composiciones responsivas en un sitio denso en contenido',
+        ],
+        value: 'Una plataforma vendida a quien la compra, no a quien la opera.',
+      },
+      'shop-multivendor-ecommerce': {
+        category: 'Comercio Electronico',
+        title: 'App y Web de Comercio Multivendedor',
+        overview:
+          'Una plataforma de comercio que corre en Android, iOS y web desde un unico backend Laravel, con la tienda configurable desde el panel y no desde un despliegue.',
+        features: [
+          'App y web configuradas desde un solo panel',
+          'Diez pasarelas de pago y alta por OTP, Google y Facebook',
+          'Categorias ilimitadas con valoraciones y resenas',
+          'Productos fisicos y digitales en la misma plataforma',
+        ],
+        value: 'Tres escaparates mantenidos a la par porque debajo son un solo sistema.',
+      },
+      'shop-skyhigh-party-rentals': {
+        category: 'Comercio Electronico',
+        title: 'Tienda Sky High Party Rentals',
+        overview:
+          'Una tienda Magento adaptada para alquilar en lugar de vender - una capa de reservas sobre el modelo de producto - con panel de administracion propio y un rastreador de entregas en tiempo real construido en paralelo.',
+        features: [
+          'Reservas y disponibilidad sobre los productos de Magento',
+          'Panel propio con informes de agentes y de feedback',
+          'Comparativa de ventas mensual y anual',
+          'Aplicacion aparte de seguimiento de entregas en tiempo real',
+        ],
+        value: 'Un negocio de alquiler gestionado en una plataforma hecha para vender, no para prestar.',
+      },
+      'shop-app-netplus-pharmacy': {
+        category: 'Comercio Electronico',
+        title: 'App y Web de la Farmacia Net Plus',
+        overview:
+          'Una app de comercio para farmacia en Flutter con web acompanante, con un catalogo completo de categorias de medicamentos, marcas y lineas con descuento tras un flujo de compra corriente.',
+        features: [
+          'Catalogo de medicamentos por categoria, marca y tipo',
+          'Web que comparte el catalogo de la aplicacion',
+          'Lineas con descuento destacadas sin romper el flujo',
+          'Pedidos y gestion de cuenta desde el movil',
+        ],
+        value: 'Un mostrador de farmacia accesible desde el movil, con el catalogo intacto.',
       },
     },
   },
