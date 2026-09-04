@@ -917,6 +917,32 @@ const en = {
         ],
         value: 'A pharmacy counter reachable from a phone, with the catalogue intact.',
       },
+      'game-web-ludo-real-money': {
+        category: 'Game Platform',
+        title: 'Ludo Real Tournament Platform',
+        overview:
+          'A tournament platform built around a live Ludo board: brackets are run by the system, wallets hold several currencies, and winners are paid out without an operator settling anything by hand.',
+        features: [
+          'Bespoke tournament and bracket system',
+          'Redesigned live game board',
+          'Automated winner payouts',
+          'Multi-currency wallet and player dashboard',
+        ],
+        value: 'A tournament that settles itself, which is the part an operator cannot do at scale.',
+      },
+      'app-web-bharat-support': {
+        category: 'Mobile & Web Platform',
+        title: 'Bharat Support On-Demand Services',
+        overview:
+          'An on-demand services ecosystem in four parts: an app for customers booking work, an app for the providers doing it, an admin panel governing both, and a public website in front of them.',
+        features: [
+          'Customer app for booking services',
+          'Provider app for accepting and fulfilling jobs',
+          'Admin panel governing both sides',
+          'Public website in front of the platform',
+        ],
+        value: 'Four surfaces over one platform, so a job booked in the app is the job the provider sees.',
+      },
     },
   },
   examples: {
@@ -2092,6 +2118,32 @@ const pt = {
         ],
         value: 'Um balcao de farmacia acessivel pelo telemovel, com o catalogo intacto.',
       },
+      'game-web-ludo-real-money': {
+        category: 'Plataforma de Jogo',
+        title: 'Plataforma de Torneios Ludo Real',
+        overview:
+          'Uma plataforma de torneios construida em torno de um tabuleiro de Ludo ao vivo: os quadros sao geridos pelo sistema, as carteiras suportam varias moedas e os vencedores sao pagos sem que um operador liquide nada a mao.',
+        features: [
+          'Sistema proprio de torneios e quadros',
+          'Tabuleiro de jogo ao vivo redesenhado',
+          'Pagamento automatico aos vencedores',
+          'Carteira multi-moeda e painel do jogador',
+        ],
+        value: 'Um torneio que se liquida sozinho, que e a parte que um operador nao consegue fazer em escala.',
+      },
+      'app-web-bharat-support': {
+        category: 'Plataforma Movel e Web',
+        title: 'Bharat Support Servicos a Pedido',
+        overview:
+          'Um ecossistema de servicos a pedido em quatro partes: uma app para clientes marcarem trabalho, uma app para os prestadores o executarem, um painel que governa ambas e um site publico a frente delas.',
+        features: [
+          'App de cliente para marcar servicos',
+          'App de prestador para aceitar e executar trabalhos',
+          'Painel de administracao a governar os dois lados',
+          'Site publico a frente da plataforma',
+        ],
+        value: 'Quatro superficies sobre uma plataforma, para que o trabalho marcado seja o que o prestador ve.',
+      },
     },
   },
   examples: {
@@ -3266,6 +3318,32 @@ const es = {
           'Pedidos y gestion de cuenta desde el movil',
         ],
         value: 'Un mostrador de farmacia accesible desde el movil, con el catalogo intacto.',
+      },
+      'game-web-ludo-real-money': {
+        category: 'Plataforma de Juego',
+        title: 'Plataforma de Torneos Ludo Real',
+        overview:
+          'Una plataforma de torneos construida en torno a un tablero de Ludo en vivo: los cuadros los gestiona el sistema, los monederos admiten varias monedas y los ganadores cobran sin que un operador liquide nada a mano.',
+        features: [
+          'Sistema propio de torneos y cuadros',
+          'Tablero de juego en vivo rediseñado',
+          'Pago automatico a los ganadores',
+          'Monedero multidivisa y panel del jugador',
+        ],
+        value: 'Un torneo que se liquida solo, que es la parte que un operador no puede hacer a escala.',
+      },
+      'app-web-bharat-support': {
+        category: 'Plataforma Movil y Web',
+        title: 'Bharat Support Servicios a Demanda',
+        overview:
+          'Un ecosistema de servicios a demanda en cuatro partes: una app para que los clientes reserven trabajo, una app para que los proveedores lo ejecuten, un panel que gobierna ambas y una web publica delante de ellas.',
+        features: [
+          'App de cliente para reservar servicios',
+          'App de proveedor para aceptar y ejecutar trabajos',
+          'Panel de administracion que gobierna ambos lados',
+          'Web publica delante de la plataforma',
+        ],
+        value: 'Cuatro superficies sobre una plataforma, para que el trabajo reservado sea el que ve el proveedor.',
       },
     },
   },

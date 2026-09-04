@@ -20,6 +20,20 @@ import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
 /* Earlier delivered work: apps, sites and stores. */
+import gameWebLudoRealMoneyImg from '../assets/work/game-web-ludo-real-money.webp'
+import appWebBharatSupportImg from '../assets/work/app-web-bharat-support.webp'
+import appAspireSchoolManagementShot1 from '../assets/work/gallery/app-aspire-school-management-1.webp'
+import appLumyBeautyShot1 from '../assets/work/gallery/app-lumy-beauty-1.webp'
+import appLumyBeautyShot2 from '../assets/work/gallery/app-lumy-beauty-2.webp'
+import appLumyBeautyShot3 from '../assets/work/gallery/app-lumy-beauty-3.webp'
+import appLumyBeautyShot4 from '../assets/work/gallery/app-lumy-beauty-4.webp'
+import appScanDocaiScannerShot1 from '../assets/work/gallery/app-scan-docai-scanner-1.webp'
+import appScanDocaiScannerShot2 from '../assets/work/gallery/app-scan-docai-scanner-2.webp'
+import webBethemeWordpressThemeShot1 from '../assets/work/gallery/web-betheme-wordpress-theme-1.webp'
+import webBethemeWordpressThemeShot2 from '../assets/work/gallery/web-betheme-wordpress-theme-2.webp'
+import webBethemeWordpressThemeShot3 from '../assets/work/gallery/web-betheme-wordpress-theme-3.webp'
+import webBethemeWordpressThemeShot4 from '../assets/work/gallery/web-betheme-wordpress-theme-4.webp'
+import shopAppNetplusPharmacyShot1 from '../assets/work/gallery/shop-app-netplus-pharmacy-1.webp'
 import appAmaneTaxiImg from '../assets/work/app-amane-taxi.webp'
 import appAspireSchoolManagementImg from '../assets/work/app-aspire-school-management.webp'
 import appLetsDoYogaImg from '../assets/work/app-lets-do-yoga.webp'
@@ -370,6 +384,7 @@ const projectMedia = {
     ],
   },
   'app-aspire-school-management': {
+    gallery: [appAspireSchoolManagementShot1],
     tags: ['mobile', 'php'],
     image: appAspireSchoolManagementImg,
     imageSize: [1280, 800],
@@ -385,6 +400,7 @@ const projectMedia = {
     tech: ['Flutter', 'Android', 'iOS', 'Mobile App Design'],
   },
   'app-lumy-beauty': {
+    gallery: [appLumyBeautyShot1, appLumyBeautyShot2, appLumyBeautyShot3, appLumyBeautyShot4],
     tags: ['mobile', 'api'],
     image: appLumyBeautyImg,
     imageSize: [1280, 800],
@@ -394,6 +410,7 @@ const projectMedia = {
     ],
   },
   'app-scan-docai-scanner': {
+    gallery: [appScanDocaiScannerShot1, appScanDocaiScannerShot2],
     tags: ['mobile'],
     image: appScanDocaiScannerImg,
     imageSize: [1280, 800],
@@ -448,6 +465,7 @@ const projectMedia = {
     ],
   },
   'web-betheme-wordpress-theme': {
+    gallery: [webBethemeWordpressThemeShot1, webBethemeWordpressThemeShot2, webBethemeWordpressThemeShot3, webBethemeWordpressThemeShot4],
     tags: ['wordpress', 'php', 'frontend'],
     image: webBethemeWordpressThemeImg,
     imageSize: [1280, 800],
@@ -521,6 +539,7 @@ const projectMedia = {
     ],
   },
   'shop-app-netplus-pharmacy': {
+    gallery: [shopAppNetplusPharmacyShot1],
     tags: ['ecommerce', 'mobile', 'php'],
     image: shopAppNetplusPharmacyImg,
     imageSize: [1280, 800],
@@ -528,6 +547,25 @@ const projectMedia = {
     links: [
       { label: 'Live site', url: 'https://net-plus.in/' },
       { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.netplus.med' },
+    ],
+  },
+  'game-web-ludo-real-money': {
+    tags: ['frontend', 'api'],
+    image: gameWebLudoRealMoneyImg,
+    imageSize: [1280, 800],
+    tech: ['JavaScript', 'Node.js', 'Web App', 'Payments', 'Responsive Web Design'],
+    links: [
+      { label: 'Demo', url: 'https://imtiaz.itpaybd.xyz/' },
+    ],
+  },
+  'app-web-bharat-support': {
+    tags: ['mobile', 'frontend'],
+    image: appWebBharatSupportImg,
+    imageSize: [1280, 800],
+    tech: ['Android', 'Mobile App Development', 'Web Design', 'Responsive Web Design'],
+    links: [
+      { label: 'Website', url: 'https://bharatsupport.org/' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.bharatsupport.usr' },
     ],
   },
 }
@@ -598,6 +636,8 @@ const projectOrder = [
   'shop-multivendor-ecommerce',
   'shop-skyhigh-party-rentals',
   'shop-app-netplus-pharmacy',
+  'game-web-ludo-real-money',
+  'app-web-bharat-support',
 ]
 
 const exampleMedia = {

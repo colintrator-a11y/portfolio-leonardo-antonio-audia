@@ -103,6 +103,18 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
           ) : (
             <ProjectVisual variant={project.visual} title={project.title} />
           )}
+
+          {/* Further screens from the same build, filling the column beside a
+              record that is usually taller than one image. */}
+          {project.gallery?.length ? (
+            <ul className="pdialog__gallery">
+              {project.gallery.map((shot) => (
+                <li key={shot}>
+                  <img src={shot} alt="" loading="lazy" decoding="async" width="640" height="400" />
+                </li>
+              ))}
+            </ul>
+          ) : null}
           </div>
         </div>
 

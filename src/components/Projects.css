@@ -765,3 +765,23 @@
     transition: none;
   }
 }
+
+/* Further screens from the same build ---------------------------------------
+   Sits under the main image in the media column, so the record reads as one
+   project rather than as a picture with a filmstrip stapled to it. */
+
+.pdialog__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pdialog__gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper-sunken);
+}
