@@ -6,7 +6,7 @@ import ClickPulse from './components/ClickPulse'
 import BackdropSolids from './components/BackdropSolids'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import Rail from './components/Rail'
 import Process from './components/Process'
 import Projects from './components/Projects'
 import Services from './components/Services'
@@ -40,18 +40,20 @@ export default function App() {
         {ui.skipToContent}
       </a>
 
-      <Navbar />
+      <Rail />
 
-      <main id="main">
+      <div className="pane">
+        <main id="main">
         <Hero />
         <Projects />
         <Skills />
         <Services />
         <About />
         <Process />
-      </main>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
       <div className="cursorGlow" aria-hidden="true" />
       <ClickPulse />
       <BackToTop />

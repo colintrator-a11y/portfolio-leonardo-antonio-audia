@@ -759,3 +759,214 @@ svg {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Two-pane shell — a fixed rail, and everything else scrolling beside it
+   ========================================================================== */
+
+:root {
+  --rail-w: 264px;
+}
+
+@media (min-width: 1024px) {
+  .pane {
+    margin-left: var(--rail-w);
+  }
+
+  /* The content column no longer centres on the viewport; it centres in what
+     is left of it, which is what stops the page reading as a template. */
+  .container {
+    max-width: 1060px;
+    padding-inline: clamp(28px, 4vw, 72px);
+    margin-inline: 0;
+  }
+
+  .section {
+    padding-block: clamp(72px, 8vw, 120px);
+  }
+}
+
+/* ==========================================================================
+   The work, as an index
+   ========================================================================== */
+
+.index {
+  margin: clamp(26px, 3vw, 38px) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.row {
+  border-bottom: 1px solid var(--line);
+}
+
+.row__hit {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 4px 14px;
+  width: 100%;
+  padding: 16px 4px;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: padding-left 0.45s var(--settle), background 0.45s var(--ease);
+  animation: row-in 0.6s var(--settle) both;
+  animation-delay: calc(var(--i, 0) * 28ms);
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* The row moves aside as the pointer arrives, which is what a list can do that
+   a grid of tiles cannot. */
+.row__hit:hover,
+.row__hit:focus-visible {
+  padding-left: 16px;
+  background: var(--paper-raised);
+}
+
+.row__num {
+  grid-row: span 2;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.row__hit:hover .row__num {
+  color: var(--accent);
+}
+
+.row__title {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.2vw, 27px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.row__meta {
+  grid-column: 2;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.row__stack {
+  display: none;
+}
+
+.row__end {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .row__hit {
+    grid-template-columns: 48px minmax(0, 1.5fr) minmax(0, 0.7fr) minmax(0, 0.9fr) auto;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .row__num,
+  .row__title,
+  .row__meta {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .row__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+  }
+
+  .row__end {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--faint);
+  }
+
+  .row__hit:hover .row__end {
+    color: var(--accent);
+  }
+
+  .row__live {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .row__end svg {
+    transition: transform 0.4s var(--settle);
+  }
+
+  .row__hit:hover .row__end svg {
+    transform: translateX(5px);
+  }
+}
+
+/* The image for the hovered row, carried on the pointer ------------------- */
+
+.peek {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 300px;
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-lg);
+  pointer-events: none;
+  translate: calc(var(--pointer-x, 50vw) + 26px) calc(var(--pointer-y, 50vh) - 96px);
+  transition: translate 0.28s var(--ease);
+  animation: peek-in 0.28s var(--settle) both;
+}
+
+.peek img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes peek-in {
+  from {
+    opacity: 0;
+    scale: 0.94;
+  }
+}
+
+@media (max-width: 1023px), (hover: none), (pointer: coarse) {
+  .peek {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .peek {
+    display: none;
+  }
+
+  .row__hit {
+    animation: none;
+  }
+
+  .row__hit:hover {
+    padding-left: 4px;
+  }
+}
