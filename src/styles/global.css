@@ -933,8 +933,17 @@ svg {
   border: 1px solid var(--line-strong);
   box-shadow: var(--shadow-lg);
   pointer-events: none;
-  translate: calc(var(--pointer-x, 50vw) + 26px) calc(var(--pointer-y, 50vh) - 96px);
-  transition: translate 0.28s var(--ease);
+  /*
+   * Held inside the viewport on both axes. Unclamped it ran off the right edge
+   * whenever the pointer was near it, and off the top on the first rows.
+   * 300x188 is the panel, so the stops are 318 and 206 with a margin.
+   */
+  translate:
+    min(calc(var(--pointer-x, 50vw) + 28px), calc(100vw - 318px))
+    clamp(14px, calc(var(--pointer-y, 50vh) - 94px), calc(100vh - 206px));
+  /* Short and linear: anything longer reads as the panel trailing the cursor
+     rather than being carried by it. */
+  transition: translate 0.14s linear;
   animation: peek-in 0.28s var(--settle) both;
 }
 

@@ -142,3 +142,17 @@
   color: var(--accent-ink);
   font-weight: 600;
 }
+
+/*
+ * In the rail the switcher sits at the bottom of a full-height fixed column,
+ * so a menu opening downwards opens past the bottom of the screen. Here it
+ * opens upwards, and from the left edge, the rail being narrower than the
+ * menu is wide.
+ */
+.rail__controls .lang__menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: auto;
+  transform-origin: bottom left;
+}

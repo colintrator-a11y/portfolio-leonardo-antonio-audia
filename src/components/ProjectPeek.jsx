@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 
 /**
  * The image for whatever row the pointer is on, floating beside it.
@@ -7,6 +8,11 @@ import { useEffect, useRef } from 'react'
  * publishes, so hovering seventy-two rows costs no React renders and no layout.
  * Hidden entirely for touch and for reduced motion, where a pointer-following
  * panel has nothing to follow.
+ *
+ * Rendered into the body. `position: fixed` is only relative to the viewport
+ * while no ancestor establishes a containing block, and the projects section
+ * carries a backdrop-filter, which does. Left where it sits in the tree the
+ * panel was offset by the width of the rail.
  */
 export default function ProjectPeek({ project }) {
   const ref = useRef(null)
@@ -25,9 +31,11 @@ export default function ProjectPeek({ project }) {
 
   if (!project?.image) return null
 
-  return (
+  const peek = (
     <figure className="peek" ref={ref} aria-hidden="true">
       <img src={project.image} alt="" width="1280" height="800" />
     </figure>
   )
+
+  return typeof document === 'undefined' ? peek : createPortal(peek, document.body)
 }
