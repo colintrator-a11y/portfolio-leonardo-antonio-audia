@@ -174,7 +174,9 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
                       rel="noopener noreferrer"
                     >
                       <Icon name="arrowRight" size={13} strokeWidth={2.2} />
-                      {label}
+                      {/* Store names are proper nouns and stay as they are;
+                          only the generic label is worth translating. */}
+                      {label === 'liveSite' ? ui.liveSite : label}
                     </a>
                   </li>
                 ))}

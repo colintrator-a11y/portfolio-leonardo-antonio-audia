@@ -20,9 +20,8 @@ import multiBrandImg from '../assets/projects/multi-brand.webp'
 import fitnessPlatformImg from '../assets/projects/fitness-platform.webp'
 
 /* Earlier delivered work: apps, sites and stores. */
-import gameWebLudoRealMoneyImg from '../assets/work/game-web-ludo-real-money.webp'
-import appWebBharatSupportImg from '../assets/work/app-web-bharat-support.webp'
 import appAspireSchoolManagementShot1 from '../assets/work/gallery/app-aspire-school-management-1.webp'
+import appAspireSchoolManagementShot2 from '../assets/work/gallery/app-aspire-school-management-2.webp'
 import appLumyBeautyShot1 from '../assets/work/gallery/app-lumy-beauty-1.webp'
 import appLumyBeautyShot2 from '../assets/work/gallery/app-lumy-beauty-2.webp'
 import appLumyBeautyShot3 from '../assets/work/gallery/app-lumy-beauty-3.webp'
@@ -33,7 +32,13 @@ import webBethemeWordpressThemeShot1 from '../assets/work/gallery/web-betheme-wo
 import webBethemeWordpressThemeShot2 from '../assets/work/gallery/web-betheme-wordpress-theme-2.webp'
 import webBethemeWordpressThemeShot3 from '../assets/work/gallery/web-betheme-wordpress-theme-3.webp'
 import webBethemeWordpressThemeShot4 from '../assets/work/gallery/web-betheme-wordpress-theme-4.webp'
+import webBethemeWordpressThemeShot5 from '../assets/work/gallery/web-betheme-wordpress-theme-5.webp'
+import webBethemeWordpressThemeShot6 from '../assets/work/gallery/web-betheme-wordpress-theme-6.webp'
+import webBethemeWordpressThemeShot7 from '../assets/work/gallery/web-betheme-wordpress-theme-7.webp'
+import webJennySchatzleCoachingShot1 from '../assets/work/gallery/web-jenny-schatzle-coaching-1.webp'
 import shopAppNetplusPharmacyShot1 from '../assets/work/gallery/shop-app-netplus-pharmacy-1.webp'
+import gameWebLudoRealMoneyImg from '../assets/work/game-web-ludo-real-money.webp'
+import appWebBharatSupportImg from '../assets/work/app-web-bharat-support.webp'
 import appAmaneTaxiImg from '../assets/work/app-amane-taxi.webp'
 import appAspireSchoolManagementImg from '../assets/work/app-aspire-school-management.webp'
 import appLetsDoYogaImg from '../assets/work/app-lets-do-yoga.webp'
@@ -201,174 +206,203 @@ const projectMedia = {
     tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
   },
   'keyzar-jewelry': {
+    links: [{ label: 'liveSite', url: 'https://keyzarjewelry.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
     image: keyzarImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'E-commerce'],
   },
   'instalador-portas': {
+    links: [{ label: 'liveSite', url: 'https://instaladordeportas.com.br/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
     image: instaladorImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
   },
   'rembrr-app': {
+    links: [{ label: 'liveSite', url: 'https://rembrr.com/' }],
     tags: ['frontend', 'api', 'chatbot'],
     image: rembrrImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'JavaScript', 'Chatbot', 'REST API', 'Responsive Web Design'],
   },
   'dawson-home-care': {
+    links: [{ label: 'liveSite', url: 'https://dawsonhomecare.com/' }],
     tags: ['frontend', 'chatbot'],
     image: dawsonImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
   },
   'dentalis': {
+    links: [{ label: 'liveSite', url: 'https://www.dentalis.com.br/' }],
     tags: ['frontend', 'api'],
     image: dentalisImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'API Integration'],
   },
   'elevar-empilhadeiras': {
+    links: [{ label: 'liveSite', url: 'https://elevarempilhadeiras.com.br/' }],
     tags: ['frontend', 'api'],
     image: elevarImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
   },
   'cda-metais': {
+    links: [{ label: 'liveSite', url: 'https://cdametais.com.br/' }],
     tags: ['frontend', 'api'],
     image: cdametaisImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
   },
   'tools4trade': {
+    links: [{ label: 'liveSite', url: 'https://tools4trade.co.uk/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'api'],
     image: tools4tradeImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'E-commerce'],
   },
   'xelan-wheelchairs': {
+    links: [{ label: 'liveSite', url: 'https://xelan.com.vn/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: xelanImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'breck-and-fox': {
+    links: [{ label: 'liveSite', url: 'https://breckandfox.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: breckandfoxImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'garnet-marketplace': {
+    links: [{ label: 'liveSite', url: 'https://garnetmarketplace.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'api'],
     image: garnetImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Shopify App', 'JavaScript', 'REST API', 'E-commerce'],
   },
   'lumenwild-fine-art': {
+    links: [{ label: 'liveSite', url: 'https://lumenwildfineart.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: lumenwildImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'velocitek-prostart': {
+    links: [{ label: 'liveSite', url: 'https://www.velocitek.com/products/prostart' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: velocitekImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'daphnes-headcovers': {
+    links: [{ label: 'liveSite', url: 'https://www.daphnesheadcovers.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: daphnesImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'conscious-ink': {
+    links: [{ label: 'liveSite', url: 'https://www.consciousink.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: consciousinkImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'wildfang': {
+    links: [{ label: 'liveSite', url: 'https://www.wildfang.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: wildfangImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'video-milkshake': {
+    links: [{ label: 'liveSite', url: 'https://www.videomilkshake.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: videomilkshakeImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'miro-tea': {
+    links: [{ label: 'liveSite', url: 'https://mirotea.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: miroteaImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'take-care-shop': {
+    links: [{ label: 'liveSite', url: 'https://takecareshopdc.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: takecareImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'illumivein': {
+    links: [{ label: 'liveSite', url: 'https://illumivein.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: illumiveinImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'perricone-md': {
+    links: [{ label: 'liveSite', url: 'https://www.perriconemd.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: perriconeImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'hisense-bolivia': {
+    links: [{ label: 'liveSite', url: 'https://hisense.com.bo/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: hisenseImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'troubadour-goods': {
+    links: [{ label: 'liveSite', url: 'https://www.troubadourgoods.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: troubadourImg,
     imageSize: [1280, 800],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'velodrome-shop': {
+    links: [{ label: 'liveSite', url: 'https://www.velodrome.shop' }],
     tags: ['ecommerce', 'wordpress', 'php', 'frontend'],
     image: velodromeImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
   },
   'belay-solutions': {
+    links: [{ label: 'liveSite', url: 'https://www.belaysolutions.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: belayImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'webfx': {
+    links: [{ label: 'liveSite', url: 'https://www.webfx.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: webfxImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'lyfe-marketing': {
+    links: [{ label: 'liveSite', url: 'https://www.lyfemarketing.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: lyfeImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'hubspot': {
+    links: [{ label: 'liveSite', url: 'https://www.hubspot.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: hubspotImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'ironpaper': {
+    links: [{ label: 'liveSite', url: 'https://www.ironpaper.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: ironpaperImg,
     imageSize: [1280, 800],
@@ -384,7 +418,7 @@ const projectMedia = {
     ],
   },
   'app-aspire-school-management': {
-    gallery: [appAspireSchoolManagementShot1],
+    gallery: [appAspireSchoolManagementShot1, appAspireSchoolManagementShot2],
     tags: ['mobile', 'php'],
     image: appAspireSchoolManagementImg,
     imageSize: [1280, 800],
@@ -452,7 +486,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['JavaScript', 'HTML', 'CSS', 'Bootstrap', 'AJAX', 'Amazon SES'],
     links: [
-      { label: 'Live site', url: 'https://www.hoteljobs.co.za' },
+      { label: 'liveSite', url: 'https://www.hoteljobs.co.za' },
     ],
   },
   'web-aimro-market-research': {
@@ -461,17 +495,17 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['React.js', 'Node.js', 'Web Design', 'SEO', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://www.aimro.ie/' },
+      { label: 'liveSite', url: 'https://www.aimro.ie/' },
     ],
   },
   'web-betheme-wordpress-theme': {
-    gallery: [webBethemeWordpressThemeShot1, webBethemeWordpressThemeShot2, webBethemeWordpressThemeShot3, webBethemeWordpressThemeShot4],
+    gallery: [webBethemeWordpressThemeShot1, webBethemeWordpressThemeShot2, webBethemeWordpressThemeShot3, webBethemeWordpressThemeShot4, webBethemeWordpressThemeShot5, webBethemeWordpressThemeShot6, webBethemeWordpressThemeShot7],
     tags: ['wordpress', 'php', 'frontend'],
     image: webBethemeWordpressThemeImg,
     imageSize: [1280, 800],
     tech: ['WordPress', 'BeTheme', 'PHP', 'CSS', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://beck.id/' },
+      { label: 'liveSite', url: 'https://beck.id/' },
     ],
   },
   'web-learning-pool': {
@@ -480,7 +514,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['WordPress', 'JavaScript', 'HTML', 'CSS', 'Web Design'],
     links: [
-      { label: 'Live site', url: 'https://learningpool.com/' },
+      { label: 'liveSite', url: 'https://learningpool.com/' },
     ],
   },
   'web-mammolink-healthcare': {
@@ -489,16 +523,17 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['WordPress', 'Frontend Development', 'SEO', 'UX Research', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://www.mammolink.com/' },
+      { label: 'liveSite', url: 'https://www.mammolink.com/' },
     ],
   },
   'web-jenny-schatzle-coaching': {
+    gallery: [webJennySchatzleCoachingShot1],
     tags: ['frontend'],
     image: webJennySchatzleCoachingImg,
     imageSize: [1280, 800],
     tech: ['Kajabi', 'Web Design', 'Website Testing', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://jennyschatzle.mykajabi.com/' },
+      { label: 'liveSite', url: 'https://jennyschatzle.mykajabi.com/' },
     ],
   },
   'web-shrader-mendez-attorney': {
@@ -507,7 +542,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['WordPress', 'Frontend Development', 'SEO', 'Conversion Rate Optimization', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://www.shradermendez.com/' },
+      { label: 'liveSite', url: 'https://www.shradermendez.com/' },
     ],
   },
   'web-vizury-engage360': {
@@ -516,7 +551,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['JavaScript', 'HTML', 'Laravel', 'Web Design', 'Responsive Web Design'],
     links: [
-      { label: 'Live site', url: 'https://www.vizury.com/' },
+      { label: 'liveSite', url: 'https://www.vizury.com/' },
     ],
   },
   'shop-multivendor-ecommerce': {
@@ -534,7 +569,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['Magento', 'PHP', 'Node.js', 'AngularJS', 'AWS', 'PayPal'],
     links: [
-      { label: 'Live site', url: 'https://skyhighpartyrentals.com' },
+      { label: 'liveSite', url: 'https://skyhighpartyrentals.com' },
       { label: 'Delivery tracker', url: 'http://routestatus.net' },
     ],
   },
@@ -545,7 +580,7 @@ const projectMedia = {
     imageSize: [1280, 800],
     tech: ['Flutter', 'PHP', 'Android', 'iOS', 'E-commerce'],
     links: [
-      { label: 'Live site', url: 'https://net-plus.in/' },
+      { label: 'liveSite', url: 'https://net-plus.in/' },
       { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.netplus.med' },
     ],
   },
