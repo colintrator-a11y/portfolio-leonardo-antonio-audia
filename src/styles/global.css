@@ -5,52 +5,50 @@
    ========================================================================== */
 
 :root {
-  /* Paper. Everything above the backdrop is translucent, so the field drifting
-     behind the page is visible through it; only --paper itself is solid,
-     because it is what the backdrop paints. */
-  --paper: #faf9f6;
-  --paper-raised: rgba(255, 255, 255, 0.58);
-  --paper-sunken: rgba(240, 239, 233, 0.4);
-  --paper-tint: rgba(238, 243, 251, 0.64);
-  --paper-solid: #ffffff;
-  /* Dims the page behind a dialog. Has to be its own value: a fixed dark wash
-     barely registers once the page beneath it is already dark. */
-  --scrim: rgba(9, 18, 33, 0.55);
+  /* Paper — bone rather than white, warm rather than blue. Everything above
+     the backdrop is translucent so the field behind the page shows through. */
+  --paper: #f3f0e9;
+  --paper-raised: rgba(255, 253, 249, 0.62);
+  --paper-sunken: rgba(230, 226, 216, 0.46);
+  --paper-tint: rgba(255, 232, 222, 0.6);
+  --paper-solid: #fffdf9;
+  --scrim: rgba(14, 12, 10, 0.72);
 
-  /* Ink */
-  --ink: #0d1b30;
-  --ink-soft: #33445e;
-  --body: #4a5a72;
-  --muted: #77869c;
-  --faint: #9aa6b8;
+  /* Ink — warm near-black, not navy */
+  --ink: #12100e;
+  --ink-soft: #3a352f;
+  --body: #565049;
+  --muted: #8a8177;
+  --faint: #a9a096;
 
-  /* Accent */
-  --accent: #1d4ed8;
-  --accent-hover: #1a44bd;
-  --accent-soft: #dbe7fb;
-  --accent-ink: #12356f;
-  --sky: #0ea5e9;
+  /* Accent — one hot colour, used sparingly and never diluted */
+  --accent: #ff4a1c;
+  --accent-hover: #e23c10;
+  --accent-soft: #ffe0d4;
+  --accent-ink: #8c2409;
+  --sky: #ff9130;
 
-  /* Lines */
-  --line: rgba(13, 27, 48, 0.1);
-  --line-strong: rgba(13, 27, 48, 0.18);
-  --line-hair: rgba(13, 27, 48, 0.07);
+  /* Lines carry the structure now that surfaces have no shadow to sit on */
+  --line: rgba(18, 16, 14, 0.16);
+  --line-strong: rgba(18, 16, 14, 0.32);
+  --line-hair: rgba(18, 16, 14, 0.08);
+  --rule: rgba(18, 16, 14, 0.9);
 
-  /* Gradients */
-  --grad-brand: linear-gradient(120deg, #1d4ed8 0%, #0ea5e9 100%);
-  --grad-text: linear-gradient(115deg, #1d4ed8 0%, #0284c7 60%, #0ea5e9 100%);
+  --grad-brand: linear-gradient(100deg, #ff4a1c 0%, #ff9130 100%);
+  --grad-text: linear-gradient(100deg, #ff4a1c 0%, #ff7a2b 60%, #ff9130 100%);
 
-  /* Shadows — soft, navy-tinted, never grey */
-  --shadow-xs: 0 1px 2px rgba(13, 27, 48, 0.05);
-  --shadow-sm: 0 2px 8px -2px rgba(13, 27, 48, 0.08);
-  --shadow-md: 0 14px 34px -18px rgba(13, 27, 48, 0.24);
-  --shadow-lg: 0 34px 70px -34px rgba(13, 27, 48, 0.3);
+  /* Shadows are offsets, not blurs: hard edges, no glow */
+  --shadow-xs: none;
+  --shadow-sm: 2px 2px 0 rgba(18, 16, 14, 0.1);
+  --shadow-md: 5px 5px 0 rgba(18, 16, 14, 0.14);
+  --shadow-lg: 10px 10px 0 rgba(18, 16, 14, 0.16);
 
-  /* Geometry — editorial keeps corners restrained */
-  --radius-sm: 6px;
-  --radius: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
+  /* Geometry — square. Every rounded corner has been taken out on purpose. */
+  --radius-sm: 0px;
+  --radius: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-pill: 2px;
 
   /* Layout */
   --container: 1180px;
@@ -69,10 +67,10 @@
   /* Surfaces that float above content and cannot inherit its background */
   --overlay-raised: rgba(255, 255, 255, 0.9);
   --overlay-soft: rgba(255, 255, 255, 0.75);
-  --card-glow: rgba(29, 78, 216, 0.09);
-  --cursor-glow: rgba(29, 78, 216, 0.1);
-  --grid-ink: rgba(13, 27, 48, 0.045);
-  --dot-ink: rgba(13, 27, 48, 0.06);
+  --card-glow: rgba(255, 74, 28, 0.09);
+  --cursor-glow: rgba(255, 74, 28, 0.1);
+  --grid-ink: rgba(18, 16, 14, 0.05);
+  --dot-ink: rgba(18, 16, 14, 0.06);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -82,7 +80,7 @@
   --dur: 0.5s;
 
   /* Type */
-  --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-display: 'Bricolage Grotesque', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -97,41 +95,39 @@
    ========================================================================== */
 
 :root[data-theme='dark'] {
-  /* Paper — deep navy rather than grey, so it stays the same family as the ink */
-  --paper: #0b1120;
-  --paper-raised: rgba(20, 30, 50, 0.5);
-  --paper-sunken: rgba(12, 20, 35, 0.34);
-  --paper-tint: rgba(23, 38, 65, 0.56);
-  --paper-solid: #121c2f;
-  --scrim: rgba(3, 7, 15, 0.74);
+  /* Paper — near-black, warm, so the bone above it reads as paper not screen */
+  --paper: #0c0b0a;
+  --paper-raised: rgba(30, 28, 25, 0.62);
+  --paper-sunken: rgba(20, 19, 17, 0.5);
+  --paper-tint: rgba(58, 30, 20, 0.5);
+  --paper-solid: #1a1815;
+  --scrim: rgba(0, 0, 0, 0.82);
 
-  /* Ink */
-  --ink: #eaf0fb;
-  --ink-soft: #c5d1e6;
-  --body: #a2b3cc;
-  --muted: #8092ab;
-  --faint: #64758f;
+  --ink: #f3f0e9;
+  --ink-soft: #d6d0c6;
+  --body: #aca498;
+  --muted: #8a8177;
+  --faint: #6b635a;
 
-  /* Accent — lifted, because the light-mode blue is too dark to read on navy */
-  --accent: #6aa8fb;
-  --accent-hover: #8bbcfd;
-  --accent-soft: #1b2f52;
-  --accent-ink: #d3e2ff;
-  --sky: #38bdf8;
+  /* Lifted, because the light-mode orange goes muddy on black */
+  --accent: #ff6a3d;
+  --accent-hover: #ff855f;
+  --accent-soft: #3a1d12;
+  --accent-ink: #ffd9c9;
+  --sky: #ffa15c;
 
-  /* Lines */
-  --line: rgba(234, 240, 251, 0.13);
-  --line-strong: rgba(234, 240, 251, 0.24);
-  --line-hair: rgba(234, 240, 251, 0.08);
+  --line: rgba(243, 240, 233, 0.18);
+  --line-strong: rgba(243, 240, 233, 0.34);
+  --line-hair: rgba(243, 240, 233, 0.09);
+  --rule: rgba(243, 240, 233, 0.85);
 
-  --grad-brand: linear-gradient(120deg, #3b82f6 0%, #22d3ee 100%);
-  --grad-text: linear-gradient(115deg, #7cb5fb 0%, #38bdf8 60%, #22d3ee 100%);
+  --grad-brand: linear-gradient(100deg, #ff6a3d 0%, #ffa15c 100%);
+  --grad-text: linear-gradient(100deg, #ff6a3d 0%, #ff8a52 60%, #ffa15c 100%);
 
-  /* Shadows carry no light on a dark ground; they only deepen it. */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 14px 34px -18px rgba(0, 0, 0, 0.75);
-  --shadow-lg: 0 34px 70px -34px rgba(0, 0, 0, 0.85);
+  --shadow-xs: none;
+  --shadow-sm: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 5px 5px 0 rgba(0, 0, 0, 0.6);
+  --shadow-lg: 10px 10px 0 rgba(0, 0, 0, 0.7);
 
   --on-ink: #0b1120;
   --nav-scrolled: rgba(10, 16, 30, 0.86);
@@ -143,8 +139,8 @@
   --overlay-raised: rgba(18, 28, 47, 0.92);
   --overlay-soft: rgba(255, 255, 255, 0.08);
   /* Accent light pools further on a dark ground before it looks like glare. */
-  --card-glow: rgba(106, 168, 251, 0.14);
-  --cursor-glow: rgba(106, 168, 251, 0.13);
+  --card-glow: rgba(255, 106, 61, 0.15);
+  --cursor-glow: rgba(255, 106, 61, 0.14);
   --grid-ink: rgba(234, 240, 251, 0.05);
   --dot-ink: rgba(234, 240, 251, 0.06);
 
@@ -183,11 +179,11 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 700;
   color: var(--ink);
-  line-height: 1.18;
-  letter-spacing: -0.015em;
+  line-height: 1.06;
+  letter-spacing: -0.032em;
 }
 
 h4 {
@@ -271,7 +267,7 @@ svg {
   gap: 18px;
   margin-bottom: clamp(44px, 5.5vw, 72px);
   padding-top: 26px;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid var(--rule);
 }
 
 .opener__mark {
@@ -281,12 +277,18 @@ svg {
 }
 
 /* Big, thin, and set in the serif: the number is a chapter mark, not a badge. */
+/* Set in the mono and boxed in the accent: an index mark, not a decorative
+   numeral. */
 .opener__index {
-  font-family: var(--font-serif);
-  font-size: clamp(30px, 3.4vw, 46px);
-  font-weight: 300;
-  line-height: 0.9;
-  color: var(--accent);
+  align-self: start;
+  padding: 3px 9px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums;
 }
 
@@ -299,9 +301,9 @@ svg {
 }
 
 .opener__title {
-  font-size: clamp(30px, 4.4vw, 54px);
-  line-height: 1.04;
-  letter-spacing: -0.028em;
+  font-size: clamp(32px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -0.038em;
   text-wrap: balance;
 }
 
@@ -337,10 +339,9 @@ svg {
 
 .card {
   position: relative;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
   background: var(--paper-raised);
-  box-shadow: var(--shadow-xs);
   overflow: hidden;
 }
 
@@ -354,7 +355,7 @@ svg {
   justify-content: center;
   gap: 10px;
   padding: 14px 28px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.005em;
@@ -363,8 +364,9 @@ svg {
     background-color 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease);
 }
 
+/* Lifts up and left so the hard shadow it casts appears underneath. */
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
 }
 
 .btn:active {
@@ -372,14 +374,16 @@ svg {
 }
 
 .btn--primary {
-  color: var(--on-ink);
-  background: var(--ink);
-  box-shadow: var(--shadow-md);
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn--primary:hover {
-  background: var(--accent);
-  box-shadow: 0 18px 36px -18px rgba(29, 78, 216, 0.65);
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: var(--shadow-md);
 }
 
 .btn--ghost {
@@ -391,7 +395,7 @@ svg {
 .btn--ghost:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(29, 78, 216, 0.04);
+  background: rgba(255, 74, 28, 0.05);
 }
 
 .btn__icon {
@@ -413,7 +417,7 @@ svg {
   align-items: center;
   padding: 5px 13px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper-raised);
   color: var(--ink-soft);
   font-size: 13px;
@@ -423,7 +427,7 @@ svg {
 
 .chip:hover {
   color: var(--accent-ink);
-  border-color: rgba(29, 78, 216, 0.32);
+  border-color: rgba(255, 74, 28, 0.4);
   background: var(--paper-tint);
 }
 
@@ -501,7 +505,7 @@ svg {
   right: -160px;
   width: 660px;
   height: 660px;
-  background: radial-gradient(circle, rgba(29, 78, 216, 0.16), transparent 68%);
+  background: radial-gradient(circle, rgba(255, 74, 28, 0.16), transparent 68%);
   animation: orb-drift 26s var(--ease) infinite alternate;
   translate: calc(var(--px) * 40px) calc(var(--py) * 26px);
   transition: translate 0.8s var(--ease);
@@ -512,7 +516,7 @@ svg {
   left: -240px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.14), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 145, 48, 0.14), transparent 70%);
   animation: orb-drift 32s var(--ease) infinite alternate-reverse;
   translate: calc(var(--px) * -30px) calc(var(--py) * -18px);
   transition: translate 0.8s var(--ease);
@@ -526,7 +530,7 @@ svg {
   bottom: -220px;
   width: 620px;
   height: 620px;
-  background: radial-gradient(circle, rgba(29, 78, 216, 0.11), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 74, 28, 0.11), transparent 70%);
   animation: orb-drift 38s var(--ease) infinite alternate;
   translate: calc(var(--px) * 20px) calc(var(--py) * -14px);
   transition: translate 0.8s var(--ease);

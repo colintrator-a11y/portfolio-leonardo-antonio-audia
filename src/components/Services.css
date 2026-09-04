@@ -47,7 +47,7 @@
 }
 
 .service:hover .service__icon {
-  border-color: rgba(29, 78, 216, 0.3);
+  border-color: rgba(255, 74, 28, 0.36);
   transform: translateY(-2px);
 }
 

@@ -87,7 +87,7 @@
 
 .hero__pillar strong {
   color: var(--ink);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
 }
@@ -121,7 +121,7 @@
 
 .hero__stat strong {
   display: block;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(30px, 3.4vw, 42px);
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -154,7 +154,7 @@
   position: absolute;
   inset: 14% -4% -10% 8%;
   z-index: -1;
-  background: radial-gradient(circle at 60% 45%, rgba(29, 78, 216, 0.16), transparent 64%);
+  background: radial-gradient(circle at 60% 45%, rgba(255, 74, 28, 0.16), transparent 64%);
   filter: blur(46px);
 }
 

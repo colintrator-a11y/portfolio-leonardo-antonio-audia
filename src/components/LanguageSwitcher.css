@@ -128,7 +128,7 @@
 .langInline__btn {
   padding: 9px 16px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper-raised);
   color: var(--body);
   font-size: 14px;

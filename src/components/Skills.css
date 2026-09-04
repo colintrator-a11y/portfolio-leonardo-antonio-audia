@@ -183,7 +183,7 @@
 .deckCard__chip {
   padding: 7px 14px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper);
   color: var(--ink-soft);
   font-size: 13px;

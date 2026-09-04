@@ -6,7 +6,7 @@
 
 .section--projects {
   background:
-    radial-gradient(36rem 24rem at 88% 3%, rgba(14, 165, 233, 0.08), transparent 62%),
+    radial-gradient(36rem 24rem at 88% 3%, rgba(255, 145, 48, 0.09), transparent 62%),
     linear-gradient(180deg, var(--paper-sunken) 0%, var(--paper) 72%);
   border-block: 1px solid var(--line-hair);
 }
@@ -44,7 +44,7 @@
   gap: 7px;
   padding: 8px 14px 8px 16px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper-raised);
   color: var(--body);
   font-family: inherit;
@@ -66,7 +66,7 @@
 .filter__count {
   min-width: 18px;
   padding: 1px 5px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper-sunken);
   color: var(--muted);
   font-family: var(--font-mono);
@@ -281,7 +281,7 @@
   top: 11px;
   left: 12px;
   padding: 3px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(13, 27, 48, 0.72);
   color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-mono);
@@ -296,7 +296,7 @@
   top: 10px;
   right: 12px;
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.92);
   color: #33445e;
   font-size: 9.5px;
@@ -327,7 +327,7 @@
 }
 
 .pcard__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 19px;
   font-weight: 600;
   line-height: 1.28;
@@ -397,7 +397,7 @@
 .loadMore {
   padding: 11px 26px;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--paper-raised);
   color: var(--ink);
   font-family: inherit;
@@ -558,7 +558,7 @@
   display: inline-flex;
   padding: 3px 11px;
   border: 1px dashed var(--line-strong);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--muted);
   font-size: 10px;
   font-weight: 600;
@@ -765,7 +765,7 @@
   gap: 7px;
   padding: 8px 15px;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--accent);
   font-size: 13px;
   font-weight: 600;
