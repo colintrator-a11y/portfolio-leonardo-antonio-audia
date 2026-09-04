@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 import { useContent } from '../i18n/LanguageContext'
 import Icon from './ui/Icon'
-import ProjectPeek from './ProjectPeek'
 import ProjectRow from './ProjectRow'
 import ProjectDialog from './ProjectDialog'
 import Reveal from './ui/Reveal'
@@ -28,8 +27,6 @@ export default function Projects() {
   const { projects, ui } = useContent()
   const [active, setActive] = useState('all')
   const [open, setOpen] = useState(null)
-  // The row the pointer is on, whose image floats beside the list.
-  const [peek, setPeek] = useState(null)
   const [visible, setVisible] = useState(FIRST_PAGE)
   const sentinel = useRef(null)
 
@@ -132,12 +129,9 @@ export default function Projects() {
               index={index}
               ui={ui}
               onOpen={(item) => setOpen({ item, index })}
-              onHover={setPeek}
             />
           ))}
         </ol>
-
-        <ProjectPeek project={peek} />
 
         {!shown.length ? <p className="projects__empty">{ui.noMatches}</p> : null}
 

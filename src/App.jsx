@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 
 import About from './components/About'
 import BackToTop from './components/BackToTop'
-import ClickPulse from './components/ClickPulse'
 import BackdropCorridor from './components/BackdropCorridor'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -56,8 +55,6 @@ export default function App() {
 
         <Footer />
       </div>
-      <div className="cursorGlow" aria-hidden="true" />
-      <ClickPulse />
       <BackToTop />
     </div>
   )

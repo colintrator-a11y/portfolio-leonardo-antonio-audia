@@ -1,34 +1,32 @@
-import { useCallback, useRef } from 'react'
-
 import Icon from './ui/Icon'
+import ProjectVisual from './ProjectVisual'
 
 /**
  * One line of the index.
  *
- * A row, not a card: number, title, discipline, stack, and a mark for work you
- * can open. Seventy-two of these read as a body of work; seventy-two cards read
- * as a search result. The image is not in the row at all - it follows the
- * pointer, so the list stays dense and the picture still arrives.
+ * A row, not a card: number, thumbnail, title, discipline, stack, and a mark
+ * for work you can open. Seventy-two of these read as a body of work; seventy-
+ * two cards read as a search result. The thumbnail is small on purpose - it
+ * identifies the project without turning the list back into a grid.
  */
-export default function ProjectRow({ project, index, ui, onOpen, onHover }) {
-  const ref = useRef(null)
-
-  const enter = useCallback(() => onHover(project), [onHover, project])
-  const leave = useCallback(() => onHover(null), [onHover])
-
+export default function ProjectRow({ project, index, ui, onOpen }) {
   return (
-    <li className="row" ref={ref}>
+    <li className="row">
       <button
         type="button"
         className="row__hit"
         onClick={() => onOpen(project)}
-        onMouseEnter={enter}
-        onFocus={enter}
-        onMouseLeave={leave}
-        onBlur={leave}
         style={{ '--i': index % 12 }}
       >
         <span className="row__num">{String(index + 1).padStart(2, '0')}</span>
+
+        <span className="row__thumb">
+          {project.image ? (
+            <img src={project.image} alt="" loading="lazy" decoding="async" width="1280" height="800" />
+          ) : (
+            <ProjectVisual variant={project.visual} title={project.title} fit="slice" />
+          )}
+        </span>
 
         <span className="row__title">{project.title}</span>
 
