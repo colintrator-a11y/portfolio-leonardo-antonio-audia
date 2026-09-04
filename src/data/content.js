@@ -59,6 +59,77 @@ import shopMultivendorEcommerceImg from '../assets/work/shop-multivendor-ecommer
 import shopSkyhighPartyRentalsImg from '../assets/work/shop-skyhigh-party-rentals.webp'
 import shopAppNetplusPharmacyImg from '../assets/work/shop-app-netplus-pharmacy.webp'
 
+/* Further sections of each live site, for the in-dialog gallery. */
+import belaySolutionsLive1 from '../assets/live/belay-solutions-live1.webp'
+import belaySolutionsLive2 from '../assets/live/belay-solutions-live2.webp'
+import breckAndFoxLive1 from '../assets/live/breck-and-fox-live1.webp'
+import breckAndFoxLive2 from '../assets/live/breck-and-fox-live2.webp'
+import cdaMetaisLive1 from '../assets/live/cda-metais-live1.webp'
+import cdaMetaisLive2 from '../assets/live/cda-metais-live2.webp'
+import consciousInkLive1 from '../assets/live/conscious-ink-live1.webp'
+import consciousInkLive2 from '../assets/live/conscious-ink-live2.webp'
+import daphnesHeadcoversLive1 from '../assets/live/daphnes-headcovers-live1.webp'
+import daphnesHeadcoversLive2 from '../assets/live/daphnes-headcovers-live2.webp'
+import dawsonHomeCareLive1 from '../assets/live/dawson-home-care-live1.webp'
+import dawsonHomeCareLive2 from '../assets/live/dawson-home-care-live2.webp'
+import dentalisLive1 from '../assets/live/dentalis-live1.webp'
+import dentalisLive2 from '../assets/live/dentalis-live2.webp'
+import elevarEmpilhadeirasLive1 from '../assets/live/elevar-empilhadeiras-live1.webp'
+import elevarEmpilhadeirasLive2 from '../assets/live/elevar-empilhadeiras-live2.webp'
+import garnetMarketplaceLive1 from '../assets/live/garnet-marketplace-live1.webp'
+import garnetMarketplaceLive2 from '../assets/live/garnet-marketplace-live2.webp'
+import hisenseBoliviaLive1 from '../assets/live/hisense-bolivia-live1.webp'
+import hisenseBoliviaLive2 from '../assets/live/hisense-bolivia-live2.webp'
+import hubspotLive1 from '../assets/live/hubspot-live1.webp'
+import hubspotLive2 from '../assets/live/hubspot-live2.webp'
+import illumiveinLive1 from '../assets/live/illumivein-live1.webp'
+import illumiveinLive2 from '../assets/live/illumivein-live2.webp'
+import instaladorPortasLive1 from '../assets/live/instalador-portas-live1.webp'
+import instaladorPortasLive2 from '../assets/live/instalador-portas-live2.webp'
+import ironpaperLive1 from '../assets/live/ironpaper-live1.webp'
+import ironpaperLive2 from '../assets/live/ironpaper-live2.webp'
+import keyzarJewelryLive1 from '../assets/live/keyzar-jewelry-live1.webp'
+import keyzarJewelryLive2 from '../assets/live/keyzar-jewelry-live2.webp'
+import lumenwildFineArtLive1 from '../assets/live/lumenwild-fine-art-live1.webp'
+import lumenwildFineArtLive2 from '../assets/live/lumenwild-fine-art-live2.webp'
+import lyfeMarketingLive1 from '../assets/live/lyfe-marketing-live1.webp'
+import lyfeMarketingLive2 from '../assets/live/lyfe-marketing-live2.webp'
+import miroTeaLive1 from '../assets/live/miro-tea-live1.webp'
+import miroTeaLive2 from '../assets/live/miro-tea-live2.webp'
+import perriconeMdLive1 from '../assets/live/perricone-md-live1.webp'
+import perriconeMdLive2 from '../assets/live/perricone-md-live2.webp'
+import rembrrAppLive1 from '../assets/live/rembrr-app-live1.webp'
+import rembrrAppLive2 from '../assets/live/rembrr-app-live2.webp'
+import takeCareShopLive1 from '../assets/live/take-care-shop-live1.webp'
+import takeCareShopLive2 from '../assets/live/take-care-shop-live2.webp'
+import tools4tradeLive1 from '../assets/live/tools4trade-live1.webp'
+import tools4tradeLive2 from '../assets/live/tools4trade-live2.webp'
+import troubadourGoodsLive1 from '../assets/live/troubadour-goods-live1.webp'
+import troubadourGoodsLive2 from '../assets/live/troubadour-goods-live2.webp'
+import velocitekProstartLive1 from '../assets/live/velocitek-prostart-live1.webp'
+import velocitekProstartLive2 from '../assets/live/velocitek-prostart-live2.webp'
+import velodromeShopLive1 from '../assets/live/velodrome-shop-live1.webp'
+import velodromeShopLive2 from '../assets/live/velodrome-shop-live2.webp'
+import videoMilkshakeLive1 from '../assets/live/video-milkshake-live1.webp'
+import videoMilkshakeLive2 from '../assets/live/video-milkshake-live2.webp'
+import webAimroMarketResearchLive1 from '../assets/live/web-aimro-market-research-live1.webp'
+import webAimroMarketResearchLive2 from '../assets/live/web-aimro-market-research-live2.webp'
+import webBethemeWordpressThemeLive1 from '../assets/live/web-betheme-wordpress-theme-live1.webp'
+import webBethemeWordpressThemeLive2 from '../assets/live/web-betheme-wordpress-theme-live2.webp'
+import webHoteljobsJobPortalLive1 from '../assets/live/web-hoteljobs-job-portal-live1.webp'
+import webLearningPoolLive1 from '../assets/live/web-learning-pool-live1.webp'
+import webLearningPoolLive2 from '../assets/live/web-learning-pool-live2.webp'
+import webMammolinkHealthcareLive1 from '../assets/live/web-mammolink-healthcare-live1.webp'
+import webMammolinkHealthcareLive2 from '../assets/live/web-mammolink-healthcare-live2.webp'
+import webShraderMendezAttorneyLive1 from '../assets/live/web-shrader-mendez-attorney-live1.webp'
+import webShraderMendezAttorneyLive2 from '../assets/live/web-shrader-mendez-attorney-live2.webp'
+import webVizuryEngage360Live1 from '../assets/live/web-vizury-engage360-live1.webp'
+import webVizuryEngage360Live2 from '../assets/live/web-vizury-engage360-live2.webp'
+import webfxLive1 from '../assets/live/webfx-live1.webp'
+import webfxLive2 from '../assets/live/webfx-live2.webp'
+import wildfangLive1 from '../assets/live/wildfang-live1.webp'
+import wildfangLive2 from '../assets/live/wildfang-live2.webp'
+
 /* Client sites, captured from the live builds. */
 import keyzarImg from '../assets/clients/keyzar.webp'
 import instaladorImg from '../assets/clients/instalador.webp'
@@ -206,6 +277,7 @@ const projectMedia = {
     tech: ['Pipefy', 'Process Automation', 'Workflow Design', 'Third-Party Integrations'],
   },
   'keyzar-jewelry': {
+    gallery: [keyzarJewelryLive1, keyzarJewelryLive2],
     links: [{ label: 'liveSite', url: 'https://keyzarjewelry.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
     image: keyzarImg,
@@ -213,6 +285,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'E-commerce'],
   },
   'instalador-portas': {
+    gallery: [instaladorPortasLive1, instaladorPortasLive2],
     links: [{ label: 'liveSite', url: 'https://instaladordeportas.com.br/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'chatbot'],
     image: instaladorImg,
@@ -220,6 +293,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
   },
   'rembrr-app': {
+    gallery: [rembrrAppLive1, rembrrAppLive2],
     links: [{ label: 'liveSite', url: 'https://rembrr.com/' }],
     tags: ['frontend', 'api', 'chatbot'],
     image: rembrrImg,
@@ -227,6 +301,7 @@ const projectMedia = {
     tech: ['Shopify', 'JavaScript', 'Chatbot', 'REST API', 'Responsive Web Design'],
   },
   'dawson-home-care': {
+    gallery: [dawsonHomeCareLive1, dawsonHomeCareLive2],
     links: [{ label: 'liveSite', url: 'https://dawsonhomecare.com/' }],
     tags: ['frontend', 'chatbot'],
     image: dawsonImg,
@@ -234,6 +309,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'Chatbot', 'Responsive Web Design'],
   },
   'dentalis': {
+    gallery: [dentalisLive1, dentalisLive2],
     links: [{ label: 'liveSite', url: 'https://www.dentalis.com.br/' }],
     tags: ['frontend', 'api'],
     image: dentalisImg,
@@ -241,6 +317,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'API Integration'],
   },
   'elevar-empilhadeiras': {
+    gallery: [elevarEmpilhadeirasLive1, elevarEmpilhadeirasLive2],
     links: [{ label: 'liveSite', url: 'https://elevarempilhadeiras.com.br/' }],
     tags: ['frontend', 'api'],
     image: elevarImg,
@@ -248,6 +325,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
   },
   'cda-metais': {
+    gallery: [cdaMetaisLive1, cdaMetaisLive2],
     links: [{ label: 'liveSite', url: 'https://cdametais.com.br/' }],
     tags: ['frontend', 'api'],
     image: cdametaisImg,
@@ -255,6 +333,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'WhatsApp Business API', 'Responsive Web Design'],
   },
   'tools4trade': {
+    gallery: [tools4tradeLive1, tools4tradeLive2],
     links: [{ label: 'liveSite', url: 'https://tools4trade.co.uk/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'api'],
     image: tools4tradeImg,
@@ -269,6 +348,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'breck-and-fox': {
+    gallery: [breckAndFoxLive1, breckAndFoxLive2],
     links: [{ label: 'liveSite', url: 'https://breckandfox.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: breckandfoxImg,
@@ -276,6 +356,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'garnet-marketplace': {
+    gallery: [garnetMarketplaceLive1, garnetMarketplaceLive2],
     links: [{ label: 'liveSite', url: 'https://garnetmarketplace.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend', 'api'],
     image: garnetImg,
@@ -283,6 +364,7 @@ const projectMedia = {
     tech: ['Shopify', 'Shopify App', 'JavaScript', 'REST API', 'E-commerce'],
   },
   'lumenwild-fine-art': {
+    gallery: [lumenwildFineArtLive1, lumenwildFineArtLive2],
     links: [{ label: 'liveSite', url: 'https://lumenwildfineart.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: lumenwildImg,
@@ -290,6 +372,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'velocitek-prostart': {
+    gallery: [velocitekProstartLive1, velocitekProstartLive2],
     links: [{ label: 'liveSite', url: 'https://www.velocitek.com/products/prostart' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: velocitekImg,
@@ -297,6 +380,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'daphnes-headcovers': {
+    gallery: [daphnesHeadcoversLive1, daphnesHeadcoversLive2],
     links: [{ label: 'liveSite', url: 'https://www.daphnesheadcovers.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: daphnesImg,
@@ -304,6 +388,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'conscious-ink': {
+    gallery: [consciousInkLive1, consciousInkLive2],
     links: [{ label: 'liveSite', url: 'https://www.consciousink.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: consciousinkImg,
@@ -311,6 +396,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'wildfang': {
+    gallery: [wildfangLive1, wildfangLive2],
     links: [{ label: 'liveSite', url: 'https://www.wildfang.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: wildfangImg,
@@ -318,6 +404,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'video-milkshake': {
+    gallery: [videoMilkshakeLive1, videoMilkshakeLive2],
     links: [{ label: 'liveSite', url: 'https://www.videomilkshake.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: videomilkshakeImg,
@@ -325,6 +412,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'miro-tea': {
+    gallery: [miroTeaLive1, miroTeaLive2],
     links: [{ label: 'liveSite', url: 'https://mirotea.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: miroteaImg,
@@ -332,6 +420,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'take-care-shop': {
+    gallery: [takeCareShopLive1, takeCareShopLive2],
     links: [{ label: 'liveSite', url: 'https://takecareshopdc.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: takecareImg,
@@ -339,6 +428,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'illumivein': {
+    gallery: [illumiveinLive1, illumiveinLive2],
     links: [{ label: 'liveSite', url: 'https://illumivein.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: illumiveinImg,
@@ -346,6 +436,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'perricone-md': {
+    gallery: [perriconeMdLive1, perriconeMdLive2],
     links: [{ label: 'liveSite', url: 'https://www.perriconemd.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: perriconeImg,
@@ -353,6 +444,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'hisense-bolivia': {
+    gallery: [hisenseBoliviaLive1, hisenseBoliviaLive2],
     links: [{ label: 'liveSite', url: 'https://hisense.com.bo/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: hisenseImg,
@@ -360,6 +452,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'troubadour-goods': {
+    gallery: [troubadourGoodsLive1, troubadourGoodsLive2],
     links: [{ label: 'liveSite', url: 'https://www.troubadourgoods.com/' }],
     tags: ['ecommerce', 'shopify', 'frontend'],
     image: troubadourImg,
@@ -367,6 +460,7 @@ const projectMedia = {
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS', 'E-commerce'],
   },
   'velodrome-shop': {
+    gallery: [velodromeShopLive1, velodromeShopLive2],
     links: [{ label: 'liveSite', url: 'https://www.velodrome.shop' }],
     tags: ['ecommerce', 'wordpress', 'php', 'frontend'],
     image: velodromeImg,
@@ -374,6 +468,7 @@ const projectMedia = {
     tech: ['WordPress', 'WooCommerce', 'PHP', 'E-commerce', 'Responsive Web Design'],
   },
   'belay-solutions': {
+    gallery: [belaySolutionsLive1, belaySolutionsLive2],
     links: [{ label: 'liveSite', url: 'https://www.belaysolutions.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: belayImg,
@@ -381,6 +476,7 @@ const projectMedia = {
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'webfx': {
+    gallery: [webfxLive1, webfxLive2],
     links: [{ label: 'liveSite', url: 'https://www.webfx.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: webfxImg,
@@ -388,6 +484,7 @@ const projectMedia = {
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'lyfe-marketing': {
+    gallery: [lyfeMarketingLive1, lyfeMarketingLive2],
     links: [{ label: 'liveSite', url: 'https://www.lyfemarketing.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: lyfeImg,
@@ -395,6 +492,7 @@ const projectMedia = {
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'hubspot': {
+    gallery: [hubspotLive1, hubspotLive2],
     links: [{ label: 'liveSite', url: 'https://www.hubspot.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: hubspotImg,
@@ -402,6 +500,7 @@ const projectMedia = {
     tech: ['WordPress', 'PHP', 'Responsive Web Design', 'SEO', 'Modern UI Development'],
   },
   'ironpaper': {
+    gallery: [ironpaperLive1, ironpaperLive2],
     links: [{ label: 'liveSite', url: 'https://www.ironpaper.com' }],
     tags: ['wordpress', 'php', 'frontend'],
     image: ironpaperImg,
@@ -481,6 +580,7 @@ const projectMedia = {
     ],
   },
   'web-hoteljobs-job-portal': {
+    gallery: [webHoteljobsJobPortalLive1],
     tags: ['frontend', 'api'],
     image: webHoteljobsJobPortalImg,
     imageSize: [1280, 800],
@@ -490,6 +590,7 @@ const projectMedia = {
     ],
   },
   'web-aimro-market-research': {
+    gallery: [webAimroMarketResearchLive1, webAimroMarketResearchLive2],
     tags: ['frontend', 'api'],
     image: webAimroMarketResearchImg,
     imageSize: [1280, 800],
@@ -499,7 +600,7 @@ const projectMedia = {
     ],
   },
   'web-betheme-wordpress-theme': {
-    gallery: [webBethemeWordpressThemeShot1, webBethemeWordpressThemeShot2, webBethemeWordpressThemeShot3, webBethemeWordpressThemeShot4, webBethemeWordpressThemeShot5, webBethemeWordpressThemeShot6, webBethemeWordpressThemeShot7],
+    gallery: [webBethemeWordpressThemeShot1, webBethemeWordpressThemeShot2, webBethemeWordpressThemeShot3, webBethemeWordpressThemeShot4, webBethemeWordpressThemeShot5, webBethemeWordpressThemeShot6, webBethemeWordpressThemeShot7, webBethemeWordpressThemeLive1, webBethemeWordpressThemeLive2],
     tags: ['wordpress', 'php', 'frontend'],
     image: webBethemeWordpressThemeImg,
     imageSize: [1280, 800],
@@ -509,6 +610,7 @@ const projectMedia = {
     ],
   },
   'web-learning-pool': {
+    gallery: [webLearningPoolLive1, webLearningPoolLive2],
     tags: ['wordpress', 'php', 'frontend'],
     image: webLearningPoolImg,
     imageSize: [1280, 800],
@@ -518,6 +620,7 @@ const projectMedia = {
     ],
   },
   'web-mammolink-healthcare': {
+    gallery: [webMammolinkHealthcareLive1, webMammolinkHealthcareLive2],
     tags: ['wordpress', 'php', 'frontend'],
     image: webMammolinkHealthcareImg,
     imageSize: [1280, 800],
@@ -537,6 +640,7 @@ const projectMedia = {
     ],
   },
   'web-shrader-mendez-attorney': {
+    gallery: [webShraderMendezAttorneyLive1, webShraderMendezAttorneyLive2],
     tags: ['wordpress', 'php', 'frontend'],
     image: webShraderMendezAttorneyImg,
     imageSize: [1280, 800],
@@ -546,6 +650,7 @@ const projectMedia = {
     ],
   },
   'web-vizury-engage360': {
+    gallery: [webVizuryEngage360Live1, webVizuryEngage360Live2],
     tags: ['php', 'frontend'],
     image: webVizuryEngage360Img,
     imageSize: [1280, 800],
