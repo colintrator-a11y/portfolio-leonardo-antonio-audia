@@ -3,9 +3,10 @@ import { useEffect } from 'react'
 import About from './components/About'
 import BackToTop from './components/BackToTop'
 import ClickPulse from './components/ClickPulse'
-import BackdropSolids from './components/BackdropSolids'
+import BackdropCorridor from './components/BackdropCorridor'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
+import Meta from './components/Meta'
 import Rail from './components/Rail'
 import Process from './components/Process'
 import Projects from './components/Projects'
@@ -30,7 +31,7 @@ export default function App() {
     <div className="app">
       <div className="backdrop" aria-hidden="true">
         <div className="backdrop__grid" />
-        <BackdropSolids />
+        <BackdropCorridor />
         <span className="backdrop__orb backdrop__orb--a" />
         <span className="backdrop__orb backdrop__orb--b" />
         <span className="backdrop__orb backdrop__orb--c" />
@@ -41,6 +42,7 @@ export default function App() {
       </a>
 
       <Rail />
+      <Meta />
 
       <div className="pane">
         <main id="main">

@@ -1,0 +1,121 @@
+/* ==========================================================================
+   The right rail — position, scale, and a way out
+   ========================================================================== */
+
+.meta {
+  position: fixed;
+  inset: 0 0 auto auto;
+  z-index: 60;
+  display: none;
+  flex-direction: column;
+  gap: 26px;
+  width: var(--meta-w);
+  height: 100vh;
+  padding: 30px 20px;
+  border-left: 1px solid var(--line);
+  /* Reads as an edge of the page, not a panel on top of it. */
+  background: transparent;
+}
+
+@media (min-width: 1280px) {
+  .meta {
+    display: flex;
+  }
+}
+
+/* Where you are ----------------------------------------------------------- */
+
+.meta__now {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.meta__step {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.meta__step i {
+  color: var(--faint);
+  font-style: normal;
+}
+
+/* A hairline the whole height of the rail, filled as the page is read. */
+.meta__track {
+  position: relative;
+  flex: 1;
+  width: 2px;
+  background: var(--line);
+}
+
+.meta__track i {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform-origin: top;
+  transition: transform 0.12s linear;
+}
+
+/* What there is ----------------------------------------------------------- */
+
+.meta__figures {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.meta__figures div {
+  display: grid;
+  gap: 2px;
+}
+
+.meta__figures dt {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meta__figures dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.meta__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--body);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.3s var(--ease);
+}
+
+.meta__contact:hover {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meta__track i {
+    transition: none;
+  }
+}

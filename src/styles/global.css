@@ -766,11 +766,20 @@ svg {
 
 :root {
   --rail-w: 264px;
+  --meta-w: 132px;
 }
 
 @media (min-width: 1024px) {
   .pane {
     margin-left: var(--rail-w);
+  }
+}
+
+/* The right rail only appears once there is room for it, and the content
+   column steps aside by exactly its width when it does. */
+@media (min-width: 1280px) {
+  .pane {
+    margin-right: var(--meta-w);
   }
 
   /* The content column no longer centres on the viewport; it centres in what
