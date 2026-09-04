@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
 import Icon from './ui/Icon'
@@ -26,6 +26,10 @@ const FOCUSABLE = 'a[href], button:not([disabled]), input, textarea, select, [ta
 export default function ProjectDialog({ project, label, index, badge, ui, onClose }) {
   const panelRef = useRef(null)
   const closeRef = useRef(null)
+  // The image currently blown up over the dialog, if any.
+  const [preview, setPreview] = useState(null)
+  const previewRef = useRef(null)
+  previewRef.current = preview
 
   useEffect(() => {
     const opener = document.activeElement
@@ -43,7 +47,10 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
     function onKeyDown(event) {
       if (event.key === 'Escape') {
         event.preventDefault()
-        onClose()
+        // The preview sits over the dialog, so it is what Escape dismisses
+        // first; closing both at once would lose the reader's place.
+        if (previewRef.current) setPreview(null)
+        else onClose()
         return
       }
       if (event.key !== 'Tab') return
@@ -93,13 +100,20 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
         <div className="pdialog__media">
           <div className="pdialog__mediaInner">
           {project.image ? (
-            <img
-              className="pdialog__shot"
-              src={project.image}
-              alt={`Screenshot of ${project.title}`}
-              width={project.imageSize?.[0]}
-              height={project.imageSize?.[1]}
-            />
+            <button
+              type="button"
+              className="pdialog__zoom"
+              onClick={() => setPreview(project.image)}
+              aria-label={ui.enlargeImage}
+            >
+              <img
+                className="pdialog__shot"
+                src={project.image}
+                alt={`Screenshot of ${project.title}`}
+                width={project.imageSize?.[0]}
+                height={project.imageSize?.[1]}
+              />
+            </button>
           ) : (
             <ProjectVisual variant={project.visual} title={project.title} />
           )}
@@ -110,7 +124,14 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
             <ul className="pdialog__gallery">
               {project.gallery.map((shot) => (
                 <li key={shot}>
-                  <img src={shot} alt="" loading="lazy" decoding="async" width="640" height="400" />
+                  <button
+                    type="button"
+                    className="pdialog__zoom"
+                    onClick={() => setPreview(shot)}
+                    aria-label={ui.enlargeImage}
+                  >
+                    <img src={shot} alt="" loading="lazy" decoding="async" width="1280" height="800" />
+                  </button>
                 </li>
               ))}
             </ul>
@@ -196,6 +217,25 @@ export default function ProjectDialog({ project, label, index, badge, ui, onClos
         </div>
         </div>
       </div>
+
+      {/* Full size, over the dialog. Its own layer rather than a swap of the
+          image in place, so the record underneath keeps its scroll position. */}
+      {preview ? (
+        <div
+          className="pshade"
+          onMouseDown={(event) => event.target === event.currentTarget && setPreview(null)}
+        >
+          <img className="pshade__img" src={preview} alt="" />
+          <button
+            type="button"
+            className="pshade__close"
+            onClick={() => setPreview(null)}
+            aria-label={ui.closeDetails}
+          >
+            <Icon name="close" size={17} strokeWidth={2.2} />
+          </button>
+        </div>
+      ) : null}
     </div>
   )
 

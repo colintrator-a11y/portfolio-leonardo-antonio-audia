@@ -30,10 +30,20 @@ export default function Projects() {
   const [visible, setVisible] = useState(FIRST_PAGE)
   const sentinel = useRef(null)
 
-  const shown = useMemo(
-    () => (active === 'all' ? projects.items : projects.items.filter((i) => i.tags?.includes(active))),
-    [active, projects.items]
-  )
+  /*
+   * Work that can be opened comes first. A card that links to the live site is
+   * stronger evidence than one that only describes itself, so it should not be
+   * three pages down behind projects a visitor cannot go and look at. Ordering
+   * is otherwise untouched, so each group keeps the sequence it was written in.
+   */
+  const shown = useMemo(() => {
+    const matching =
+      active === 'all' ? projects.items : projects.items.filter((i) => i.tags?.includes(active))
+    return [
+      ...matching.filter((i) => i.links?.length),
+      ...matching.filter((i) => !i.links?.length),
+    ]
+  }, [active, projects.items])
 
   /*
    * Counting here rather than in the data keeps the buttons honest: a filter
