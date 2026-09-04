@@ -89,11 +89,47 @@
 
 /* Grid -------------------------------------------------------------------- */
 
+/*
+ * Three columns, but the first card of every page of six takes two of them and
+ * two rows. A uniform grid of seventy-two identical tiles reads as a search
+ * result; giving one card per page real size gives the eye somewhere to land
+ * and the section a rhythm.
+ */
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: clamp(18px, 2vw, 26px);
   margin-top: clamp(26px, 3vw, 38px);
+  perspective: 1200px;
+}
+
+@media (min-width: 1040px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .projects__grid .pcard:nth-child(6n + 1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* The feature has room for a taller image and a third line of the summary. */
+  .projects__grid .pcard:nth-child(6n + 1) .pcard__media {
+    aspect-ratio: 16 / 9.4;
+  }
+
+  .projects__grid .pcard:nth-child(6n + 1) .pcard__title {
+    font-size: 25px;
+  }
+
+  .projects__grid .pcard:nth-child(6n + 1) .pcard__overview {
+    -webkit-line-clamp: 3;
+    font-size: 14.6px;
+  }
+
+  .projects__grid .pcard:nth-child(6n + 1) .pcard__body {
+    padding: 24px 26px 26px;
+  }
 }
 
 .projects__empty {
@@ -103,11 +139,6 @@
 }
 
 /* Card -------------------------------------------------------------------- */
-
-/* The grid is the shared 3D space; each card tilts inside it. */
-.projects__grid {
-  perspective: 1200px;
-}
 
 .pcard {
   position: relative;

@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section className="section section--alt" id="about" aria-labelledby="about-title">
       <div className="container">
-        <SectionHead id="about-title" eyebrow={about.eyebrow} title={about.heading} />
+        <SectionHead index={4} id="about-title" eyebrow={about.eyebrow} title={about.heading} />
 
         <div className="about__grid">
           <div className="about__main">

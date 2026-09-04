@@ -11,8 +11,8 @@ export default function Services() {
     <section className="section" id="services" aria-labelledby="services-title">
       <div className="container">
         <SectionHead
+          index={3}
           id="services-title"
-          center
           eyebrow={services.eyebrow}
           title={services.heading}
           intro={services.intro}

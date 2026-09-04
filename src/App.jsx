@@ -44,10 +44,10 @@ export default function App() {
 
       <main id="main">
         <Hero />
-        <About />
-        <Services />
-        <Skills />
         <Projects />
+        <Skills />
+        <Services />
+        <About />
         <Process />
       </main>
 

@@ -99,6 +99,7 @@ export default function Projects() {
     <section className="section section--projects" id="projects" aria-labelledby="projects-title">
       <div className="container">
         <SectionHead
+          index={1}
           id="projects-title"
           eyebrow={projects.eyebrow}
           title={projects.heading}

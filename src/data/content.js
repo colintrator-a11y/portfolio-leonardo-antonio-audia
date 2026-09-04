@@ -194,12 +194,14 @@ export const profile = {
   workanaUrl: 'https://www.workana.com/freelancer/f9d69e5b850578f4e85687d42b23fbcf',
 }
 
+/* Navigation order follows the page: work first, then how it is built, then
+   who builds it. */
 export const sectionIds = [
   'home',
-  'about',
-  'services',
-  'skills',
   'projects',
+  'skills',
+  'services',
+  'about',
   'process',
 ]
 

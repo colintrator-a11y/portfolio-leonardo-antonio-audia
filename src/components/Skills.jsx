@@ -58,8 +58,8 @@ export default function Skills() {
     <section className="section section--alt" id="skills" aria-labelledby="skills-title">
       <div className="container">
         <SectionHead
+          index={2}
           id="skills-title"
-          center
           eyebrow={skills.eyebrow}
           title={skills.heading}
           intro={skills.intro}

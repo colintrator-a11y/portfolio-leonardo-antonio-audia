@@ -10,8 +10,8 @@ export default function Process() {
     <section className="section section--alt" id="process" aria-labelledby="process-title">
       <div className="container">
         <SectionHead
+          index={5}
           id="process-title"
-          center
           eyebrow={process.eyebrow}
           title={process.heading}
           intro={process.intro}
